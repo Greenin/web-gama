@@ -9,7 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { PrivacyModalComponent } from './privacy-modal/privacy-modal/privacy-modal.component';
+import { PrivacyModalComponent } from '../../shared/privacy-modal/privacy-modal.component';
 
 
 @Component({

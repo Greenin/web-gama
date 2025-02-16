@@ -14,7 +14,8 @@
       <li id="headerSpace">&nbsp;</li>
       <li><a href="#identidad">QUIÉNES SOMOS</a></li>
       <li><a href="#speakers" >EL EQUIPO</a></li>
-      <li><span id="normalScreenMisionesSpan" (click)="irAUneteMisiones()">ÚNETE A LAS MISIONES</span></li>
+      <li><a href="#uneteMisiones" >ÚNETE A LAS MISIONES</a></li>
+      <!-- <li><span id="normalScreenMisionesSpan" (click)="irAUneteMisiones()">ÚNETE A LAS MISIONES</span></li> -->
       <li>
         <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a>
       </li>
@@ -42,7 +43,8 @@
         <mat-menu id="cellPhoneMenu" #menu="matMenu">
           <button mat-menu-item><a href="#identidad">QUIÉNES SOMOS</a></button>
           <button mat-menu-item><a href="#speakers">EL EQUIPO</a></button>
-          <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button>
+          <button mat-menu-item><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
+          <!-- <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button> -->
           <button mat-menu-item>
             <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a>
           </button>
@@ -199,45 +201,64 @@
   <!--======================================== -->
   <!--========= UNETE A LAS MISIONES ========= -->
   <!--======================================== -->
-  <section id="misiones" class="pt-3 pb-3">
+  <section id="uneteMisiones" class="pt-3 pb-3">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row"> -->
         <div class="col text-uppercase text-center">
           <small>únete a las </small>
           <h2>MISIONES</h2>
         </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col text-center">
+      <!-- </div> -->
+      <!-- <div class="row mb-2"> -->
+        <!-- <div class="col text-center"> -->
+          <p>
           <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
           Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
-         </div>
-      </div>
-      <div class="row">
-        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-          <form>
-            <div class="form-row">
-              <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control" id="missionary-name" placeholder="Nombre">
-              </div>
-              <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control" id="missionary-surname" placeholder="Apellido">
-              </div>
-            </div> 
-            <div class="form-row">
-              <div class="form-group col">
-                <textarea name="text" class="form-control form-control-lg" id="missionary-skill" placeholder="Qué te gustaría hacer?"></textarea>
-                <small class="form-text text-muted">En breve nos pondremos en contacto contigo</small>
-              </div>
+          </p>
+          <br>
+         <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2"> -->
+          
+          <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()">
+            <!-- Nombre -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="nombre" name="nombre" required>
+            </mat-form-field>
+      
+            <!-- Apellidos -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Apellidos</mat-label>
+              <input matInput formControlName="apellidos" name="apellidos" required>
+            </mat-form-field>
+      
+            <!-- Correo electrónico -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Correo electrónico</mat-label>
+              <input matInput formControlName="email" name="email" required>
+            </mat-form-field>
+      
+            <!-- Checkbox de privacidad -->
+            <mat-checkbox formControlName="privacidad" name="privacidad" required>
+              He leído y aceptado condiciones de
+              <a href="#" (click)="openPrivacidadModal($event)">privacidad de datos</a>.
+            </mat-checkbox>
+      
+            <!-- Botón de enviar -->
+            <div class="text-center">
+              <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
             </div>
-            <div class="form-row">
-              <div class="col">
-                <button type="button" onclick="sendMissionaryForm()" class="btn btn-platzi btn-block">Enviar</button>
-              </div>
+      
+            <!-- Mensaje de éxito -->
+            <div *ngIf="enviadoConExito" class="mensaje-exito">
+              Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a al electrónico indicado en unos minutos con el enlace web para seguir su proceso de suscripción. Muchas gracias.
             </div>
           </form>
-        </div>
-      </div>
+
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </section>
 
