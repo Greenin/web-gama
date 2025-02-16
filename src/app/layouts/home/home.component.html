@@ -49,7 +49,10 @@
           <button mat-menu-item><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
           <!-- <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button> -->
           <button mat-menu-item>
-            <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a>
+            <!-- <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a> -->
+            <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+              PETICIÓN DE ORACIÓN
+            </a>
           </button>
         </mat-menu>
       </div>

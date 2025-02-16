@@ -2,6 +2,11 @@
     width: 100%;
   }
   
+  .dialog-content {
+    max-height: 60vh; /* Limita la altura del contenido para que no se desborde */
+    overflow-y: auto; /* Añade scroll si el contenido es muy largo */
+  }
+  
   .dialog-actions {
     display: flex;
     justify-content: center;
@@ -17,4 +22,17 @@
   .enviar-button {
     background-color: #4caf50; /* Verde */
     color: white;
+  }
+  
+  /* Estilos para móviles */
+  @media (max-width: 600px) {
+    .mat-dialog-container {
+      width: 90vw; /* Ajusta el ancho del modal para móviles */
+      max-width: 90vw; /* Evita que el modal sea demasiado ancho */
+      margin: 0 auto; /* Centra el modal */
+    }
+  
+    .dialog-content {
+      max-height: 50vh; /* Reduce la altura máxima para móviles */
+    }
   }
