@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { UneteMisionesComponent } from './layouts/unete-misiones/unete-misiones.component';
+import { MainComponent } from './layouts/main/main.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: MainComponent,
+    children: [
+      // Rutas que usan el diseño principal
+    ]
+  },
+  { path: 'unete-misiones', component: UneteMisionesComponent },
+  // Otras rutas
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

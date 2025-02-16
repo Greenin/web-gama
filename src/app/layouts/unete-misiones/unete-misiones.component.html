@@ -1,0 +1,180 @@
+
+<!--======================================== -->
+  <!--========= NORMAL SCREEN HEADER ========= -->
+  <!--======================================== -->
+
+  <header id="normalScreenSubscriptionsHeader" class="d-none d-md-block">
+    <ul>
+      <li id="headerName">      
+        <a id="normalScreenSubscriptionsHeaderLogo" href="#">
+          <img src="../assets/img/logoGAMA.png" alt="GAMA EVANGELISTIC ASSOCIATION" id="normalScreenLogoImg">
+          <span id="normalScreenLogoText">GAMA EVANGELISTIC <br> ASSOCIATION</span>
+        </a>
+      </li>
+      <li id="headerSpace">&nbsp;</li>
+      <li id="headerSpace">&nbsp;</li>
+      <li><span id="normalScreenHeaderSubscriptionsTitle">SUSCRIPCIÓN</span></li>
+      <li id="headerSpace">&nbsp;</li>
+      <li id="headerSpace">&nbsp;</li>
+    </ul>
+  </header>
+  
+
+
+  <!--======================================== -->
+  <!--========== CELL PHONE HEADER  ========== -->
+  <!--======================================== -->
+  <header id="cellPhoneSubscriptionsHeader" class="d-block d-md-none">
+    <div id="cellPhoneSubscriptionsHeaderRow" class="row">
+
+      <div id="cellPhoneSubscriptionsHeaderLogoTit" class="col" >
+        <a href="#" id="cellPhoneLogoHeader">
+          <img id="cellPhoneLogoImg" src="../assets/img/logoGAMA.png" alt="GAMA EVANGELISTIC ASSOCIATION" >
+          <span id="cellPhoneLogoText">GAMA <br> EVANGELISTIC <br> ASSOCIATION</span>
+        </a>
+      </div>
+
+
+      <div id="cellPhoneSubscriptionsHeaderTitle" class="col text-end" >
+        <span id="cellPhoneHeaderSubscriptionsTitle">SUBSCRIPCIÓN</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <!-- <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneMenuButton"><mat-icon>menu</mat-icon></button> -->
+        <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
+          <button mat-menu-item><a href="#identidad">QUIÉNES SOMOS</a></button>
+          <button mat-menu-item><a href="#speakers">EL EQUIPO</a></button>
+          <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button>
+          <button mat-menu-item>
+            <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a>
+          </button>
+        </mat-menu> -->
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!--======================================== -->
+  <!--============ MISSIONARY FORM =========== -->
+  <!--======================================== -->
+
+  <div class="container">
+
+    <div class="row mt-4">
+    
+        <div class="col-12">
+
+            <div class="form-container">
+                <h1>Únete a las misiones</h1>
+                <p>Ponte en contacto con nosotros si te atrae la idea de participar en misiones.</p>
+            
+                <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/xjvawjkq" method="POST">
+                
+                    <!-- Nombre y Apellido -->
+                    <div class="row">
+                        <mat-form-field class="col">
+                        <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" required>
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                        <input matInput placeholder="Apellido" formControlName="apellido" name="apellido" required>
+                        </mat-form-field>
+                    </div>
+                
+                    <!-- Correo electrónico -->
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Correo electrónico" formControlName="email" name="email" required>
+                    </mat-form-field>
+                
+                    <!-- Calle -->
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Calle" formControlName="calle" name="calle" required>
+                    </mat-form-field>
+                
+                    <!-- Código postal/ZIP y Ciudad -->
+                    <div class="row">
+                        <mat-form-field class="col">
+                        <input matInput placeholder="Código postal/ZIP" formControlName="codigoPostal" name="codigoPostal" required>
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                        <input matInput placeholder="Ciudad" formControlName="ciudad" name="ciudad" required>
+                        </mat-form-field>
+                    </div>
+                
+                    <!-- Soporte mensual y Pagar a través de -->
+                    <div class="row">
+                        <mat-form-field class="col">
+                        <input matInput type="number" placeholder="Soporte mensual (en Euros)" formControlName="soporteMensual" name="soporteMensual" required>
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                        <mat-select placeholder="Pagar a través de" formControlName="metodoPago" name="metodoPago" required>
+                            <mat-option value="tarjeta">Tarjeta de crédito</mat-option>
+                            <mat-option value="transferencia">Transferencia bancaria</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                
+                    <!-- Número de teléfono y Cumpleaños -->
+                    <div class="row">
+                        <mat-form-field class="col">
+                        <input matInput placeholder="Número de teléfono" formControlName="telefono" name="telefono" required>
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                        <input matInput type="date" placeholder="Cumpleaños" formControlName="cumpleaños" name="cumpleaños" required>
+                        </mat-form-field>
+                    </div>
+                
+                    <!-- Lenguaje de preferencia y País -->
+                    <div class="row">
+                        <mat-form-field class="col">
+                        <mat-select placeholder="Lenguaje de preferencia" formControlName="lenguaje" name="lenguaje" required>
+                            <mat-option value="es">Español</mat-option>
+                            <mat-option value="en">Inglés</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="col">
+                        <mat-select placeholder="País" formControlName="pais" name="pais" required>
+                            <mat-option value="es">España</mat-option>
+                            <mat-option value="mx">México</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                    </div>
+                
+                    <!-- Mensaje de contacto -->
+                    <p>En breve nos pondremos en contacto contigo.</p>
+                
+                    <!-- Checkbox de privacidad -->
+                    <mat-checkbox formControlName="privacidad" name="privacidad" required>
+                        He leído y aceptado condiciones de privacidad de datos.
+                    </mat-checkbox>
+                
+                    <!-- Botón de enviar -->
+                    <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!--======================================== -->
+  <!--================ FOOTER ================ -->
+  <!--======================================== -->
+  <footer class="text-end">
+    <div class="container">
+      <div class="row text-center pb-1">
+        <div class="col-12 col-lg">
+          <a data-toggle="modal" data-target="#modalcontacto" href="#">Contáctanos</a>
+        </div> 
+      </div>
+      <br>
+      <!-- <div class="col-6"></div> -->
+      <!-- <div class="col-6"> -->
+        Copyright &copy; 2025 - GAMA
+      <!-- </div> -->
+    </div>
+  </footer>

@@ -1,12 +1,16 @@
 import { Routes } from '@angular/router';
-import { UneteMisionesComponent } from './components/unete-misiones/unete-misiones.component';
-import { UneteMisionesPageComponent } from './components/unete-misiones-page/unete-misiones-page.component';
+import { UneteMisionesComponent } from './layouts/unete-misiones/unete-misiones.component';
+import { HomeComponent } from './layouts/home/home.component';
 
 export const routes: Routes = [
   {
-    path: 'unete-misiones',
-    component: UneteMisionesPageComponent, // Usa el nuevo layout
-    children: [{ path: '', component: UneteMisionesComponent }]
+    path: '',
+    component: HomeComponent, 
   },
+  {
+    path: 'unete-misiones',
+    component: UneteMisionesComponent, 
+  },
+
     // { path: '**', redirectTo: '' } // Redirección por defecto
   ];

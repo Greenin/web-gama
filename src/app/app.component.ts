@@ -8,17 +8,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  // imports: [RouterOutlet],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  imports: [CommonModule, MatButtonModule, MatMenuModule, MatIconModule]
 })
 export class AppComponent {
-  title = 'web-gama';
-
-  constructor(private router: Router) {}
-
-  irAUneteMisiones() {
-    this.router.navigate(['unete-misiones']);
-  } 
 }

@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UneteMisionesComponent } from './layouts/unete-misiones/unete-misiones.component';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    // UneteMisionesComponent
+    // Otros componentes
+  ],
+  imports: [
+    BrowserModule,
+    // AppRoutingModule,
+    CommonModule, MatButtonModule, MatMenuModule, MatIconModule
+    // Otros módulos
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
