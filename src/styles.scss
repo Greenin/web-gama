@@ -55,34 +55,20 @@ body::-webkit-scrollbar{
 }
 
 /* Scroll bar hidden firefox */
-html{ 
+html { 
   scrollbar-width: none;
 }
 
 
-// #header {
-//   background: white;
-//   border: 1px solid #fece15;
-// }
-
-// #header img {
-//   width: 50px;
-//   height: 50px;
-// }
-
-// #logoCabecera {
-//   color: #88af27;
-// }
+html, body { 
+	height: 100%; 
+}
+body { 
+	margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
 
 
-
-
-
-
-
-
-// Estilos para pantalla de portátil normal
 
 //======================================== //
 //========= NORMAL SCREEN STYLE ========== //
@@ -90,48 +76,18 @@ html{
 
 @media only screen and (min-width: 768px) {
 
-	//=========== NORMAL SCREEN HEADER ===========//
-
 	header {
 		background-color:#F5F5DC;
-		// display: block;
-		// width: 100%;
-		// height: 90px;
-		// background: rgba(53,103,164,0.8);
-		// position: fixed;
-		// text-transform: uppercase;
-		// font-family: YesevaOne-Regular;
-		// font-family: DMSerifText-Regular;
-		// font-family: PlayfairDisplaySC-Regular;
-			// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 		font-family: Arial, Helvetica, sans-serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-		// font-weight: bold;
-		// text-transform: uppercase;
 		font-size: 14px; //***** 
     	font-weight: normal;
-		// color: gray;
 		color: rgb(80, 173, 17);
-		// height: 70px;
 		line-height: 80px;
     	max-height: 80px;
-		// margin-top: auto;
 	}
 
 
-	#headerName {
-		// font-family: OpenSans-Regular !important;
-		// font-weight: bolder;
-		// font-size: large;
-		// font-size: 17px;
-		// line-height: 70px;
-		// color: white;
+	#headerIconText {
     	padding-left: 10px;
 	}
 
@@ -165,10 +121,6 @@ html{
 		// height: 70px;
 	}
 
-  // #logoCol {
-  //   display: flex;
-  //   align-items: center;    
-  // }
 
 	#team-logo-gama {
 		margin: 0px;
@@ -179,25 +131,16 @@ html{
 
 
 
-	header ul{
-		// display: block;
+	header ul {
 		width: 100%;
-		// height: inherit;
-		// margin: 0px auto;
-		// margin-top: -3px;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
 		padding: 0;
-    // height: 80px; /* Asegura que el ul tenga la misma altura que la cabecera */
 	}
 
 
 	header ul li {
-		// display: inline-block;
-		// margin: 0px auto;
-		// text-align: center;
-		// line-height: 80px;
 		display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
 		align-items: center; /* Centra los elementos en el eje vertical */
 		margin: 0;
@@ -206,16 +149,6 @@ html{
 
 
 	header a {
-		// display: block;
-    // margin: 0px auto;
-		// padding-right: 40px;
-		// padding-left: 40px;
-		// height: inherit;
-		// text-decoration: none;
-		// color: inherit;
-		// transition: all 300ms;
-		// height: 70px;
-
 		display: flex;
 		align-items: center; /* Centra el texto dentro del enlace */
 		padding: 0 30px; /* Reduce el padding lateral si es necesario */
@@ -227,8 +160,6 @@ html{
 
 
 	header a:hover, .actived{
-		// background: rgba(0,0,0,0.8);
-		// height: 87px;
 		transform: scale(1.25,1.25);
 	}
 
@@ -236,7 +167,6 @@ html{
 
 	#normalScreenMisionesSpan {
 		cursor: pointer;
-
 		display: flex;
 		align-items: center; /* Centra el texto dentro del enlace */
 		padding: 0 30px; /* Reduce el padding lateral si es necesario */
@@ -247,28 +177,9 @@ html{
 	}
 
 	#normalScreenMisionesSpan:hover{
-		// background: rgba(0,0,0,0.8);
-		// height: 87px;
 		transform: scale(1.25,1.25);
 	}
 
-
-
-
-	// #subscriptionsHeaderList {
-	// 	display: flex; // Convierte el ul en un contenedor flexible
-	// 	justify-content: space-between; // Distribuye el espacio entre los elementos
-	// 	align-items: center; // Centra verticalmente los elementos
-	// 	list-style: none; // Quita los puntos de la lista
-	// 	padding: 0; // Elimina el padding por defecto
-	// 	margin: 0; // Elimina el margen por defecto
-	// }
-
-
-	// #subscriptionsHeaderTitleName {
-	// 	flex-grow: 1; // Hace que este li ocupe todo el espacio disponible
-	// 	text-align: center; // Centra el texto horizontalmente
-	//   }
 
 	//=========== NORMAL SCREEN SUBSCRIPTIONS HEADER ===========//
 
@@ -301,27 +212,10 @@ html{
 
 	#normalScreenHeaderSubscriptionsTitle {
 		font-size: 27px;
-		// font-weight: bold;
-			// font-family: OpenSans-Regular !important;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-					// font-family: monospace !important;
-		// font-family: cursive !important;
 		font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
     	font-weight: normal;
 		letter-spacing: 0.1em;
-		// color: gray;
-		// color: rgb(80, 173, 17);
-		// height: 70px;
 	}
-
-
 
 	
 	#significadoGAMA {
@@ -333,7 +227,7 @@ html{
 
 	//=========== NORMAL SCREEN PRESENTATION ===========//
 
-	#spaceBetweenHeaderPresentation{
+	#spaceBetweenHeaderPresentation {
 		height:100px;
 	}
 
@@ -347,7 +241,7 @@ html{
 	}
 
 
-	#presentation{
+	#presentation {
 		// width: 60%;
 		margin: 0px auto;
 		// text-align: left;
@@ -463,25 +357,6 @@ html{
 		// font-weight: bolder;
 	}
 
-	// .about{
-	// 	width: 70%;
-	// 	margin: 0px auto;
-	// 	margin-bottom: 20px;
-	// 	font-size: 23px;
-	// 	color: black;
-	// }
-
-	// .about h2{
-	// 	border-bottom: 1px solid #ccc;
-	// 	padding-bottom: 5px;
-	// 	margin-bottom: 5px;
-	// }
-
-	// .about p{
-	// 	padding-top: 20px;
-	// 	padding-bottom: 30px;
-	// 	text-align: justify;
-	// }
 
 	#spaceDescAboutFooter {
 		height: 500px;
@@ -529,8 +404,6 @@ html{
 
 
 
-// Estilos para movil
-
 //======================================== //
 //=========== CELL PHONE STYLE =========== //
 //======================================== //
@@ -542,9 +415,6 @@ html{
 
 	#cellPhoneHeader {
 		background-color: #F5F5DC;
-		// font-family: OpenSans-Regular !important;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size: 14px; 
 		color: rgb(80, 173, 17);
@@ -553,40 +423,24 @@ html{
 
 
   	#cellPhoneHeaderRow {
-		// display: block;
-		// width: 100%;
-		// height: inherit;
-		// margin: 0px auto;
-		// margin-top: -3px;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
 		padding: 0;
-		// height: 80px; /* Asegura que el ul tenga la misma altura que la cabecera */
 	}
 
-  #cellPhoneHeaderLogoTit {
-		// display: block;
-		// width: 100%;
+  	#cellPhoneHeaderLogoTit {
     	max-width: 75%;
-		// height: inherit;
-		// margin: 0px auto;
-		// margin-top: -3px;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
 		padding-left: 10px;
-		// height: 80px; /* Asegura que el ul tenga la misma altura que la cabecera */
 	}
 
 
 	#cellPhoneHeaderButtonDiv {
-		// display: inline-block;
-		// margin: 0px auto;
     	max-width: 25%;
 		text-align: right;
-		// line-height: 80px;
-		// display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
 		align-items: center; /* Centra los elementos en el eje vertical */
 		margin: 0;
 		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
@@ -601,8 +455,6 @@ html{
 		display: flex;
 		align-items: center; /* Centra verticalmente */
 		text-decoration: none;
-
-		// display: block;
 		padding-right: 0px;
 		padding-left: 10px;
 		height: inherit;
@@ -618,7 +470,6 @@ html{
 
 	#cellPhoneLogoText {
 		display: block;
-		// max-width: 140px;
 		text-align: left;
 		font-weight: normal;
 		font-size: 14px;
@@ -628,41 +479,6 @@ html{
 		word-wrap: break-word; /* Asegura que el texto respete el ancho */
 	}
 
-
-
-  // #cellphoneHeaderSpace {
-	// 	min-width: 1%;
-		// height: 70px;
-	// }
-
-
-
-	// #cellPhoneMenuButton {
-	// 	color: rgb(118, 204, 61);
-	// }
-
-
-  // #cellPhoneMenu {
-  //   background-color: blue;
-  // }
-
-
-	// #cellPhoneLogoHeader {
-		// display: block;
-		// padding-right: 0px;
-		// padding-left: 10px;
-		// height: inherit;
-		// text-decoration: none;
-		// color: inherit;
-		// transition: all 300ms;
-		// height: 70px;
-	// }
-
-
-  // #logoCol {
-  //   display: flex;
-  //   align-items: center;    
-  // }
 
 
 	#team-logo-gama {
@@ -675,38 +491,20 @@ html{
 
 	
 	#cellPhoneScreenMisionesSpan {
-		// cursor: pointer;
-		// display: block;
 		padding-right: 10px;
-		// padding-left: 10px;
 		height: inherit;
 		text-decoration: none;
 		color: inherit;
 		// transition: all 300ms;
 	}
 
-	// #cellPhoneScreenMisionesSpan:hover{
-	// 	// background: rgba(0,0,0,0.8);
-	// 	// height: 87px;
-	// 	transform: scale(1.25,1.25);
-	// }
+
 
 	//=========== CELL PHONE SUBSCRIPTIONS HEADER ===========//
 
 	#cellPhoneSubscriptionsHeader {
 		background-color: #F5F5DC;
-		// font-family: OpenSans-Regular !important;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
 		font-family: Arial, Helvetica, sans-serif !important;
-					// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 		font-size: 14px; 
 		color: rgb(80, 173, 17);
 		line-height: 70px;
@@ -714,43 +512,24 @@ html{
 
 
   	#cellPhoneSubscriptionsHeaderRow {
-		// display: block;
-		// width: 100%;
-		// height: inherit;
-		// margin: 0px auto;
-		// margin-top: -3px;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
 		padding: 0;
-		// height: 80px; /* Asegura que el ul tenga la misma altura que la cabecera */
 	}
 
 
 	#cellPhoneSubscriptionsHeaderLogoTit {
-		// display: block;
-		// width: 100%;
     	max-width: 50%;
-		// height: inherit;
-		// margin: 0px auto;
-		// margin-top: -3px;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		// padding-left: 10px;
-		// height: 80px; /* Asegura que el ul tenga la misma altura que la cabecera */
 	}
 
 
 	
 	#cellPhoneSubscriptionsHeaderTitle {
-		// display: inline-block;
-		// margin: 0px auto;
     	max-width: 50%;
-		// text-align: right;
-		// line-height: 80px;
-		// display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
-		// align-items: center; /* Centra los elementos en el eje vertical */
 		text-align: right;
 		margin: 0;
 		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
@@ -763,12 +542,7 @@ html{
 		// font-weight: bold;
 		// font-family: Arial, Helvetica, sans-serif !important;
     	// font-weight: normal;
-		// color: gray;
-		// color: rgb(80, 173, 17);
-		// height: 70px;
 	}
-
-
 
 
 
@@ -858,25 +632,6 @@ html{
 		height: 30px;
 	}
 
-	// .about{
-	// 	width: 70%;
-	// 	margin: 0px auto;
-	// 	margin-bottom: 20px;
-	// 	font-size: 23px;
-	// 	color: black;
-	// }
-
-	// .about h2{
-	// 	border-bottom: 1px solid #ccc;
-	// 	padding-bottom: 5px;
-	// 	margin-bottom: 5px;
-	// }
-
-	// .about p{
-	// 	padding-top: 20px;
-	// 	padding-bottom: 30px;
-	// 	text-align: justify;
-	// }
 
 	#spaceDescAboutFooter {
 		height: 500px;
@@ -898,7 +653,7 @@ html{
 //=========== CELL PHONE FOOTER ===========//
 
 
-// footer{
+// footer {
 //   width: 75%;
 //   margin: 0px auto;
 //   padding-top: 15px;
@@ -1122,6 +877,3 @@ body {
 	background: linear-gradient(90deg, #1c3643 0, #273b47 50%, #1e5372);
 }
 */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
