@@ -58,106 +58,131 @@
   <!--============ MISSIONARY FORM =========== -->
   <!--======================================== -->
 
-  <div class="container">
-
-    <div class="row mt-4">
-    
-        <div class="col-12">
-
-            <div class="form-container">
-                <h1>Únete a las misiones</h1>
-                <p>Ponte en contacto con nosotros si te atrae la idea de participar en misiones.</p>
-            
-                <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/xjvawjkq" method="POST">
-                
-                    <!-- Nombre y Apellido -->
-                    <div class="row">
-                        <mat-form-field class="col">
-                        <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" required>
-                        </mat-form-field>
-                        <mat-form-field class="col">
-                        <input matInput placeholder="Apellido" formControlName="apellido" name="apellido" required>
-                        </mat-form-field>
-                    </div>
-                
-                    <!-- Correo electrónico -->
-                    <mat-form-field class="full-width">
-                        <input matInput placeholder="Correo electrónico" formControlName="email" name="email" required>
-                    </mat-form-field>
-                
-                    <!-- Calle -->
-                    <mat-form-field class="full-width">
-                        <input matInput placeholder="Calle" formControlName="calle" name="calle" required>
-                    </mat-form-field>
-                
-                    <!-- Código postal/ZIP y Ciudad -->
-                    <div class="row">
-                        <mat-form-field class="col">
-                        <input matInput placeholder="Código postal/ZIP" formControlName="codigoPostal" name="codigoPostal" required>
-                        </mat-form-field>
-                        <mat-form-field class="col">
-                        <input matInput placeholder="Ciudad" formControlName="ciudad" name="ciudad" required>
-                        </mat-form-field>
-                    </div>
-                
-                    <!-- Soporte mensual y Pagar a través de -->
-                    <div class="row">
-                        <mat-form-field class="col">
-                        <input matInput type="number" placeholder="Soporte mensual (en Euros)" formControlName="soporteMensual" name="soporteMensual" required>
-                        </mat-form-field>
-                        <mat-form-field class="col">
-                        <mat-select placeholder="Pagar a través de" formControlName="metodoPago" name="metodoPago" required>
-                            <mat-option value="tarjeta">Tarjeta de crédito</mat-option>
-                            <mat-option value="transferencia">Transferencia bancaria</mat-option>
-                        </mat-select>
-                        </mat-form-field>
-                    </div>
-                
-                    <!-- Número de teléfono y Cumpleaños -->
-                    <div class="row">
-                        <mat-form-field class="col">
-                        <input matInput placeholder="Número de teléfono" formControlName="telefono" name="telefono" required>
-                        </mat-form-field>
-                        <mat-form-field class="col">
-                        <input matInput type="date" placeholder="Cumpleaños" formControlName="cumpleaños" name="cumpleaños" required>
-                        </mat-form-field>
-                    </div>
-                
-                    <!-- Lenguaje de preferencia y País -->
-                    <div class="row">
-                        <mat-form-field class="col">
-                        <mat-select placeholder="Lenguaje de preferencia" formControlName="lenguaje" name="lenguaje" required>
-                            <mat-option value="es">Español</mat-option>
-                            <mat-option value="en">Inglés</mat-option>
-                        </mat-select>
-                        </mat-form-field>
-                        <mat-form-field class="col">
-                        <mat-select placeholder="País" formControlName="pais" name="pais" required>
-                            <mat-option value="es">España</mat-option>
-                            <mat-option value="mx">México</mat-option>
-                        </mat-select>
-                        </mat-form-field>
-                    </div>
-                
-                    <!-- Mensaje de contacto -->
-                    <p>En breve nos pondremos en contacto contigo.</p>
-                
-                    <!-- Checkbox de privacidad -->
-                    <mat-checkbox formControlName="privacidad" name="privacidad" required>
-                        He leído y aceptado condiciones de privacidad de datos.
-                    </mat-checkbox>
-                
-                    <!-- Botón de enviar -->
-                    <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
-                </form>
-            </div>
-
+  <div class="form-container">
+    <h1>FICHA A</h1>
+    <h2>Únete a las misiones</h2>
+    <p>Ponte en contacto con nosotros si te atrae la idea de participar en misiones.</p>
+  
+    <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/xjvawjkq" method="POST">
+      <!-- Nombre y Apellido -->
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nombre" formControlName="nombre" name="nombre" required>
+          </mat-form-field>
         </div>
-
-    </div>
-
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Apellido" formControlName="apellido" name="apellido" required>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Correo electrónico -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Correo electrónico" formControlName="email" name="email" required>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Ciudad y País -->
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Ciudad" formControlName="ciudad" name="ciudad" required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="País" formControlName="pais" name="pais" required>
+              <mat-option value="es">España</mat-option>
+              <mat-option value="mx">México</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Número de teléfono y Cumpleaños -->
+      <div class="row">
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Número de teléfono" formControlName="telefono" name="telefono" required>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="full-width">
+            <input matInput type="date" placeholder="Cumpleaños" formControlName="cumpleaños" name="cumpleaños" required>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Lenguaje de preferencia -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Lenguaje de preferencia" formControlName="lenguaje" name="lenguaje" required>
+              <mat-option value="es">Español</mat-option>
+              <mat-option value="en">Inglés</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Su testimonio de cómo conoció al señor Jesucristo -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Su testimonio de cómo conoció al señor Jesucristo" formControlName="testimonio" name="testimonio" rows="4" required></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Iglesia o ministerio al que forman parte -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Iglesia o ministerio al que forman parte" formControlName="iglesia" name="iglesia" required>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Su motivación para venir al tour -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Su motivación para venir al tour" formControlName="motivacion" name="motivacion" rows="4" required></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Nombre de su pastor -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nombre de su pastor" formControlName="pastor" name="pastor" required>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <!-- Checkbox de privacidad -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-checkbox formControlName="privacidad" name="privacidad" required>
+            He leído y aceptado condiciones de privacidad de datos.
+          </mat-checkbox>
+        </div>
+      </div>
+  
+      <!-- Botón de enviar -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
+        </div>
+      </div>
+    </form>
   </div>
-
 
 
 

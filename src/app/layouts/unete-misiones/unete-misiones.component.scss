@@ -1,0 +1,43 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .col-md-6, .col-md-12 {
+    flex: 1 1 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .col-md-6 {
+      flex: 1 1 calc(50% - 16px);
+    }
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-checkbox {
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  button[mat-raised-button] {
+    margin-top: 16px;
+  }

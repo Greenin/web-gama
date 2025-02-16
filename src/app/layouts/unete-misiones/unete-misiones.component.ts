@@ -25,8 +25,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   templateUrl: './unete-misiones.component.html',
-  // styleUrl: './unete-misiones.component.scss'
-  styles: ``
+  styleUrl: './unete-misiones.component.scss'
+  // styles: ``
 })
 export class UneteMisionesComponent {
 
@@ -37,15 +37,15 @@ export class UneteMisionesComponent {
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      calle: ['', Validators.required],
-      codigoPostal: ['', Validators.required],
       ciudad: ['', Validators.required],
-      soporteMensual: ['', [Validators.required, Validators.min(0)]],
-      metodoPago: ['', Validators.required],
+      pais: ['', Validators.required],
       telefono: ['', Validators.required],
       cumpleaños: ['', Validators.required],
       lenguaje: ['', Validators.required],
-      pais: ['', Validators.required],
+      testimonio: ['', Validators.required],
+      iglesia: ['', Validators.required],
+      motivacion: ['', Validators.required],
+      pastor: ['', Validators.required],
       privacidad: [false, Validators.requiredTrue],
     });
   }
