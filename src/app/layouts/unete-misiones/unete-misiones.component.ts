@@ -8,7 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { MatDialogModule } from '@angular/material/dialog';
 @Component({
   selector: 'app-unete-misiones',
   standalone: true,
@@ -22,7 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCheckboxModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   templateUrl: './unete-misiones.component.html',
   styleUrl: './unete-misiones.component.scss'
