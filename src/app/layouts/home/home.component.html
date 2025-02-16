@@ -17,7 +17,10 @@
       <li><a href="#uneteMisiones" >ÚNETE A LAS MISIONES</a></li>
       <!-- <li><span id="normalScreenMisionesSpan" (click)="irAUneteMisiones()">ÚNETE A LAS MISIONES</span></li> -->
       <li>
-        <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a>
+        <!-- <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a> -->
+        <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+          PETICIÓN DE ORACIÓN
+        </a>
       </li>
     </ul>
   </header>

@@ -1,0 +1,20 @@
+.full-width {
+    width: 100%;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .cancel-button {
+    background-color: #ff4444; /* Rojo */
+    color: white;
+  }
+  
+  .enviar-button {
+    background-color: #4caf50; /* Verde */
+    color: white;
+  }

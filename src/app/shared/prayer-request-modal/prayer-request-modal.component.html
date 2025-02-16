@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Enviar mensaje</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="outline" class="full-width mt-2">
+    <mat-label>Compártenos tu petición o motivo de agradecimiento</mat-label>
+    <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onCancel()" class="cancel-button">Cancelar</button>
+  <button mat-button (click)="onEnviar()" [disabled]="!mensaje" class="enviar-button">Enviar</button>
+</mat-dialog-actions>

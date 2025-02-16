@@ -11,6 +11,7 @@ import { PrivacyModalComponent } from '../../shared/privacy-modal/privacy-modal.
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/prayer-request-modal.component';
 
 
 @Component({
@@ -98,6 +99,13 @@ Atentamente, Global Awakening Movement Association.
   openPrivacidadModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
     this.dialog.open(PrivacyModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+    });
+  }
+
+  openPrayerRequestModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(PrayerRequestModalComponent, {
       width: '600px', // Ajusta el ancho del modal
     });
   }
