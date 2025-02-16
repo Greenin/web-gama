@@ -1,1 +1,18 @@
-<p>contact-us-modal works!</p>
+<h2 mat-dialog-title>Enviar mensaje</h2>
+<mat-dialog-content>
+  <!-- Campo de texto largo -->
+  <mat-form-field appearance="outline" class="full-width mt-2">
+    <mat-label>¿En qué te podemos ayudar?</mat-label>
+    <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea>
+  </mat-form-field>
+
+  <!-- Campo de correo electrónico -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Escríbenos tu e-mail</mat-label>
+    <input matInput [(ngModel)]="email" name="email" required email>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onCancel()" class="cancel-button">Cancelar</button>
+  <button mat-button (click)="onEnviar()" [disabled]="!mensaje || !email" class="enviar-button">Enviar</button>
+</mat-dialog-actions>

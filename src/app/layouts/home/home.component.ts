@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/prayer-request-modal.component';
+import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-us-modal.component';
 
 
 @Component({
@@ -110,9 +111,12 @@ Atentamente, Global Awakening Movement Association.
     });
   }
 
-  // irAUneteMisiones() {
-  //   this.router.navigate(['unete-misiones']);
-  // } 
+  openContactUsModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(ContactUsModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+    });
+  }
 
 }
 

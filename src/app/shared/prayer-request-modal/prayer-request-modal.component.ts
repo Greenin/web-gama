@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 export class PrayerRequestModalComponent {
 
   mensaje: string = '';
+  email: string = '';
 
   constructor(
     public dialogRef: MatDialogRef<PrayerRequestModalComponent>,
@@ -36,8 +37,8 @@ export class PrayerRequestModalComponent {
   }
 
   onEnviar(): void {
-    if (this.mensaje) {
-      const formData = { mensaje: this.mensaje };
+    if (this.mensaje && this.email) {
+      const formData = { mensaje: this.mensaje, email: this.email };
 
       // Envía los datos a Formspree
       this.http.post('https://formspree.io/f/xjvawjkq', formData).subscribe(
