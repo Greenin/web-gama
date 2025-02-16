@@ -36,7 +36,7 @@
 
 
       <div id="cellPhoneSubscriptionsHeaderTitle" class="col text-end" >
-        <span id="cellPhoneHeaderSubscriptionsTitle">SUBSCRIPCIÓN</span>
+        <span id="cellPhoneHeaderSubscriptionsTitle">SUSCRIPCIÓN</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <!-- <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneMenuButton"><mat-icon>menu</mat-icon></button> -->
         <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
@@ -59,8 +59,8 @@
   <!--======================================== -->
 
   <div class="form-container">
-    <h1><u>FICHA A:</u></h1>
-    <h2>Únete a las misiones</h2>
+    <!-- <h1><u>FICHA A:</u></h1> -->
+    <h1>Únete a las misiones</h1>
     <p>Ponte en contacto con nosotros si te atrae la idea de participar en misiones.</p>
     <br>
   
@@ -183,7 +183,8 @@
       <div class="row">
         <div class="col-md-12">
           <mat-checkbox formControlName="privacidad" name="privacidad" required>
-            He leído y aceptado condiciones de privacidad de datos.
+            He leído y aceptado condiciones de
+            <a href="#" (click)="openPrivacidadModal($event)">privacidad de datos</a>.
           </mat-checkbox>
         </div>
       </div>

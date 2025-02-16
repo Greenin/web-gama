@@ -1,0 +1,12 @@
+h2 {
+    color: #3f51b5; // Color del título
+  }
+  
+  mat-dialog-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  mat-dialog-actions {
+    justify-content: flex-end; // Alinea el botón a la derecha
+  }

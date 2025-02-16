@@ -8,7 +8,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { PrivacyModalComponent } from './privacy-modal/privacy-modal/privacy-modal.component';
+
+
 @Component({
   selector: 'app-unete-misiones',
   standalone: true,
@@ -33,7 +36,11 @@ export class UneteMisionesComponent {
 
   misioneroForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(
+      private fb: FormBuilder, 
+      private http: HttpClient,
+      private dialog: MatDialog
+    ) {
     this.misioneroForm = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
@@ -67,6 +74,13 @@ export class UneteMisionesComponent {
         }
       );
     }
+  }
+
+  openPrivacidadModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(PrivacyModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+    });
   }
 
 }
