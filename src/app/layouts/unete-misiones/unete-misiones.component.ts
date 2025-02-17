@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PrivacyModalComponent } from '../../shared/privacy-modal/privacy-modal.component';
+import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-us-modal.component';
 
 
 @Component({
@@ -79,6 +80,13 @@ export class UneteMisionesComponent {
   openPrivacidadModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
     this.dialog.open(PrivacyModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+    });
+  }
+
+  openContactUsModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(ContactUsModalComponent, {
       width: '600px', // Ajusta el ancho del modal
     });
   }

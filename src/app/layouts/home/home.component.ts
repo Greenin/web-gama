@@ -107,9 +107,7 @@ Atentamente, Global Awakening Movement Association.
   openPrayerRequestModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
     this.dialog.open(PrayerRequestModalComponent, {
-      width: '90vw', // Ajusta el ancho del modal para móviles
-      maxWidth: '90vw', // Evita que el modal sea demasiado ancho
-      maxHeight: '90vh', // Ajusta la altura máxima para móviles
+      width: '600px', // Ajusta el ancho del modal
     });
   }
 
