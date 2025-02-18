@@ -12,7 +12,7 @@
         </a>
       </li>
       <li id="headerSpace">&nbsp;</li>
-      <li><a href="#identidad">QUIÉNES SOMOS</a></li>
+      <li><a href="#identity">QUIÉNES SOMOS</a></li>
       <li><a href="#speakers" >EL EQUIPO</a></li>
       <li><a href="#uneteMisiones" >ÚNETE A LAS MISIONES</a></li>
       <!-- <li><span id="normalScreenMisionesSpan" (click)="irAUneteMisiones()">ÚNETE A LAS MISIONES</span></li> -->
@@ -44,7 +44,7 @@
       <div class="col" id="cellPhoneHeaderButtonDiv">
         <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneHeaderButton"><mat-icon>menu</mat-icon></button>
         <mat-menu id="cellPhoneMenu" #menu="matMenu">
-          <button mat-menu-item><a href="#identidad">QUIÉNES SOMOS</a></button>
+          <button mat-menu-item><a href="#identity">QUIÉNES SOMOS</a></button>
           <button mat-menu-item><a href="#speakers">EL EQUIPO</a></button>
           <button mat-menu-item><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
           <!-- <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button> -->
@@ -66,7 +66,7 @@
   <!--============== IDENTITY ============== -->
   <!--======================================== -->
 
-  <section id="identidad">
+  <section id="identity">
     <div class="container-fluid">
       <div class="row">
         <div id="significadoGAMA" class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
@@ -147,7 +147,7 @@
   <!--=============== SPEAKERS =============== -->
   <!--======================================== -->
 
-  <section id="speakers" class="mt-4">
+  <section id="speakers" class="mt-4 mb-2">
     <div class="container">
       <div class="row">
           <div class ="col text-center text-uppercase">
@@ -213,25 +213,18 @@
   <!--======================================== -->
   <!--========= UNETE A LAS MISIONES ========= -->
   <!--======================================== -->
-  <section id="uneteMisiones" class="pt-3 pb-3">
+  <section id="uneteMisiones" class="pt-5 pb-5">
     <div class="container">
       <!-- <div class="row"> -->
         <div class="col text-uppercase text-center">
           <small>únete a las </small>
           <h2>MISIONES</h2>
         </div>
-      <!-- </div> -->
-      <!-- <div class="row mb-2"> -->
-        <!-- <div class="col text-center"> -->
           <p>
           <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
           Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
           </p>
           <br>
-         <!-- </div> -->
-      <!-- </div> -->
-      <!-- <div class="row"> -->
-        <!-- <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2"> -->
           
           <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()">
             <!-- Nombre -->
@@ -296,9 +289,6 @@
           Copyright &copy; 2025 - GAMA
         </div> 
       </div>
-      <!-- <div class="col-6"></div> -->
-      <!-- <div class="col-6"> -->
-      <!-- </div> -->
     </div>
   </footer>
 
