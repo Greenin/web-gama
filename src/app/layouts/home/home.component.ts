@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -37,6 +37,9 @@ import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-u
 export class HomeComponent {
 
   // title = 'web-gama';
+  
+  private timeoutId: any;
+
 
   misioneroForm: FormGroup;
   enviadoConExito: boolean = false;
@@ -97,6 +100,8 @@ Atentamente, Global Awakening Movement Association.
     console.log('Cuerpo:', cuerpo);
   }
 
+
+
   openPrivacidadModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
     this.dialog.open(PrivacyModalComponent, {
@@ -117,6 +122,23 @@ Atentamente, Global Awakening Movement Association.
       width: '600px', // Ajusta el ancho del modal
     });
   }
+
+
+
+  // @HostListener('window:scroll', [])
+  // onScroll(): void {
+  //   const textElement = document.querySelector('.highlightText');
+
+  //   if (textElement) {
+  //     textElement.classList.add('vibrating');
+
+  //     // Elimina la vibración después de 1 segundo
+  //     clearTimeout(this.timeoutId);
+  //     this.timeoutId = setTimeout(() => {
+  //       textElement.classList.remove('vibrating');
+  //     }, 200);
+  //   }
+  // }
 
 }
 

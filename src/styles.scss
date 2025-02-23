@@ -2,52 +2,6 @@
 
 
 
-@font-face{
-	font-family: "DMSerifText-Regular";
-	src: url("/assets/fonts/DMSerifText-Regular.ttf")
-}
-
-@font-face{
-	font-family: "YesevaOne-Regular";
-	
-	src: url("/assets/fonts/YesevaOne-Regular.ttf")
-}
-
-@font-face{
-	font-family: "LibreBodoni-VariableFont_wght";
-	src: url("/assets/fonts/LibreBodoni-VariableFont_wght.ttf")
-}
-
-@font-face{
-	font-family: "Vidaloka-Regular";
-	src: url("/assets/fonts/Vidaloka-Regular.ttf")
-}
-
-@font-face{
-	font-family: "PlayfairDisplaySC-Regular";
-	src: url("/assets/fonts/PlayfairDisplaySC-Regular.ttf")
-}
-
-@font-face{
-	font-family: "OpenSans-Regular";
-	src: url("/assets/fonts/OpenSans-Regular.ttf")
-}
-
-@font-face{
-	font-family: "OpenSans-Semibold";
-	src: url("/assets/fonts/OpenSans-Semibold.ttf")
-}
-
-@font-face{
-	font-family: "OpenSans-Bold";
-	src: url("/assets/fonts/OpenSans-Semibold.ttf")
-}
-
-@font-face{
-	font-family: "OpenSans-ExtraBold";
-	src: url("/assets/fonts/OpenSans-ExtraBold.ttf")
-}
-
 
 /* Scroll bar hidden Edge y Chrome */
 body::-webkit-scrollbar{
@@ -69,627 +23,66 @@ body {
 
 
 
+.highlightText {
+	// color: #f08913;
 
-//======================================== //
-//========= NORMAL SCREEN STYLE ========== //
-//======================================== //
+	// font-weight: bold;
 
-@media only screen and (min-width: 768px) {
+	// background-color: #FFC107; /* Amarillo tipo "warning" de Bootstrap */
+    // padding: 2px 5px;
+    // border-radius: 3px;
 
-	header {
-		background-color:#F5F5DC;
-		font-family: Arial, Helvetica, sans-serif !important;
-		font-size: 14px; //***** 
-    	font-weight: normal;
-		color: rgb(80, 173, 17);
-		line-height: 80px;
-    	max-height: 80px;
-	}
+	// color: #a7563e; /* Naranja fuerte */
+    // font-weight: bold;
 
+	// text-decoration: underline;
+    // text-decoration-color: #4CAF50; /* Verde vibrante */
+    // font-weight: bold;
 
-	#headerIconText {
-    	padding-left: 10px;
-	}
+	color: #a7563e; /* Naranja fuerte */
+	text-decoration: underline;
+    text-decoration-color: #4CAF50; /* Verde vibrante */
+	transition: text-shadow 0.3s ease-in-out;
 
+	//Vibracion
+	// display: inline-block;
+	// transition: transform 0.1s ease-in-out;
+}
 
-	#normalScreenHeaderLogo {
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-	}
-
-	#normalScreenLogoImg {
-		width: 70px;
-		height: 70px;
-	}
-
-
-	#normalScreenLogoText {
-		display: block;
-		max-width: 140px;
-		text-align: left;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 1.2;
-		color: #757575; /* Cambia según tu diseño */
-		margin-left: 10px; /* Espacio entre logo y texto */
-		word-wrap: break-word; /* Asegura que el texto respete el ancho */
-	}
-
-
-	#headerSpace {
-		min-width: 10%;
-		// height: 70px;
-	}
-
-
-	#normal-screen-team-logo-gama {
-		margin: 0px;
-		padding-top: 10px;
-		padding: 0px;
-		width: 40vw;
-	}
-
-
-
-	header ul {
-		width: 100%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
-
-
-	header ul li {
-		display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
-		align-items: center; /* Centra los elementos en el eje vertical */
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-	}
-
-
-	header a {
-		display: flex;
-		align-items: center; /* Centra el texto dentro del enlace */
-		padding: 0 30px; /* Reduce el padding lateral si es necesario */
-		height: 100%; /* Hace que los enlaces ocupen toda la altura */
-		text-decoration: none;
-		color: inherit;
-		transition: all 300ms;
-	}
-
-
-	header a:hover, .actived{
-		transform: scale(1.25,1.25);
-	}
-
-
-
-	#normalScreenMisionesSpan {
-		cursor: pointer;
-		display: flex;
-		align-items: center; /* Centra el texto dentro del enlace */
-		padding: 0 30px; /* Reduce el padding lateral si es necesario */
-		height: 100%; /* Hace que los enlaces ocupen toda la altura */
-		text-decoration: none;
-		color: inherit;
-		transition: all 300ms;
-	}
-
-	#normalScreenMisionesSpan:hover{
-		transform: scale(1.25,1.25);
-	}
-
-
-	//=========== NORMAL SCREEN SUBSCRIPTIONS HEADER ===========//
-
-	#normalScreenSubscriptionsHeader {
-		background-color: #F5F5DC;
-		// font-family: OpenSans-Regular !important;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-					// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-		font-size: 14px; 
-		color: rgb(80, 173, 17);
-		line-height: 70px;
-	}
-
-
-	#normalScreenSubscriptionsHeaderLogo {
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-		font-family: Arial, Helvetica, sans-serif !important;
-	}
-
-
-	#normalScreenHeaderSubscriptionsTitle {
-		font-size: 27px;
-		font-family: OpenSans-Regular !important;
-    	font-weight: normal;
-		letter-spacing: 0.1em;
-	}
-
-	
-	#significadoGAMA {
-		padding-left: 5%;
-	}
-
-
-
-
-	//=========== NORMAL SCREEN PRESENTATION ===========//
-
-	#spaceBetweenHeaderPresentation {
-		height:100px;
-	}
-
-	#home {
-		background-color: rgb(108, 175, 255);
-		// background: url("/assets/img/bg29.jpg");
-		// background-attachment: fixed;
-		background-size: cover; //*******
-		// background-repeat: no-repeat;
-		// background-position: auto;
-	}
-
-
-	#presentation {
-		// width: 60%;
-		margin: 0px auto;
-		// text-align: left;
-		margin-top: 20px;
-		// margin-bottom: 70px;
-		// margin-left: 20px;	
-	}
-
-	#helloIntroText{
-		font-size: 25px;
-		color: gray;
-		margin-top: 5px;
-		margin-bottom: 25px;
-		padding-left: 5px;
-		// font-family: PlayfairDisplaySC-Regular !important;
-		// font-family: Vidaloka-Regular !important;
-		// font-family: LibreBodoni-VariableFont_wght !important;
-		font-family: DMSerifText-Regular !important;  //*****
-		// font-family: OpenSans-Regular !important; 
-		// font-family: YesevaOne-Regular !important;
-		// font-family: 'Courier New', Courier, monospace !important;
-		// font-weight: bold;
-	}
-
-	#nameIntroText{
-		// font-family: "finger";
-		font-size: 60px;
-		// border-bottom: 1px solid #ccc;
-		padding-bottom: 15px;
-		// font-family: "Helvetica";
-		// font-family: "Exo 2", sans-serif;
-		// font-family: Montserrat;
-		// font-family: var(--bs-font-sans-serif) !important;
-		// font-family: var(--bs-font-monospace) !important;
-		// font-family:  PlayfairDisplaySC-Regular !important;
-		// font-family:  Vidaloka-Regular !important;
-		// font-family:  LibreBodoni-VariableFont_wght !important;
-		font-family:  DMSerifText-Regular!important; //*****
-		// font-family:  YesevaOne-Regular !important;
-		// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-		// font-weight: bold;
-		// text-transform: uppercase;
-		color: white;
-		// color: rgb(58, 107, 182);
-	}
-
-	#positionIntroText{
-		// margin-top: 15px;
-		margin-bottom: 5px;
-		padding-left: 5px;
-		// font-family: PlayfairDisplaySC-Regular !important;
-		// font-family: Vidaloka-Regular !important;
-		// font-family: LibreBodoni-VariableFont_wght !important;
-		font-family: DMSerifText-Regular !important; //*****
-		// font-family: OpenSans-RegularSans-Regular !important; 
-		// font-family: YesevaOne-Regular !important;
-		// font-family: 'Courier New', Courier, monospace !important;
-		// font-weight: bold;
-		font-size: 25px;
-	}
-
-
-	#spaceBetweenPresentationTextDescAbout {
-		height: 300px;
-	}
-
-
-	//=========== NORMAL SCREEN ABOUT-ME ===========//
-
-	#spaceBetweenPresentationTextDescAboutPicture {
-		height: 70px;
-	}
-
-	#spaceBetweenPresentationPictureAboutDescText{
-		height: 30px;
-	}
-
-	#aboutDescTitle{
-		font-family: sans-serif !important;
-		// font-family: Vidaloka-Regular !important;
-		// font-family: LibreBodoni-VariableFont_wght !important;
-		// font-family: YesevaOne-Regular;
-		// font-family: DMSerifText-Regular;
-		// font-family: PlayfairDisplaySC-Regular;
-			// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-		font-size: 24px;
-		font-weight: bolder;
-	}
-
-	#aboutDesc{
-		font-family: OpenSans-Regular !important;
-		// font-size: 13px;
-
-	}
-
-	#aboutDescParagraph2{
-		font-family: OpenSans-Bold !important;
-		font-size: 18px;
-		// font-weight: bolder;
-	}
-
-
-	#spaceDescAboutFooter {
-		height: 500px;
-	}
-
-
-	//=========== NORMAL SCREEN PORTFOLIO ===========//
-
-
-
-	//=========== NORMAL SCREEN RESUME ===========//
-
-
-
-	//=========== NORMAL SCREEN CONTACT ===========//
-
-
-
-	//=========== NORMAL SCREEN FOOTER ===========//
-
-
-
-	// footer{
-	// 	width: 75%;
-	// 	margin: 0px auto;
-	// 	padding-top: 15px;
-	// 	padding-bottom: 15px;
-	// 	color: rgba(0, 0, 0, 0.5);
-	// }
-
-	footer {
-		background-color: #e3ebf4;
-		// border-top: 1px solid #f3ef11;
-		width: 100%;
-		margin: 0px auto;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		color: rgba(0, 0, 0, 0.5);
-	}
-
-
+.highlightText:hover {
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 
-
-
-
-//======================================== //
-//=========== CELL PHONE STYLE =========== //
-//======================================== //
-
-@media only screen and (max-width: 767px) {
-
-
-	//=========== CELL PHONE HEADER ===========//
-
-	#cellPhoneHeader {
-		background-color: #F5F5DC;
-		font-family: Arial, Helvetica, sans-serif !important;
-		font-size: 14px; 
-		color: rgb(80, 173, 17);
-		line-height: 70px;
-	}
-
-
-  	#cellPhoneHeaderRow {
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
-
-  	#cellPhoneHeaderLogoTit {
-    	max-width: 75%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding-left: 10px;
-	}
-
-
-	#cellPhoneHeaderButtonDiv {
-    	max-width: 25%;
-		text-align: right;
-		align-items: center; /* Centra los elementos en el eje vertical */
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-	}
-
-	#cellPhoneHeaderButton {
-		color: rgb(118, 204, 61);
-	}
-
-
-	#cellPhoneLogoHeader {
-		display: flex;
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-		padding-right: 0px;
-		padding-left: 10px;
-		height: inherit;
-		color: inherit;
-		// transition: all 300ms;
-	}
-
-	#cellPhoneLogoImg {
-		width: 60px;
-		height: 60px;
-	}
-
-
-	#cellPhoneLogoText {
-		display: block;
-		text-align: left;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 1.2;
-		color: #757575; /* Cambia según tu diseño */
-		margin-left: 10px; /* Espacio entre logo y texto */
-		word-wrap: break-word; /* Asegura que el texto respete el ancho */
-	}
-
-
-
-	#cell-phone-team-logo-gama {
-		margin: 0px;
-		padding-top: 0px;
-		margin-left:15%;
-		width: 70%;
-	}
-
-
-	
-	#cellPhoneScreenMisionesSpan {
-		padding-right: 10px;
-		height: inherit;
-		text-decoration: none;
-		color: inherit;
-		// transition: all 300ms;
-	}
-
-
-
-	//=========== CELL PHONE SUBSCRIPTIONS HEADER ===========//
-
-	#cellPhoneSubscriptionsHeader {
-		background-color: #F5F5DC;
-		font-family: Arial, Helvetica, sans-serif !important;
-		font-size: 14px; 
-		color: rgb(80, 173, 17);
-		line-height: 70px;
-	}
-
-
-  	#cellPhoneSubscriptionsHeaderRow {
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
-
-
-	#cellPhoneSubscriptionsHeaderLogoTit {
-    	max-width: 50%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-	}
-
-
-	
-	#cellPhoneSubscriptionsHeaderTitle {
-    	max-width: 50%;
-		text-align: right;
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-	}
-
-
-
-	#cellPhoneHeaderSubscriptionsTitle {
-		font-size: 16px;
-		// font-weight: bold;
-		// font-family: Arial, Helvetica, sans-serif !important;
-    	// font-weight: normal;
-	}
-
-
-
-	#significadoGAMA {
-		padding-left: 5%;
-		margin-top: 20px;
-	}
-
-
-	//=========== CELL PHONE PRESENTATION ===========//
-
-	#spaceBetweenHeaderPresentation{
-		height:20px;
-	}
-
-
-	#home {
-		background-color: rgb(108, 175, 255);
-		background-size: cover; 
-	}
-
-	#presentation{
-		margin: 0px auto;
-		margin-top: 20px;
-	}
-
-
-	#helloIntroText{
-		font-size: 25px;
-		color: gray;
-		margin-top: 5px;
-		margin-bottom: 25px;
-		padding-left: 5px;
-		font-family: DMSerifText-Regular !important;
-	}
-
-	#nameIntroText{
-		font-size: 50px;
-		padding-bottom: 15px;
-		font-family:  DMSerifText-Regular!important;
-		color: white;
-	}
-
-	#positionIntroText{
-		margin-bottom: 5px;
-		padding-left: 5px;
-		font-family: DMSerifText-Regular !important; 
-		font-size: 25px;
-	}
-
-
-	#spaceBetweenPresentationTextDescAbout {
-		height: 60px;
-	}
-
-
-	#spaceBetweenPresentationPictureDescAboutText{
-		height: 30px;
-	}
-
-
-	//=========== CELL PHONE ABOUT-ME ===========//
-
-	#spaceBetweenPresentationTextDescAboutPicture {
-		height: 30px;
-	}
-
-	#aboutDescTitle{
-		font-family: OpenSans-Bold !important;
-		font-size: 20px;
-		// font-weight: bolder;
-	}
-
-	#aboutDesc{
-		font-family: OpenSans-Regular !important;
-		// padding-left: 40px;
-		// padding-right: 40px;
-	}
-
-	#aboutDescParagraph2{
-		font-family: OpenSans-Bold !important;
-		font-size: 18px;
-		// font-weight: bolder;
-	}
-
-	#spaceBetweenPresentationPictureAboutDescText{
-		height: 30px;
-	}
-
-
-	#spaceDescAboutFooter {
-		height: 500px;
-	}
-
-
-//=========== CELL PHONE PORTFOLIO ===========//
-
-
-
-//=========== CELL PHONE RESUME ===========//
-
-
-
-//=========== CELL PHONE CONTACT ===========//
-
-
-
-//=========== CELL PHONE FOOTER ===========//
-
-
-// footer {
-//   width: 75%;
-//   margin: 0px auto;
-//   padding-top: 15px;
-//   padding-bottom: 15px;
-//   color: rgba(0, 0, 0, 0.5);
+// Truco para detectar el scroll y activar la animación
+// .vibrating {
+// 	animation: vibrate 0.2s infinite alternate ease-in-out;
+// }
+  
+// @keyframes vibrate {
+//     0% { transform: translate(0, 0); }
+//     25% { transform: translate(-1px, 1px); }
+//     50% { transform: translate(1px, -1px); }
+//     75% { transform: translate(-1px, -1px); }
+//     100% { transform: translate(1px, 1px); }
 // }
 
 
-	footer{
-		background-color: #e3ebf4;
-		// border-top: 1px solid #f3ef11;
-		width: 100%;
-		margin: 0px auto;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		color: rgba(0, 0, 0, 0.5);
-	}
-	
-
-}
 
 
 
 
+// .navbar-dark .navbar-nav .active > .nav-link,
+// .navbar-dark .navbar-nav .nav-link.active,
+// .navbar-dark .navbar-nav .nav-link.show,
+// .navbar-dark .navbar-nav .show > .nav-link {
+//   color: #fece15;
+//   font-weight: bold;
+// }
 
-.navbar-dark .navbar-nav .active > .nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show > .nav-link {
-  color: #fece15;
-  font-weight: bold;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #88af27;
-}
+// .navbar-dark .navbar-nav .nav-link {
+//   color: #88af27;
+// }
 /*
 #navbar .nav-item .nav-link{
 	color: purple;
@@ -712,9 +105,9 @@ body {
 //   }
 // }
 
-.text-primary {
-  color: #88af27 !important;
-}
+// .text-primary {
+//   color: #88af27 !important;
+// }
 
 /*Botones generales*/
 
@@ -727,126 +120,126 @@ body {
 //   color: white;
 // }
 
-.modal-content {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #ffcc31;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-}
+// .modal-content {
+//   position: relative;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-direction: column;
+//   flex-direction: column;
+//   width: 100%;
+//   pointer-events: auto;
+//   background-color: #ffcc31;
+//   background-clip: padding-box;
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   border-radius: 0.3rem;
+//   outline: 0;
+// }
 
-.modal-footer {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0.75rem;
-  border-top: none;
-  border-bottom-right-radius: calc(0.3rem - 1px);
-  border-bottom-left-radius: calc(0.3rem - 1px);
-}
+// .modal-footer {
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-wrap: wrap;
+//   flex-wrap: wrap;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   -ms-flex-pack: end;
+//   justify-content: flex-end;
+//   padding: 0.75rem;
+//   border-top: none;
+//   border-bottom-right-radius: calc(0.3rem - 1px);
+//   border-bottom-left-radius: calc(0.3rem - 1px);
+// }
 
-.modal-header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: none;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
-}
+// .modal-header {
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-align: start;
+//   align-items: flex-start;
+//   -ms-flex-pack: justify;
+//   justify-content: space-between;
+//   padding: 1rem 1rem;
+//   border-bottom: none;
+//   border-top-left-radius: calc(0.3rem - 1px);
+//   border-top-right-radius: calc(0.3rem - 1px);
+// }
 
-.btn-cancelar {
-  background-color: #e77137;
-  color: white;
-  border-color: transparent;
-}
+// .btn-cancelar {
+//   background-color: #e77137;
+//   color: white;
+//   border-color: transparent;
+// }
 
-.btn-cancelar:hover {
-  background-color: #c74808;
-  color: #fffb04;
-  border-color: transparent;
-}
+// .btn-cancelar:hover {
+//   background-color: #c74808;
+//   color: #fffb04;
+//   border-color: transparent;
+// }
 
-.btn-platzi {
-  background-color: #88af27;
-  color: white;
-}
+// .btn-platzi {
+//   background-color: #88af27;
+//   color: white;
+// }
 
-.btn-platzi:hover {
-  background-color: #638d00;
-  color: white;
-}
+// .btn-platzi:hover {
+//   background-color: #638d00;
+//   color: white;
+// }
 
-.card {
-  height: 100%;
-}
+// .card {
+//   height: 100%;
+// }
 
-.card img {
-  height: 348px;
-  object-fit: cover;
-}
+// .card img {
+//   height: 348px;
+//   object-fit: cover;
+// }
 
-#seminario-announcement-banner {
-  width: 100vw;
-  height: 95%;
-}
+// #seminario-announcement-banner {
+//   width: 100vw;
+//   height: 95%;
+// }
 
-#place-time {
-  background-color: #343a40;
-  color: white;
-}
+// #place-time {
+//   background-color: #343a40;
+//   color: white;
+// }
 
-#place-time img {
-  max-width: 100%;
-}
+// #place-time img {
+//   max-width: 100%;
+// }
 
-#badgeRuby {
-  background-color: red;
-  color: white;
-}
+// #badgeRuby {
+//   background-color: red;
+//   color: white;
+// }
 
-#tour .carousel-inner img {
-  max-height: 70vh;
-  object-fit: cover;
-  filter: grayscale(70%);
-}
+// #tour .carousel-inner img {
+//   max-height: 70vh;
+//   object-fit: cover;
+//   filter: grayscale(70%);
+// }
 
-#carousel {
-  position: relative;
-}
+// #carousel {
+//   position: relative;
+// }
 
-#carousel .overlay {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+// #carousel .overlay {
+//   z-index: 1;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
 
-  background-color: rgba(0, 0, 0, 0.5);
+//   background-color: rgba(0, 0, 0, 0.5);
 
-  color: white;
-}
+//   color: white;
+// }
 
-#carousel .overlay .container,
-#carousel .overlay .row {
-  height: 100%;
-}
+// #carousel .overlay .container,
+// #carousel .overlay .row {
+//   height: 100%;
+// }
 
 /*
 body {

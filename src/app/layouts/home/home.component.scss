@@ -1,4 +1,631 @@
-#uneteMisiones {
+
+@font-face{
+	font-family: "DMSerifText-Regular";
+	src: url("/assets/fonts/DMSerifText-Regular.ttf")
+}
+
+@font-face{
+	font-family: "YesevaOne-Regular";
+	
+	src: url("/assets/fonts/YesevaOne-Regular.ttf")
+}
+
+@font-face{
+	font-family: "LibreBodoni-VariableFont_wght";
+	src: url("/assets/fonts/LibreBodoni-VariableFont_wght.ttf")
+}
+
+@font-face{
+	font-family: "Vidaloka-Regular";
+	src: url("/assets/fonts/Vidaloka-Regular.ttf")
+}
+
+@font-face{
+	font-family: "PlayfairDisplaySC-Regular";
+	src: url("/assets/fonts/PlayfairDisplaySC-Regular.ttf")
+}
+
+// @font-face{
+// 	font-family: "OpenSans-Regular";
+// 	src: url("/assets/fonts/OpenSans-Regular.ttf")
+// }
+
+@font-face{
+	font-family: "OpenSans-Semibold";
+	src: url("/assets/fonts/OpenSans-Semibold.ttf")
+}
+
+@font-face{
+	font-family: "OpenSans-Bold";
+	src: url("/assets/fonts/OpenSans-Semibold.ttf")
+}
+
+@font-face{
+	font-family: "OpenSans-ExtraBold";
+	src: url("/assets/fonts/OpenSans-ExtraBold.ttf")
+}
+
+
+
+
+//======================================== //
+//========= NORMAL SCREEN STYLE ========== //
+//======================================== //
+
+@media only screen and (min-width: 768px) {
+
+	header {
+		background-color:#F5F5DC;
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size: 14px; //***** 
+    	font-weight: normal;
+		color: rgb(80, 173, 17);
+		line-height: 80px;
+    	max-height: 80px;
+	}
+
+
+	#headerIconText {
+    	padding-left: 10px;
+	}
+
+
+	#normalScreenHeaderLogo {
+		align-items: center; /* Centra verticalmente */
+		text-decoration: none;
+	}
+
+	#normalScreenLogoImg {
+		width: 70px;
+		height: 70px;
+	}
+
+
+	#normalScreenLogoText {
+		display: block;
+		max-width: 140px;
+		text-align: left;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 1.2;
+		color: #757575; /* Cambia según tu diseño */
+		margin-left: 10px; /* Espacio entre logo y texto */
+		word-wrap: break-word; /* Asegura que el texto respete el ancho */
+	}
+
+
+	#headerSpace {
+		min-width: 10%;
+		// height: 70px;
+	}
+
+
+	#normal-screen-team-logo-gama {
+		margin: 0px;
+		padding-top: 10px;
+		padding: 0px;
+		width: 37vw;
+	}
+
+
+
+	header ul {
+		width: 100%;
+		display: flex; /* Usa flexbox para alinear los elementos */
+		align-items: center; /* Centra verticalmente los elementos */
+		justify-content: flex-start; /* Alinea los elementos a la izquierda */
+		padding: 0;
+	}
+
+
+	header ul li {
+		display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
+		align-items: center; /* Centra los elementos en el eje vertical */
+		margin: 0;
+		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+	}
+
+
+	header a {
+		display: flex;
+		align-items: center; /* Centra el texto dentro del enlace */
+		padding: 0 30px; /* Reduce el padding lateral si es necesario */
+		height: 100%; /* Hace que los enlaces ocupen toda la altura */
+		text-decoration: none;
+		color: inherit;
+		transition: all 300ms;
+	}
+
+
+	header a:hover, .actived{
+		transform: scale(1.25,1.25);
+	}
+
+
+
+	#normalScreenMisionesSpan {
+		cursor: pointer;
+		display: flex;
+		align-items: center; /* Centra el texto dentro del enlace */
+		padding: 0 30px; /* Reduce el padding lateral si es necesario */
+		height: 100%; /* Hace que los enlaces ocupen toda la altura */
+		text-decoration: none;
+		color: inherit;
+		transition: all 300ms;
+	}
+
+	#normalScreenMisionesSpan:hover{
+		transform: scale(1.25,1.25);
+	}
+
+
+	//=========== NORMAL SCREEN SUBSCRIPTIONS HEADER ===========//
+
+	#normalScreenSubscriptionsHeader {
+		background-color: #F5F5DC;
+		// font-family: OpenSans-Regular !important;
+		// font-weight: normal;
+		// font-family: YesevaOne-Regula !important;
+		// font-family: Arial, Helvetica, sans-serif !important;
+					// font-family: monospace !important;
+		// font-family: cursive !important;
+		// font-family: OpenSans-Regular !important;
+		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+		font-size: 14px; 
+		color: rgb(80, 173, 17);
+		line-height: 70px;
+	}
+
+
+	#normalScreenSubscriptionsHeaderLogo {
+		align-items: center; /* Centra verticalmente */
+		text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif !important;
+	}
+
+
+	#normalScreenHeaderSubscriptionsTitle {
+		font-size: 27px;
+		font-family: OpenSans-Regular !important;
+    	font-weight: normal;
+		letter-spacing: 0.1em;
+	}
+
+	
+	#significadoGAMA {
+		padding-left: 5%;
+	}
+
+
+
+
+  #identity {
+
+    #identityTitleFirstLine {
+      font-size: 1.5rem;
+      color: #1e2757;
+      letter-spacing: 3px;
+      margin: 0 auto;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+		// font-weight: normal;
+		// font-family: YesevaOne-Regula !important;
+		// font-family: Arial, Helvetica, sans-serif !important;
+					// font-family: monospace !important;
+		// font-family: cursive !important;
+		// font-family: OpenSans-Regular !important;
+		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+		font-family: serif !important;
+		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    } 
+
+    #identitySpaceBeetweenLogoAndText {
+      height: 20px;
+    }
+
+    hr {
+      padding: 0px 0px 22px 0px;
+      margin: 0px 30px;
+    }
+
+  } //end identity  
+  
+  #speakers {
+
+    #speakersSpaceAtBeginning {
+      height: 30px;
+    }
+
+    #speakerTitleFirstLine {
+      font-family: serif !important;
+      font-size: 1rem;
+      color: #3f51b5;
+      letter-spacing: 3px;
+      margin: 0 auto;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    } 
+
+    #speakertitleSecondLine {
+      font-family: serif !important;
+      font-size: 2rem;
+      color: var(--bs-dark-rgb);
+      letter-spacing: 3px;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      margin-bottom: 40px;
+    } 
+
+    card {
+
+      height: 100%;
+
+      #valerioPhoto {
+        max-width: 354px;
+        max-height: 357px;
+        min-width: 354px;
+        min-height: 357px;
+      }
+      #guillermoPhoto {
+        max-width: 354px;
+        max-height: 357px;
+        min-width: 354px;
+        min-height: 357px;
+      }
+
+      .custom-badge {
+        display: inline-block;
+        padding: 1px 5px;
+        font-size: 13px;
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        margin-right: 5px;
+        white-space: nowrap;
+      }
+
+      .card-body-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      hr {
+        margin: 8px 0px 15px 0px;
+      }
+
+    } //end card
+
+  } //end speakers
+
+
+  #uneteMisiones {
+
+      padding: 40px 0;
+      background-color: #f9f9f9;
+
+      #uneteMisionesTitleFirstLine {
+        font-size: 1rem;
+        color: #3f51b5;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      } 
+
+      #uneteMisionesTitleSecondLine {
+        font-size: 1.3rem;
+        color: #3f51b5;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      } 
+    
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+    
+      // h2 {
+      //   text-align: center;
+      //   color: #3f51b5;
+      //   margin-bottom: 20px;
+      // }
+    
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    
+      form {
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      
+          mat-form-field {
+            width: 100%;
+          }
+      
+          mat-checkbox {
+            // margin-bottom: 20px;
+      
+            a {
+              color: #3f51b5;
+              text-decoration: underline;
+              cursor: pointer;
+      
+              &:hover {
+                color: #283593;
+              }
+            }
+          }
+      
+          button[mat-raised-button] {
+            margin-top: 20px;
+          }
+      
+          .mensaje-exito {
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+          }
+
+      } //end form
+
+    
+  } //end uneteMisiones
+
+
+
+
+	footer {
+		background-color: #e3ebf4;
+		// border-top: 1px solid #f3ef11;
+		width: 100%;
+		margin: 0px auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+
+}
+
+
+
+
+
+//======================================== //
+//=========== CELL PHONE STYLE =========== //
+//======================================== //
+
+@media only screen and (max-width: 767px) {
+
+
+	//=========== CELL PHONE HEADER ===========//
+
+	#cellPhoneHeader {
+		background-color: #F5F5DC;
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size: 14px; 
+		color: rgb(80, 173, 17);
+		line-height: 70px;
+	}
+
+
+  	#cellPhoneHeaderRow {
+		display: flex; /* Usa flexbox para alinear los elementos */
+		align-items: center; /* Centra verticalmente los elementos */
+		justify-content: flex-start; /* Alinea los elementos a la izquierda */
+		padding: 0;
+	}
+
+  	#cellPhoneHeaderLogoTit {
+    	max-width: 75%;
+		display: flex; /* Usa flexbox para alinear los elementos */
+		align-items: center; /* Centra verticalmente los elementos */
+		justify-content: flex-start; /* Alinea los elementos a la izquierda */
+		padding-left: 10px;
+	}
+
+
+	#cellPhoneHeaderButtonDiv {
+    	max-width: 25%;
+		text-align: right;
+		align-items: center; /* Centra los elementos en el eje vertical */
+		margin: 0;
+		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+	}
+
+	#cellPhoneHeaderButton {
+		color: rgb(118, 204, 61);
+	}
+
+
+	#cellPhoneLogoHeader {
+		display: flex;
+		align-items: center; /* Centra verticalmente */
+		text-decoration: none;
+		padding-right: 0px;
+		padding-left: 10px;
+		height: inherit;
+		color: inherit;
+		// transition: all 300ms;
+	}
+
+	#cellPhoneLogoImg {
+		width: 60px;
+		height: 60px;
+	}
+
+
+	#cellPhoneLogoText {
+		display: block;
+		text-align: left;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 1.2;
+		color: #757575; /* Cambia según tu diseño */
+		margin-left: 10px; /* Espacio entre logo y texto */
+		word-wrap: break-word; /* Asegura que el texto respete el ancho */
+	}
+
+
+
+	#cell-phone-team-logo-gama {
+		margin: 0px;
+		padding-top: 0px;
+		margin-left:15%;
+		width: 70%;
+	}
+
+
+	
+	#cellPhoneScreenMisionesSpan {
+		padding-right: 10px;
+		height: inherit;
+		text-decoration: none;
+		color: inherit;
+		// transition: all 300ms;
+	}
+
+
+
+	//=========== CELL PHONE SUBSCRIPTIONS HEADER ===========//
+
+	#cellPhoneSubscriptionsHeader {
+		background-color: #F5F5DC;
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size: 14px; 
+		color: rgb(80, 173, 17);
+		line-height: 70px;
+	}
+
+
+  	#cellPhoneSubscriptionsHeaderRow {
+		display: flex; /* Usa flexbox para alinear los elementos */
+		align-items: center; /* Centra verticalmente los elementos */
+		justify-content: flex-start; /* Alinea los elementos a la izquierda */
+		padding: 0;
+	}
+
+
+	#cellPhoneSubscriptionsHeaderLogoTit {
+    	max-width: 50%;
+		display: flex; /* Usa flexbox para alinear los elementos */
+		align-items: center; /* Centra verticalmente los elementos */
+		justify-content: flex-start; /* Alinea los elementos a la izquierda */
+	}
+
+
+	
+	#cellPhoneSubscriptionsHeaderTitle {
+    	max-width: 50%;
+		text-align: right;
+		margin: 0;
+		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+	}
+
+
+
+	#cellPhoneHeaderSubscriptionsTitle {
+		font-size: 16px;
+		// font-weight: bold;
+		// font-family: Arial, Helvetica, sans-serif !important;
+    	// font-weight: normal;
+	}
+
+
+
+	#significadoGAMA {
+		padding-left: 5%;
+		margin-top: 20px;
+	}
+
+
+  #identity {
+
+    #identityTitleFirstLine {
+      font-size: 1.2rem;
+      color: #1e2757;
+      letter-spacing: 2px;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    } 
+
+    .identityComponent {
+      padding: 0px 12px;  
+    }
+
+    #identityVision {
+      padding-top: 40px;
+    }
+
+    #identityValues {
+      padding-bottom: 40px;
+    }
+
+
+    hr {
+      padding: 0px 0px 22px 0px;
+      margin: 0px 30px;
+    }
+
+  } //end identity
+  
+
+  #speakers {
+
+    card {
+
+      height: 100%;
+
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    
+
+
+      .custom-badge {
+        display: inline-block;
+        padding: 1px 5px;
+        font-size: 13px;
+        color: white;
+        border-radius: 4px;
+        text-align: center;
+        margin-right: 5px;
+        white-space: nowrap;
+      }
+
+      .card-body-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      hr {
+        margin: 8px 0px 15px 0px;
+      }
+
+    } //end card
+
+  } //end speakers
+
+
+
+  #uneteMisiones {
+
     padding: 40px 0;
     background-color: #f9f9f9;
   
@@ -8,11 +635,11 @@
       padding: 0 20px;
     }
   
-    h2 {
-      text-align: center;
-      color: #3f51b5;
-      margin-bottom: 20px;
-    }
+    // h2 {
+    //   text-align: center;
+    //   color: #3f51b5;
+    //   margin-bottom: 20px;
+    // }
   
     p {
       text-align: center;
@@ -20,6 +647,7 @@
     }
   
     form {
+
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -52,5 +680,23 @@
         margin-top: 20px;
         font-weight: bold;
       }
-    }
-  }
+
+    } //end form
+    
+  } //end uneteMisiones
+
+
+	footer{
+		background-color: #e3ebf4;
+		// border-top: 1px solid #f3ef11;
+		width: 100%;
+		margin: 0px auto;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: rgba(0, 0, 0, 0.5);
+	}
+	
+
+}
+
+
