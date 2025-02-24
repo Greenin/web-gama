@@ -3,7 +3,7 @@
   <!--========= NORMAL SCREEN HEADER ========= -->
   <!--======================================== -->
 
-  <header class="d-none d-md-block">
+  <header class="normalScreenHeaderClass">
     <ul>
       <li id="headerIconText">      
         <a id="normalScreenHeaderLogo" href="#">
@@ -30,7 +30,7 @@
   <!--======================================== -->
   <!--========== CELL PHONE HEADER  ========== -->
   <!--======================================== -->
-  <header id="cellPhoneHeader" class="d-block d-md-none">
+  <header class="cellPhoneHeaderClass">
     <div id="cellPhoneHeaderRow" class="row">
 
       <div class="col" id="cellPhoneHeaderLogoTit">
@@ -47,9 +47,7 @@
           <button mat-menu-item><a href="#identity">QUIÉNES SOMOS</a></button>
           <button mat-menu-item><a href="#speakers">EL EQUIPO</a></button>
           <button mat-menu-item><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
-          <!-- <button mat-menu-item><span id="cellPhoneScreenMisionesSpan" (click)="irAUneteMisiones()" class="link-span text-primary text-decoration-underline">ÚNETE A LAS MISIONES</span></button> -->
           <button mat-menu-item>
-            <!-- <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a> -->
             <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
               PETICIÓN DE ORACIÓN
             </a>
@@ -63,7 +61,7 @@
 
 
   <!--======================================== -->
-  <!--============== IDENTITY ============== -->
+  <!--=============== IDENTITY =============== -->
   <!--======================================== -->
 
   <section id="identity">
@@ -83,14 +81,14 @@
         </div>
          
         <!--========= NORMAL SCREEN IDENTITY ========= -->
-        <div class="col-md-12 col-lg-6 pb-4 d-none d-md-block"> 
-          <img id="normal-screen-team-logo-gama" class="" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
-        </div> 
+        <!-- <div class="col-md-12 col-lg-6 pb-4 normalScreenImgClass"> 
+          <img id="normalScreenTeamLogoGama" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
+        </div>  -->
 
         <!--========== CELL PHONE IDENTITY  ========== -->
-        <div class="col-md-12 col-lg-6 pb-4 d-block d-md-none"> 
-          <img id="cell-phone-team-logo-gama" class="" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
-        </div> 
+        <div class="col-md-12 col-lg-6 pb-4 text-center"> 
+          <img id="teamLogoGama" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
+        </div>
         
         <div id="identitySpaceBeetweenLogoAndText" class="row"></div>
       
@@ -155,11 +153,22 @@
   <section id="speakers" class="mt-4 mb-3">
     <div class="container">
       <div id="speakersSpaceAtBeginning" class="row"></div>
-      <div class ="col text-center">
+
+
+      <!--========= NORMAL SCREEN IDENTITY ========= -->
+      <div class ="col text-center d-none d-md-block">
           <p id="speakerTitleFirstLine">CONOCE A LOS</p> 
           <br>
           <p id="speakertitleSecondLine">MIEMBROS DEL EQUIPO</p>
+      </div> 
+
+      <!--========== CELL PHONE IDENTITY  ========== -->
+      <div class ="col text-center d-block d-md-none">
+          <p id="speakerTitleFirstLine">CONOCE AL</p> 
+          <br>
+          <p id="speakertitleSecondLine">EQUIPO</p>
       </div>
+
       <div id="speakersCardRow" class="row">
         <div id="speakersCol" class="col-md-0 col-lg-2"></div>
         <div class="col-md-6 col-lg-4 mb-4">
@@ -221,7 +230,7 @@
   <!--======================================== -->
   <section id="uneteMisiones" class="pt-5 pb-5">
     <div class="container">
-      <!-- <div class="row"> -->
+
           <div class="col">
             <p id="uneteMisionesTitleFirstLine">ÚNETE A LAS </p>
             <br>
@@ -229,7 +238,7 @@
           </div>
           <p id="uneteMisionesDescParagraph">
           <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
-          Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
+            Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
           </p>
           <br>
           
@@ -264,13 +273,25 @@
             </div>
       
             <!-- Mensaje de éxito -->
-            <div *ngIf="enviadoConExito" class="mensaje-exito">
-              Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a al electrónico indicado en unos minutos con el enlace web para seguir su proceso de suscripción. Muchas gracias.
+            <div *ngIf="enviadoConExito">
+              <div class="container mt-2">
+                <div class="alert alert-success text-dark fw-bold" role="alert">
+                  <!-- <span class="material-icons me-2">check_circle</span>  -->
+                  Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias.
+                </div>
+              </div>
             </div>
+            <!-- Mensaje de error -->
+            <div *ngIf="envioFallido">
+              <div class="container mt-2">
+                <div class="alert alert-danger text-dark fw-bold" role="alert">
+                  Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.
+                </div>
+              </div>
+            </div> 
+              
           </form>
 
-        <!-- </div> -->
-      <!-- </div> -->
     </div>
   </section>
 

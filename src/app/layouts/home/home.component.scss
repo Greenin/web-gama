@@ -47,14 +47,26 @@
 
 
 
+header {
+  display: none;
+}
+
+
 
 //======================================== //
 //========= NORMAL SCREEN STYLE ========== //
 //======================================== //
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1047px) {
 
+
+  //=========== NORMAL SCREEN HEADER ===========//
 	header {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+
 		background-color:#F5F5DC;
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size: 14px; //***** 
@@ -63,6 +75,14 @@
 		line-height: 80px;
     	max-height: 80px;
 	}
+
+  .normalScreenHeaderClass {
+    display: block;
+  }
+
+  .cellPhoneHeaderClass {
+    display: none;
+  }
 
 
 	#headerIconText {
@@ -100,14 +120,7 @@
 	}
 
 
-	#normal-screen-team-logo-gama {
-		margin: 0px;
-		padding-top: 10px;
-		padding: 0px;
-		width: 37vw;
-	}
-
-
+  //=========== NORMAL SCREEN HEADER UL ===========//
 
 	header ul {
 		width: 100%;
@@ -123,6 +136,9 @@
 		align-items: center; /* Centra los elementos en el eje vertical */
 		margin: 0;
 		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+    // max-height: 80px;
+    // text-wrap:break-word;
+    line-height: 1.2; /* Reducir el interlineado */
 	}
 
 
@@ -134,6 +150,10 @@
 		text-decoration: none;
 		color: inherit;
 		transition: all 300ms;
+    max-height: 80px;
+    // white-space: nowrap;     
+    word-break: break-word; /* Divide palabras largas si es necesario */
+    line-height: 1.2; /* Reducir el interlineado */
 	}
 
 
@@ -159,75 +179,56 @@
 	}
 
 
-	//=========== NORMAL SCREEN SUBSCRIPTIONS HEADER ===========//
-
-	#normalScreenSubscriptionsHeader {
-		background-color: #F5F5DC;
-		// font-family: OpenSans-Regular !important;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-					// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-		font-size: 14px; 
-		color: rgb(80, 173, 17);
-		line-height: 70px;
-	}
-
-
-	#normalScreenSubscriptionsHeaderLogo {
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-		font-family: Arial, Helvetica, sans-serif !important;
-	}
-
-
-	#normalScreenHeaderSubscriptionsTitle {
-		font-size: 27px;
-		font-family: OpenSans-Regular !important;
-    	font-weight: normal;
-		letter-spacing: 0.1em;
-	}
-
 	
-	#significadoGAMA {
-		padding-left: 5%;
-	}
 
 
-
+  //=========== NORMAL SCREEN IDENTITY ===========//
 
   #identity {
 
-    #identityTitleFirstLine {
-      font-size: 1.5rem;
-      color: #1e2757;
-      letter-spacing: 3px;
-      margin: 0 auto;
-      padding-bottom: 8px;
-      margin-bottom: 10px;
-		// font-weight: normal;
-		// font-family: YesevaOne-Regula !important;
-		// font-family: Arial, Helvetica, sans-serif !important;
-					// font-family: monospace !important;
-		// font-family: cursive !important;
-		// font-family: OpenSans-Regular !important;
-		// font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-		// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-		font-family: serif !important;
-		// font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-		// font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-		// font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-    } 
+
+    #significadoGAMA {
+
+      padding-left: 5%;
+
+      #identityTitleFirstLine {
+        font-family: serif !important;
+        font-size: 1.5rem;
+        color: #1e2757;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+      // font-weight: normal;
+      // font-family: YesevaOne-Regula !important;
+      // font-family: Arial, Helvetica, sans-serif !important;
+            // font-family: monospace !important;
+      // font-family: cursive !important;
+      // font-family: OpenSans-Regular !important;
+      // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+      // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+      font-family: serif !important;
+      // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+      // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+      // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+      } 
+
+    }
+  
+
+
+
+
+    #teamLogoGama {
+      margin: 0px;
+      padding-top: 10px;
+      padding: 0px;
+      width: 43vw;
+    }
+
 
     #identitySpaceBeetweenLogoAndText {
-      height: 20px;
+      height: 30px;
     }
 
     hr {
@@ -237,6 +238,9 @@
 
   } //end identity  
   
+
+  //=========== NORMAL SCREEN SPEAKERS ===========//
+
   #speakers {
 
     #speakersSpaceAtBeginning {
@@ -312,10 +316,13 @@
 
       } //end card
 
-    }
+    } //end speakersCardRow
 
   } //end speakers
 
+
+
+  //=========== NORMAL SCREEN UNETE-MISIONES ===========//
 
   #uneteMisiones {
 
@@ -394,22 +401,13 @@
   
         } //end form
   
-      }
-    
-      // h2 {
-      //   text-align: center;
-      //   color: #3f51b5;
-      //   margin-bottom: 20px;
-      // }
-    
-      
-
+      } //end container
     
   } //end uneteMisiones
 
 
 
-
+  //=========== NORMAL SCREEN FOOTER ===========//
 	footer {
 		background-color: #e3ebf4;
 		// border-top: 1px solid #f3ef11;
@@ -421,7 +419,7 @@
 	}
 
 
-}
+} //end normal screen
 
 
 
@@ -431,12 +429,12 @@
 //=========== CELL PHONE STYLE =========== //
 //======================================== //
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1046px) {
 
 
 	//=========== CELL PHONE HEADER ===========//
 
-	#cellPhoneHeader {
+	header {
 		background-color: #F5F5DC;
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size: 14px; 
@@ -444,8 +442,16 @@
 		line-height: 70px;
 	}
 
+  .normalScreenHeaderClass {
+    display: none;
+  }
 
-  	#cellPhoneHeaderRow {
+  .cellPhoneHeaderClass {
+    display: block;
+  }
+
+
+  #cellPhoneHeaderRow {
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
@@ -503,16 +509,6 @@
 	}
 
 
-
-	#cell-phone-team-logo-gama {
-		margin: 0px;
-		padding-top: 0px;
-		margin-left:15%;
-		width: 70%;
-	}
-
-
-	
 	#cellPhoneScreenMisionesSpan {
 		padding-right: 10px;
 		height: inherit;
@@ -523,68 +519,36 @@
 
 
 
-	//=========== CELL PHONE SUBSCRIPTIONS HEADER ===========//
-
-	#cellPhoneSubscriptionsHeader {
-		background-color: #F5F5DC;
-		font-family: Arial, Helvetica, sans-serif !important;
-		font-size: 14px; 
-		color: rgb(80, 173, 17);
-		line-height: 70px;
-	}
 
 
-  	#cellPhoneSubscriptionsHeaderRow {
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
-
-
-	#cellPhoneSubscriptionsHeaderLogoTit {
-    	max-width: 50%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-	}
-
-
-	
-	#cellPhoneSubscriptionsHeaderTitle {
-    	max-width: 50%;
-		text-align: right;
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-	}
-
-
-
-	#cellPhoneHeaderSubscriptionsTitle {
-		font-size: 16px;
-		// font-weight: bold;
-		// font-family: Arial, Helvetica, sans-serif !important;
-    	// font-weight: normal;
-	}
-
-
-
-	#significadoGAMA {
-		padding-left: 5%;
-		margin-top: 20px;
-	}
-
+  //=========== CELL PHONE IDENTITY ===========//
 
   #identity {
 
-    #identityTitleFirstLine {
-      font-size: 1.2rem;
-      color: #1e2757;
-      letter-spacing: 2px;
-      margin: 0 auto;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    } 
+
+
+    #significadoGAMA {
+      padding-left: 5%;
+      margin-top: 20px;
+
+      #identityTitleFirstLine {
+        font-size: 1.2rem;
+        color: #1e2757;
+        letter-spacing: 2px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      } 
+  
+    }
+
+    
+    #teamLogoGama {
+      margin: 0px;
+      padding-top: 0px;
+      width: 70%;
+      max-width: 500px;
+    }
 
     .identityComponent {
       padding: 0px 12px;  
@@ -595,7 +559,7 @@
     }
 
     #identityValues {
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
 
 
@@ -606,108 +570,231 @@
 
   } //end identity
   
+  //=========== CELL PHONE SPEAKERS ===========//
 
   #speakers {
 
-    card {
 
-      height: 100%;
+    #speakerTitleFirstLine {
+      font-family: serif !important;
+      font-size: 1.1rem;
+      color: #3f51b5;
+      letter-spacing: 3px;
+      margin: 0 auto;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    } 
 
-      p {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-    
+    #speakertitleSecondLine {
+      font-family: serif !important;
+      font-size: 2.1rem;
+      color: var(--bs-dark-rgb);
+      letter-spacing: 3px;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      margin-bottom: 40px;
+    } 
+
+    #speakersCardRow {
+
+      .card {
+
+        width: 100%;
+
+        .card-body {
+
+            .card-body-title {
+              font-size: 18px;
+              margin-bottom: 6px;
+            }
+
+            .custom-badge {
+              display: inline-block;
+              padding: 1px 5px;
+              font-size: 13px;
+              color: white;
+              border-radius: 4px;
+              text-align: center;
+              margin-right: 5px;
+              white-space: nowrap;
+            }
+
+            .warning {
+              background-color: #f0ad4e; /* Color similar a "badge-warning" */
+            }
+            
+            .success {
+              background-color: #5cb85c; /* Color similar a "badge-success" */
+            }
+
+            .info {
+              background-color: #5bc0de; /* Color similar a "badge-info" */
+            }
+
+            hr {
+              margin: 8px 0px 15px 0px;
+            }
+
+            #guillermoCardText {
+              padding-bottom: 20px;
+            }
 
 
-      .custom-badge {
-        display: inline-block;
-        padding: 1px 5px;
-        font-size: 13px;
-        color: white;
-        border-radius: 4px;
-        text-align: center;
-        margin-right: 5px;
-        white-space: nowrap;
-      }
+        } //end card-body
 
-      .card-body-title {
-        font-size: 18px;
-        margin-bottom: 6px;
-      }
+      } //end card
 
-      hr {
-        margin: 8px 0px 15px 0px;
-      }
-
-    } //end card
+    } //end speakersCardRow
 
   } //end speakers
 
 
+  //=========== CELL PHONE UNETE-MISIONES ===========//
 
   #uneteMisiones {
 
+
     padding: 40px 0;
     background-color: #f9f9f9;
+
   
     .container {
+
       max-width: 800px;
       margin: 0 auto;
       padding: 0 20px;
+
+      #uneteMisionesTitleFirstLine {
+        font-family: serif !important;
+        font-size: 1.3rem;
+        color: #3f51b5;
+        letter-spacing: 4px;
+        margin: 0 auto;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+      } 
+
+      #uneteMisionesTitleSecondLine {
+        font-family: serif !important;
+        font-size: 2.9rem;
+        color:  var(--bs-dark-rgb);
+        letter-spacing: 6px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        margin-bottom: 40px;
+        text-align: center;
+      } 
+
+      #uneteMisionesDescParagraph {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+    
+      form {
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      
+          mat-form-field {
+            width: 100%;
+          }
+      
+          mat-checkbox {
+            // margin-bottom: 20px;
+      
+            a {
+              color: #3f51b5;
+              text-decoration: underline;
+              cursor: pointer;
+      
+              &:hover {
+                color: #283593;
+              }
+            }
+          }
+      
+          button[mat-raised-button] {
+            margin-top: 20px;
+          }
+      
+          // .mensaje-exito {
+          //   font-family: Arial, Helvetica, sans-serif !important;
+          //   // background-color green;
+          //   text-align: center;
+          //   margin-top: 20px;
+          //   // font-weight: bold;
+          // }
+
+      } //end form
+
     }
   
-    // h2 {
-    //   text-align: center;
-    //   color: #3f51b5;
-    //   margin-bottom: 20px;
+    
+
+    // padding: 40px 0;
+    // background-color: #f9f9f9;
+  
+    // .container {
+    //   max-width: 800px;
+    //   margin: 0 auto;
+    //   padding: 0 20px;
     // }
   
-    p {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+    // // h2 {
+    // //   text-align: center;
+    // //   color: #3f51b5;
+    // //   margin-bottom: 20px;
+    // // }
   
-    form {
+    // p {
+    //   text-align: center;
+    //   margin-bottom: 30px;
+    // }
+  
+    // form {
 
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 20px;
   
-      mat-form-field {
-        width: 100%;
-      }
+    //   mat-form-field {
+    //     width: 100%;
+    //   }
   
-      mat-checkbox {
-        // margin-bottom: 20px;
+    //   mat-checkbox {
+    //     // margin-bottom: 20px;
   
-        a {
-          color: #3f51b5;
-          text-decoration: underline;
-          cursor: pointer;
+    //     a {
+    //       color: #3f51b5;
+    //       text-decoration: underline;
+    //       cursor: pointer;
   
-          &:hover {
-            color: #283593;
-          }
-        }
-      }
+    //       &:hover {
+    //         color: #283593;
+    //       }
+    //     }
+    //   }
   
-      button[mat-raised-button] {
-        margin-top: 20px;
-      }
+    //   button[mat-raised-button] {
+    //     margin-top: 20px;
+    //   }
   
-      .mensaje-exito {
-        color: green;
-        text-align: center;
-        margin-top: 20px;
-        font-weight: bold;
-      }
+    //   .mensaje-exito {
+    //     color: green;
+    //     text-align: center;
+    //     margin-top: 20px;
+    //     font-weight: bold;
+    //   }
 
-    } //end form
+    // } //end form
     
   } //end uneteMisiones
 
 
+  //=========== CELL PHONE FOOTER ===========//
 	footer{
 		background-color: #e3ebf4;
 		// border-top: 1px solid #f3ef11;
@@ -719,6 +806,6 @@
 	}
 	
 
-}
+} //end cell phone
 
 
