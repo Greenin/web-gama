@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { PrivacyModalComponent } from '../../shared/privacy-modal/privacy-modal.component';
+import { LegalNoticeModalComponent } from '../../shared/legal-notice-modal/legal-notice-modal.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -110,6 +111,14 @@ Si usted no esperaba este mensaje en su buzón de correo electrónico, entonces 
     event.preventDefault(); // Evita que el enlace recargue la página
     this.dialog.open(PrivacyModalComponent, {
       width: '600px', // Ajusta el ancho del modal
+    });
+  }
+
+  openLegalNoticeModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(LegalNoticeModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+      // height: '500px'
     });
   }
 

@@ -302,14 +302,31 @@
   <!--======================================== -->
   <footer class="text-end">
     <div class="container">
-      <div class="row text-center pb-1">
+
+      <div class="row text-center pt-1 pb-2">
         <div class="col-12 col-lg">
-          <!-- <a data-toggle="modal" data-target="#modalcontacto" href="#">Contáctanos</a> -->
-          <a href="#" (click)="openContactUsModal($event)" data-target="modalcontacto">
+          <a href="#" (click)="openContactUsModal($event)" >
             Contáctanos
           </a>
         </div> 
       </div>
+
+      <div class="row text-center pb-2">
+        <div class="col-12 col-lg">
+          <a href="#" (click)="openPrivacidadModal($event)" >
+            Política de Privacidad
+          </a>
+        </div> 
+      </div>
+
+      <div class="row text-center pb-2">
+        <div class="col-12 col-lg">
+          <a href="#" (click)="openLegalNoticeModal($event)" >
+            Aviso Legal
+          </a>
+        </div> 
+      </div>
+
       <br>
       <br>
       <div class="row text-center pb-1">
