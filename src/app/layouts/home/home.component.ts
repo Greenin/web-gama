@@ -63,17 +63,30 @@ export class HomeComponent {
     if (this.misioneroForm.valid) {
       const formData = this.misioneroForm.value;
 
-      // Envía los datos a Formspree
-      this.http.post('https://formspree.io/f/xjvawjkq', formData).subscribe(
+      //https://www.gamamission.org/savepotenmisionero
+      //https://gamamission.org/savepotenmisionero
+      //www.gamamission.org/savepotenmisionero
+      //gamamission.org/savepotenmisionero
+      //www.gamamission.org/api/savepotenmisionero
+      //gamamission.org/api/savepotenmisionero
+      //https://www.gamamission.org/api/savepotenmisionero
+      //https://gamamission.org/api/savepotenmisionero
+      //https://www.gamamission.org:80/savepotenmisionero
+      //https://gamamission.org:80/savepotenmisionero
+      //www.gamamission.org:80/savepotenmisionero
+      //gamamission.org:80/savepotenmisionero
+      this.http.post('https://www.gamamission.org/api/savepotenmisionero', formData).subscribe(
         (response) => {
           console.log('Formulario enviado con éxito:', response);
           this.enviadoConExito = true; // Muestra el mensaje de éxito
+          this.envioFallido = false;
 
           // Envía el correo electrónico
-          this.enviarCorreo(formData.email);
+          // this.enviarCorreo(formData.email);
         },
         (error) => {
           this.envioFallido = true;
+          this.enviadoConExito = false;
           console.error('Error al enviar el formulario:', error);
           // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
         }
@@ -81,29 +94,30 @@ export class HomeComponent {
     }
   }
 
-  enviarCorreo(email: string) {
-    const asunto = 'Suscripción a misionero GAMA';
-    const cuerpo = `
-Hola,
 
-Desde la Asociación del Movimiento de Avivamiento Global, GAMA, le felicitamos por su aplicación para realizar una misión evangélica por las naciones.
+//   enviarCorreo(email: string) {
+//     const asunto = 'Suscripción a misionero GAMA';
+//     const cuerpo = `
+// Hola,
 
-Por favor, a continuación pulse en el siguiente enlace para navegar a la página web de la asociación, y continuar completando su perfil de usuario:
+// Desde la Asociación del Movimiento de Avivamiento Global, GAMA, le felicitamos por su aplicación para realizar una misión evangélica por las naciones.
 
-https://www.gamamission.org/#/descargar-pdf
+// Por favor, a continuación pulse en el siguiente enlace para navegar a la página web de la asociación, y continuar completando su perfil de usuario:
 
-Muchas gracias por interés en continuar expandiendo el reino de Dios a todo el mundo.
+// https://www.gamamission.org/#/descargar-pdf
 
-Atentamente, Global Awakening Movement Association.
+// Muchas gracias por interés en continuar expandiendo el reino de Dios a todo el mundo.
 
-Si usted no esperaba este mensaje en su buzón de correo electrónico, entonces hubo un error en el destinatario. Por lo que, simplemente ignórelo.
-    `;
+// Atentamente, Global Awakening Movement Association.
 
-    // Simula el envío del correo (puedes usar un servicio de correo real aquí)
-    console.log('Correo enviado a:', email);
-    console.log('Asunto:', asunto);
-    console.log('Cuerpo:', cuerpo);
-  }
+// Si usted no esperaba este mensaje en su buzón de correo electrónico, entonces hubo un error en el destinatario. Por lo que, simplemente ignórelo.
+//     `;
+
+//     // Simula el envío del correo (puedes usar un servicio de correo real aquí)
+//     console.log('Correo enviado a:', email);
+//     console.log('Asunto:', asunto);
+//     console.log('Cuerpo:', cuerpo);
+//   }
 
 
 
