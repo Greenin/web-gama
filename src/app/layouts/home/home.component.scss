@@ -240,6 +240,8 @@ header {
 
   #speakers {
 
+    background-color: #f9f9f9;
+
     #speakersSpaceAtBeginning {
       height: 30px;
     }
@@ -455,8 +457,8 @@ header {
 		padding: 0;
 	}
 
-  	#cellPhoneHeaderLogoTit {
-    	max-width: 75%;
+  #cellPhoneHeaderLogoTit {
+    max-width: 75%;
 		display: flex; /* Usa flexbox para alinear los elementos */
 		align-items: center; /* Centra verticalmente los elementos */
 		justify-content: flex-start; /* Alinea los elementos a la izquierda */
@@ -465,7 +467,7 @@ header {
 
 
 	#cellPhoneHeaderButtonDiv {
-    	max-width: 25%;
+    max-width: 25%;
 		text-align: right;
 		align-items: center; /* Centra los elementos en el eje vertical */
 		margin: 0;
@@ -571,6 +573,7 @@ header {
 
   #speakers {
 
+    background-color: #f9f9f9;
 
     #speakerTitleFirstLine {
       font-family: serif !important;
@@ -806,3 +809,75 @@ header {
 } //end cell phone
 
 
+
+//======================================== //
+//=========== CURRENT YEAR TOUR ========== //
+//======================================== //
+
+#currentYearTour {
+
+  // margin-bottom: 40px;
+
+  #currentYearTourFirstSpan {
+    font-family: serif !important;
+    font-size: 1.9rem;
+    color:  var(--bs-dark-rgb);
+    letter-spacing: 4px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+  } 
+
+  #currentYearTourSecondSpan {
+    font-family: serif !important;
+    font-size: 2.2rem;
+    color: #3f51b5 !important;
+    letter-spacing: 6px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    margin-bottom: 40px;
+    // text-align: center;
+  } 
+
+  .row {
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    // align-items: center;
+
+    // .gapCol {
+
+    // }
+
+
+    .imageContainer {
+      // flex: 1 1 350px;
+      max-width: 350px;
+      padding: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+
+    .imageContainer img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+    // .tourSection {
+      // text-align: center;
+      // padding: 20px;
+    // }
+
+    // .imageGrid {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    //   gap: 40px;
+    // }
+
+
+
+}
