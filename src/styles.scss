@@ -7,6 +7,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+
+
+@font-face{
+	font-family: "DMSerifText-Regular";
+	src: url("/assets/fonts/DMSerifText-Regular.ttf")
+}
+
+@font-face{
+	font-family: "YesevaOne-Regular";
+	
+	src: url("/assets/fonts/YesevaOne-Regular.ttf")
+}
+
+@font-face{
+	font-family: "LibreBodoni-VariableFont_wght";
+	src: url("/assets/fonts/LibreBodoni-VariableFont_wght.ttf")
+}
+
+@font-face{
+	font-family: "Vidaloka-Regular";
+	src: url("/assets/fonts/Vidaloka-Regular.ttf")
+}
+
+@font-face{
+	font-family: "PlayfairDisplaySC-Regular";
+	src: url("/assets/fonts/PlayfairDisplaySC-Regular.ttf")
+}
+
+// @font-face{
+// 	font-family: "OpenSans-Regular";
+// 	src: url("/assets/fonts/OpenSans-Regular.ttf")
+// }
+
+@font-face{
+	font-family: "OpenSans-Semibold";
+	src: url("/assets/fonts/OpenSans-Semibold.ttf")
+}
+
+@font-face{
+	font-family: "OpenSans-Bold";
+	src: url("/assets/fonts/OpenSans-Semibold.ttf")
+}
+
+@font-face{
+	font-family: "OpenSans-ExtraBold";
+	src: url("/assets/fonts/OpenSans-ExtraBold.ttf")
+}
+
+
+
+
 /* Scroll bar hidden Edge y Chrome */
 body::-webkit-scrollbar{
   display: none;
@@ -25,6 +84,51 @@ body {
 	margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
+
+
+.headerText {
+	font-family: 'Montserrat' !important;
+	// font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 14px; //***** 
+    font-weight: normal;
+	color: rgb(80, 173, 17);
+}
+
+.title {
+	font-family: 'Montserrat' !important;
+}
+
+.boldTitle {
+	font-family: 'Montserrat' !important;
+	font-weight: bold;
+}
+
+.title2 {
+	font-family: 'Playfair Display' !important;
+	font-size: 1.5rem;
+	color: #1e2757;
+	letter-spacing: 3px;
+}
+
+.title3 {
+	font-family: 'Raleway' !important;
+	font-size: 1.5rem;
+	color: #1e2757;
+	letter-spacing: 3px;
+}
+
+
+.text {
+	font-family: 'Merriweather' !important;
+}
+
+.text2 {
+	font-family: 'Nunito' !important;
+}
+
+.text3 {
+	font-family: 'Roboto' !important;
+}
 
 
 .highlightText {

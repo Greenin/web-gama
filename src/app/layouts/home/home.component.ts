@@ -1,19 +1,21 @@
-import { Component, HostListener } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+
+import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-us-modal.component';
+
 import { PrivacyModalComponent } from '../../shared/privacy-modal/privacy-modal.component';
 import { LegalNoticeModalComponent } from '../../shared/legal-notice-modal/legal-notice-modal.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/prayer-request-modal.component';
-import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-us-modal.component';
+
+import { IdentityComponent } from './identity/identity.component';
+import { TeamComponent } from './team/team.component';
+import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
+import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
+import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 
 
 @Component({
@@ -21,78 +23,44 @@ import { ContactUsModalComponent } from '../../shared/contact-us-modal/contact-u
   standalone: true,
   imports: [
     CommonModule, 
-    MatButtonModule, 
     MatMenuModule, 
     MatIconModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatCheckboxModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    // PrivacyModalComponent,
+    // LegalNoticeModalComponent,
+    // PrayerRequestModalComponent,
+    // ContactUsModalComponent,
+    IdentityComponent,
+    TeamComponent,
+    CurrentyearTourComponent,
+    TenyearsExperienceComponent,
+    JoinusMissionsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  // exports: [
+  //   CommonModule, 
+  //   MatButtonModule, 
+  //   ReactiveFormsModule,
+  //   MatInputModule,
+  //   MatFormFieldModule,
+  //   MatCheckboxModule,
+  //   HttpClientModule,
+  // ]
 })
 export class HomeComponent {
 
   // title = 'web-gama';
   
-  private timeoutId: any;
+  // private timeoutId: any;
 
-
-  misioneroForm: FormGroup;
-  enviadoConExito: boolean = false;
-  envioFallido: boolean  = false;
 
   constructor(
-    private fb: FormBuilder,
-    private http: HttpClient,
     private dialog: MatDialog
   ) {
-    this.misioneroForm = this.fb.group({
-      nombre: ['', Validators.required],
-      apellidos: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      privacidad: [false, Validators.requiredTrue],
-    });
   }
 
-  onSubmit() {
-    if (this.misioneroForm.valid) {
-      const formData = this.misioneroForm.value;
-
-      //https://www.gamamission.org/savepotenmisionero
-      //https://gamamission.org/savepotenmisionero
-      //www.gamamission.org/savepotenmisionero
-      //gamamission.org/savepotenmisionero
-      //www.gamamission.org/api/savepotenmisionero
-      //gamamission.org/api/savepotenmisionero
-      //https://www.gamamission.org/api/savepotenmisionero
-      //https://gamamission.org/api/savepotenmisionero
-      //https://www.gamamission.org:80/savepotenmisionero
-      //https://gamamission.org:80/savepotenmisionero
-      //www.gamamission.org:80/savepotenmisionero
-      //gamamission.org:80/savepotenmisionero
-      this.http.post('https://www.gamamission.org/api/savepotenmisionero', formData).subscribe(
-        (response) => {
-          console.log('Formulario enviado con éxito:', response);
-          this.enviadoConExito = true; // Muestra el mensaje de éxito
-          this.envioFallido = false;
-
-          // Envía el correo electrónico
-          // this.enviarCorreo(formData.email);
-        },
-        (error) => {
-          this.envioFallido = true;
-          this.enviadoConExito = false;
-          console.error('Error al enviar el formulario:', error);
-          // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
-        }
-      );
-    }
-  }
 
 
 //   enviarCorreo(email: string) {
@@ -119,7 +87,12 @@ export class HomeComponent {
 //     console.log('Cuerpo:', cuerpo);
 //   }
 
-
+openPrayerRequestModal(event: Event) {
+  event.preventDefault(); // Evita que el enlace recargue la página
+  this.dialog.open(PrayerRequestModalComponent, {
+    width: '600px', // Ajusta el ancho del modal
+  });
+}
 
   openPrivacidadModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
@@ -136,12 +109,6 @@ export class HomeComponent {
     });
   }
 
-  openPrayerRequestModal(event: Event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
-    this.dialog.open(PrayerRequestModalComponent, {
-      width: '600px', // Ajusta el ancho del modal
-    });
-  }
 
   openContactUsModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página

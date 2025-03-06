@@ -3,7 +3,7 @@
   <!--========= NORMAL SCREEN HEADER ========= -->
   <!--======================================== -->
 
-  <header class="normalScreenHeaderClass">
+  <header class="normalScreenHeaderClass headerText">
     <ul>
       <li id="headerIconText">      
         <a id="normalScreenHeaderLogo" href="#">
@@ -29,7 +29,7 @@
   <!--========== CELL PHONE HEADER  ========== -->
   <!--======================================== -->
 
-  <header class="cellPhoneHeaderClass">
+  <header class="cellPhoneHeaderClass headerText">
     <div id="cellPhoneHeaderRow" class="row">
 
       <div id="cellPhoneHeaderLogoTit" class="col">
@@ -43,11 +43,11 @@
       <div class="col" id="cellPhoneHeaderButtonDiv">
         <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneHeaderButton"><mat-icon>menu</mat-icon></button>
         <mat-menu id="cellPhoneMenu" #menu="matMenu">
-          <button mat-menu-item><a href="#identity">QUIÉNES SOMOS</a></button>
-          <button mat-menu-item><a href="#speakers">EL EQUIPO</a></button>
-          <button mat-menu-item><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
+          <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
+          <button mat-menu-item><a class="headerText" href="#speakers">EL EQUIPO</a></button>
+          <button mat-menu-item><a class="headerText" href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
           <button mat-menu-item>
-            <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+            <a class="headerText" href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
               PETICIÓN DE ORACIÓN
             </a>
           </button>
@@ -57,58 +57,11 @@
     </div>
   </header>
 
-
-
   <!--======================================== -->
   <!--=============== IDENTITY =============== -->
   <!--======================================== -->
-
-  <section id="identity">
-    <div class="container-fluid">
-
-      <div class="row">
-
-        <div id="significadoGAMA" class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
-          <div class="col">
-            <p id="identityTitleFirstLine">¿Qué significa GAMA?</p>
-            <p><span class="highlightText">Global Awakening Movement Association</span> somos un grupo de personas que
-            compartimos una serie de inquietudes entorno al evangelio y la iglesia de Cristo. Creemos que Dios está 
-            despertando y comisionando a su Iglesia alrededor de toda la tierra para cumplir con su llamado y alcanzar el 
-            destino que Dios tiene para ella. 
-            </p>    
-          </div>
-        </div>
-         
-        <div class="col-md-12 col-lg-6 pb-4 text-center"> 
-          <img id="teamLogoGama" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
-        </div>
-        
-        <div id="identitySpaceBeetweenLogoAndText" class="row"></div>
-      
-        <div id="identityVision" class="identityComponent col-12 col-lg-4">
-          <h2 class="text-center">VISIÓN</h2>
-          <hr>
-          <p class="text-center">Ser parte del <span class="highlightText">despertar</span> que Dios tiene para Su Iglesia.
-          </p>
-        </div>
-        <div class="identityComponent col-12 col-lg-4">
-          <h2 class="text-center">MISIÓN</h2>
-          <hr>
-          <p class="text-center">A través de diferentes iniciativas de <span class="highlightText">evangelismo</span> y <span class="highlightText">misiones</span> queremos extender el despertar de la Iglesia de Cristo.
-          </p>
-        </div>
-        <div id="identityValues" class="identityComponent col-12 col-lg-4">
-          <h2 class="text-center">VALORES</h2>
-          <hr>
-          <p class="text-center">Identificamos la Palabra de Dios plenamente en la <span class="highlightText">Biblia</span> y confiamos en el <span class="highlightText">Espíritu Santo</span> como nuestro guía.
-          </p>
-        </div>
-      
-      </div>
-      
-    </div>
-  </section>
-
+  
+  <app-identity></app-identity>
 
 
   <!--======================================== -->
@@ -140,58 +93,7 @@
   <!--=============== SPEAKERS =============== -->
   <!--======================================== -->
 
-  <section id="speakers" class="mt-4 mb-3 pb-5">
-    <div class="container">
-      <div id="speakersSpaceAtBeginning" class="row"></div>
-
-
-      <!--========= NORMAL SCREEN IDENTITY ========= -->
-      <div class ="col text-center d-none d-md-block">
-          <p id="speakerTitleFirstLine">CONOCE A LOS</p> 
-          <br>
-          <p id="speakertitleSecondLine">MIEMBROS DEL EQUIPO</p>
-      </div> 
-
-      <!--========== CELL PHONE IDENTITY  ========== -->
-      <div class ="col text-center d-block d-md-none">
-          <p id="speakerTitleFirstLine">CONOCE AL</p> 
-          <br>
-          <p id="speakertitleSecondLine">EQUIPO</p>
-      </div>
-
-      <div id="speakersCardRow" class="row">
-        <div id="speakersCol" class="col-md-0 col-lg-2"></div>
-        <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card">
-                <img id="valerioPhoto" src="../assets/img/foto-valerio-4.jpg" alt="Foto de Valerio">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <span class="custom-badge warning">Misiones</span>
-                    <span class="custom-badge success">Evangelismo</span>
-                  </div>
-                  <p class="card-body-title text-dark">Valerio Andras</p>
-                  <hr>
-                  <p class="card-text">Misionero a tiempo completo, participa en programas de radio, evangelismo en universidades, tours misioneros por Europa así como viajes por todo el mundo equipando a las iglesias en evangelismo.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card">
-                <img src="../assets/img/foto-guillermo-2.jpg" alt="Foto de Guillermo">
-                <div class="card-body">
-                  <div class="badges mb-3">
-                    <span class="custom-badge info">Ingeniería</span>
-                    <span class="custom-badge success">Evangelismo</span>
-                  </div>
-                  <p class="card-body-title text-dark">Guillermo Baldán</p>
-                  <hr>
-                  <p id="guillermoCardText" class="card-text">Ingeniero de profesión, se encarga de dar apoyo a la obra misionera en todo tipo de tareas logísticas y técnicas además de participar activamente en campañas evangelísticas.</p>
-               </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <app-team></app-team>
 
 
 
@@ -199,129 +101,14 @@
   <!--========== CURRENT YEAR TOUR =========== -->
   <!--======================================== -->
 
-  <section id="currentYearTour" class="pt-4 pb-4">
-
-    <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
-    <div id="normalScreenCurrentYearTourTitle" class="col text-center mt-4 mb-5">
-      <p><span id="currentYearTourFirstSpan">TOUR MISIONERO </span><span id="currentYearTourSecondSpan">2025</span></p>
-    </div>
-
-    <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
-    <div id="cellPhoneCurrentYearTourTitle" class="col text-center mt-4 mb-5">
-        <p>
-            <span id="currentYearTourFirstSpan">TOUR MISIONERO </span>
-            <br>
-            <br>
-            <span id="currentYearTourSecondSpan">2025</span>
-        </p>
-    </div>
-    
-    <div class="row mb-2">
-      <div class="imageContainer">
-        <img src="../assets/img/brochure1.jpeg" alt="">
-      </div>
-      <div class="imageContainer">
-        <img src="../assets/img/brochure2.jpeg" alt="">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="imageContainer">
-        <img src="../assets/img/brochure3.jpeg" alt="">
-      </div>
-      <div class="imageContainer">
-        <img src="../assets/img/brochure4.jpeg" alt="">
-      </div>
-    </div>
-    
-    <!-- <div class="row">
-      <div class="imageContainer">
-        <img src="../assets/img/brochure5.jpeg" alt="">
-      </div>
-      <div class="imageContainer">
-        &nbsp;
-      </div>
-    </div> -->
-  </section>
-
+  <app-currentyear-tour></app-currentyear-tour>
   
+
   <!--======================================== -->
   <!--========= TEN YEARS EXPERIENCE ========= -->
   <!--======================================== -->
 
-  <section id="tenYearsExperience" class="pt-4 pb-5">
-
-      <div class="container-fluid">
-
-        <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
-        <!-- <div id="tenYearsExperienceTitle" class="col text-center mt-4 mb-5">
-          <p><span id="tenYearsExperienceFirstSpan">10 </span><span id="tenYearsExperienceSecondSpan">AÑOS DE EXPERIENCIA</span></p>
-        </div> -->
-
-        <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
-        <!-- <div id="cellPhoneCurrentYearTourTitle" class="col text-center mt-4 mb-5">
-            <p>
-                <span id="currentYearTourFirstSpan">TOUR MISIONERO </span>
-                <br>
-                <br>
-                <span id="currentYearTourSecondSpan">2025</span>
-            </p>
-        </div> -->
-
-    
-          <div class="row">
-          
-              <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
-              <div id="tenYearsExperienceLelftCol" >
-
-                <p>
-                  <span id="tenYearsExperience1Span">10 </span><span id="tenYearsExperience2Span">AÑOS</span>
-                </p>
-                <br>
-                <p>
-                  <span id="tenYearsExperience3Span">DE</span>
-                </p>
-                <br>
-                <p>
-                  <span id="tenYearsExperience4Span">EXPERIENCIA</span>
-                </p>
-                <br>
-                <p>
-                  <span id="tenYearsExperience5Span">PARA</span>
-                </p>
-                <br>
-                <p>
-                  <span id="tenYearsExperience6Span">LA GLORIA</span>
-                </p>
-                <br>
-                <p>
-                  <span id="tenYearsExperience7Span">DE DIOS</span>
-                </p>
-              
-
-                <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
-                <!-- <div id="cellPhoneTenYearsExperienceTitle" class="col">
-                    <p>
-                        <span id="tenYearsExperienceFirstSpan">TOUR MISIONERO </span>
-                        <br>
-                        <br>
-                        <span id="tenYearsExperienceSecondSpan">2025</span>
-                    </p>
-                </div> -->
-
-              </div>
-              
-
-              <div class="imageContainer">
-                <img src="../assets/img/brochure5.jpeg">
-              </div>
-
-          </div>
-
-      </div>
-  
-  </section>
-
+  <app-tenyears-experience></app-tenyears-experience>
   
   <!--======================================== -->
   <!--============ lUGAR Y FECHA ============= -->
@@ -350,73 +137,7 @@
   <!--========= UNETE A LAS MISIONES ========= -->
   <!--======================================== -->
   
-  <section id="uneteMisiones" class="pt-5 pb-5">
-    <div class="container">
-
-          <div class="col">
-            <p id="uneteMisionesTitleFirstLine">ÚNETE A LAS </p>
-            <br>
-            <p id="uneteMisionesTitleSecondLine">MISIONES</p>
-          </div>
-          <p id="uneteMisionesDescParagraph">
-          <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
-            Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
-          </p>
-          <br>
-          
-          <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()">
-            <!-- Nombre -->
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Nombre</mat-label>
-              <input matInput formControlName="nombre" name="nombre" required>
-            </mat-form-field>
-      
-            <!-- Apellidos -->
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Apellidos</mat-label>
-              <input matInput formControlName="apellidos" name="apellidos" required>
-            </mat-form-field>
-      
-            <!-- Correo electrónico -->
-            <mat-form-field appearance="outline" class="full-width">
-              <mat-label>Correo electrónico</mat-label>
-              <input matInput formControlName="email" name="email" required>
-            </mat-form-field>
-      
-            <!-- Checkbox de privacidad -->
-            <mat-checkbox formControlName="privacidad" name="privacidad" required>
-              He leído y aceptado condiciones de
-              <a href="#" (click)="openPrivacidadModal($event)">privacidad de datos</a>.
-            </mat-checkbox>
-      
-            <!-- Botón de enviar -->
-            <div class="text-center">
-              <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
-            </div>
-      
-            <!-- Mensaje de éxito -->
-            <div *ngIf="enviadoConExito">
-              <div class="container mt-2">
-                <div class="alert alert-success text-dark" role="alert">
-                  <!-- <span class="material-icons me-2">check_circle</span>  -->
-                  Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias.
-                </div>
-              </div>
-            </div>
-            <!-- Mensaje de error -->
-            <div *ngIf="envioFallido">
-              <div class="container mt-2">
-                <div class="alert alert-danger text-dark" role="alert">
-                  Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.
-                </div>
-              </div>
-            </div> 
-              
-          </form>
-
-    </div>
-  </section>
-
+  <app-joinus-missions></app-joinus-missions>
 
 
   <!--======================================== -->
