@@ -7,17 +7,15 @@
     <ul>
       <li id="headerIconText">      
         <a id="normalScreenHeaderLogo" href="#">
-          <img src="../assets/img/icon-6.png" alt="GAMA EVANGELISTIC ASSOCIATION" id="normalScreenLogoImg">
-          <span id="normalScreenLogoText">GAMA EVANGELISTIC <br> ASSOCIATION</span>
+          <img id="normalScreenLogoImg" src="../assets/img/icon-6.png" alt="GAMA EVANGELISTIC ASSOCIATION" >
+          <span id="normalScreenLogoText">MOVIMIENTO MISIONERO <br> GLOBAL</span>
         </a>
       </li>
       <li id="headerSpace">&nbsp;</li>
       <li><a href="#identity">QUIÉNES SOMOS</a></li>
-      <li><a href="#speakers" >EL EQUIPO</a></li>
-      <li><a href="#uneteMisiones" >ÚNETE A LAS MISIONES</a></li>
-      <!-- <li><span id="normalScreenMisionesSpan" (click)="irAUneteMisiones()">ÚNETE A LAS MISIONES</span></li> -->
+      <li><a href="#speakers">EL EQUIPO</a></li>
+      <li><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></li>
       <li>
-        <!-- <a href="#" data-toggle="modal" data-target="#modaloración">PETICIÓN DE ORACIÓN</a> -->
         <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
           PETICIÓN DE ORACIÓN
         </a>
@@ -30,13 +28,14 @@
   <!--======================================== -->
   <!--========== CELL PHONE HEADER  ========== -->
   <!--======================================== -->
+
   <header class="cellPhoneHeaderClass">
     <div id="cellPhoneHeaderRow" class="row">
 
-      <div class="col" id="cellPhoneHeaderLogoTit">
-        <a href="#" id="cellPhoneLogoHeader">
+      <div id="cellPhoneHeaderLogoTit" class="col">
+        <a id="cellPhoneLogoHeader" href="#" >
           <img id="cellPhoneLogoImg" src="../assets/img/icon-6.png" alt="GAMA EVANGELISTIC ASSOCIATION" >
-          <span id="cellPhoneLogoText">GAMA <br> EVANGELISTIC <br> ASSOCIATION</span>
+          <span id="cellPhoneLogoText">MOVIMIENTO  <br> MISIONERO <br> GLOBAL</span>
         </a>
       </div>
 
@@ -67,7 +66,7 @@
   <section id="identity">
     <div class="container-fluid">
 
-      <div class="row mb-5">
+      <div class="row">
 
         <div id="significadoGAMA" class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
           <div class="col">
@@ -80,12 +79,6 @@
           </div>
         </div>
          
-        <!--========= NORMAL SCREEN IDENTITY ========= -->
-        <!-- <div class="col-md-12 col-lg-6 pb-4 normalScreenImgClass"> 
-          <img id="normalScreenTeamLogoGama" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
-        </div>  -->
-
-        <!--========== CELL PHONE IDENTITY  ========== -->
         <div class="col-md-12 col-lg-6 pb-4 text-center"> 
           <img id="teamLogoGama" src="../assets/img/GAMABodyLogo.png" alt="Logotipo de GAMA">
         </div>
@@ -118,39 +111,36 @@
 
 
 
-  <!--Seminario-->
-<!--    <seminario id="seminario">
+  <!--======================================== -->
+  <!--=============== SEMINARIO =============== -->
+  <!--======================================== -->
+<!--  <seminario id="seminario">
     <div id="seminario-announcement" class="carousel slide carousel-fade" data-ride="carousel"  data-pause="false">
       <div  class="row">
-        
         <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
           <img  id="seminario-announcement-banner" src="./images/misiones-europa-seminario.png"  alt="">
-
         </div> 
-
-            </div>
-      </seminario> -->
+        </div>
+    </seminario> -->
   <!-- /Seminario -->
   <!-- tour --> 
-<!--   <tour id="tour">
+<!-- <tour id="tour">
     <div id="tour-announcement" >
       <div  class="row">
-        
         <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
           <img  id="seminario-announcement-banner" src="./images/tour_misionero_2022.jpg"  alt="">
-
         </div> 
-
-            </div>
-  </tour> -->
+      </div>
+    </tour> -->
   <!-- /tour-->
+
 
 
   <!--======================================== -->
   <!--=============== SPEAKERS =============== -->
   <!--======================================== -->
 
-  <section id="speakers" class="mt-4 mb-3 pt-4 pb-5">
+  <section id="speakers" class="mt-4 mb-3 pb-5">
     <div class="container">
       <div id="speakersSpaceAtBeginning" class="row"></div>
 
@@ -209,39 +199,133 @@
   <!--========== CURRENT YEAR TOUR =========== -->
   <!--======================================== -->
 
-  <section id="currentYearTour" class="pt-4 pb-5">
+  <section id="currentYearTour" class="pt-4 pb-4">
 
-    <div class="col text-center mt-4 mb-5">
+    <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
+    <div id="normalScreenCurrentYearTourTitle" class="col text-center mt-4 mb-5">
       <p><span id="currentYearTourFirstSpan">TOUR MISIONERO </span><span id="currentYearTourSecondSpan">2025</span></p>
+    </div>
+
+    <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
+    <div id="cellPhoneCurrentYearTourTitle" class="col text-center mt-4 mb-5">
+        <p>
+            <span id="currentYearTourFirstSpan">TOUR MISIONERO </span>
+            <br>
+            <br>
+            <span id="currentYearTourSecondSpan">2025</span>
+        </p>
     </div>
     
     <div class="row mb-2">
-      <!-- <div class="gapCol">&nbsp;</div> -->
       <div class="imageContainer">
-        <img src="../assets/img/brochure1.jpeg" alt="Descripción de la imagen 1">
+        <img src="../assets/img/brochure1.jpeg" alt="">
       </div>
       <div class="imageContainer">
-        <img src="../assets/img/brochure2.jpeg" alt="Descripción de la imagen 2">
+        <img src="../assets/img/brochure2.jpeg" alt="">
       </div>
-      <!-- <div class="col-sm-12 col-md-6 col-lg-3">&nbsp;</div> -->
-
     </div>
     
     <div class="row">
-      <!-- <div class="gapCol">&nbsp;</div> -->
-      <div class=" imageContainer">
-        <img src="../assets/img/brochure3.jpeg" alt="Descripción de la imagen 3">
+      <div class="imageContainer">
+        <img src="../assets/img/brochure3.jpeg" alt="">
       </div>
       <div class="imageContainer">
-        <img src="../assets/img/brochure4.jpeg" alt="Descripción de la imagen 4">
+        <img src="../assets/img/brochure4.jpeg" alt="">
       </div>
-      <!-- <div class="col-sm-12 col-md-6 col-lg-3">&nbsp;</div> -->
-
     </div>
+    
+    <!-- <div class="row">
+      <div class="imageContainer">
+        <img src="../assets/img/brochure5.jpeg" alt="">
+      </div>
+      <div class="imageContainer">
+        &nbsp;
+      </div>
+    </div> -->
   </section>
 
   
-  <!-- Lugar y Fecha -->
+  <!--======================================== -->
+  <!--========= TEN YEARS EXPERIENCE ========= -->
+  <!--======================================== -->
+
+  <section id="tenYearsExperience" class="pt-4 pb-5">
+
+      <div class="container-fluid">
+
+        <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
+        <!-- <div id="tenYearsExperienceTitle" class="col text-center mt-4 mb-5">
+          <p><span id="tenYearsExperienceFirstSpan">10 </span><span id="tenYearsExperienceSecondSpan">AÑOS DE EXPERIENCIA</span></p>
+        </div> -->
+
+        <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
+        <!-- <div id="cellPhoneCurrentYearTourTitle" class="col text-center mt-4 mb-5">
+            <p>
+                <span id="currentYearTourFirstSpan">TOUR MISIONERO </span>
+                <br>
+                <br>
+                <span id="currentYearTourSecondSpan">2025</span>
+            </p>
+        </div> -->
+
+    
+          <div class="row">
+          
+              <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
+              <div id="tenYearsExperienceLelftCol" >
+
+                <p>
+                  <span id="tenYearsExperience1Span">10 </span><span id="tenYearsExperience2Span">AÑOS</span>
+                </p>
+                <br>
+                <p>
+                  <span id="tenYearsExperience3Span">DE</span>
+                </p>
+                <br>
+                <p>
+                  <span id="tenYearsExperience4Span">EXPERIENCIA</span>
+                </p>
+                <br>
+                <p>
+                  <span id="tenYearsExperience5Span">PARA</span>
+                </p>
+                <br>
+                <p>
+                  <span id="tenYearsExperience6Span">LA GLORIA</span>
+                </p>
+                <br>
+                <p>
+                  <span id="tenYearsExperience7Span">DE DIOS</span>
+                </p>
+              
+
+                <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
+                <!-- <div id="cellPhoneTenYearsExperienceTitle" class="col">
+                    <p>
+                        <span id="tenYearsExperienceFirstSpan">TOUR MISIONERO </span>
+                        <br>
+                        <br>
+                        <span id="tenYearsExperienceSecondSpan">2025</span>
+                    </p>
+                </div> -->
+
+              </div>
+              
+
+              <div class="imageContainer">
+                <img src="../assets/img/brochure5.jpeg">
+              </div>
+
+          </div>
+
+      </div>
+  
+  </section>
+
+  
+  <!--======================================== -->
+  <!--============ lUGAR Y FECHA ============= -->
+  <!--======================================== -->
   <!--
   <section id="place-time">
     <div class="container-fluid">
@@ -259,12 +343,13 @@
     </div>
   </section>
 -->
-  <!-- /Lugar y Fecha -->
+
 
 
   <!--======================================== -->
   <!--========= UNETE A LAS MISIONES ========= -->
   <!--======================================== -->
+  
   <section id="uneteMisiones" class="pt-5 pb-5">
     <div class="container">
 
@@ -372,6 +457,7 @@
       </div>
     </div>
   </footer>
+
 
   <!-- <footer id="footer" class="pb-4 pt-4">
     <div class="container">

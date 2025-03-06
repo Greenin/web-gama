@@ -46,7 +46,6 @@
 }
 
 
-
 header {
   display: none;
 }
@@ -67,7 +66,14 @@ header {
     // justify-content: space-between;
     // align-items: center;
 
-		background-color:#F5F5DC;
+    //#f5f5dc;  //De los mejores: 1
+    // #ececc7
+    // #eeeeda;  //De los mejores: 2
+    // #f0ebd6;  //De los mejores: 2
+    // #f0ecdc;
+    // #f3f0e5;
+    // #f8f6ed  //De los mejores: 1
+		background-color:#f8f6ed;
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size: 14px; //***** 
     font-weight: normal;
@@ -179,7 +185,6 @@ header {
 	}
 
 
-	
 
 
   //=========== NORMAL SCREEN IDENTITY ===========//
@@ -187,51 +192,57 @@ header {
   #identity {
 
 
-    #significadoGAMA {
+      .row { 
 
-      padding-left: 5%;
+          padding-bottom: 30px;
 
-      #identityTitleFirstLine {
-        font-family: serif !important;
-        font-size: 1.5rem;
-        color: #1e2757;
-        letter-spacing: 3px;
-        margin: 0 auto;
-        padding-bottom: 8px;
-        margin-bottom: 10px;
-      // font-weight: normal;
-      // font-family: YesevaOne-Regula !important;
-      // font-family: Arial, Helvetica, sans-serif !important;
-            // font-family: monospace !important;
-      // font-family: cursive !important;
-      // font-family: OpenSans-Regular !important;
-      // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-      // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-      font-family: serif !important;
-      // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-      // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-      // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-      } 
+          #significadoGAMA {
 
-    }
-  
+            padding-left: 5%;
 
-    #teamLogoGama {
-      margin: 0px;
-      padding-top: 10px;
-      padding: 0px;
-      width: 43vw;
-    }
+            #identityTitleFirstLine {
+              font-family: serif !important;
+              font-size: 1.5rem;
+              color: #1e2757;
+              letter-spacing: 3px;
+              margin: 0 auto;
+              padding-bottom: 8px;
+              margin-bottom: 10px;
+            // font-weight: normal;
+            // font-family: YesevaOne-Regula !important;
+            // font-family: Arial, Helvetica, sans-serif !important;
+                  // font-family: monospace !important;
+            // font-family: cursive !important;
+            // font-family: OpenSans-Regular !important;
+            // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+            // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+              font-family: serif !important;
+            // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+            // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+            // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+            } 
+
+          }
+      
+
+          #teamLogoGama {
+            margin: 0px;
+            padding-top: 10px;
+            padding: 0px;
+            width: 43vw;
+          }
 
 
-    #identitySpaceBeetweenLogoAndText {
-      height: 30px;
-    }
+          #identitySpaceBeetweenLogoAndText {
+            height: 30px;
+          }
 
-    hr {
-      padding: 0px 0px 22px 0px;
-      margin: 0px 30px;
-    }
+          hr {
+            padding: 0px 0px 22px 0px;
+            margin: 0px 30px;
+          }
+
+      }
 
   } //end identity  
   
@@ -241,6 +252,7 @@ header {
   #speakers {
 
     background-color: #f9f9f9;
+    padding-top: 30px;
 
     #speakersSpaceAtBeginning {
       height: 30px;
@@ -318,6 +330,255 @@ header {
     } //end speakersCardRow
 
   } //end speakers
+
+
+
+  //=========== NORMAL SCREEN CURRENT YEAR TOUR ===========//
+
+  #currentYearTour {
+
+    #cellPhoneCurrentYearTourTitle {
+      display: none;
+    }
+
+    #normalScreenCurrentYearTourTitle {
+
+        display: block;
+
+        #currentYearTourFirstSpan {
+          font-family: serif !important;
+          font-size: 1.9rem;
+          color:  var(--bs-dark-rgb);
+          letter-spacing: 4px;
+          margin: 0 auto;
+          padding-bottom: 0px;
+          margin-bottom: 0px;
+          text-align: center;
+        } 
+
+        #currentYearTourSecondSpan {
+          font-family: serif !important;
+          font-size: 2.2rem;
+          color: #3f51b5 !important;
+          letter-spacing: 6px;
+          margin: 0 auto;
+          padding-bottom: 5px;
+          margin-bottom: 40px;
+        } 
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+
+
+      .imageContainer {
+        max-width: 350px;
+        padding: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+      }
+
+      .imageContainer img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+
+        // border-radius: 12px;
+        // border: 6px double #d4af37; /* Borde dorado doble */
+        // background-color: #fff;
+        // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+        // border: 6px solid #4CAF50; /* Color del marco */
+        // border-radius: 10px; /* Bordes redondeados */
+        // padding: 10px; /* Espacio entre el marco y la imagen */
+        // background-color: #ffffff; /* Fondo blanco detrás del marco */
+        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+        // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+        border: 9px solid #fff; // Borde blanco
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+        border-radius: 10px; // Bordes redondeados
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      
+        &:hover {
+          // transform: scale(1.05);
+          // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+          // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+          // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+
+          transform: scale(1.05); // Efecto de zoom al pasar el mouse
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+       
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  //=========== NORMAL SCREEN TEN YEARS EXPERIENCE ===========//
+
+  #tenYearsExperience {
+
+    // #cellPhoneTenYearsExperienceTitle {
+    //   display: none;
+    // }
+
+    // #normalScreenTenYearsExperienceTitle {
+
+        // display: block;
+
+    .row {
+
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        // align-content: center;
+
+        #tenYearsExperienceLelftCol {
+
+            display: block;
+            width: 25%;
+            max-width: 25%;
+            padding: 30px;
+
+            #tenYearsExperience1Span {
+              font-family: 'Poppins' !important;
+              font-size: 2.8rem;
+              color: rgb(80, 173, 17) !important;
+              letter-spacing: 6px;
+              margin: 0 auto;
+              padding-bottom: 5px;
+              margin-bottom: 40px;
+              // text-align: center;
+            } 
+
+            #tenYearsExperience2Span {
+              // Cormorant Garamond
+              // Poppins
+              // Lora
+              // Quicksand
+              font-family: 'Poppins' !important;
+              font-size: 2.3rem;
+              color:  var(--bs-dark-rgb);
+              letter-spacing: 4px;
+              margin: 0 auto;
+              text-align: center;
+            } 
+
+            #tenYearsExperience3Span {
+              font-family: 'Poppins' !important;
+              font-size: 1.5rem;
+              color:  var(--bs-dark-rgb);
+              letter-spacing: 4px;
+              margin: 0 auto;
+              text-align: center;
+            } 
+
+            #tenYearsExperience4Span {
+              font-family: 'Poppins' !important;
+              font-size: 1.5rem;
+              color:  var(--bs-dark-rgb);
+              letter-spacing: 6px;
+              margin: 0 auto;
+              // text-align: center;
+            } 
+
+            #tenYearsExperience5Span {
+              font-family: 'Poppins' !important;
+              font-size: 2.2rem;
+              color: #3f51b5 !important;
+              letter-spacing: 6px;
+              margin: 0 auto;
+              // text-align: center;
+            } 
+
+            #tenYearsExperience6Span {
+              font-family: 'Poppins' !important;
+              font-size: 2.2rem;
+              color: #3f51b5 !important;
+              letter-spacing: 6px;
+              margin: 0 auto;
+              // text-align: center;
+            } 
+
+            #tenYearsExperience7Span {
+              font-family: 'Poppins' !important;
+              font-size: 2.2rem;
+              color: #3f51b5 !important;
+              letter-spacing: 6px;
+              margin: 0 auto;
+              // text-align: center;
+            } 
+
+        }
+
+
+
+        .imageContainer {
+            display: block;
+            max-width: 350px;
+            // padding: 0;
+            margin-left: 35px;
+            // margin-right: 20px;
+            // margin-bottom: 30px;
+        }
+
+        .imageContainer img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+
+            // border-radius: 12px;
+            // border: 6px double #d4af37; /* Borde dorado doble */
+            // background-color: #fff;
+            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+            border: 6px solid #4CAF50; /* Color del marco */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px; /* Espacio entre el marco y la imagen */
+            background-color: #ffffff; /* Fondo blanco detrás del marco */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+            // border: 9px solid #fff; // Borde blanco
+            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+            // border-radius: 10px; // Bordes redondeados
+            // transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          
+            &:hover {
+              // transform: scale(1.05);
+              // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+              transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+
+              // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+              // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+          
+            }
+
+        }
+
+    }
+
+  }
 
 
 
@@ -434,7 +695,14 @@ header {
 	//=========== CELL PHONE HEADER ===========//
 
 	header {
-		background-color: #F5F5DC;
+    //#f5f5dc;  //De los mejores: 1
+    //#ececc7
+    //#eeeeda;  //De los mejores: 2
+    //#f0ebd6;  //De los mejores: 2
+    //#f0ecdc;
+    //#f3f0e5;
+    //#f8f6ed  //De los mejores: 1
+		background-color:#f8f6ed;
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size: 14px; 
 		color: rgb(80, 173, 17);
@@ -524,41 +792,50 @@ header {
 
   #identity {
 
+    margin-top: 10px;
+
+    .row {
+
+        // padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        #significadoGAMA {
+
+          padding-left: 5%;
+          margin-top: 20px;
+
+          #identityTitleFirstLine {
+            font-size: 1.2rem;
+            color: #1e2757;
+            letter-spacing: 2px;
+            margin: 0 auto;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+          } 
+      
+        }
+
+        
+        #teamLogoGama {
+          margin: 0px;
+          padding-top: 0px;
+          width: 70%;
+          max-width: 500px;
+        }
+
+        .identityComponent {
+          padding: 0px 12px;  
+        }
+
+        // #identityVision {
+          // padding-top: 40px;
+        // }
+
+        #identityValues {
+          padding-bottom: 20px;
+        }
 
 
-    #significadoGAMA {
-      padding-left: 5%;
-      margin-top: 20px;
-
-      #identityTitleFirstLine {
-        font-size: 1.2rem;
-        color: #1e2757;
-        letter-spacing: 2px;
-        margin: 0 auto;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-      } 
-  
-    }
-
-    
-    #teamLogoGama {
-      margin: 0px;
-      padding-top: 0px;
-      width: 70%;
-      max-width: 500px;
-    }
-
-    .identityComponent {
-      padding: 0px 12px;  
-    }
-
-    #identityVision {
-      padding-top: 40px;
-    }
-
-    #identityValues {
-      padding-bottom: 20px;
     }
 
 
@@ -568,12 +845,14 @@ header {
     }
 
   } //end identity
+
   
   //=========== CELL PHONE SPEAKERS ===========//
 
   #speakers {
 
     background-color: #f9f9f9;
+    padding-top: 40px;
 
     #speakerTitleFirstLine {
       font-family: serif !important;
@@ -647,6 +926,260 @@ header {
     } //end speakersCardRow
 
   } //end speakers
+
+
+
+  //=========== CELL PHONE CURRENT YEAR TOUR ===========//
+
+  #currentYearTour {
+
+
+      #normalScreenCurrentYearTourTitle {
+        display: none;
+      }
+
+      #cellPhoneCurrentYearTourTitle {
+
+          display: block;
+
+          #currentYearTourFirstSpan {
+            font-family: serif !important;
+            font-size: 1.9rem;
+            color:  var(--bs-dark-rgb);
+            letter-spacing: 4px;
+            margin: 0 auto;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+          } 
+
+          #currentYearTourSecondSpan {
+            font-family: serif !important;
+            font-size: 2.2rem;
+            color: #3f51b5 !important;
+            letter-spacing: 6px;
+            // margin: 0 auto;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            // text-align: center;
+            // @media only screen and (max-width: 415px) {
+            //   padding-top: 20px !important;
+            // }
+          } 
+      }
+
+      .row {
+        
+          display: flex;
+          justify-content: center;
+
+          .imageContainer {
+            max-width: 350px;
+            padding: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+          }
+
+          .imageContainer img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+
+            // border-radius: 12px;
+            // border: 6px double #d4af37; /* Borde dorado doble */
+            // background-color: #fff;
+            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+            // border: 6px solid #4CAF50; /* Color del marco */
+            // border-radius: 10px; /* Bordes redondeados */
+            // padding: 10px; /* Espacio entre el marco y la imagen */
+            // background-color: #ffffff; /* Fondo blanco detrás del marco */
+            // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+            // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+            border: 9px solid #fff; // Borde blanco
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+            border-radius: 10px; // Bordes redondeados
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          
+            &:hover {
+              // transform: scale(1.05);
+              // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+              // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+              // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+
+              transform: scale(1.05); // Efecto de zoom al pasar el mouse
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+          
+            }
+
+          }
+
+      }
+
+  }
+
+
+  
+  //=========== CELL PHONE TEN YEARS EXPERIENCE ===========//
+
+  #tenYearsExperience {
+
+
+      .row {
+
+          // display: flex;
+          justify-content: center;
+          align-items: center;
+          // align-content: center;
+
+          #tenYearsExperienceLelftCol {
+
+              display: block;
+              padding: 30px;
+
+              @media only screen and (max-width: 1046px) {
+                width: 50%;
+              }
+              @media only screen and (max-width: 413px) {
+                width: 80%;
+              }
+              // max-width: 100%;
+
+              #tenYearsExperience1Span {
+                font-family: 'Poppins' !important;
+                font-size: 2.8rem;
+                color: rgb(80, 173, 17) !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience2Span {
+                // Cormorant Garamond
+                // Poppins
+                // Lora
+                // Quicksand
+                font-family: 'Poppins' !important;
+                font-size: 2.3rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                text-align: center;
+              } 
+  
+              #tenYearsExperience3Span {
+                font-family: 'Poppins' !important;
+                font-size: 1.5rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                text-align: center;
+              } 
+  
+              #tenYearsExperience4Span {
+                font-family: 'Poppins' !important;
+                font-size: 1.5rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience5Span {
+                font-family: 'Poppins' !important;
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience6Span {
+                font-family: 'Poppins' !important;
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience7Span {
+                font-family: 'Poppins' !important;
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+
+          }
+
+
+          .imageContainer {
+              display: block;
+              max-width: 350px;
+              padding: 0;
+              margin-left: 20px;
+              margin-right: 20px;
+              margin-bottom: 30px;
+          }
+
+          .imageContainer img {
+              width: 100%;
+              height: auto;
+              display: block;
+
+
+              // border-radius: 12px;
+              // border: 6px double #d4af37; /* Borde dorado doble */
+              // background-color: #fff;
+              // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+              // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+              border: 6px solid #4CAF50; /* Color del marco */
+              border-radius: 10px; /* Bordes redondeados */
+              padding: 10px; /* Espacio entre el marco y la imagen */
+              background-color: #ffffff; /* Fondo blanco detrás del marco */
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+              transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+
+              // border: 9px solid #fff; // Borde blanco
+              // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+              // border-radius: 10px; // Bordes redondeados
+              // transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            
+              &:hover {
+                // transform: scale(1.05);
+                // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+                transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+
+                // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+            
+              }
+
+          }
+
+      }
+
+  }
+
+
 
 
   //=========== CELL PHONE UNETE-MISIONES ===========//
@@ -809,75 +1342,3 @@ header {
 } //end cell phone
 
 
-
-//======================================== //
-//=========== CURRENT YEAR TOUR ========== //
-//======================================== //
-
-#currentYearTour {
-
-  // margin-bottom: 40px;
-
-  #currentYearTourFirstSpan {
-    font-family: serif !important;
-    font-size: 1.9rem;
-    color:  var(--bs-dark-rgb);
-    letter-spacing: 4px;
-    margin: 0 auto;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-  } 
-
-  #currentYearTourSecondSpan {
-    font-family: serif !important;
-    font-size: 2.2rem;
-    color: #3f51b5 !important;
-    letter-spacing: 6px;
-    margin: 0 auto;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
-    // text-align: center;
-  } 
-
-  .row {
-    display: flex;
-    // flex-direction: row;
-    justify-content: center;
-    // align-items: center;
-
-    // .gapCol {
-
-    // }
-
-
-    .imageContainer {
-      // flex: 1 1 350px;
-      max-width: 350px;
-      padding: 0;
-      margin-left: 20px;
-      margin-right: 20px;
-      margin-bottom: 30px;
-    }
-
-    .imageContainer img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  }
-    // .tourSection {
-      // text-align: center;
-      // padding: 20px;
-    // }
-
-    // .imageGrid {
-    //   display: flex;
-    //   flex-wrap: wrap;
-    //   justify-content: center;
-    //   gap: 40px;
-    // }
-
-
-
-}
