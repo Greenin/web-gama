@@ -1,0 +1,163 @@
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+
+//======================================== //
+//========= NORMAL SCREEN STYLE ========== //
+//======================================== //
+
+@media only screen and (min-width: 1047px) {
+
+
+  //=========== NORMAL SCREEN IDENTITY ===========//
+
+  #identity {
+
+      .row { 
+
+          padding-bottom: 30px;
+
+          #significadoGAMA {
+
+            padding-left: 5%;
+
+            #identityTitleFirstLine {
+              font-size: 1.5rem;
+              color: #1e2757;
+              letter-spacing: 3px;
+              margin: 0 auto;
+              padding-bottom: 8px;
+              margin-bottom: 10px;
+            // font-weight: normal;
+            // font-family: YesevaOne-Regula !important;
+            // font-family: Arial, Helvetica, sans-serif !important;
+                  // font-family: monospace !important;
+            // font-family: cursive !important;
+            // font-family: OpenSans-Regular !important;
+            // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+            // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+              // font-family: serif !important;
+            // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+            // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+            // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+            } 
+
+          }
+      
+
+          #teamLogoGama {
+            margin: 0px;
+            padding-top: 10px;
+            padding: 0px;
+            width: 43vw;
+          }
+
+
+          #identitySpaceBeetweenLogoAndText {
+            height: 30px;
+          }
+
+          .identityComponentTitle {
+            font-size: 1.5rem;
+            color: #1e2757;
+            letter-spacing: 3px;
+          }
+
+          hr {
+            padding: 0px 0px 22px 0px;
+            margin: 0px 30px;
+          }
+
+      }
+
+  } //end identity  
+  
+
+} //end normal screen
+
+
+
+
+//======================================== //
+//=========== CELL PHONE STYLE =========== //
+//======================================== //
+
+@media only screen and (max-width: 1046px) {
+
+
+
+  //=========== CELL PHONE IDENTITY ===========//
+
+  #identity {
+
+    margin-top: 10px;
+
+    .row {
+
+        // padding-bottom: 20px;
+        margin-bottom: 20px;
+        // padding-bottom: 20px;
+
+        #significadoGAMA {
+
+          padding-left: 5%;
+          margin-top: 20px;
+
+          #identityTitleFirstLine {
+            font-size: 1.2rem;
+            color: #1e2757;
+            letter-spacing: 2px;
+            margin: 0 auto;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+          } 
+      
+        }
+
+        
+        #teamLogoGama {
+          margin: 0px;
+          padding-top: 0px;
+          width: 70%;
+          max-width: 500px;
+        }
+
+        .identityComponent {
+          margin-top: 0px;
+          margin-bottom: 20px;  
+        }
+
+        .identityComponentTitle {
+          font-size: 1.5rem;
+          color: #1e2757;
+          letter-spacing: 3px;
+        }
+
+
+    }
+
+
+    hr {
+      padding: 0px 0px 22px 0px;
+      margin: 0px 30px;
+    }
+
+  } //end identity
+
+  
+
+} //end cell phone
+
+

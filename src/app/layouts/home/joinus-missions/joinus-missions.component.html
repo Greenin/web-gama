@@ -1,0 +1,70 @@
+<!--======================================== -->
+  <!--========= UNETE A LAS MISIONES ========= -->
+  <!--======================================== -->
+  
+  <section id="uneteMisiones" class="pt-5 pb-5">
+    <div class="container">
+
+          <div class="col">
+            <p id="uneteMisionesTitleFirstLine">ÚNETE A LAS </p>
+            <br>
+            <p id="uneteMisionesTitleSecondLine">MISIONES</p>
+          </div>
+          <p id="uneteMisionesDescParagraph">
+          <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
+            Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
+          </p>
+          <br>
+          
+          <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()">
+            <!-- Nombre -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="nombre" name="nombre" required>
+            </mat-form-field>
+      
+            <!-- Apellidos -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Apellidos</mat-label>
+              <input matInput formControlName="apellidos" name="apellidos" required>
+            </mat-form-field>
+      
+            <!-- Correo electrónico -->
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Correo electrónico</mat-label>
+              <input matInput formControlName="email" name="email" required>
+            </mat-form-field>
+      
+            <!-- Checkbox de privacidad -->
+            <mat-checkbox formControlName="privacidad" name="privacidad" required>
+              He leído y aceptado condiciones de
+              <a href="#" (click)="openPrivacidadModal($event)">privacidad de datos</a>.
+            </mat-checkbox>
+      
+            <!-- Botón de enviar -->
+            <div class="text-center">
+              <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
+            </div>
+      
+            <!-- Mensaje de éxito -->
+            <div *ngIf="enviadoConExito">
+              <div class="container mt-2">
+                <div class="alert alert-success text-dark" role="alert">
+                  <!-- <span class="material-icons me-2">check_circle</span>  -->
+                  Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias.
+                </div>
+              </div>
+            </div>
+            <!-- Mensaje de error -->
+            <div *ngIf="envioFallido">
+              <div class="container mt-2">
+                <div class="alert alert-danger text-dark" role="alert">
+                  Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.
+                </div>
+              </div>
+            </div> 
+              
+          </form>
+
+    </div>
+  </section>

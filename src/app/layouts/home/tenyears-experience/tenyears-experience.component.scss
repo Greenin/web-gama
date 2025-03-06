@@ -1,0 +1,330 @@
+
+//======================================== //
+//========= NORMAL SCREEN STYLE ========== //
+//======================================== //
+
+@media only screen and (min-width: 1047px) {
+
+  
+    #tenYearsExperience {
+  
+      // #cellPhoneTenYearsExperienceTitle {
+      //   display: none;
+      // }
+  
+      // #normalScreenTenYearsExperienceTitle {
+  
+          // display: block;
+  
+      .row {
+  
+          // display: flex;
+          justify-content: center;
+          align-items: center;
+          // align-content: center;
+  
+          #tenYearsExperienceLelftCol {
+  
+              display: block;
+
+              @media only screen and (min-width: 1047px) {
+                width: 50%;
+                max-width: 50%;
+              }
+
+              @media only screen and (min-width: 1194px) {
+
+                width: 25%;
+                max-width: 25%;
+              }
+              
+              padding: 30px;
+  
+              #tenYearsExperience1Span {
+                font-size: 2.8rem;
+                color: rgb(80, 173, 17) !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience2Span {
+                // Cormorant Garamond
+                // Poppins
+                // Lora
+                // Quicksand
+                font-size: 2.3rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                text-align: center;
+              } 
+  
+              #tenYearsExperience3Span {
+                font-size: 1.5rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                text-align: center;
+              } 
+  
+              #tenYearsExperience4Span {
+                font-size: 1.5rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience5Span {
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience6Span {
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+              #tenYearsExperience7Span {
+                font-size: 2.2rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                // text-align: center;
+              } 
+  
+          }
+  
+  
+  
+          .imageContainer {
+              display: block;
+              max-width: 350px;
+              // padding: 0;
+              margin-left: 35px;
+              // margin-right: 20px;
+              // margin-bottom: 30px;
+          }
+  
+          .imageContainer img {
+              width: 100%;
+              height: auto;
+              display: block;
+  
+  
+              // border-radius: 12px;
+              // border: 6px double #d4af37; /* Borde dorado doble */
+              // background-color: #fff;
+              // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+              // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  
+              border: 6px solid #4CAF50; /* Color del marco */
+              border-radius: 10px; /* Bordes redondeados */
+              padding: 10px; /* Espacio entre el marco y la imagen */
+              background-color: #ffffff; /* Fondo blanco detrás del marco */
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+              transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  
+              // border: 9px solid #fff; // Borde blanco
+              // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+              // border-radius: 10px; // Bordes redondeados
+              // transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+            
+              &:hover {
+                // transform: scale(1.05);
+                // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  
+                transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+  
+                // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+            
+              }
+  
+          }
+  
+      }
+  
+    }
+  
+  
+  } //end normal screen
+  
+  
+  
+  
+  
+  //======================================== //
+  //=========== CELL PHONE STYLE =========== //
+  //======================================== //
+  
+  @media only screen and (max-width: 1046px) {
+  
+  
+    //=========== CELL PHONE TEN YEARS EXPERIENCE ===========//
+  
+    #tenYearsExperience {
+  
+  
+        .row {
+  
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+            // align-content: center;
+  
+            #tenYearsExperienceLelftCol {
+  
+                display: block;
+                padding: 30px;
+  
+                @media only screen and (max-width: 1046px) {
+                  width: 50%;
+                }
+                
+                @media only screen and (max-width: 594px) {
+                  width: 60%;
+                }
+
+                @media only screen and (max-width: 413px) {
+                  width: 80%;
+                }
+                // max-width: 100%;
+  
+                #tenYearsExperience1Span {
+                  font-size: 2.8rem;
+                  color: rgb(80, 173, 17) !important;
+                  letter-spacing: 6px;
+                  margin: 0 auto;
+                  padding-bottom: 5px;
+                  margin-bottom: 40px;
+                  // text-align: center;
+                } 
+    
+                #tenYearsExperience2Span {
+                  // Cormorant Garamond
+                  // Poppins
+                  // Lora
+                  // Quicksand
+                  font-size: 2.3rem;
+                  color:  var(--bs-dark-rgb);
+                  letter-spacing: 4px;
+                  margin: 0 auto;
+                  text-align: center;
+                } 
+    
+                #tenYearsExperience3Span {
+                  font-size: 1.5rem;
+                  color:  var(--bs-dark-rgb);
+                  letter-spacing: 4px;
+                  margin: 0 auto;
+                  text-align: center;
+                } 
+    
+                #tenYearsExperience4Span {
+                  font-size: 1.5rem;
+                  color:  var(--bs-dark-rgb);
+                  letter-spacing: 6px;
+                  margin: 0 auto;
+                  // text-align: center;
+                } 
+    
+                #tenYearsExperience5Span {
+                  font-size: 2.2rem;
+                  color: #3f51b5 !important;
+                  letter-spacing: 6px;
+                  margin: 0 auto;
+                  // text-align: center;
+                } 
+    
+                #tenYearsExperience6Span {
+                  font-size: 2.2rem;
+                  color: #3f51b5 !important;
+                  letter-spacing: 6px;
+                  margin: 0 auto;
+                  // text-align: center;
+                } 
+    
+                #tenYearsExperience7Span {
+                  font-size: 2.2rem;
+                  color: #3f51b5 !important;
+                  letter-spacing: 6px;
+                  margin: 0 auto;
+                  // text-align: center;
+                } 
+  
+            }
+  
+  
+            .imageContainer {
+                display: block;
+                max-width: 350px;
+                padding: 0;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+            }
+  
+            .imageContainer img {
+                width: 100%;
+                height: auto;
+                display: block;
+  
+  
+                // border-radius: 12px;
+                // border: 6px double #d4af37; /* Borde dorado doble */
+                // background-color: #fff;
+                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  
+                border: 6px solid #4CAF50; /* Color del marco */
+                border-radius: 10px; /* Bordes redondeados */
+                padding: 10px; /* Espacio entre el marco y la imagen */
+                background-color: #ffffff; /* Fondo blanco detrás del marco */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  
+                // border: 9px solid #fff; // Borde blanco
+                // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+                // border-radius: 10px; // Bordes redondeados
+                // transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+              
+                &:hover {
+                  // transform: scale(1.05);
+                  // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  
+                  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+  
+                  // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                  // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+              
+                }
+  
+            }
+  
+        }
+  
+    }
+  
+  
+  } //end cell phone
+  
+  
+  
