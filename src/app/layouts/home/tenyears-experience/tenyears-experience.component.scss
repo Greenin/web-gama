@@ -23,22 +23,22 @@
           align-items: center;
           // align-content: center;
   
-          #tenYearsExperienceLelftCol {
+          #tenYearsExperienceLelftDiv {
   
               display: block;
+              padding: 0px;
 
               @media only screen and (min-width: 1047px) {
-                width: 50%;
-                max-width: 50%;
+                width: 25%;
+                max-width: 25%;
               }
 
               @media only screen and (min-width: 1194px) {
 
-                width: 25%;
-                max-width: 25%;
+                width: 20%;
+                max-width: 20%;
               }
               
-              padding: 30px;
   
               #tenYearsExperience1Span {
                 font-size: 2.8rem;
@@ -105,7 +105,6 @@
           }
   
   
-  
           .imageContainer {
               display: block;
               max-width: 350px;
@@ -165,8 +164,6 @@
   
   
   
-  
-  
   //======================================== //
   //=========== CELL PHONE STYLE =========== //
   //======================================== //
@@ -186,85 +183,108 @@
             align-items: center;
             // align-content: center;
   
-            #tenYearsExperienceLelftCol {
+            #tenYearsExperienceLelftDiv {
   
-                display: block;
-                padding: 30px;
-  
+                display: flex;
+                padding: 0;
+                justify-content: center;
+                margin-bottom: 30px;
+
+
                 @media only screen and (max-width: 1046px) {
-                  width: 50%;
+                  width: 30%;
                 }
                 
-                @media only screen and (max-width: 594px) {
-                  width: 60%;
+                @media only screen and (max-width: 777px) {
+                  width: 100%;
                 }
 
-                @media only screen and (max-width: 413px) {
-                  width: 80%;
+                // @media only screen and (max-width: 594px) {
+                //   width: 100%;
+                // }
+
+                // @media only screen and (max-width: 440px) {
+                //   width: 100%;
+                // }
+
+                #tenYearsExperienceLelftDivContainer {
+
+                    display: block;
+                    padding: 0;
+                    justify-content: left;
+      
+                    @media only screen and (max-width: 777px) {
+                      width: 40%;
+                    }
+    
+                    @media only screen and (max-width: 594px) {
+                      width: 60%;
+                    }
+                    // max-width: 100%;
+      
+                    #tenYearsExperience1Span {
+                      font-size: 2.5rem;
+                      color: rgb(80, 173, 17) !important;
+                      letter-spacing: 6px;
+                      margin: 0 auto;
+                      padding-bottom: 5px;
+                      margin-bottom: 40px;
+                      // text-align: center;
+                    } 
+        
+                    #tenYearsExperience2Span {
+                      // Cormorant Garamond
+                      // Poppins
+                      // Lora
+                      // Quicksand
+                      font-size: 2rem;
+                      color:  var(--bs-dark-rgb);
+                      letter-spacing: 4px;
+                      margin: 0 auto;
+                      text-align: center;
+                    } 
+        
+                    #tenYearsExperience3Span {
+                      font-size: 1.3rem;
+                      color:  var(--bs-dark-rgb);
+                      letter-spacing: 4px;
+                      margin: 0 auto;
+                      text-align: center;
+                    } 
+        
+                    #tenYearsExperience4Span {
+                      font-size: 1.2rem;
+                      color:  var(--bs-dark-rgb);
+                      letter-spacing: 6px;
+                      margin: 0 auto;
+                      // text-align: center;
+                    } 
+        
+                    #tenYearsExperience5Span {
+                      font-size: 1.7rem;
+                      color: #3f51b5 !important;
+                      letter-spacing: 6px;
+                      margin: 0 auto;
+                      // text-align: center;
+                    } 
+        
+                    #tenYearsExperience6Span {
+                      font-size: 1.7rem;
+                      color: #3f51b5 !important;
+                      letter-spacing: 6px;
+                      margin: 0 auto;
+                      // text-align: center;
+                    } 
+        
+                    #tenYearsExperience7Span {
+                      font-size: 1.7rem;
+                      color: #3f51b5 !important;
+                      letter-spacing: 6px;
+                      margin: 0 auto;
+                      // text-align: center;
+                    } 
+
                 }
-                // max-width: 100%;
-  
-                #tenYearsExperience1Span {
-                  font-size: 2.8rem;
-                  color: rgb(80, 173, 17) !important;
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  padding-bottom: 5px;
-                  margin-bottom: 40px;
-                  // text-align: center;
-                } 
-    
-                #tenYearsExperience2Span {
-                  // Cormorant Garamond
-                  // Poppins
-                  // Lora
-                  // Quicksand
-                  font-size: 2.3rem;
-                  color:  var(--bs-dark-rgb);
-                  letter-spacing: 4px;
-                  margin: 0 auto;
-                  text-align: center;
-                } 
-    
-                #tenYearsExperience3Span {
-                  font-size: 1.5rem;
-                  color:  var(--bs-dark-rgb);
-                  letter-spacing: 4px;
-                  margin: 0 auto;
-                  text-align: center;
-                } 
-    
-                #tenYearsExperience4Span {
-                  font-size: 1.5rem;
-                  color:  var(--bs-dark-rgb);
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  // text-align: center;
-                } 
-    
-                #tenYearsExperience5Span {
-                  font-size: 2.2rem;
-                  color: #3f51b5 !important;
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  // text-align: center;
-                } 
-    
-                #tenYearsExperience6Span {
-                  font-size: 2.2rem;
-                  color: #3f51b5 !important;
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  // text-align: center;
-                } 
-    
-                #tenYearsExperience7Span {
-                  font-size: 2.2rem;
-                  color: #3f51b5 !important;
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  // text-align: center;
-                } 
   
             }
   

@@ -13,140 +13,130 @@ header {
 @media only screen and (min-width: 1047px) {
 
 
-  //=========== NORMAL SCREEN HEADER ===========//
-	header {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // align-items: center;
+		.normalScreenHeaderClass {
+			display: block;
+		}
 
-    //#f5f5dc;  //De los mejores: 1
-    // #ececc7
-    // #eeeeda;  //De los mejores: 2
-    // #f0ebd6;  //De los mejores: 2
-    // #f0ecdc;
-    // #f3f0e5;
-    // #f8f6ed  //De los mejores: 1
+		.cellPhoneHeaderClass {
+			display: none;
+		}
+
+
+		//=========== NORMAL SCREEN HEADER ===========//
+		header {
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: space-between;
+			// align-items: center;
+
+			//#f5f5dc;  //De los mejores: 1
+			// #ececc7
+			// #eeeeda;  //De los mejores: 2
+			// #f0ebd6;  //De los mejores: 2
+			// #f0ecdc;
+			// #f3f0e5;
+			// #f8f6ed  //De los mejores: 1
+			background-color: #f8f6ed;
+			line-height: 80px;
+			max-height: 80px;
+		}
+
+
+
+		//=========== NORMAL SCREEN HEADER UL ===========//
+
+		header ul {
+			width: 100%;
+			display: flex; /* Usa flexbox para alinear los elementos */
+			align-items: center; /* Centra verticalmente los elementos */
+			justify-content: flex-start; /* Alinea los elementos a la izquierda */
+			padding: 0;
+		}
+
+
+		header ul li {
+			display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
+			align-items: center; /* Centra los elementos en el eje vertical */
+			margin: 0;
+			height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+			// max-height: 80px;
+			// text-wrap:break-word;
+			line-height: 1.2; /* Reducir el interlineado */
+		}
+
+
+		header a {
+			display: flex;
+			align-items: center; /* Centra el texto dentro del enlace */
+			padding: 0 30px; /* Reduce el padding lateral si es necesario */
+			height: 100%; /* Hace que los enlaces ocupen toda la altura */
+			text-decoration: none;
+			color: inherit;
+			transition: all 300ms;
+			max-height: 80px;
+			// white-space: nowrap;     
+			word-break: break-word; /* Divide palabras largas si es necesario */
+			line-height: 1.2; /* Reducir el interlineado */
+		}
+
+
+		header a:hover, .actived{
+			transform: scale(1.25,1.25);
+		}
+
+
+
+		#headerIconText {
+
+			padding-left: 4px;
+
+			#normalScreenHeaderLogo {
+
+				align-items: center; /* Centra verticalmente */
+				text-decoration: none;
+
+				#normalScreenLogo {
+					width: 70px;
+					height: 70px;
+				}
+
+				#normalScreenText {
+					display: block;
+					max-width: 140px;
+					text-align: left;
+					font-weight: normal;
+					font-size: 14px;
+					line-height: 1.2;
+					color: #757575; /* Cambia según tu diseño */
+					margin-left: 10px; /* Espacio entre logo y texto */
+					word-wrap: break-word; /* Asegura que el texto respete el ancho */
+				}
+
+			}
+
+		}
+
+
+		#headerSpace {
+			min-width: 12%;
+			// height: 70px;
+		}
+
+
 		
-		background-color: #f8f6ed;
-		line-height: 80px;
-    max-height: 80px;
-	}
-
-  .normalScreenHeaderClass {
-    display: block;
-  }
-
-  .cellPhoneHeaderClass {
-    display: none;
-  }
-
-
-	#headerIconText {
-    	padding-left: 10px;
-	}
-
-
-	#normalScreenHeaderLogo {
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-	}
-
-	#normalScreenLogoImg {
-		width: 70px;
-		height: 70px;
-	}
-
-
-	#normalScreenLogoText {
-		display: block;
-		max-width: 140px;
-		text-align: left;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 1.2;
-		color: #757575; /* Cambia según tu diseño */
-		margin-left: 10px; /* Espacio entre logo y texto */
-		word-wrap: break-word; /* Asegura que el texto respete el ancho */
-	}
-
-
-	#headerSpace {
-		min-width: 10%;
-		// height: 70px;
-	}
-
-
-  //=========== NORMAL SCREEN HEADER UL ===========//
-
-	header ul {
-		width: 100%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
-
-
-	header ul li {
-		display: flex; /* Asegura que el contenido dentro de los li también se alinee correctamente */
-		align-items: center; /* Centra los elementos en el eje vertical */
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-    // max-height: 80px;
-    // text-wrap:break-word;
-    line-height: 1.2; /* Reducir el interlineado */
-	}
-
-
-	header a {
-		display: flex;
-		align-items: center; /* Centra el texto dentro del enlace */
-		padding: 0 30px; /* Reduce el padding lateral si es necesario */
-		height: 100%; /* Hace que los enlaces ocupen toda la altura */
-		text-decoration: none;
-		color: inherit;
-		transition: all 300ms;
-    max-height: 80px;
-    // white-space: nowrap;     
-    word-break: break-word; /* Divide palabras largas si es necesario */
-    line-height: 1.2; /* Reducir el interlineado */
-	}
-
-
-	header a:hover, .actived{
-		transform: scale(1.25,1.25);
-	}
 
 
 
-	#normalScreenMisionesSpan {
-		cursor: pointer;
-		display: flex;
-		align-items: center; /* Centra el texto dentro del enlace */
-		padding: 0 30px; /* Reduce el padding lateral si es necesario */
-		height: 100%; /* Hace que los enlaces ocupen toda la altura */
-		text-decoration: none;
-		color: inherit;
-		transition: all 300ms;
-	}
-
-	#normalScreenMisionesSpan:hover{
-		transform: scale(1.25,1.25);
-	}
-
-
-
-  //=========== NORMAL SCREEN FOOTER ===========//
-	footer {
-		background-color: #e3ebf4;
-		// border-top: 1px solid #f3ef11;
-		width: 100%;
-		margin: 0px auto;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		color: rgba(0, 0, 0, 0.5);
-	}
+		//=========== NORMAL SCREEN FOOTER ===========//
+		footer {
+			background-color: #e3ebf4;
+			// border-top: 1px solid #f3ef11;
+			width: 100%;
+			margin: 0px auto;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: rgba(0, 0, 0, 0.5);
+		}
 
 
 } //end normal screen
@@ -161,109 +151,145 @@ header {
 @media only screen and (max-width: 1046px) {
 
 
-	//=========== CELL PHONE HEADER ===========//
+		.normalScreenHeaderClass {
+			display: none;
+		}
 
-	header {
-    //#f5f5dc;  //De los mejores: 1
-    //#ececc7
-    //#eeeeda;  //De los mejores: 2
-    //#f0ebd6;  //De los mejores: 2
-    //#f0ecdc;
-    //#f3f0e5;
-    //#f8f6ed  //De los mejores: 1
-		background-color: #f8f6ed;
-		line-height: 70px;
-	}
+		.cellPhoneHeaderClass {
+			display: block;
+		}
 
-  .normalScreenHeaderClass {
-    display: none;
-  }
+		//=========== CELL PHONE HEADER ===========//
 
-  .cellPhoneHeaderClass {
-    display: block;
-  }
+		header {
+			//#f5f5dc;  //De los mejores: 1
+			//#ececc7
+			//#eeeeda;  //De los mejores: 2
+			//#f0ebd6;  //De los mejores: 2
+			//#f0ecdc;
+			//#f3f0e5;
+			//#f8f6ed  //De los mejores: 1
+			background-color: #f8f6ed;
+			line-height: 70px;
+			padding: 0 auto;
+			margin: 0 auto;
+			width: 100%;
+		
 
+			#cellPhoneHeaderRow {
+				display: flex; /* Usa flexbox para alinear los elementos */
+				align-items: center; /* Centra verticalmente los elementos */
+				justify-content: flex-start; /* Alinea los elementos a la izquierda */
+				padding: 0 auto;
+				margin: 0 auto;
+				width: 100%;
+			
 
-  #cellPhoneHeaderRow {
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding: 0;
-	}
+				#cellPhoneHeaderLeftSide {
 
-  #cellPhoneHeaderLogoTit {
-    max-width: 75%;
-		display: flex; /* Usa flexbox para alinear los elementos */
-		align-items: center; /* Centra verticalmente los elementos */
-		justify-content: flex-start; /* Alinea los elementos a la izquierda */
-		padding-left: 10px;
-	}
+					max-width: 70%;
+					display: flex; /* Usa flexbox para alinear los elementos */
+					align-items: center; /* Centra verticalmente los elementos */
+					justify-content: flex-start; /* Alinea los elementos a la izquierda */
 
+					@media only screen and (max-width: 1046px) {
+						padding-left: 15px;
+					}
 
-	#cellPhoneHeaderButtonDiv {
-    max-width: 25%;
-		text-align: right;
-		align-items: center; /* Centra los elementos en el eje vertical */
-		margin: 0;
-		height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
-	}
+					@media only screen and (max-width: 415px) {
+						padding-left: 0px;
+					}
+				
 
-	#cellPhoneHeaderButton {
-		color: rgb(118, 204, 61);
-    background-color: #f8f6ed;
-    border: none;
-	}
+					#cellPhoneHeaderLeftSideContainer {
+						display: flex;
+						align-items: center; /* Centra verticalmente */
+						text-decoration: none;
+						padding-right: 0px;
+						padding-left: 10px;
+						height: inherit;
+						color: inherit;
+						// transition: all 300ms;
+					}
 
+					#cellPhoneLogo {
+						width: 60px;
+						height: 60px;
+					}
 
-	#cellPhoneLogoHeader {
-		display: flex;
-		align-items: center; /* Centra verticalmente */
-		text-decoration: none;
-		padding-right: 0px;
-		padding-left: 10px;
-		height: inherit;
-		color: inherit;
-		// transition: all 300ms;
-	}
+					#cellPhoneText {
+						display: block;
+						text-align: left;
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 1.2;
+						color: #757575; /* Cambia según tu diseño */
+						margin-left: 10px; /* Espacio entre logo y texto */
+						word-wrap: break-word; /* Asegura que el texto respete el ancho */
+					}
 
-	#cellPhoneLogoImg {
-		width: 60px;
-		height: 60px;
-	}
-
-
-	#cellPhoneLogoText {
-		display: block;
-		text-align: left;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 1.2;
-		color: #757575; /* Cambia según tu diseño */
-		margin-left: 10px; /* Espacio entre logo y texto */
-		word-wrap: break-word; /* Asegura que el texto respete el ancho */
-	}
+				}
 
 
-	#cellPhoneScreenMisionesSpan {
-		padding-right: 10px;
-		height: inherit;
-		text-decoration: none;
-		color: inherit;
-		// transition: all 300ms;
-	}
+				#cellPhoneHeaderRightSide {
+					max-width: 30%;
+					text-align: right;
+					align-items: center; /* Centra los elementos en el eje vertical */
+					margin: 0 auto;
+					height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
 
-  
+					#cellPhoneHeaderButton {
 
-  //=========== CELL PHONE FOOTER ===========//
-	footer {
-		background-color: #e3ebf4;
-		// border-top: 1px solid #f3ef11;
-		width: 100%;
-		margin: 0px auto;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		color: rgba(0, 0, 0, 0.5);
-	}
+						color: rgb(118, 204, 61);
+						background-color: #f8f6ed;
+						border: none;
+
+						@media only screen and (max-width: 1046px) {
+							margin-right: 25px;
+						}
+
+						@media only screen and (max-width: 415px) {
+							margin-right: 10px;
+						}
+
+						@media only screen and (max-width: 377px) {
+							margin-right: 0px;
+						}
+						
+					}
+
+				}
+
+
+
+
+
+
+			} //end row
+
+		} //end header
+
+
+		// #cellPhoneScreenMisionesSpan {
+		// 	padding-right: 10px;
+		// 	height: inherit;
+		// 	text-decoration: none;
+		// 	color: inherit;
+			// transition: all 300ms;
+		// }
+
+	
+
+	//=========== CELL PHONE FOOTER ===========//
+		footer {
+			background-color: #e3ebf4;
+			// border-top: 1px solid #f3ef11;
+			width: 100%;
+			margin: 0px auto;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: rgba(0, 0, 0, 0.5);
+		}
 	
 
 } //end cell phone
