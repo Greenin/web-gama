@@ -51,6 +51,7 @@ header {
 			align-items: center; /* Centra verticalmente los elementos */
 			justify-content: flex-start; /* Alinea los elementos a la izquierda */
 			padding: 0;
+			margin: 0;
 		}
 
 
@@ -121,10 +122,6 @@ header {
 			min-width: 12%;
 			// height: 70px;
 		}
-
-
-		
-
 
 
 		//=========== NORMAL SCREEN FOOTER ===========//
@@ -260,11 +257,6 @@ header {
 
 				}
 
-
-
-
-
-
 			} //end row
 
 		} //end header
@@ -278,7 +270,6 @@ header {
 			// transition: all 300ms;
 		// }
 
-	
 
 	//=========== CELL PHONE FOOTER ===========//
 		footer {

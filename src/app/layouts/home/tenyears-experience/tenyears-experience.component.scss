@@ -190,6 +190,26 @@
                 justify-content: center;
                 margin-bottom: 30px;
 
+                // position: relative;
+
+                // padding: 2rem;
+                // border-radius: 15px;
+                // background: linear-gradient(135deg, #6a11cb, #2575fc);
+                // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                // color: white;
+                // text-align: center;
+
+
+                // background: linear-gradient(135deg, #6a11cb, #2575fc);
+                // background-size: 200% 200%;
+                // animation: gradientAnimation 5s ease infinite;
+
+                // @keyframes gradientAnimation {
+                //   0% { background-position: 0% 50%; }
+                //   50% { background-position: 100% 50%; }
+                //   100% { background-position: 0% 50%; }
+                // }
+
 
                 @media only screen and (max-width: 1046px) {
                   width: 30%;
@@ -207,18 +227,65 @@
                 //   width: 100%;
                 // }
 
+
+                // #canvas {
+                //   display: block;
+                //   position: absolute;
+                  // top: 0;
+                  // left: 0;
+                  // width: 100%;
+                  // height: 100%;
+                  // background: rgba(255, 255, 255, 0.8); // Fondo translúcido o con textura
+                  // z-index: 1; // Capa base del lienzo
+
+                  // background: url('../../../../assets/textures/europe1a.jpg'); 
+                  // background-size: cover;
+                  // border-radius: 12px;
+                  // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de flotación
+                  // border: 2px solid rgba(255, 255, 255, 0.6);
+                  // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
+                  // opacity: 0.2; //Reduce la opacidad al 80%
+
+                //   @media only screen and (max-width: 1060px) {
+                //     width: 90%;
+                //   }
+
+                //   @media only screen and (max-width: 777px) {
+                //     width: 40%;
+                //   }
+  
+                //   @media only screen and (max-width: 594px) {
+                //     width: 90%;
+                //   }
+                // }
+
                 #tenYearsExperienceLelftDivContainer {
 
                     display: block;
-                    padding: 0;
-                    justify-content: left;
+                    padding-top: 50px;
+                    padding-bottom: 40px;
+                    padding-left: 25px;
+                    // justify-content: center;
+                    // height: 100%;
+
+                    // position: absolute;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%); // Centra el div sobre el lienzo
+                    // z-index: 2; // Lo coloca sobre el lienzo
+                    // padding: 20px;
+                    // background: none; // Evita que tenga otro fondo
+                    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+                    border-radius: 12px;
+                    // border: 2px solid rgba(255, 255, 255, 0.6);
+                    // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
       
                     @media only screen and (max-width: 777px) {
                       width: 40%;
                     }
     
                     @media only screen and (max-width: 594px) {
-                      width: 60%;
+                      width: 85%;
                     }
                     // max-width: 100%;
       
@@ -230,6 +297,7 @@
                       padding-bottom: 5px;
                       margin-bottom: 40px;
                       // text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience2Span {
@@ -242,6 +310,7 @@
                       letter-spacing: 4px;
                       margin: 0 auto;
                       text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience3Span {
@@ -250,6 +319,7 @@
                       letter-spacing: 4px;
                       margin: 0 auto;
                       text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience4Span {
@@ -258,6 +328,7 @@
                       letter-spacing: 6px;
                       margin: 0 auto;
                       // text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience5Span {
@@ -266,6 +337,7 @@
                       letter-spacing: 6px;
                       margin: 0 auto;
                       // text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience6Span {
@@ -274,6 +346,7 @@
                       letter-spacing: 6px;
                       margin: 0 auto;
                       // text-align: center;
+                      // font-weight: bold;
                     } 
         
                     #tenYearsExperience7Span {
@@ -282,6 +355,7 @@
                       letter-spacing: 6px;
                       margin: 0 auto;
                       // text-align: center;
+                      // font-weight: bold;
                     } 
 
                 }
