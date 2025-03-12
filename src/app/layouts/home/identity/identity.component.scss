@@ -18,144 +18,204 @@
 //========= NORMAL SCREEN STYLE ========== //
 //======================================== //
 
-@media only screen and (min-width: 1047px) {
+// @media only screen and (min-width: 1047px) {
 
 
   //=========== NORMAL SCREEN IDENTITY ===========//
 
   #identity {
 
-      .row { 
+      margin: 0 auto;
+      padding: 0;
 
-            padding-bottom: 30px;
+      #identityContainer {
 
+      //=========== CELL PHONE SIZE ===========//
+          @media only screen and (max-width: 1046px) {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            margin-right: 0 auto;
+            margin-left: 0 auto;
+          }
 
-                
-            display: flex;
-            position: relative;
+          @media only screen and (max-width: 1046px) {
+            margin: 0 auto;
             padding: 0;
-            width: 100%;
-            height: 100%;
+          }
 
+          .row { 
 
-            #canvas {
-
-              display: block;
-              position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 100%;
-              height: 100%;
-              width: 100%;
-              // background: rgba(255, 255, 255, 0.8); // Fondo translúcido o con textura
-              z-index: 1; // Capa base del lienzo
-
-              background: url('../../../../assets/img/identity-bg.png'); 
-              // background-size: cover;
-              // border-radius: 12px;
-              // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de flotación
-              // border: 2px solid rgba(255, 255, 255, 0.6);
-              // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
-              // opacity: 0.2; //Reduce la opacidad al 80%
-              
-              // @media only screen and (max-width: 1060px) {
-              //   width: 90%;
-              // }
-
-              // @media only screen and (max-width: 777px) {
-              //   width: 40%;
-              // }
-
-              // @media only screen and (max-width: 594px) {
-              //   width: 90%;
-              // }
-            } //end canvas
-
-            #canvasContainer {
-                // position: absolute;
-                // display: block;
-                // display: flex;
-                // position: relative;
-                display: block;
+                display: flex;
+                position: relative;
+                padding-bottom: 25px;
                 width: 100%;
                 height: 100%;
-                z-index: 2;
+                margin: 0 auto;
+                padding: 0;
 
-                  #identityRow {
 
-                      // display: flex;
+                #canvas {
 
-                      #significadoGAMA {
+                  display: block;
+                  position: absolute;
+                  // top: 0;
+                  // left: 0;
+                  // width: 100%;
+                  height: 100%;
+                  width: 100%;
+                  // background: rgba(255, 255, 255, 0.8); // Fondo translúcido o con textura
+                  z-index: 1; // Capa base del lienzo
 
-                          padding-left: 5%;
-                          // z-index: 2; 
+                  background: url('../../../../assets/img/identity-bg-4.png'); 
+                  background-size: cover;
+                  // border-radius: 12px;
+                  // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de flotación
+                  // border: 2px solid rgba(255, 255, 255, 0.6);
+                  // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
+                  opacity: 0.1; //Reduce la opacidad al 80%
+                  
+                  // @media only screen and (max-width: 1060px) {
+                  //   width: 90%;
+                  // }
 
-                          #identityTitleFirstLine {
-                            font-size: 1.5rem;
-                            color: #1e2757;
-                            letter-spacing: 0px;
-                            margin: 0 auto;
-                            padding-bottom: 8px;
-                            margin-bottom: 10px;
-                            
-                            
-                          // font-weight: normal;
-                          // font-family: YesevaOne-Regula !important;
-                          // font-family: Arial, Helvetica, sans-serif !important;
-                                // font-family: monospace !important;
-                          // font-family: cursive !important;
-                          // font-family: OpenSans-Regular !important;
-                          // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
-                          // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-                            // font-family: serif !important;
-                          // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-                          // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
-                          // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-                          } 
+                  // @media only screen and (max-width: 777px) {
+                  //   width: 40%;
+                  // }
 
-                      }
+                  // @media only screen and (max-width: 594px) {
+                  //   width: 90%;
+                  // }
+                } //end canvas
+
+                #canvasContainer {
+                    // position: absolute;
+                    // display: block;
+                    // display: flex;
+                    // position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    padding: 0;
+                    z-index: 2;
+
+                      #identityRow {
+
+                          // display: flex;
+                          // font-weight: bold !important;
+
+                          #significadoGAMA {
+
+                              padding-left: 5%;
+                              //=========== CELL PHONE SIZE ===========//
+                              @media only screen and (max-width: 1046px) {
+                                margin-top: 20px;
+                              }
+                              // z-index: 2; 
+
+                              #identityTitleFirstLine {
+                                  //=========== CELL PHONE SIZE ===========//
+                                  @media only screen and (min-width: 1047px) {
+                                    font-size: 1.5rem;
+                                  }
+
+                                  @media only screen and (max-width: 1046px) {
+                                    font-size: 1.2rem;
+                                  }
+
+                                  color: #1e2757;
+                                  letter-spacing: 0px;
+                                  margin: 0 auto;
+                                  margin-bottom: 10px;
+
+                                  //=========== CELL PHONE SIZE ===========//
+                                  @media only screen and (min-width: 1047px) {
+                                    padding-bottom: 8px;
+                                  }
+
+                                  @media only screen and (max-width: 1046px) {
+                                    padding-bottom: 5px;
+                                  }
+                                
+                                
+                                // font-weight: normal;
+                                // font-family: YesevaOne-Regula !important;
+                                // font-family: Arial, Helvetica, sans-serif !important;
+                                      // font-family: monospace !important;
+                                // font-family: cursive !important;
+                                // font-family: OpenSans-Regular !important;
+                                // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; //***** uppercase
+                                // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+                                  // font-family: serif !important;
+                                // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+                                // font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; 
+                                // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+                              } 
+
+                          }
+                          
+
+                          #teamLogoGama {
+
+                            margin: 0px;
+
+                            //=========== CELL PHONE SIZE ===========//
+                            @media only screen and (min-width: 1047px) {
+                              padding-bottom: 0px;
+                              padding-right: 0px;
+                              padding-left: 0px;
+                              padding-top: 10px;
+                              width: 43vw;
+                            }
+
+                            @media only screen and (max-width: 1046px) {
+                              padding-top: 0px;
+                              width: 70%;
+                              max-width: 500px;
+                            }
+
+                          }
+
+
+                          #identitySpaceBeetweenLogoAndText {
+                            height: 30px;
+                          }
+
+
+                          .identityComponent {
+                            // background-color: white;
+                            @media only screen and (max-width: 1046px) {
+                              margin-top: 0px;
+                              margin-bottom: 20px;  
+                            }
+                          }
                       
 
-                      #teamLogoGama {
-                        margin: 0px;
-                        padding-top: 10px;
-                        padding: 0px;
-                        width: 43vw;
-                        
-                      }
+                          .identityComponentTitle {
+                            font-size: 1.5rem;
+                            color: #1e2757;
+                            letter-spacing: 3px;
+
+                          }
+
+                          hr {
+                            padding: 0px 0px 22px 0px;
+                            margin: 0px 30px;
+                          }
 
 
-                      #identitySpaceBeetweenLogoAndText {
-                        height: 30px;
-                      }
+                      } //end logoAndComponentRow
+                    
+                } // end canvasContainer
 
-
-                      .identityComponent {
-                        // background-color: white;
-                      }
-                  
-
-                      .identityComponentTitle {
-                        font-size: 1.5rem;
-                        color: #1e2757;
-                        letter-spacing: 3px;
-                      }
-
-                      hr {
-                        padding: 0px 0px 22px 0px;
-                        margin: 0px 30px;
-                      }
-
-                  } //end logoAndComponentRow
-                
-            } // end canvasContainer
-
-      } //end row
+          } //end row
+      
+      } //end identityContainer
 
   } //end identity  
   
 
-} //end normal screen
+// } //end normal screen
 
 
 
@@ -164,70 +224,70 @@
 //=========== CELL PHONE STYLE =========== //
 //======================================== //
 
-@media only screen and (max-width: 1046px) {
+// @media only screen and (max-width: 1046px) {
 
 
 
   //=========== CELL PHONE IDENTITY ===========//
 
-  #identity {
+  // #identity {
 
-    margin-top: 10px;
+  //   margin-top: 10px;
 
-    .row {
+  //   .row {
 
         // padding-bottom: 20px;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         // padding-bottom: 20px;
 
-        #significadoGAMA {
+    //     #significadoGAMA {
 
-          padding-left: 5%;
-          margin-top: 20px;
+    //       padding-left: 5%;
+    //       margin-top: 20px;
 
-          #identityTitleFirstLine {
-            font-size: 1.2rem;
-            color: #1e2757;
-            letter-spacing: 0px;
-            margin: 0 auto;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-          } 
+    //       #identityTitleFirstLine {
+    //         font-size: 1.2rem;
+    //         color: #1e2757;
+    //         letter-spacing: 0px;
+    //         margin: 0 auto;
+    //         padding-bottom: 5px;
+    //         margin-bottom: 10px;
+    //       } 
       
-        }
+    //     }
 
         
-        #teamLogoGama {
-          margin: 0px;
-          padding-top: 0px;
-          width: 70%;
-          max-width: 500px;
-        }
+    //     #teamLogoGama {
+    //       margin: 0px;
+    //       padding-top: 0px;
+    //       width: 70%;
+    //       max-width: 500px;
+    //     }
 
-        .identityComponent {
-          margin-top: 0px;
-          margin-bottom: 20px;  
-        }
+    //     .identityComponent {
+    //       margin-top: 0px;
+    //       margin-bottom: 20px;  
+    //     }
 
-        .identityComponentTitle {
-          font-size: 1.5rem;
-          color: #1e2757;
-          letter-spacing: 3px;
-        }
-
-
-    }
+    //     .identityComponentTitle {
+    //       font-size: 1.5rem;
+    //       color: #1e2757;
+    //       letter-spacing: 3px;
+    //     }
 
 
-    hr {
-      padding: 0px 0px 22px 0px;
-      margin: 0px 30px;
-    }
+    // }
 
-  } //end identity
+
+    // hr {
+    //   padding: 0px 0px 22px 0px;
+    //   margin: 0px 30px;
+    // }
+
+//   } //end identity
 
   
 
-} //end cell phone
+// } //end cell phone
 
 
