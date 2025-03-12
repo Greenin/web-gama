@@ -28,17 +28,15 @@
               display: block;
               padding: 0px;
 
+              @media only screen and (min-width: 1194px) {
+                width: 20%;
+                max-width: 20%;
+              }
+
               @media only screen and (min-width: 1047px) {
                 width: 25%;
                 max-width: 25%;
               }
-
-              @media only screen and (min-width: 1194px) {
-
-                width: 20%;
-                max-width: 20%;
-              }
-              
   
               #tenYearsExperience1Span {
                 font-size: 2.8rem;
@@ -188,7 +186,7 @@
                 display: flex;
                 padding: 0;
                 justify-content: center;
-                margin-bottom: 30px;
+                margin-bottom: 10px;
 
                 // position: relative;
 
@@ -275,8 +273,8 @@
                     // z-index: 2; // Lo coloca sobre el lienzo
                     // padding: 20px;
                     // background: none; // Evita que tenga otro fondo
-                    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-                    border-radius: 12px;
+                    // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+                    // border-radius: 12px;
                     // border: 2px solid rgba(255, 255, 255, 0.6);
                     // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
       
@@ -285,7 +283,11 @@
                     }
     
                     @media only screen and (max-width: 594px) {
-                      width: 85%;
+                      width: 55%;
+                    }
+
+                    @media only screen and (max-width: 390px) {
+                      width: 65%;
                     }
                     // max-width: 100%;
       
@@ -366,7 +368,8 @@
             .imageContainer {
                 display: block;
                 max-width: 350px;
-                padding: 0;
+                padding-left: 15px;
+                padding-right: 15px;
                 margin-left: 20px;
                 margin-right: 20px;
                 margin-bottom: 30px;
