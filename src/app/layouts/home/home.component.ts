@@ -15,6 +15,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { TeamComponent } from './team/team.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
 import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
+import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 
 
@@ -35,6 +36,7 @@ import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.compo
     TeamComponent,
     CurrentyearTourComponent,
     TenyearsExperienceComponent,
+    JoinusInfoComponent,
     JoinusMissionsComponent,
   ],
   templateUrl: './home.component.html',
