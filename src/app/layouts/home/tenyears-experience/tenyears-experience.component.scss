@@ -3,162 +3,384 @@
 //========= NORMAL SCREEN STYLE ========== //
 //======================================== //
 
-@media only screen and (min-width: 1047px) {
+// @media only screen and (min-width: 1047px) {
 
   
     #tenYearsExperience {
   
-      // #cellPhoneTenYearsExperienceTitle {
-      //   display: none;
-      // }
-  
-      // #normalScreenTenYearsExperienceTitle {
-  
-          // display: block;
-  
-      .row {
-  
-          // display: flex;
-          justify-content: center;
-          align-items: center;
-          // align-content: center;
-  
-          #tenYearsExperienceLelftDiv {
-  
-              display: block;
-              padding: 0px;
-
-              @media only screen and (min-width: 1194px) {
-                width: 20%;
-                max-width: 20%;
-              }
-
+        // #cellPhoneTenYearsExperienceTitle {
+        //   display: none;
+        // }
+    
+        // #normalScreenTenYearsExperienceTitle {
+    
+            // display: block;
+    
+        .row {
+    
+              //=========== NORMAL SCREEN SIZE ===========//
               @media only screen and (min-width: 1047px) {
-                width: 25%;
-                max-width: 25%;
+                  // display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  // align-content: center;
+                  position: relative;
+
+                  width: 100%;
+                  height: 100%;
+                  margin: 0 auto;
+                  padding-top: 25px;
+                  padding-bottom: 25px;
               }
-  
-              #tenYearsExperience1Span {
-                font-size: 2.8rem;
-                color: rgb(80, 173, 17) !important;
-                letter-spacing: 6px;
-                margin: 0 auto;
-                padding-bottom: 5px;
-                margin-bottom: 40px;
-                // text-align: center;
-              } 
-  
-              #tenYearsExperience2Span {
-                // Cormorant Garamond
-                // Poppins
-                // Lora
-                // Quicksand
-                font-size: 2.3rem;
-                color:  var(--bs-dark-rgb);
-                letter-spacing: 4px;
-                margin: 0 auto;
-                text-align: center;
-              } 
-  
-              #tenYearsExperience3Span {
-                font-size: 1.5rem;
-                color:  var(--bs-dark-rgb);
-                letter-spacing: 4px;
-                margin: 0 auto;
-                text-align: center;
-              } 
-  
-              #tenYearsExperience4Span {
-                font-size: 1.5rem;
-                color:  var(--bs-dark-rgb);
-                letter-spacing: 6px;
-                margin: 0 auto;
-                // text-align: center;
-              } 
-  
-              #tenYearsExperience5Span {
-                font-size: 2.2rem;
-                color: #3f51b5 !important;
-                letter-spacing: 6px;
-                margin: 0 auto;
-                // text-align: center;
-              } 
-  
-              #tenYearsExperience6Span {
-                font-size: 2.2rem;
-                color: #3f51b5 !important;
-                letter-spacing: 6px;
-                margin: 0 auto;
-                // text-align: center;
-              } 
-  
-              #tenYearsExperience7Span {
-                font-size: 2.2rem;
-                color: #3f51b5 !important;
-                letter-spacing: 6px;
-                margin: 0 auto;
-                // text-align: center;
-              } 
-  
-          }
-  
-  
-          .imageContainer {
-              display: block;
-              max-width: 350px;
-              // padding: 0;
-              margin-left: 35px;
-              // margin-right: 20px;
-              // margin-bottom: 30px;
-          }
-  
-          .imageContainer img {
-              width: 100%;
-              height: auto;
-              display: block;
-  
-  
-              // border-radius: 12px;
-              // border: 6px double #d4af37; /* Borde dorado doble */
-              // background-color: #fff;
-              // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-              // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
-  
-              border: 6px solid #4CAF50; /* Color del marco */
-              border-radius: 10px; /* Bordes redondeados */
-              padding: 10px; /* Espacio entre el marco y la imagen */
-              background-color: #ffffff; /* Fondo blanco detrás del marco */
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
-              transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
-  
-              // border: 9px solid #fff; // Borde blanco
-              // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
-              // border-radius: 10px; // Bordes redondeados
-              // transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-            
-              &:hover {
-                // transform: scale(1.05);
-                // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-  
-                transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
-  
-                // transform: scale(1.05); // Efecto de zoom al pasar el mouse
-                // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
-            
+
+              //=========== CELL PHONE SIZE ===========//
+              @media only screen and (max-width: 1046px) {
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 auto;
+                  padding: 0;
               }
-  
-          }
-  
-      }
+
+
+              #canvas {
+
+                display: block;
+                position: absolute;
+                height: 100%;
+                // min-height: 100dvh; // Usa la altura real del dispositivo
+                width: 100%;
+                                /* Evitar problemas en móviles */
+                // min-height: 50dvh; // Usa la altura real del dispositivo
+                // min-width: 50vw; // Garantiza que cubra todo el ancho
+                // max-height: 50dvh; // Usa la altura real del dispositivo
+                // min-width: 50vw; // Garantiza que cubra todo el ancho
+                
+                /* En caso de que esté dentro de otro contenedor */
+                // overflow: hidden; 
+
+                // top: 0;
+                // left: 0;
+                // margin: 0 auto;
+                // padding: 0;
+
+                z-index: 1; // Capa base del lienzo
+
+                background: url('../../../../assets/textures/europe4.jpg'); 
+
+                // background-size: cover;
+                // background-position: center;
+
+                // background-size: 100% 100%; // Extiende la imagen al tamaño exacto del contenedor
+                // background-position: top left; // Asegura que empieza desde la esquina superior izquierda
+
+                // background-repeat: repeat;  // Repite la imagen en ambas direcciones
+                // background-size: auto; // Usa el tamaño original de la imagen
+
+                // background-repeat: repeat;
+                // background-size: contain; // Ajusta el tamaño sin distorsionar la imagen
+
+                // background-repeat: repeat-x; // Solo en horizontal
+                // background-repeat: repeat-y; // Solo en vertical (elige una de las dos)
+
+
+                // border-radius: 12px;
+                // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de flotación
+                // border: 2px solid rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
+                opacity: 0.8; //Reduce la opacidad al 80%
+                
+                // @media only screen and (max-width: 1060px) {
+                //   width: 90%;
+                // }
+
+                // @media only screen and (max-width: 777px) {
+                //   width: 40%;
+                // }
+
+                // @media only screen and (max-width: 594px) {
+                //   width: 90%;
+                // }
+
+              } //end canvas
+
+
+              #canvasContainer {
+
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  margin: 0 auto;
+                  padding: 0;
+                  z-index: 2;
+
+                  #tenYearsRow {
+
+                        width: 100%;
+                        height: 100%;
+                        margin: 0 auto;
+                        padding: 0;
+
+                        #tenYearsExperienceLelftDiv {
+
+                              display: block;
+                            //=========== NORMAL SCREEN SIZE ===========//
+                              @media only screen and (min-width: 1047px) {
+                                  padding: 0px;
+                              }
+                              
+                              //=========== NORMAL SCREEN SIZE ===========//
+                              @media only screen and (min-width: 1194px) {
+                                  width: 20%;
+                                  max-width: 20%;
+                              }
+                              
+                              //=========== NORMAL SCREEN SIZE ===========//
+                              @media only screen and (min-width: 1047px) {
+                                  width: 25%;
+                                  max-width: 25%;
+                              }
+
+                              //=========== CELL PHONE SIZE ===========//
+                              @media only screen and (max-width: 1046px) {
+                                  display: flex;
+                                  padding: 0;
+                                  justify-content: center;
+                                  margin-bottom: 10px;
+                                  width: 30%;
+                              }
+
+                              //=========== CELL PHONE SIZE ===========//
+                              @media only screen and (max-width: 777px) {
+                                  width: 100%;
+                              }
+
+
+                              // border-radius: 15px; // Bordes redondeados
+                              // background: linear-gradient(135deg, #6a11cb, #2575fc); // Gradiente elegante
+                              // box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Sombra suave
+                              // color: white; // Color del texto
+                              // text-align: center; // Centrar el texto
+
+
+
+                              #tenYearsExperienceLelftDivContainer {
+
+
+                                    //=========== NORMAL SCREEN SIZE ===========//
+                                    @media only screen and (min-width: 1047px) {
+                                    }
+
+                                    //=========== CELL PHONE SIZE ===========//
+                                    @media only screen and (max-width: 1046px) {
+                                        display: block;
+                                        padding-top: 50px;
+                                        padding-bottom: 40px;
+                                        padding-left: 25px;
+                                    }
+                                    //=========== CELL PHONE SIZE ===========//
+                                    @media only screen and (max-width: 777px) {
+                                      width: 40%;
+                                    }
+                                    //=========== CELL PHONE SIZE ===========//
+                                    @media only screen and (max-width: 594px) {
+                                      width: 55%;
+                                    }
+                                    //=========== CELL PHONE SIZE ===========//
+                                    @media only screen and (max-width: 390px) {
+                                      width: 65%;
+                                    }
+
+
+                    
+                                    #tenYearsExperience1Span {
+
+                                        //=========== NORMAL SCREEN SIZE ===========//
+                                        @media only screen and (min-width: 1047px) {
+                                            font-size: 2.8rem;
+                                        }
+
+                                        //=========== CELL PHONE SIZE ===========//
+                                        @media only screen and (max-width: 1046px) {
+                                            font-size: 2.5rem;
+                                        }
+
+                                        color: rgb(80, 173, 17) !important;
+                                        letter-spacing: 6px;
+                                        margin: 0 auto;
+                                        padding-bottom: 5px;
+                                        margin-bottom: 40px;
+                                        // text-align: center;
+                                    } 
+                        
+                                    #tenYearsExperience2Span {
+                                        // Cormorant Garamond
+                                        // Poppins
+                                        // Lora
+                                        // Quicksand
+                                        //=========== NORMAL SCREEN SIZE ===========//
+                                        @media only screen and (min-width: 1047px) {
+                                            font-size: 2.3rem;
+                                        }
+
+                                        //=========== CELL PHONE SIZE ===========//
+                                        @media only screen and (max-width: 1046px) {
+                                            font-size: 2rem;
+                                        }
+                                        color:  var(--bs-dark-rgb);
+                                        letter-spacing: 4px;
+                                        margin: 0 auto;
+                                        text-align: center;
+                                    } 
+                        
+                                    #tenYearsExperience3Span {
+
+                                        @media only screen and (min-width: 1047px) {
+                                            font-size: 1.5rem;
+                                        }
+
+                                        //=========== CELL PHONE SIZE ===========//
+                                        @media only screen and (max-width: 1046px) {
+                                            font-size: 1.3rem;
+                                        }
+                                        color:  var(--bs-dark-rgb);
+                                        letter-spacing: 4px;
+                                        margin: 0 auto;
+                                        text-align: center;
+                                    } 
+                        
+                                    #tenYearsExperience4Span {
+                                        @media only screen and (min-width: 1047px) {
+                                            font-size: 1.5rem;
+                                        }
+
+                                        //=========== CELL PHONE SIZE ===========//
+                                        @media only screen and (max-width: 1046px) {
+                                            font-size: 1.2rem;
+                                        }
+                                        color:  var(--bs-dark-rgb);
+                                        letter-spacing: 6px;
+                                        margin: 0 auto;
+                                        // text-align: center;
+                                    } 
+                        
+                                    #tenYearsExperience5Span, #tenYearsExperience6Span, #tenYearsExperience7Span {
+                                        @media only screen and (min-width: 1047px) {
+                                            font-size: 2.2rem;
+                                        }
+
+                                        //=========== CELL PHONE SIZE ===========//
+                                        @media only screen and (max-width: 1046px) {
+                                            font-size: 1.7rem;
+                                        }
+                                        
+                                        color: #3f51b5 !important;
+                                        letter-spacing: 6px;
+                                        margin: 0 auto;
+                                        // text-align: center;
+                                    } 
+                        
+                                    // #tenYearsExperience6Span {
+                                    //   font-size: 2.2rem;
+                                    //   color: #3f51b5 !important;
+                                    //   letter-spacing: 6px;
+                                    //   margin: 0 auto;
+                                    //   // text-align: center;
+                                    // } 
+                        
+                                    // #tenYearsExperience7Span {
+                                    //   font-size: 2.2rem;
+                                    //   color: #3f51b5 !important;
+                                    //   letter-spacing: 6px;
+                                    //   margin: 0 auto;
+                                    //   // text-align: center;
+                                    // } 
+                                    
+                              } //end tenYearsExperienceLelftDivContainer
+
+                
+                        } //end tenYearsExperienceLelftDiv
+                
+                
+                        .imageContainer {
+
+                            //=========== NORMAL SCREEN SIZE ===========//
+                            @media only screen and (min-width: 1047px) {
+                              display: block;
+                              max-width: 350px;
+                              // padding: 0;
+                              margin-left: 35px;
+                              // margin-right: 20px;
+                              // margin-bottom: 30px;
+                            }
+
+                            //=========== CELL PHONE SIZE ===========//
+                            @media only screen and (max-width: 1046px) {
+                                display: block;
+                                max-width: 350px;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                                margin-left: 20px;
+                                margin-right: 20px;
+                                margin-bottom: 30px;
+
+                            }
+
+                        }  //end imageContainer
+
+                
+                        .imageContainer img {
+
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                
+                
+                            // border-radius: 12px;
+                            // border: 6px double #d4af37; /* Borde dorado doble */
+                            // background-color: #fff;
+                            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                            // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                
+                
+                            border: 6px solid #4CAF50; /* Color del marco */
+                            border-radius: 10px; /* Bordes redondeados */
+                            padding: 10px; /* Espacio entre el marco y la imagen */
+                            background-color: #ffffff; /* Fondo blanco detrás del marco */
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+                            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                
+                
+                            // border: 9px solid #fff; // Borde blanco
+                            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+                            // border-radius: 10px; // Bordes redondeados
+                            // transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                          
+                            &:hover {
+                              // transform: scale(1.05);
+                              // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+                
+                              transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+                              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+                
+                              // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                              // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+                          
+                            }
+                
+                        }
+
+
+                    } //tenYearsRow
+
+              } // canvasContainer
+            
+        } //end row
   
     }
   
   
-  } //end normal screen
+  // } //end normal screen
   
   
   
@@ -166,27 +388,27 @@
   //=========== CELL PHONE STYLE =========== //
   //======================================== //
   
-  @media only screen and (max-width: 1046px) {
+  // @media only screen and (max-width: 1046px) {
   
   
     //=========== CELL PHONE TEN YEARS EXPERIENCE ===========//
   
-    #tenYearsExperience {
+    // #tenYearsExperience {
   
   
-        .row {
+    //     .row {
   
-            // display: flex;
-            justify-content: center;
-            align-items: center;
-            // align-content: center;
+    //         // display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         // align-content: center;
   
-            #tenYearsExperienceLelftDiv {
+            // #tenYearsExperienceLelftDiv {
   
-                display: flex;
-                padding: 0;
-                justify-content: center;
-                margin-bottom: 10px;
+            //     display: flex;
+            //     padding: 0;
+            //     justify-content: center;
+            //     margin-bottom: 10px;
 
                 // position: relative;
 
@@ -209,13 +431,13 @@
                 // }
 
 
-                @media only screen and (max-width: 1046px) {
-                  width: 30%;
-                }
+                // @media only screen and (max-width: 1046px) {
+                //   width: 30%;
+                // }
                 
-                @media only screen and (max-width: 777px) {
-                  width: 100%;
-                }
+                // @media only screen and (max-width: 777px) {
+                //   width: 100%;
+                // }
 
                 // @media only screen and (max-width: 594px) {
                 //   width: 100%;
@@ -257,12 +479,12 @@
                 //   }
                 // }
 
-                #tenYearsExperienceLelftDivContainer {
+                // #tenYearsExperienceLelftDivContainer {
 
-                    display: block;
-                    padding-top: 50px;
-                    padding-bottom: 40px;
-                    padding-left: 25px;
+                //     display: block;
+                //     padding-top: 50px;
+                //     padding-bottom: 40px;
+                //     padding-left: 25px;
                     // justify-content: center;
                     // height: 100%;
 
@@ -278,150 +500,150 @@
                     // border: 2px solid rgba(255, 255, 255, 0.6);
                     // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
       
-                    @media only screen and (max-width: 777px) {
-                      width: 40%;
-                    }
+                    // @media only screen and (max-width: 777px) {
+                    //   width: 40%;
+                    // }
     
-                    @media only screen and (max-width: 594px) {
-                      width: 55%;
-                    }
+                    // @media only screen and (max-width: 594px) {
+                    //   width: 55%;
+                    // }
 
-                    @media only screen and (max-width: 390px) {
-                      width: 65%;
-                    }
+                    // @media only screen and (max-width: 390px) {
+                    //   width: 65%;
+                    // }
                     // max-width: 100%;
       
-                    #tenYearsExperience1Span {
-                      font-size: 2.5rem;
-                      color: rgb(80, 173, 17) !important;
-                      letter-spacing: 6px;
-                      margin: 0 auto;
-                      padding-bottom: 5px;
-                      margin-bottom: 40px;
-                      // text-align: center;
-                      // font-weight: bold;
-                    } 
+                    // #tenYearsExperience1Span {
+                    //   font-size: 2.5rem;
+                    //   color: rgb(80, 173, 17) !important;
+                    //   letter-spacing: 6px;
+                    //   margin: 0 auto;
+                    //   padding-bottom: 5px;
+                    //   margin-bottom: 40px;
+                    //   // text-align: center;
+                    //   // font-weight: bold;
+                    // } 
         
-                    #tenYearsExperience2Span {
-                      // Cormorant Garamond
-                      // Poppins
-                      // Lora
-                      // Quicksand
-                      font-size: 2rem;
-                      color:  var(--bs-dark-rgb);
-                      letter-spacing: 4px;
-                      margin: 0 auto;
-                      text-align: center;
-                      // font-weight: bold;
-                    } 
+                    // #tenYearsExperience2Span {
+                    //   // Cormorant Garamond
+                    //   // Poppins
+                    //   // Lora
+                    //   // Quicksand
+                    //   font-size: 2rem;
+                    //   color:  var(--bs-dark-rgb);
+                    //   letter-spacing: 4px;
+                    //   margin: 0 auto;
+                    //   text-align: center;
+                    //   // font-weight: bold;
+                    // } 
         
-                    #tenYearsExperience3Span {
-                      font-size: 1.3rem;
-                      color:  var(--bs-dark-rgb);
-                      letter-spacing: 4px;
-                      margin: 0 auto;
-                      text-align: center;
-                      // font-weight: bold;
-                    } 
+                    // #tenYearsExperience3Span {
+                    //   font-size: 1.3rem;
+                    //   color:  var(--bs-dark-rgb);
+                    //   letter-spacing: 4px;
+                    //   margin: 0 auto;
+                    //   text-align: center;
+                    //   // font-weight: bold;
+                    // } 
         
-                    #tenYearsExperience4Span {
-                      font-size: 1.2rem;
-                      color:  var(--bs-dark-rgb);
-                      letter-spacing: 6px;
-                      margin: 0 auto;
-                      // text-align: center;
-                      // font-weight: bold;
-                    } 
+                    // #tenYearsExperience4Span {
+                    //   font-size: 1.2rem;
+                    //   color:  var(--bs-dark-rgb);
+                    //   letter-spacing: 6px;
+                    //   margin: 0 auto;
+                    //   // text-align: center;
+                    //   // font-weight: bold;
+                    // } 
         
-                    #tenYearsExperience5Span {
-                      font-size: 1.7rem;
-                      color: #3f51b5 !important;
-                      letter-spacing: 6px;
-                      margin: 0 auto;
-                      // text-align: center;
-                      // font-weight: bold;
-                    } 
+            //         #tenYearsExperience5Span {
+            //           font-size: 1.7rem;
+            //           color: #3f51b5 !important;
+            //           letter-spacing: 6px;
+            //           margin: 0 auto;
+            //           // text-align: center;
+            //           // font-weight: bold;
+            //         } 
         
-                    #tenYearsExperience6Span {
-                      font-size: 1.7rem;
-                      color: #3f51b5 !important;
-                      letter-spacing: 6px;
-                      margin: 0 auto;
-                      // text-align: center;
-                      // font-weight: bold;
-                    } 
+            //         #tenYearsExperience6Span {
+            //           font-size: 1.7rem;
+            //           color: #3f51b5 !important;
+            //           letter-spacing: 6px;
+            //           margin: 0 auto;
+            //           // text-align: center;
+            //           // font-weight: bold;
+            //         } 
         
-                    #tenYearsExperience7Span {
-                      font-size: 1.7rem;
-                      color: #3f51b5 !important;
-                      letter-spacing: 6px;
-                      margin: 0 auto;
-                      // text-align: center;
-                      // font-weight: bold;
-                    } 
+            //         #tenYearsExperience7Span {
+            //           font-size: 1.7rem;
+            //           color: #3f51b5 !important;
+            //           letter-spacing: 6px;
+            //           margin: 0 auto;
+            //           // text-align: center;
+            //           // font-weight: bold;
+            //         } 
 
-                }
+            //     }
   
-            }
-  
-  
-            .imageContainer {
-                display: block;
-                max-width: 350px;
-                padding-left: 15px;
-                padding-right: 15px;
-                margin-left: 20px;
-                margin-right: 20px;
-                margin-bottom: 30px;
-            }
-  
-            .imageContainer img {
-                width: 100%;
-                height: auto;
-                display: block;
+            // }
   
   
-                // border-radius: 12px;
-                // border: 6px double #d4af37; /* Borde dorado doble */
-                // background-color: #fff;
-                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            // .imageContainer {
+            //     display: block;
+            //     max-width: 350px;
+            //     padding-left: 15px;
+            //     padding-right: 15px;
+            //     margin-left: 20px;
+            //     margin-right: 20px;
+            //     margin-bottom: 30px;
+            // }
+  
+            // .imageContainer img {
+            //     width: 100%;
+            //     height: auto;
+            //     display: block;
   
   
-                border: 6px solid #4CAF50; /* Color del marco */
-                border-radius: 10px; /* Bordes redondeados */
-                padding: 10px; /* Espacio entre el marco y la imagen */
-                background-color: #ffffff; /* Fondo blanco detrás del marco */
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
-                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            //     // border-radius: 12px;
+            //     // border: 6px double #d4af37; /* Borde dorado doble */
+            //     // background-color: #fff;
+            //     // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            //     // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   
   
-                // border: 9px solid #fff; // Borde blanco
-                // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
-                // border-radius: 10px; // Bordes redondeados
-                // transition: transform 0.3s ease, box-shadow 0.3s ease;
+            //     border: 6px solid #4CAF50; /* Color del marco */
+            //     border-radius: 10px; /* Bordes redondeados */
+            //     padding: 10px; /* Espacio entre el marco y la imagen */
+            //     background-color: #ffffff; /* Fondo blanco detrás del marco */
+            //     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+            //     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+  
+            //     // border: 9px solid #fff; // Borde blanco
+            //     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+            //     // border-radius: 10px; // Bordes redondeados
+            //     // transition: transform 0.3s ease, box-shadow 0.3s ease;
   
               
-                &:hover {
-                  // transform: scale(1.05);
-                  // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            //     &:hover {
+            //       // transform: scale(1.05);
+            //       // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   
-                  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-                  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+            //       transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+            //       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
   
-                  // transform: scale(1.05); // Efecto de zoom al pasar el mouse
-                  // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+            //       // transform: scale(1.05); // Efecto de zoom al pasar el mouse
+            //       // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
               
-                }
+            //     }
   
-            }
+            // }
   
-        }
+    //     }
   
-    }
+    // }
   
   
-  } //end cell phone
+  // } //end cell phone
   
   
   
