@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
@@ -27,6 +28,7 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
     MatInputModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatSelectModule,
     // HttpClientModule,
     MatDialogModule,
   ],
@@ -52,6 +54,11 @@ export class JoinusMissionsComponent {
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      telefono: ['', Validators.required],
+      localidad: ['', Validators.required],
+      pais: ['', Validators.required],
+      testimonio: ['', Validators.required],
+      idioma: ['', Validators.required],
       privacidad: [false, Validators.requiredTrue],
     });
 
