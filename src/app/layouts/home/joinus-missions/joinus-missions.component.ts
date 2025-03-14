@@ -51,29 +51,28 @@ export class JoinusMissionsComponent {
   ) {
 
     this.misioneroForm = this.fb.group({
-      nombre: ['', Validators.required],
-      apellidos: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      telefono: ['', Validators.required],
-      localidad: ['', Validators.required],
-      pais: ['', Validators.required],
-      testimonio: ['', Validators.required],
-      idioma: ['', Validators.required],
-      privacidad: [false, Validators.requiredTrue],
+        nombre: ['', Validators.required],
+        apellidos: ['', Validators.required],
+        email: ['', [Validators.required, this.emailValidator]],
+        // this.asyncPhoneValidator.bind(this)
+        telefono: ['', Validators.required, this.asyncPhoneValidator],
+        localidad: ['', Validators.required],
+        pais: ['', Validators.required],
+        testimonio: ['', Validators.required, this.asyncTestimonyValidator],
+        idioma: ['', Validators.required],
+        privacidad: [false, Validators.requiredTrue],
     });
 
   }
 
 
-  
-  telefonoValidator(control: AbstractControl): ValidationErrors | null {
-    const telefono = control.value;
-    const regex = /^\+\d{1,4}\d{6,14}$/; // Ajusta el regex según tus necesidades
-    if (!regex.test(telefono)) {
-      return { invalidTelefono: true };
-    }
-    return null;
+  asyncPhoneValidator(control: AbstractControl): Promise<ValidationErrors | null> {
+    return new Promise(resolve => {
+      const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
+      resolve(isValid ? null : { invalidPhone: true });
+    });
   }
+
 
   emailValidator(control: AbstractControl): ValidationErrors | null {
     const email = control.value;
@@ -82,6 +81,15 @@ export class JoinusMissionsComponent {
       return { invalidEmail: true };
     }
     return null;
+  }
+
+  asyncTestimonyValidator(control: AbstractControl): Promise<ValidationErrors | null> {
+    return new Promise(resolve => {
+      // const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
+      const maxLength = 4000;
+      const isValid = control.value ? control.value.length <= maxLength : true
+      resolve(isValid ? null : { maxLengthExceeded: true });
+    });
   }
 
 
@@ -95,38 +103,37 @@ export class JoinusMissionsComponent {
 
 
   onSubmit() {
-    if (this.misioneroForm.valid) {
-      const formData = this.misioneroForm.value;
 
-      //https://www.gamamission.org/savepotenmisionero
-      //https://gamamission.org/savepotenmisionero
-      //www.gamamission.org/savepotenmisionero
-      //gamamission.org/savepotenmisionero
-      //www.gamamission.org/api/savepotenmisionero
-      //gamamission.org/api/savepotenmisionero
-      //https://www.gamamission.org/api/savepotenmisionero
-      //https://gamamission.org/api/savepotenmisionero
-      //https://www.gamamission.org:80/savepotenmisionero
-      //https://gamamission.org:80/savepotenmisionero
-      //www.gamamission.org:80/savepotenmisionero
-      //gamamission.org:80/savepotenmisionero
-      this.http.post('https://www.gamamission.org/api/savepotenmisionero', formData).subscribe(
-        (response) => {
-          console.log('Formulario enviado con éxito:', response);
-          this.enviadoConExito = true; // Muestra el mensaje de éxito
-          this.envioFallido = false;
+      if (this.misioneroForm.valid) {
+          const formData = this.misioneroForm.value;
 
-          // Envía el correo electrónico
-          // this.enviarCorreo(formData.email);
-        },
-        (error) => {
-          this.envioFallido = true;
-          this.enviadoConExito = false;
-          console.error('Error al enviar el formulario:', error);
-          // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
-        }
-      );
-    }
+          this.http.post('https://www.gamamission.org/api/savepotenmisionero', formData).subscribe(
+              (response) => {
+                // console.log('Formulario enviado con éxito:', response);
+                this.enviadoConExito = true; // Muestra el mensaje de éxito
+                this.envioFallido = false;
+
+                this.misioneroForm.reset();
+
+                    // Limpia el formulario y sus errores
+                Object.keys(this.misioneroForm.controls).forEach(controlName => {
+                  const control = this.misioneroForm.get(controlName);
+                  control?.markAsPristine(); // Marca como no modificado
+                  control?.markAsUntouched(); // Marca como no tocado
+                  control?.setErrors(null); // Limpia cualquier error remanente
+                });
+
+                // Envía el correo electrónico
+                // this.enviarCorreo(formData.email);
+              },
+              (error) => {
+                this.envioFallido = true;
+                this.enviadoConExito = false;
+                console.error('Error al enviar el formulario:', error);
+                // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+              }
+          );
+      }
   }
 
 

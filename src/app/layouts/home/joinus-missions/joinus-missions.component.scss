@@ -9,86 +9,125 @@
   
     //=========== NORMAL SCREEN UNETE-MISIONES ===========//
   
-    #uneteMisiones {
-  
-        padding: 40px 0;
-        background-color: #f9f9f9;
-  
-      
-        .container {
-  
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 0 20px;
-  
-          #uneteMisionesTitleFirstLine {
-            // font-family: serif !important;
-            font-size: 1.3rem;
-            color: #3f51b5;
-            letter-spacing: 4px;
-            margin: 0 auto;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-            text-align: center;
-          } 
+      #uneteMisiones {
     
-          #uneteMisionesTitleSecondLine {
-            // font-family: serif !important;
-            font-size: 2.9rem;
-            color:  var(--bs-dark-rgb);
-            letter-spacing: 6px;
-            margin: 0 auto;
-            padding-bottom: 5px;
-            margin-bottom: 40px;
-            text-align: center;
-          } 
-  
-          #uneteMisionesDescParagraph {
-            text-align: center;
-            margin-bottom: 30px;
-          }
-  
+          padding: 40px 0;
+          background-color: #f9f9f9;
+      
         
-          form {
+          .container {
     
-              display: flex;
-              flex-direction: column;
-              gap: 20px;
-          
-              mat-form-field {
-                width: 100%;
-              }
-          
-              mat-checkbox {
-                // margin-bottom: 20px;
-          
-                a {
-                  color: #3f51b5;
-                  text-decoration: underline;
-                  cursor: pointer;
-          
-                  &:hover {
-                    color: #283593;
-                  }
-                }
-              }
-          
-              button[mat-raised-button] {
-                margin-top: 20px;
-              }
-          
-              .mensaje-exito {
-                color: green;
-                text-align: center;
-                margin-top: 20px;
-                font-weight: bold;
-              }
-    
-          } //end form
-    
-        } //end container
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 0 20px;
       
-    } //end uneteMisiones
+              #uneteMisionesTitleFirstLine {
+                // font-family: serif !important;
+                font-size: 1.3rem;
+                color: #3f51b5;
+                letter-spacing: 4px;
+                margin: 0 auto;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+              } 
+        
+              #uneteMisionesTitleSecondLine {
+                // font-family: serif !important;
+                font-size: 2.9rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+                text-align: center;
+              } 
+      
+              #uneteMisionesDescParagraph {
+                text-align: center;
+                margin-bottom: 30px;
+              }
+      
+            
+              form {
+        
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+
+
+
+                  // label {
+                  //   display: block;
+                  //   margin-bottom: 5px;
+                  //   font-weight: bold;
+                  // }
+                  
+                  // input, textarea, select {
+                  //   width: 100%;
+                  //   padding: 8px;
+                  //   border: 1px solid #ccc;
+                  //   border-radius: 4px;
+                  // }
+                  
+                  // button {
+                  //   padding: 10px 15px;
+                  //   background-color: #007bff;
+                  //   color: white;
+                  //   border: none;
+                  //   border-radius: 4px;
+                  //   cursor: pointer;
+                  // }
+                  
+                  // button:disabled {
+                  //   background-color: #ccc;
+                  //   cursor: not-allowed;
+                  // }
+                  
+                  // p {
+                  //   color: red;
+                  //   font-size: 0.9em;
+                  //   margin-top: 5px;
+                  // }
+  
+                
+                  
+
+              
+                  mat-form-field {
+                    width: 100%;
+                  }
+              
+                  mat-checkbox {
+                    // margin-bottom: 20px;
+              
+                      a {
+                          color: #3f51b5;
+                          text-decoration: underline;
+                          cursor: pointer;
+                  
+                          &:hover {
+                            color: #283593;
+                          }
+                      }
+                  }
+              
+                  button[mat-raised-button] {
+                      margin-top: 20px;
+                  }
+              
+                  .mensaje-exito {
+                      color: green;
+                      text-align: center;
+                      margin-top: 20px;
+                      font-weight: bold;
+                  }
+        
+              } //end form
+      
+          } //end container
+        
+      } //end uneteMisiones
   
   
   } //end normal screen
@@ -103,149 +142,185 @@
   @media only screen and (max-width: 1046px) {
   
   
-    //=========== CELL PHONE UNETE-MISIONES ===========//
-  
-    #uneteMisiones {
-  
-  
-      padding: 40px 0;
-      background-color: #f9f9f9;
-  
+      //=========== CELL PHONE UNETE-MISIONES ===========//
     
-      .container {
-  
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-  
-        #uneteMisionesTitleFirstLine {
-          // font-family: serif !important;
-          font-size: 1.3rem;
-          color: #3f51b5;
-          letter-spacing: 4px;
-          margin: 0 auto;
-          padding-bottom: 0px;
-          margin-bottom: 0px;
-          text-align: center;
-        } 
-  
-        #uneteMisionesTitleSecondLine {
-          // font-family: serif !important;
-          font-size: 2.7rem;
-          color:  var(--bs-dark-rgb);
-          letter-spacing: 6px;
-          margin: 0 auto;
-          padding-bottom: 5px;
-          margin-bottom: 40px;
-          text-align: center;
-        } 
-  
-        #uneteMisionesDescParagraph {
-          text-align: center;
-          margin-bottom: 30px;
-        }
-  
+      #uneteMisiones {
+    
+    
+        padding: 40px 0;
+        background-color: #f9f9f9;
+    
       
-        form {
-  
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        
-            mat-form-field {
-              width: 100%;
+        .container {
+    
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+      
+            #uneteMisionesTitleFirstLine {
+              // font-family: serif !important;
+              font-size: 1.3rem;
+              color: #3f51b5;
+              letter-spacing: 4px;
+              margin: 0 auto;
+              padding-bottom: 0px;
+              margin-bottom: 0px;
+              text-align: center;
+            } 
+      
+            #uneteMisionesTitleSecondLine {
+              // font-family: serif !important;
+              font-size: 2.7rem;
+              color:  var(--bs-dark-rgb);
+              letter-spacing: 6px;
+              margin: 0 auto;
+              padding-bottom: 5px;
+              margin-bottom: 40px;
+              text-align: center;
+            } 
+      
+            #uneteMisionesDescParagraph {
+              text-align: center;
+              margin-bottom: 30px;
             }
-        
-            mat-checkbox {
-              // margin-bottom: 20px;
-        
-              a {
-                color: #3f51b5;
-                text-decoration: underline;
-                cursor: pointer;
-        
-                &:hover {
-                  color: #283593;
+      
+          
+            form {
+      
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+
+                // label {
+                //   display: block;
+                //   margin-bottom: 5px;
+                //   font-weight: bold;
+                // }
+                
+                // input, textarea, select {
+                //   width: 100%;
+                //   padding: 8px;
+                //   border: 1px solid #ccc;
+                //   border-radius: 4px;
+                // }
+                
+                // button {
+                //   padding: 10px 15px;
+                //   background-color: #007bff;
+                //   color: white;
+                //   border: none;
+                //   border-radius: 4px;
+                //   cursor: pointer;
+                // }
+                
+                // button:disabled {
+                //   background-color: #ccc;
+                //   cursor: not-allowed;
+                // }
+                
+                // p {
+                //   color: red;
+                //   font-size: 0.9em;
+                //   margin-top: 5px;
+                // }
+
+
+            
+                mat-form-field {
+                  width: 100%;
                 }
-              }
-            }
-        
-            button[mat-raised-button] {
-              margin-top: 20px;
-            }
-        
-            // .mensaje-exito {
-            //   font-family: Arial, Helvetica, sans-serif !important;
-            //   // background-color green;
-            //   text-align: center;
-            //   margin-top: 20px;
-            //   // font-weight: bold;
-            // }
-  
-        } //end form
-  
-      }
-    
+            
+                mat-checkbox {
+                  // margin-bottom: 20px;
+            
+                    a {
+                        color: #3f51b5;
+                        text-decoration: underline;
+                        cursor: pointer;
+                
+                        &:hover {
+                            color: #283593;
+                        }
+                    }
+                }
+            
+                button[mat-raised-button] {
+                    margin-top: 20px;
+                }
+            
+                // .mensaje-exito {
+                //   font-family: Arial, Helvetica, sans-serif !important;
+                //   // background-color green;
+                //   text-align: center;
+                //   margin-top: 20px;
+                //   // font-weight: bold;
+                // }
       
-  
-      // padding: 40px 0;
-      // background-color: #f9f9f9;
+            } //end form
     
-      // .container {
-      //   max-width: 800px;
-      //   margin: 0 auto;
-      //   padding: 0 20px;
-      // }
-    
-      // // h2 {
-      // //   text-align: center;
-      // //   color: #3f51b5;
-      // //   margin-bottom: 20px;
-      // // }
-    
-      // p {
-      //   text-align: center;
-      //   margin-bottom: 30px;
-      // }
-    
-      // form {
-  
-      //   display: flex;
-      //   flex-direction: column;
-      //   gap: 20px;
-    
-      //   mat-form-field {
-      //     width: 100%;
-      //   }
-    
-      //   mat-checkbox {
-      //     // margin-bottom: 20px;
-    
-      //     a {
-      //       color: #3f51b5;
-      //       text-decoration: underline;
-      //       cursor: pointer;
-    
-      //       &:hover {
-      //         color: #283593;
-      //       }
-      //     }
-      //   }
-    
-      //   button[mat-raised-button] {
-      //     margin-top: 20px;
-      //   }
-    
-      //   .mensaje-exito {
-      //     color: green;
-      //     text-align: center;
-      //     margin-top: 20px;
-      //     font-weight: bold;
-      //   }
-  
-      // } //end form
+        } //end container
       
-    } //end uneteMisiones
+        
+    
+        // padding: 40px 0;
+        // background-color: #f9f9f9;
+      
+        // .container {
+        //   max-width: 800px;
+        //   margin: 0 auto;
+        //   padding: 0 20px;
+        // }
+      
+        // // h2 {
+        // //   text-align: center;
+        // //   color: #3f51b5;
+        // //   margin-bottom: 20px;
+        // // }
+      
+        // p {
+        //   text-align: center;
+        //   margin-bottom: 30px;
+        // }
+      
+        // form {
+    
+        //   display: flex;
+        //   flex-direction: column;
+        //   gap: 20px;
+      
+        //   mat-form-field {
+        //     width: 100%;
+        //   }
+      
+        //   mat-checkbox {
+        //     // margin-bottom: 20px;
+      
+        //     a {
+        //       color: #3f51b5;
+        //       text-decoration: underline;
+        //       cursor: pointer;
+      
+        //       &:hover {
+        //         color: #283593;
+        //       }
+        //     }
+        //   }
+      
+        //   button[mat-raised-button] {
+        //     margin-top: 20px;
+        //   }
+      
+        //   .mensaje-exito {
+        //     color: green;
+        //     text-align: center;
+        //     margin-top: 20px;
+        //     font-weight: bold;
+        //   }
+    
+        // } //end form
+        
+      } //end uneteMisiones
   
   
   } //end cell phone
