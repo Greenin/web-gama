@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -64,6 +64,25 @@ export class JoinusMissionsComponent {
 
   }
 
+
+  
+  telefonoValidator(control: AbstractControl): ValidationErrors | null {
+    const telefono = control.value;
+    const regex = /^\+\d{1,4}\d{6,14}$/; // Ajusta el regex según tus necesidades
+    if (!regex.test(telefono)) {
+      return { invalidTelefono: true };
+    }
+    return null;
+  }
+
+  emailValidator(control: AbstractControl): ValidationErrors | null {
+    const email = control.value;
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!regex.test(email)) {
+      return { invalidEmail: true };
+    }
+    return null;
+  }
 
 
   

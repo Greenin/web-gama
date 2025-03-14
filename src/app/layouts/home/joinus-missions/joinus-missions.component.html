@@ -33,12 +33,18 @@
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Correo electrónico</mat-label>
               <input matInput formControlName="email" name="email" required>
+              <!-- <div *ngIf="misioneroForm.get('email').invalid && misioneroForm.get('email').touched">
+                <p *ngIf="misioneroForm.get('email').errors?.invalidEmail">Por favor, introduce un email válido.</p>
+              </div>  -->
             </mat-form-field>
 
             <!-- Número de teléfono y Cumpleaños -->
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Número de teléfono</mat-label>
               <input matInput formControlName="telefono" name="telefono" required>
+              <!-- <div *ngIf="misioneroForm.get('telefono').invalid && misioneroForm.get('telefono').touched">
+                <p *ngIf="misioneroForm.get('telefono').errors?.invalidTelefono">El teléfono debe incluir el prefijo y el símbolo "+".</p>
+              </div> -->
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
@@ -162,7 +168,7 @@
 
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Su testimonio de cómo conoció al Señor Jesucristo</mat-label>
-              <textarea matInput formControlName="testimonio" name="testimonio" rows="4" required></textarea>
+              <textarea matInput formControlName="testimonio" name="testimonio" rows="4" placeholder="Escríbenos de una manera resumida tu testimonio de cómo conociste a Cristo." required></textarea>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
@@ -170,6 +176,9 @@
               <mat-select formControlName="idioma" name="idioma" required>
                 <mat-option value="es">Español</mat-option>
                 <mat-option value="en">Inglés</mat-option>
+                <option value="de">Alemán</option>
+                <option value="ro">Rumano</option>
+                <option value="pt">Portugués</option>
               </mat-select>
             </mat-form-field>
         
