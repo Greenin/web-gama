@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AbstractControl, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
-// import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-modal.component';
+// import { HttpClientModule } from '@angular/common/http';
 // import { provideHttpClient, withFetch } from '@angular/common/http';
 // import provideHttpClient;
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-modal.component';
 
 
 @Component({
@@ -23,12 +23,12 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
   standalone: true,
   imports: [
     CommonModule, 
-    MatButtonModule, 
     ReactiveFormsModule,
-    MatInputModule,
     MatFormFieldModule,
+    MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatButtonModule, 
     // HttpClientModule,
     MatDialogModule,
   ],
@@ -67,29 +67,29 @@ export class JoinusMissionsComponent {
 
 
   asyncPhoneValidator(control: AbstractControl): Promise<ValidationErrors | null> {
-    return new Promise(resolve => {
-      const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
-      resolve(isValid ? null : { invalidPhone: true });
-    });
+      return new Promise(resolve => {
+          const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
+          resolve(isValid ? null : { invalidPhone: true });
+      });
   }
 
 
   emailValidator(control: AbstractControl): ValidationErrors | null {
-    const email = control.value;
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!regex.test(email)) {
-      return { invalidEmail: true };
-    }
-    return null;
+      const email = control.value;
+      const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!regex.test(email)) {
+          return { invalidEmail: true };
+      }
+      return null;
   }
 
   asyncTestimonyValidator(control: AbstractControl): Promise<ValidationErrors | null> {
-    return new Promise(resolve => {
-      // const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
-      const maxLength = 4000;
-      const isValid = control.value ? control.value.length <= maxLength : true
-      resolve(isValid ? null : { maxLengthExceeded: true });
-    });
+      return new Promise(resolve => {
+          // const isValid = /^\+\d{1,4}\d{6,14}$/.test(control.value);
+          const maxLength = 4000;
+          const isValid = control.value ? control.value.length <= maxLength : true
+          resolve(isValid ? null : { maxLengthExceeded: true });
+      });
   }
 
 

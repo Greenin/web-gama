@@ -89,12 +89,13 @@ export class HomeComponent {
 //     console.log('Cuerpo:', cuerpo);
 //   }
 
-openPrayerRequestModal(event: Event) {
-  event.preventDefault(); // Evita que el enlace recargue la página
-  this.dialog.open(PrayerRequestModalComponent, {
-    width: '600px', // Ajusta el ancho del modal
-  });
-}
+  openPrayerRequestModal(event: Event) {
+    event.preventDefault(); // Evita que el enlace recargue la página
+    this.dialog.open(PrayerRequestModalComponent, {
+      width: '600px', // Ajusta el ancho del modal
+    });
+  }
+  
 
   openPrivacidadModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
@@ -102,6 +103,7 @@ openPrayerRequestModal(event: Event) {
       width: '600px', // Ajusta el ancho del modal
     });
   }
+
 
   openLegalNoticeModal(event: Event) {
     event.preventDefault(); // Evita que el enlace recargue la página
