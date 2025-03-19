@@ -85,6 +85,8 @@ export class ContactUsModalComponent {
       if (this.contactForm.valid) {
         const formData = this.contactForm.value;
 
+        //Este correo debe llegará a la bandeja de entrada de la cuenta de correo electrónico, admin@gamamission.org, en la página web oficial del servicio de IONOS, https://id.ionos.es/identifier
+
         this.http.post('https://www.gamamission.org/api/sendcontactemail', formData).subscribe(
             (response) => {
               // console.log('Formulario enviado con éxito:', response);

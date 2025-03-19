@@ -13,8 +13,8 @@
           </div>
 
           <p id="uneteMisionesDescParagraph" class="text">
-          <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
-            Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
+              <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
+              Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
           </p>
           <br>
           
@@ -43,7 +43,7 @@
               <!-- Número de teléfono y Cumpleaños -->
               <mat-form-field appearance="outline" class="full-width">
                   <mat-label>Número de teléfono</mat-label>
-                  <input matInput formControlName="telefono" name="telefono" placeholder="Incluye tu código de país para poder contactarte sin problemas." required>
+                  <input matInput formControlName="telefono" name="telefono" placeholder="Incluye el prefijo internacional de tu país para poder contactarte sin problemas." required>
                   <mat-error *ngIf="misioneroForm.get('telefono')?.touched && misioneroForm.get('telefono')?.errors?.['invalidPhone']">
                     Teléfono no válido. Introduce el prefijo internacional. Ejemplo: +34123456789. 
                   </mat-error>
@@ -57,6 +57,7 @@
               <mat-form-field appearance="outline" class="full-width">
                   <mat-label>País donde vives</mat-label>
                   <mat-select formControlName="pais" name="pais" required>
+                      <mat-option value=""></mat-option>
                       <mat-option value="Afganistán">Afganistán</mat-option>
                       <mat-option value="Albania">Albania</mat-option>
                       <mat-option value="Alemania">Alemania</mat-option>
@@ -179,6 +180,7 @@
               <mat-form-field appearance="outline" class="full-width">
                   <mat-label>Idioma de preferencia</mat-label>
                   <mat-select formControlName="idioma" name="idioma" required>
+                      <mat-option value=""></mat-option>
                       <mat-option value="es">Español - ES</mat-option>
                       <mat-option value="en">English - EN</mat-option>
                       <mat-option value="de">Deutsch - DE</mat-option>
