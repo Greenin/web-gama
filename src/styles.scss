@@ -68,7 +68,7 @@
 
 /* Scroll bar hidden Edge y Chrome */
 body::-webkit-scrollbar{
-  display: none;
+//   display: none;
 }
 
 /* Scroll bar hidden firefox */
@@ -80,11 +80,16 @@ html {
 html, body { 
 	height: 100%; 
 }
+
 body { 
-	margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+	margin: 0; 
+	font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
 
+.headerBackgroundColor {
+	background-color: #f8f6ed;
+}
 
 .headerText {
 	font-family: 'Montserrat' !important;

@@ -36,7 +36,7 @@ header {
 			// #f0ecdc;
 			// #f3f0e5;
 			// #f8f6ed  //De los mejores: 1
-			background-color: #f8f6ed;
+			// background-color: #f8f6ed;
 			line-height: 80px;
 			max-height: 80px;
 		}
@@ -133,6 +133,15 @@ header {
 			padding-top: 15px;
 			padding-bottom: 15px;
 			color: rgba(0, 0, 0, 0.5);
+
+			#linkHr {
+				display: block;
+				// width: 15px;
+				// max-width: 15px;
+				width: 5%;
+				max-width: 5%;
+				justify-content: center;
+			}
 		}
 
 
@@ -166,7 +175,7 @@ header {
 			//#f0ecdc;
 			//#f3f0e5;
 			//#f8f6ed  //De los mejores: 1
-			background-color: #f8f6ed;
+			// background-color: #f8f6ed;
 			line-height: 70px;
 			padding: 0 auto;
 			margin: 0 auto;
@@ -228,17 +237,74 @@ header {
 				}
 
 
+				// .header-container {
+				// 	position: relative;
+				// 	display: flex;
+				// 	justify-content: space-between;
+				// 	align-items: center;
+				// 	padding: 10px;
+				// 	background-color: #f8f8f8;
+				//   }
+				  
+				//   .menu-toggle {
+				// 	display: block; // Ocultar en desktop
+				// 	background: none;
+				// 	border: none;
+				// 	font-size: 24px;
+				// 	cursor: pointer;
+				//   }
+				  
+				//   .cellPhoneHeaderRightSide {
+				// 	display: block; // Ocultar por defecto en móviles
+				// 	position: fixed;
+				// 	top: 0;
+				// 	right: 0;
+				// 	width: 100%;
+				// 	height: 100vh;
+				// 	background-color: #fff;
+				// 	z-index: 1000;
+				// 	overflow-y: auto;
+				// 	transform: translateX(100%);
+				// 	transition: transform 0.3s ease-in-out;
+				  
+				// 	&.open {
+				// 	  transform: translateX(0); // Mostrar el menú
+				// 	}
+				  
+				// 	nav {
+				// 	  padding: 20px;
+				// 	  ul {
+				// 		list-style: none;
+				// 		padding: 0;
+				// 		margin: 0;
+				  
+				// 		li {
+				// 		  margin-bottom: 15px;
+				  
+				// 		  a {
+				// 			text-decoration: none;
+				// 			color: #333;
+				// 			font-size: 18px;
+				// 		  }
+				// 		}
+				// 	  }
+				// 	}
+				//   }
+				  
+
+
 				#cellPhoneHeaderRightSide {
+
 					max-width: 30%;
 					text-align: right;
 					align-items: center; /* Centra los elementos en el eje vertical */
 					margin: 0 auto;
 					height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
 
-					#cellPhoneHeaderButton {
+					#cellPhoneHeaderMenuButton {
 
 						color: rgb(118, 204, 61);
-						background-color: #f8f6ed;
+						// background-color: #f8f6ed;
 						border: none;
 
 						@media only screen and (max-width: 1046px) {
@@ -253,9 +319,69 @@ header {
 							margin-right: 0px;
 						}
 						
-					}
+					} //end cellPhoneHeaderMenuButton
 
-				}
+
+					#cellPhoneHeaderCloseButton {
+
+						color: rgb(118, 204, 61);
+						// background-color: white;
+						border: none;
+
+						// @media only screen and (max-width: 1046px) {
+						// 	margin-right: 25px;
+						// }
+
+						// @media only screen and (max-width: 415px) {
+						// 	margin-right: 10px;
+						// }
+
+						// @media only screen and (max-width: 377px) {
+						// 	margin-right: 0px;
+						// }
+						
+					} //end cellPhoneHeaderCloseButton
+
+					#cellPhoneDropDownMenu {
+
+						display: block; // Ocultar por defecto en móviles
+						position: fixed;
+						top: 0;
+						right: 0;
+						width: 80%;
+						height: 100vh;
+						// background-color: #fff;
+						z-index: 1000;
+						overflow-y: auto;
+						transform: translateX(100%);
+						transition: transform 0.3s ease-in-out;
+
+						&.open {
+							transform: translateX(0); // Mostrar el menú
+						}
+
+						nav {
+							padding: 20px;
+							ul {
+								list-style: none;
+								padding: 0;
+								margin: 0;
+							
+								li {
+									margin-bottom: 15px;
+							
+									a {
+										text-decoration: none;
+										color: #333;
+										font-size: 18px;
+									}
+								}
+							}
+						  }
+
+					} //cellPhoneDropDownMenu
+
+				} //end cellPhoneHeaderRightSide
 
 			} //end row
 
@@ -273,6 +399,7 @@ header {
 
 	//=========== CELL PHONE FOOTER ===========//
 		footer {
+
 			background-color: #e3ebf4;
 			// border-top: 1px solid #f3ef11;
 			width: 100%;
@@ -280,6 +407,11 @@ header {
 			padding-top: 15px;
 			padding-bottom: 15px;
 			color: rgba(0, 0, 0, 0.5);
+
+			#linkHr {
+				width: 15px;
+				max-width: 15px;
+			}
 		}
 	
 

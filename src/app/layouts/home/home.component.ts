@@ -53,15 +53,42 @@ import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.compo
 })
 export class HomeComponent {
 
-  // title = 'web-gama';
-  
-  // private timeoutId: any;
+    // title = 'web-gama';
+    
+    // private timeoutId: any;
+    isMenuOpen: boolean = false;
+
+    constructor(
+      private dialog: MatDialog
+    ) {
+    }
 
 
-  constructor(
-    private dialog: MatDialog
-  ) {
-  }
+    toggleMenu(): void {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+
+    scrollIntoView(sectionId: string) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    clickIdentityLink() {
+      this.scrollIntoView("identity");
+      this.toggleMenu(); // Cierra el menú después de desplazarse
+    }
+
+    clickSpeakersLink() {
+      this.scrollIntoView("speakers");
+      this.toggleMenu(); // Cierra el menú después de desplazarse
+    }
+
+    clickUneteMisionesLink() {
+      this.scrollIntoView("uneteMisiones");
+      this.toggleMenu(); // Cierra el menú después de desplazarse
+    }
 
 
 
@@ -89,38 +116,39 @@ export class HomeComponent {
 //     console.log('Cuerpo:', cuerpo);
 //   }
 
-  openPrayerRequestModal(event: Event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
-    this.dialog.open(PrayerRequestModalComponent, {
-      width: '600px', // Ajusta el ancho del modal
-    });
-  }
-  
-
-  openPrivacidadModal(event: Event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
-    this.dialog.open(PrivacyModalComponent, {
-      width: '600px', // Ajusta el ancho del modal
-    });
-  }
 
 
-  openLegalNoticeModal(event: Event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
-    this.dialog.open(LegalNoticeModalComponent, {
-      width: '600px', // Ajusta el ancho del modal
-      // height: '500px'
-    });
-  }
+    openContactUsModal(event: Event) {
+      event.preventDefault(); // Evita que el enlace recargue la página
+      this.dialog.open(ContactUsModalComponent, {
+        width: '600px', // Ajusta el ancho del modal
+      });
+    }
 
 
-  openContactUsModal(event: Event) {
-    event.preventDefault(); // Evita que el enlace recargue la página
-    this.dialog.open(ContactUsModalComponent, {
-      width: '600px', // Ajusta el ancho del modal
-    });
-  }
+    openPrayerRequestModal(event: Event) {
+      event.preventDefault(); // Evita que el enlace recargue la página
+      this.dialog.open(PrayerRequestModalComponent, {
+        width: '600px', // Ajusta el ancho del modal
+      });
+    }
+    
 
+    openPrivacidadModal(event: Event) {
+      event.preventDefault(); // Evita que el enlace recargue la página
+      this.dialog.open(PrivacyModalComponent, {
+        width: '600px', // Ajusta el ancho del modal
+      });
+    }
+
+
+    openLegalNoticeModal(event: Event) {
+      event.preventDefault(); // Evita que el enlace recargue la página
+      this.dialog.open(LegalNoticeModalComponent, {
+        width: '600px', // Ajusta el ancho del modal
+        // height: '500px'
+      });
+    }
 
 
   // @HostListener('window:scroll', [])

@@ -2,23 +2,23 @@
   <!--========= NORMAL SCREEN HEADER ========= -->
   <!--======================================== -->
 
-  <header class="normalScreenHeaderClass headerText">
+  <header class="normalScreenHeaderClass headerBackgroundColor headerText">
     <ul>
-      <li id="headerIconText">      
-        <a id="normalScreenHeaderLogo" href="#">
-          <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
-          <span id="normalScreenText">MOVIMIENTO MISIONERO <br> GLOBAL</span>
-        </a>
-      </li>
-      <li id="headerSpace">&nbsp;</li>
-      <li><a href="#identity">QUIÉNES SOMOS</a></li>
-      <li><a href="#speakers">EL EQUIPO</a></li>
-      <li><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></li>
-      <li>
-        <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
-          PETICIÓN DE ORACIÓN
-        </a>
-      </li>
+        <li id="headerIconText">      
+            <a id="normalScreenHeaderLogo" href="#">
+                <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
+                <span id="normalScreenText">MOVIMIENTO MISIONERO <br> GLOBAL</span>
+            </a>
+        </li>
+        <li id="headerSpace">&nbsp;</li>
+        <li><a href="#identity">QUIÉNES SOMOS</a></li>
+        <li><a href="#speakers">EL EQUIPO</a></li>
+        <li><a href="#uneteMisiones">ÚNETE A LAS MISIONES</a></li>
+        <!-- <li>
+          <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+              PETICIÓN DE ORACIÓN
+          </a>
+        </li> -->
     </ul>
   </header>
   
@@ -28,30 +28,71 @@
   <!--========== CELL PHONE HEADER  ========== -->
   <!--======================================== -->
 
-  <header class="cellPhoneHeaderClass headerText">
+  <header class="cellPhoneHeaderClass headerBackgroundColor headerText">
     <div id="cellPhoneHeaderRow" class="row">
 
       <div id="cellPhoneHeaderLeftSide" class="col">
-        <a id="cellPhoneHeaderLeftSideContainer" href="#" >
-          <img id="cellPhoneLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
-          <span id="cellPhoneText">MOVIMIENTO  <br> MISIONERO <br> GLOBAL</span>
-        </a>
+          <a id="cellPhoneHeaderLeftSideContainer" href="#" >
+              <img id="cellPhoneLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
+              <span id="cellPhoneText">MOVIMIENTO  <br> MISIONERO <br> GLOBAL</span>
+          </a>
       </div>
 
 
       <div id="cellPhoneHeaderRightSide" class="col">
-        <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneHeaderButton"><mat-icon>menu</mat-icon></button>
-        <mat-menu id="cellPhoneMenu" #menu="matMenu">
-          <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
-          <button mat-menu-item><a class="headerText" href="#speakers">EL EQUIPO</a></button>
-          <button mat-menu-item><a class="headerText" href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button>
-          <button mat-menu-item>
-            <a class="headerText" href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
-              PETICIÓN DE ORACIÓN
-            </a>
+          <!-- <button mat-button [matMenuTriggerFor]="menu" id="cellPhoneHeaderMenuButton"><mat-icon>menu</mat-icon></button> -->
+          <button mat-button id="cellPhoneHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
+              <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
           </button>
-        </mat-menu>
+          <!-- Menú desplegable -->
+          <div id="cellPhoneDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
+              <!-- Contenido del menú -->
+              <button mat-button id="cellPhoneHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                  <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+              </button>
+              
+              <nav>
+                  <ul>
+                      <li><a class="headerText" (click)="clickIdentityLink()">QUIÉNES SOMOS</a></li>
+                      <li><a class="headerText" (click)="clickSpeakersLink()">EL EQUIPO</a></li>
+                      <li><a class="headerText" (click)="clickUneteMisionesLink()">ÚNETE A LAS MISIONES</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
+              <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
+              <button mat-menu-item><a class="headerText" href="#speakers">EL EQUIPO</a></button>
+              <button mat-menu-item><a class="headerText" href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button> -->
+              <!-- <button mat-menu-item>
+                  <a class="headerText" href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+                      PETICIÓN DE ORACIÓN
+                  </a>
+              </button> -->
+          <!-- </mat-menu> -->
       </div>
+
+
+      <!-- <div class="header-container"> -->
+        <!-- Otros elementos del header -->
+    
+        <!-- Botón para abrir/cerrar el menú en móviles -->
+        <!-- <button class="menu-toggle" (click)="toggleMenu()">
+          <span *ngIf="!isMenuOpen">☰</span>
+          <span *ngIf="isMenuOpen">✕</span>
+        </button> -->
+    
+        <!-- Menú desplegable -->
+        <!-- <div class="cellPhoneHeaderRightSide" [class.open]="isMenuOpen"> -->
+          <!-- Contenido del menú -->
+          <!-- <nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div> -->
 
     </div>
   </header>
@@ -148,36 +189,55 @@
   <footer class="text-end">
     <div class="container">
 
-      <div class="row text-center pt-4 pb-2">
-        <div class="col-12 col-lg">
-          <a href="#" (click)="openContactUsModal($event)" >
-            Contáctanos
-          </a>
-        </div> 
+      <div class="row text-center pt-4">
+          <div class="col-12 col-lg">
+             <h2>Enlaces</h2>
+          </div> 
       </div>
 
       <div class="row text-center pb-2">
-        <div class="col-12 col-lg">
-          <a href="#" (click)="openPrivacidadModal($event)" >
-            Política de Privacidad
-          </a>
-        </div> 
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openContactUsModal($event)" >
+                  Contáctanos
+              </a>
+              &nbsp;
+              <a href="#" (click)="openPrayerRequestModal($event)" >
+                Petición de Oración
+              </a>
+          </div> 
+      </div>
+
+      <!-- <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openPrayerRequestModal($event)" >
+                  Petición de Oración
+              </a>
+          </div> 
+      </div> -->
+
+      <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openPrivacidadModal($event)" >
+                  Política de Privacidad
+              </a>
+          </div> 
       </div>
 
       <div class="row text-center pb-2">
-        <div class="col-12 col-lg">
-          <a href="#" (click)="openLegalNoticeModal($event)" >
-            Aviso Legal
-          </a>
-        </div> 
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openLegalNoticeModal($event)" >
+                  Aviso Legal
+              </a>
+          </div> 
       </div>
 
       <br>
       <div class="row text-center pb-1">
-        <div class="col-12 col-lg">
-          Copyright &copy; 2025 - GAMA - Global Awakening Movement Association
-        </div> 
+          <div class="col-12 col-lg">
+              Copyright &copy; 2025 - GAMA - Global Awakening Movement Association
+          </div> 
       </div>
+
     </div>
   </footer>
 
