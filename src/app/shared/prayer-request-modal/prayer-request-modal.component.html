@@ -1,31 +1,16 @@
-<!-- <h2 mat-dialog-title>Enviar mensaje</h2>
-<mat-dialog-content>
-  <mat-form-field appearance="outline" class="full-width mt-2">
-    <mat-label>Compártenos tu petición o motivo de agradecimiento</mat-label>
-    <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea>
-  </mat-form-field> -->
-  <!-- Campo de correo electrónico -->
-  <!-- <mat-form-field appearance="outline" class="full-width">
-    <mat-label>Escríbenos tu e-mail</mat-label>
-    <input matInput [(ngModel)]="email" name="email" required email>
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions class="dialog-actions">
-  <button mat-button (click)="onCancel()" class="cancel-button">Cancelar</button>
-  <button mat-button (click)="onEnviar()" [disabled]="!mensaje || !email" class="enviar-button">Enviar</button>
-</mat-dialog-actions> -->
-
-
-<h2 mat-dialog-title>Enviar mensaje</h2>
+<h2 mat-dialog-title>Petición de Oración</h2>
 
 <mat-dialog-content class="dialog-content">
 
     <form [formGroup]="prayReqForm">
         <!-- Campo de texto largo -->
-        <mat-form-field appearance="outline" class="full-width mt-2">
+        <mat-form-field appearance="outline" class="full-width mt-2 mb-3">
             <mat-label>Compártenos tu petición o motivo de agradecimiento</mat-label>
             <!-- <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea> -->
             <textarea matInput formControlName="message" name="message" rows="4" placeholder="Compártenos tu petición o motivo de agradecimiento." required></textarea>
+            <mat-error *ngIf="prayReqForm.get('message')?.touched && prayReqForm.get('message')?.errors?.['required']">
+              Campo obligatorio. 
+            </mat-error>            
             <mat-error *ngIf="prayReqForm.get('message')?.touched && prayReqForm.get('message')?.errors?.['maxLengthExceeded']">
                 Longitud máxima de 4000 caracteres alcanzado.
             </mat-error>
@@ -36,9 +21,11 @@
             <mat-label>Tu correo electrónico</mat-label>
             <!-- <input matInput [(ngModel)]="email" name="email" required email> -->
             <input matInput formControlName="email" name="email" placeholder="Escríbenos un correo al que podamos responderte." required>
-
-            <mat-error *ngIf="prayReqForm.get('email')?.touched && prayReqForm.get('email')?.errors?.['invalidEmail']">
-              Ingresa un correo válido.
+            <mat-error *ngIf="prayReqForm.get('email')?.touched && prayReqForm.get('email')?.errors?.['required']">
+                Campo obligatorio. 
+            </mat-error>
+            <mat-error *ngIf="prayReqForm.get('email')?.touched && prayReqForm.get('email')?.errors?.['invalidEmail'] && !prayReqForm.get('email')?.errors?.['required']">
+                Ingresa un correo válido.
             </mat-error>
         </mat-form-field>
 

@@ -1,13 +1,16 @@
-<h2 mat-dialog-title>Enviar mensaje</h2>
+<h2 mat-dialog-title>Contacto</h2>
 
 <mat-dialog-content class="dialog-content">
 
     <form [formGroup]="contactForm">
         <!-- Campo de texto largo -->
-        <mat-form-field appearance="outline" class="full-width mt-2">
+        <mat-form-field appearance="outline" class="full-width mt-2 mb-3">
             <mat-label>¿En qué te podemos ayudar?</mat-label>
             <!-- <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea> -->
             <textarea matInput formControlName="message" name="message" rows="4" placeholder="Pregúntanos lo que quieras." required></textarea>
+            <mat-error *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']">
+                Campo obligatorio. 
+            </mat-error>
             <mat-error *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['maxLengthExceeded']">
                 Longitud máxima de 4000 caracteres alcanzado.
             </mat-error>
@@ -18,9 +21,11 @@
             <mat-label>Escríbenos tu correo electrónico</mat-label>
             <!-- <input matInput [(ngModel)]="email" name="email" required email> -->
             <input matInput formControlName="email" name="email" placeholder="Escríbenos un correo al que podamos responderte." required>
-
-            <mat-error *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['invalidEmail']">
-              Ingresa un correo válido.
+            <mat-error *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">
+                Campo obligatorio. 
+            </mat-error>
+            <mat-error *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['invalidEmail'] && !contactForm.get('email')?.errors?.['required']">
+                Ingresa un correo válido.
             </mat-error>
         </mat-form-field>
     

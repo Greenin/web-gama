@@ -56,19 +56,20 @@
                 <h2 class="title">Home</h2>
                 <hr>
                 <ul class="list">
-                  <li><a (click)="clickMenuAddress('identity')">QUIÉNES SOMOS</a></li>
-                  <li><a (click)="clickMenuAddress('speakers')">EL EQUIPO</a></li>
-                  <li><a (click)="clickMenuAddress('uneteMisiones')">ÚNETE A LAS MISIONES</a></li>
+                  <li><a (click)="clickMenuAddress('identity')">Quiénes somos</a></li>
+                  <li><a (click)="clickMenuAddress('speakers')">El equipo</a></li>
+                  <li><a (click)="clickMenuAddress('uneteMisiones')">Únete a la misión 2025</a></li>
                   <li>
-                    <a (click)="openContactUsModal($event)">
-                      CONTÁCTANOS
-                    </a>
+                      <a (click)="openContactUsModal($event)">
+                          Contacto
+                      </a>
                   </li>
                   <li>
-                    <a (click)="openPrayerRequestModal($event)">
-                      PETICIÓN DE ORACIÓN
-                    </a>
+                      <a (click)="openPrayerRequestModal($event)">
+                          Petición de oración
+                      </a>
                   </li>
+                  <li><a>Idioma</a></li>
                 </ul>
               </div>
               
@@ -212,7 +213,7 @@
       <div class="row text-center pb-2">
           <div class="col-12 col-lg">
               <a href="#" (click)="openContactUsModal($event)" >
-                  Contáctanos
+                  Contacto
               </a>
               &nbsp;
               <a href="#" (click)="openPrayerRequestModal($event)" >
