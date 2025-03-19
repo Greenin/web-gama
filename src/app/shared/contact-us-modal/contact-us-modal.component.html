@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>Enviar mensaje</h2>
 
-<mat-dialog-content>
+<mat-dialog-content class="dialog-content">
 
     <form [formGroup]="contactForm">
         <!-- Campo de texto largo -->
@@ -8,7 +8,7 @@
             <mat-label>¿En qué te podemos ayudar?</mat-label>
             <!-- <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea> -->
             <textarea matInput formControlName="message" name="message" rows="4" placeholder="Pregúntanos lo que quieras." required></textarea>
-            <mat-error *ngIf="contactForm.get('testimonio')?.touched && contactForm.get('testimonio')?.errors?.['maxLengthExceeded']">
+            <mat-error *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['maxLengthExceeded']">
                 Longitud máxima de 4000 caracteres alcanzado.
             </mat-error>
         </mat-form-field>
@@ -37,7 +37,7 @@
       <div *ngIf="envioFallido">
         <div class="container mt-2">
             <div class="alert alert-danger text-dark" role="alert">
-                Hubo un error al enviar el correo electrónico Por favor, inténtalo de nuevo.
+                Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo.
             </div>
         </div>
       </div> 

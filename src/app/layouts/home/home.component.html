@@ -51,13 +51,27 @@
                   <mat-icon *ngIf="isMenuOpen">close</mat-icon>
               </button>
               
-              <nav>
-                  <ul>
-                      <li><a class="headerText" (click)="clickIdentityLink()">QUIÉNES SOMOS</a></li>
-                      <li><a class="headerText" (click)="clickSpeakersLink()">EL EQUIPO</a></li>
-                      <li><a class="headerText" (click)="clickUneteMisionesLink()">ÚNETE A LAS MISIONES</a></li>
-                  </ul>
-              </nav>
+
+              <div id="menuCol" class="col">
+                <h2 class="title">Home</h2>
+                <hr>
+                <ul class="list">
+                  <li><a (click)="clickMenuAddress('identity')">QUIÉNES SOMOS</a></li>
+                  <li><a (click)="clickMenuAddress('speakers')">EL EQUIPO</a></li>
+                  <li><a (click)="clickMenuAddress('uneteMisiones')">ÚNETE A LAS MISIONES</a></li>
+                  <li>
+                    <a (click)="openContactUsModal($event)">
+                      CONTÁCTANOS
+                    </a>
+                  </li>
+                  <li>
+                    <a (click)="openPrayerRequestModal($event)">
+                      PETICIÓN DE ORACIÓN
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
           </div>
           <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
               <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
@@ -318,156 +332,3 @@
         </div>
       </div>
     </div> -->
-
-<!-- <div class="modal fade" id="modaloración" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo mensaje</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Compártenos tu petición o motivo de agradecimiento</label>
-            <textarea class="form-control" id="petition-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-cancelar" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-platzi" onclick="sendPetition()" data-dismiss="modal">Enviar mensaje</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div class="modal fade" id="modaltour" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Datos de contacto</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Escríbenos tu email</label>
-            <input class="form-control" id="form-email">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Escríbenos tu número de teléfono</label>
-            <input class="form-control" id="form-phone">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-cancelar" data-dismiss="modal">Cancelar</button>
-        <button type="button" onclick="sendTourCompetitor()"class="btn btn-platzi" data-dismiss="modal">Enviar</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-<!-- <div class="modal fade" id="modalcontacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nuevo mensaje</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">¿En qué te podemos ayudar?</label>
-            <textarea class="form-control" id="contact-subject"></textarea>
-          </div>
-            <div class="form-group">
-            <label for="message-text" class="col-form-label">Escríbenos tu email</label>
-            <input class="form-control" id="contact-email">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-cancelar" data-dismiss="modal">Cancelar</button>
-        <button type="button" onclick="sendContact()" class="btn btn-platzi" data-dismiss="modal" data-dismiss="modal">Enviar mensaje</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-<!--</div> -->
- <!--
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalCenterTitle">Enviar</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="form-row">
-          <div class="form-group col">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend pt-2 pb-2">
-              </div>
-              <input type="text" class="form-control" placeholder="email de contacto" aria-label="Username" aria-describedby="basic-addon1">
-              <textarea placeholder="Cuál es tu motivo de oración?"></textarea>
-            </div>
-          </div>
-        </div>
-      </form>
-      <div class="alert alert-warning" role="alert">
-        Recibirás un correo de confirmación
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-      <button type="button" class="btn btn-platzi">Enviar</button>
-    </div>
-  </div>
-</div>
--->
-
-
-  <!-- /Modal -->
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script> -->
-<!-- TODO: Add SDKs for Firebase products that you want to use
-   https://firebase.google.com/docs/web/setup#config-web-app -->
-
-<!-- <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCClADFQo4NVRIH3HwQIGd3Z0bQ7uJytUs",
-    authDomain: "gama-website-6054f.firebaseapp.com",
-    databaseURL: "https://gama-website-6054f.firebaseio.com",
-    projectId: "gama-website-6054f",
-    storageBucket: "gama-website-6054f.appspot.com",
-    messagingSenderId: "352339550861",
-    appId: "1:352339550861:web:99e7c3cc9235ddd9"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script> -->
-
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="js/index.js"></script> -->

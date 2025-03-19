@@ -17,6 +17,9 @@ import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.co
 import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
 import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+
 
 
 @Component({
@@ -36,8 +39,10 @@ import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.compo
     TeamComponent,
     CurrentyearTourComponent,
     TenyearsExperienceComponent,
-    JoinusInfoComponent,
+    // JoinusInfoComponent,
     JoinusMissionsComponent,
+    MatCardModule,
+    MatListModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -65,30 +70,39 @@ export class HomeComponent {
 
 
     toggleMenu(): void {
-      this.isMenuOpen = !this.isMenuOpen;
+        this.isMenuOpen = !this.isMenuOpen;
     }
 
-    scrollIntoView(sectionId: string) {
+    // scrollIntoView(sectionId: string) {
+    //     const element = document.getElementById(sectionId);
+    //     if (element) {
+    //         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    //     }
+    // }
+
+    clickMenuAddress(sectionId: string) {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }
-
-    clickIdentityLink() {
-      this.scrollIntoView("identity");
       this.toggleMenu(); // Cierra el menú después de desplazarse
-    }
+  }
 
-    clickSpeakersLink() {
-      this.scrollIntoView("speakers");
-      this.toggleMenu(); // Cierra el menú después de desplazarse
-    }
 
-    clickUneteMisionesLink() {
-      this.scrollIntoView("uneteMisiones");
-      this.toggleMenu(); // Cierra el menú después de desplazarse
-    }
+    // clickIdentityAddress() {
+    //     this.scrollIntoView("identity");
+    //     this.toggleMenu(); // Cierra el menú después de desplazarse
+    // }
+
+    // clickSpeakersAddress() {
+    //     this.scrollIntoView("speakers");
+    //     this.toggleMenu(); // Cierra el menú después de desplazarse
+    // }
+
+    // clickUneteMisionesAddress() {
+    //     this.scrollIntoView("uneteMisiones");
+    //     this.toggleMenu(); // Cierra el menú después de desplazarse
+    // }
 
 
 

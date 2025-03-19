@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,12 +8,6 @@ import { MatInputModule } from '@angular/material/input';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
-
-
-import { ReactiveFormsModule } from '@angular/forms';
-// import { MatSelectModule } from '@angular/material/select';
-// import { MatCheckboxModule } from '@angular/material/checkbox';
-// import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -32,9 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class ContactUsModalComponent {
 
-
-  mensaje: string = '';
-  email: string = '';
 
   contactForm: FormGroup;
 
@@ -80,53 +72,40 @@ export class ContactUsModalComponent {
 
   onEnviar(): void {
 
-      // if (this.mensaje && this.email) {
-      //   const formData = { mensaje: this.mensaje, email: this.email };
       if (this.contactForm.valid) {
-        const formData = this.contactForm.value;
+          const formData = this.contactForm.value;
 
-        //Este correo debe llegará a la bandeja de entrada de la cuenta de correo electrónico, admin@gamamission.org, en la página web oficial del servicio de IONOS, https://id.ionos.es/identifier
+          //Este correo debe llegará a la bandeja de entrada de la cuenta de correo electrónico, admin@gamamission.org, en la página web oficial del servicio de IONOS, https://id.ionos.es/identifier
 
-        this.http.post('https://www.gamamission.org/api/sendcontactemail', formData).subscribe(
-            (response) => {
-              // console.log('Formulario enviado con éxito:', response);
-              // this.enviadoConExito = true; // Muestra el mensaje de éxito
-              this.envioFallido = false;
+          this.http.post('https://www.gamamission.org/api/sendcontactemail', formData).subscribe(
+              (response) => {
+                  // console.log('Formulario enviado con éxito:', response);
+                  // this.enviadoConExito = true; // Muestra el mensaje de éxito
+                  this.envioFallido = false;
 
-              this.dialogRef.close(); // Cierra el modal después de enviar
+                  this.dialogRef.close(); // Cierra el modal después de enviar
 
-              // this.contactForm.reset();
+                  // this.contactForm.reset();
 
-              //     // Limpia el formulario y sus errores
-              // Object.keys(this.contactForm.controls).forEach(controlName => {
-              //   const control = this.contactForm.get(controlName);
-              //   control?.markAsPristine(); // Marca como no modificado
-              //   control?.markAsUntouched(); // Marca como no tocado
-              //   control?.setErrors(null); // Limpia cualquier error remanente
-              // });
+                  //     // Limpia el formulario y sus errores
+                  // Object.keys(this.contactForm.controls).forEach(controlName => {
+                  //   const control = this.contactForm.get(controlName);
+                  //   control?.markAsPristine(); // Marca como no modificado
+                  //   control?.markAsUntouched(); // Marca como no tocado
+                  //   control?.setErrors(null); // Limpia cualquier error remanente
+                  // });
 
-              // Envía el correo electrónico
-              // this.enviarCorreo(formData.email);
-            },
-            (error) => {
-              this.envioFallido = true;
-              // this.enviadoConExito = false;
-              console.error('Error al enviar el formulario:', error);
-              // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
-            }
-        );
+                  // Envía el correo electrónico
+                  // this.enviarCorreo(formData.email);
+              },
+              (error) => {
+                  this.envioFallido = true;
+                  // this.enviadoConExito = false;
+                  console.error('Error al enviar el formulario:', error);
+                  // alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+              }
+          );
 
-        // Envía los datos a Formspree
-        // this.http.post('https://formspree.io/f/xjvawjkq', formData).subscribe(
-        //   (response) => {
-        //     console.log('Mensaje enviado con éxito:', response);
-        //     this.dialogRef.close(); // Cierra el modal después de enviar
-        //   },
-        //   (error) => {
-        //     console.error('Error al enviar el mensaje:', error);
-        //     alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
-        //   }
-        // );
       }
   }
 
