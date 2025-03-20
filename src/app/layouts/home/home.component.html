@@ -16,9 +16,17 @@
         <li><a href="#currentYearTour">TOUR MISIONERO 2025</a></li>
         <li><a href="#uneteMisiones">ÚNETE A LA MISIÓN 2025</a></li>
         <!-- <li id="headerSpace2">&nbsp;</li> -->
-        <li *ngIf="spainSelected"><a id="spainFlag" class="flag" (click)="toggleLanguage('en')"><img  class="countryFlag" src="../assets/img/spain-little.png">&nbsp;ESPAÑOL</a></li>
-        <li *ngIf="ukSelected"><a id="UKFlag" class="flag" (click)="toggleLanguage('es')"><img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;ENGLISH</a></li>
-        <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="toggleLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
+        <li class="flagLi" *ngIf="currentLang===ESPANOL">
+            <a id="spainFlag" class="flag" (click)="selectLanguage(ENGLISH)">
+                <img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;&nbsp;ENGLISH
+            </a>
+        </li>
+        <li class="flagLi" *ngIf="currentLang===ENGLISH">
+            <a id="UKFlag" class="flag" (click)="selectLanguage(ESPANOL)">
+              <img class="countryFlag" src="../assets/img/spain-little.png">&nbsp;&nbsp;ESPAÑOL
+            </a>
+        </li>
+        <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="selectLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
         <!-- <li>
           <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
               PETICIÓN DE ORACIÓN
@@ -38,8 +46,6 @@
                 <div id="menuCol" class="col">
                   <h2 class="title">Home</h2>
                   <hr>
-                  <!-- <div class="list"> -->
-                    <!-- <li><a (click)="clickMenuAddress('uneteMisiones')">Únete a la misión 2025</a></li> -->
                     <div>
                         <a (click)="openContactUsModal($event)">
                             Contacto
@@ -51,15 +57,13 @@
                         </a>
                     </div>
                     <div>
-                      <!-- <a>Idioma</a> -->
                       <a class="submenu-toggle" (click)="toggleSubmenu($event)">Idioma<mat-icon id="expandMore">expand_more</mat-icon></a>
                       <div class="submenu-list" *ngIf="isSubmenuOpen">
-                          <div>Español - ES</div>
-                          <div>English - EN</div>
-                          <div>Deutsch - DE</div>
+                          <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
+                          <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
+                          <!-- <div>Deutsch - DE</div> -->
                       </div>
                     </div>
-                  <!-- </div> -->
                 </div>
                 
             </div>
@@ -95,56 +99,65 @@
 
 
       <div id="cellPhoneHeaderRightSide" class="col">
-          <button mat-button id="cellPhoneHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
-              <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
-          </button>
-          <!-- Menú desplegable -->
-          <div id="cellPhoneDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
-              <!-- Contenido del menú -->
-              <button mat-button id="cellPhoneHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
-                  <mat-icon *ngIf="isMenuOpen">close</mat-icon>
-              </button>
-              
-              <div id="menuCol" class="col">
-                <h2 class="title">Home</h2>
-                <hr>
-                <ul class="list">
-                  <li><a (click)="clickMenuAddress('identity')">Quiénes somos</a></li>
-                  <li><a (click)="clickMenuAddress('speakers')">El equipo</a></li>
-                  <li><a (click)="clickMenuAddress('uneteMisiones')">Únete a la misión 2025</a></li>
-                  <li>
-                      <a (click)="openContactUsModal($event)">
-                          Contacto
-                      </a>
-                  </li>
-                  <li>
-                      <a (click)="openPrayerRequestModal($event)">
-                          Petición de oración
-                      </a>
-                  </li>
-                  <li>
-                    <!-- <a>Idioma</a> -->
-                    <a class="submenu-toggle" (click)="toggleSubmenu($event)">Idioma<mat-icon id="expandMore">expand_more</mat-icon></a>
-                    <div class="submenu-list" *ngIf="isSubmenuOpen">
-                        <div>Español - ES</div>
-                        <div>English - EN</div>
-                        <div>Deutsch - DE</div>
+          
+          <div id="cellPhoneHeaderRightSideRow">
+
+                <div *ngIf="currentLang===ESPANOL" class="cellPhoneFlagDiv">
+                    <a id="cellPhoneSpainFlag" class="cellPhoneFlag" (click)="selectLanguage(ENGLISH)">
+                        <img  class="cellPhoneCountryFlag" src="../assets/img/unitedkingdom-little.png">
+                    </a>
+                </div>
+                <div *ngIf="currentLang===ENGLISH" class="cellPhoneFlagDiv">
+                    <a id="cellPhoneUKFlag" class="cellPhoneFlag" (click)="selectLanguage(ESPANOL)">
+                        <img  class="cellPhoneCountryFlag" src="../assets/img/spain-little.png">
+                    </a>
+                </div>
+
+                <button mat-button id="cellPhoneHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                    <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
+                </button>
+                
+                <div id="cellPhoneDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
+                    <!-- Contenido del menú -->
+                    <button mat-button id="cellPhoneHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+                    </button>
+                    
+                    <div id="menuCol" class="col">
+                      <h2 class="title">Home</h2>
+                      <hr>
+                      <ul class="list">
+                        <li><a (click)="clickMenuAddress('identity')">Quiénes somos</a></li>
+                        <li><a (click)="clickMenuAddress('speakers')">El equipo</a></li>
+                        <li><a (click)="clickMenuAddress('uneteMisiones')">Únete a la misión 2025</a></li>
+                        <li>
+                            <a (click)="openContactUsModal($event)">
+                                Contacto
+                            </a>
+                        </li>
+                        <li>
+                            <a (click)="openPrayerRequestModal($event)">
+                                Petición de oración
+                            </a>
+                        </li>
+                        <li>
+                          <!-- <a>Idioma</a> -->
+                          <a (click)="toggleSubmenu($event)">Idioma<mat-icon id="expandMore">expand_more</mat-icon></a>
+                          <div class="submenu-list" *ngIf="isSubmenuOpen">
+                              <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
+                              <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
+                              <!-- <div>Español - ES</div>
+                              <div>English - EN</div> -->
+                              <!-- <div>Deutsch - DE</div> -->
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ul>
-              </div>
-              
+                
+                </div>
+
           </div>
-          <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
-              <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
-              <button mat-menu-item><a class="headerText" href="#speakers">EL EQUIPO</a></button>
-              <button mat-menu-item><a class="headerText" href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button> -->
-              <!-- <button mat-menu-item>
-                  <a class="headerText" href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
-                      PETICIÓN DE ORACIÓN
-                  </a>
-              </button> -->
-          <!-- </mat-menu> -->
+          
       </div>
 
 

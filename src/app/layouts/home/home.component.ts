@@ -15,7 +15,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { TeamComponent } from './team/team.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
 import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
-import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
+// import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
@@ -61,6 +61,15 @@ export class HomeComponent {
     // title = 'web-gama';
     
     // private timeoutId: any;
+
+    readonly ESPANOL = "es";
+    readonly ENGLISH = "en";
+    readonly DEUTSCH = "de";
+
+    currentLang = "es";
+    // currentLang = "";
+
+
     spainSelected: boolean = false;
     ukSelected: boolean = true;
     germanySelected: boolean = false;
@@ -75,32 +84,33 @@ export class HomeComponent {
     }
 
 
-    toggleLanguage(selectedLanguage: string) {
+    selectLanguage(selectedLang: string) {
+        this.currentLang = selectedLang;
+        // if (selectedLang=='es') {
+        //     this.spainSelected = true;
+        //     this.ukSelected = false;
+        //     this.germanySelected = false;
 
-        if (selectedLanguage=='es') {
-            this.spainSelected = true;
-            this.ukSelected = false;
-            this.germanySelected = false;
-
-        } else {
+        // } else {
           
-            if (selectedLanguage=='en') {
-                this.spainSelected = false;
-                this.ukSelected = true;
-                this.germanySelected = false;
+        //     if (selectedLang=='en') {
+        //         this.spainSelected = false;
+        //         this.ukSelected = true;
+        //         this.germanySelected = false;
 
-            } else {
-                this.spainSelected = false;
-                this.ukSelected = false;
-                this.germanySelected = true;
-            }
-        }
+        //     } else {
+        //         this.spainSelected = false;
+        //         this.ukSelected = false;
+        //         this.germanySelected = true;
+        //     }
+        // }
 
-    } //end toggleLanguage
+    } //end selectLanguage
 
 
     toggleMenu(): void {
         this.isMenuOpen = !this.isMenuOpen;
+        this.isSubmenuOpen = false;
     }
 
     // scrollIntoView(sectionId: string) {

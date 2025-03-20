@@ -1,7 +1,7 @@
 
 
 header {
-  display: none;
+  	display: none;
 }
 
 
@@ -83,13 +83,15 @@ header {
 
 
 		header a:hover, .actived{
-			transform: scale(1.25,1.25);
+			// transform: scale(1.25,1.25);
+			color: #a7563e; 
 		}
 
 
 		#headerIconText {
 
 			padding-left: 4px;
+			transition: all 300ms;
 
 			#normalScreenHeaderLogo {
 
@@ -115,42 +117,47 @@ header {
 
 			} //end normalScreenHeaderLogo
 
+			&:hover {
+				transform: scale(1.1,1.1);
+			}
+	
+
 		} //end headerIconText
 
 
 		#headerSpace {
 			min-width: 12%;
-			// height: 70px;
 		}
 
 		#headerSpace2 {
 			min-width: 5%;
-			// height: 70px;
 		}
 
-		.flag {
-			margin-left: 0px;
-			margin-right: 0;
-			padding-left: 40px;
-			padding-right: 26px;
-			&:hover {
-				transform: inherit !important;
-				color: #a7563e; 
+
+		.flagLi {
+			
+			width: 15%;
+
+			.flag	 {
+				margin-left: 0px;
+				margin-right: 0;
+				// padding-left: 26px;
+				// padding-right: 26px;
 			}
-		}
 
-		// #spainFlag {
-		// }
+			// #spainFlag {
+			// }
 
-		// #UKFlag {
-		// }
+			// #UKFlag {
+			// }
 
-		// #germanyFlag {
-		// }
+			// #germanyFlag {
+			// }
 
-		.countryFlag {
-			height: 18px;
-			width: 25px;
+			.countryFlag {
+				height: 18px;
+				width: 25px;
+			}	
 		}
 
 		#normalScreenHeaderMenuButtonLi {
@@ -190,13 +197,14 @@ header {
 				position: fixed;
 				top: 0;
 				right: 0;
-				width: 80%;
+				width: 40%;
 				height: 100vh;
 				// background-color: #fff;
 				z-index: 1000;
 				overflow-y: auto;
 				transform: translateX(100%);
 				transition: transform 0.3s ease-in-out;
+				// border-left: 1px thin #a7563e;
 
 				&.open {
 					transform: translateX(0); // Mostrar el menú
@@ -265,6 +273,7 @@ header {
 						a {
 							text-decoration: none;
 							padding: 0;
+							// color: inherit;
 							// color: #1976d2; /* Color de los enlaces */
 							
 							@media only screen and (min-width: 1047px) {
@@ -283,13 +292,9 @@ header {
 							&:hover {
 							//   color: #0d47a1; /* Color al pasar el mouse */
 								color: rgb(62, 122, 22); /* Color al pasar el mouse */
-								transform: inherit;
+								// transform: inherit;
 							}
 
-							// a:hover, .actived{
-							// 	transform: initial;
-							// }
-					
 
 							#expandMore {
 								// margin-top:14px;
@@ -303,18 +308,9 @@ header {
 
 						.submenu-list {
 							height: 100%;
-							// top:0;
 							margin: 0 auto;
 							position: relative;
 							top: 14px;
-							
-							// list-style-type: none;
-							// padding: 0;
-							// margin: 0px 0 0;
-							// background-color: #f9f9f9;
-							// border: 1px solid #ddd;
-							// border-radius: 4px;
-							// box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 							div {
 
@@ -412,6 +408,7 @@ header {
 			//#f8f6ed  //De los mejores: 1
 			// background-color: #f8f6ed;
 			line-height: 70px;
+			// max-height: 70px;
 			padding: 0 auto;
 			margin: 0 auto;
 			width: 100%;
@@ -428,17 +425,18 @@ header {
 
 				#cellPhoneHeaderLeftSide {
 
-					max-width: 70%;
+					max-width: 60%;
 					display: flex; /* Usa flexbox para alinear los elementos */
 					align-items: center; /* Centra verticalmente los elementos */
 					justify-content: flex-start; /* Alinea los elementos a la izquierda */
+					margin: 0 auto;
 
 					@media only screen and (max-width: 1046px) {
 						padding-left: 15px;
 					}
 
 					@media only screen and (max-width: 415px) {
-						padding-left: 0px;
+						padding-left: 10px;
 					}
 				
 
@@ -447,10 +445,10 @@ header {
 						align-items: center; /* Centra verticalmente */
 						text-decoration: none;
 						padding-right: 0px;
-						padding-left: 10px;
 						height: inherit;
 						color: inherit;
 						// transition: all 300ms;
+						// width:100%;
 					}
 
 					#cellPhoneLogo {
@@ -466,7 +464,8 @@ header {
 						line-height: 1.2;
 						color: #757575; /* Cambia según tu diseño */
 						margin-left: 10px; /* Espacio entre logo y texto */
-						word-wrap: break-word; /* Asegura que el texto respete el ancho */
+						word-wrap: normal; /* Asegura que el texto respete el ancho */
+						// width: auto;
 					}
 
 				} //end cellPhoneHeaderLeftSide
@@ -474,155 +473,147 @@ header {
 
 
 				#cellPhoneHeaderRightSide {
-
-					max-width: 30%;
+					
+					max-width: 40%;
 					text-align: right;
-					align-items: center; /* Centra los elementos en el eje vertical */
+					// align-items: center; /* Centra los elementos en el eje vertical */
 					margin: 0 auto;
-					height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+					padding: 0;
+					// height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
 
-					#cellPhoneHeaderMenuButton {
+					#cellPhoneHeaderRightSideRow {
 
-						color: rgb(118, 204, 61);
-						// background-color: #f8f6ed;
-						border: none;
+						display: flex; /* Usa flexbox para alinear los elementos */
+						align-items: center; /* Centra verticalmente los elementos */
+						justify-content: flex-end; /* Alinea los elementos a la izquierda */
+						// padding: 0 auto;
+						// margin: 0 auto;
+						// width: 100%;
+						// height: 100%;
 
-						@media only screen and (max-width: 1046px) {
-							margin-right: 25px;
-						}
+						.cellPhoneFlagDiv {
+							// max-width: 15%;
+							width: 50%;
 
-						@media only screen and (max-width: 415px) {
-							margin-right: 10px;
-						}
+							.cellPhoneFlag {
+								margin-left: 0px;
+								margin-right: 0;
+								padding-left: 0px;
+								padding-right: 0px;
+							}
+					
+							.cellPhoneCountryFlag {
+								height: 18px;
+								width: 25px;
+							}
 
-						@media only screen and (max-width: 377px) {
-							margin-right: 0px;
 						}
 						
-					} //end cellPhoneHeaderMenuButton
 
-
-					#cellPhoneDropDownMenu {
-
-						display: block; // Ocultar por defecto en móviles
-						position: fixed;
-						top: 0;
-						right: 0;
-						width: 80%;
-						height: 100vh;
-						// background-color: #fff;
-						z-index: 1000;
-						overflow-y: auto;
-						transform: translateX(100%);
-						transition: transform 0.3s ease-in-out;
-
-						&.open {
-							transform: translateX(0); // Mostrar el menú
-						}
-
-
-						#cellPhoneHeaderCloseButton {
-
+						#cellPhoneHeaderMenuButton {
+							width: 50%;
 							color: rgb(118, 204, 61);
-							// background-color: white;
+							// background-color: #f8f6ed;
 							border: none;
-	
+							max-height: 70px;
+
 							@media only screen and (max-width: 1046px) {
 								margin-right: 25px;
+								padding-top: 8px;
 							}
-	
+
 							@media only screen and (max-width: 415px) {
-								margin-right: 20px;
+								margin-right: 10px;
+								padding-top: 5px;
 							}
-	
+
 							@media only screen and (max-width: 377px) {
-								margin-right: 15px;
+								margin-right: 0px;
+								padding-top: 5px;
 							}
 							
-						} //end cellPhoneHeaderCloseButton
+						} //end cellPhoneHeaderMenuButton
 
-						#menuCol {
-							margin: 0 auto;
-							text-align: left; /* Alineación a la izquierda */
-							padding-left: 25px;
-							padding-right: 20px;
 
-							.title {
-								
+						#cellPhoneDropDownMenu {
+
+							display: block; // Ocultar por defecto en móviles
+							position: fixed;
+							top: 0;
+							right: 0;
+							width: 80%;
+							height: 100vh;
+							// background-color: #fff;
+							z-index: 1000;
+							overflow-y: auto;
+							transform: translateX(100%);
+							transition: transform 0.3s ease-in-out;
+
+							&.open {
+								transform: translateX(0); // Mostrar el menú
+							}
+
+
+							#cellPhoneHeaderCloseButton {
+
+								color: rgb(118, 204, 61);
+								// background-color: white;
+								border: none;
+		
 								@media only screen and (max-width: 1046px) {
-									font-size: 1.2rem;
+									margin-right: 25px;
 								}
 		
 								@media only screen and (max-width: 415px) {
-									font-size: 1.2rem;
+									margin-right: 20px;
 								}
 		
 								@media only screen and (max-width: 377px) {
-									font-size: 1.2rem;
+									margin-right: 15px;
 								}
-								font-weight: bold;
-								color: #333; /* Color del texto */
-								margin-bottom: 16px;
-							}
-
-							hr {
-								margin: 0px 0px 5px 0px;
-							}
-							
-							.list {
-									list-style-type: none; /* Quitar el estilo predeterminado */
-									padding: 0;
 								
-									li {
-										height: 2.5rem;
-										margin: 0px 0;
-										// border: rgb(118, 204, 61);
+							} //end cellPhoneHeaderCloseButton
+
+							#menuCol {
+								margin: 0 auto;
+								text-align: left; /* Alineación a la izquierda */
+								padding-left: 25px;
+								padding-right: 20px;
+
+								.title {
 									
-										a {
-											text-decoration: none;
-											// color: #1976d2; /* Color de los enlaces */
-											
-											@media only screen and (max-width: 1046px) {
-												font-size: 0.95rem;
-											}
-					
-											@media only screen and (max-width: 415px) {
-												font-size: 0.95rem;
-											}
-					
-											@media only screen and (max-width: 377px) {
-												font-size: 1.05rem;
-											}
-											transition: color 0.3s;
+									@media only screen and (max-width: 1046px) {
+										font-size: 1.2rem;
+									}
+			
+									@media only screen and (max-width: 415px) {
+										font-size: 1.2rem;
+									}
+			
+									@media only screen and (max-width: 377px) {
+										font-size: 1.2rem;
+									}
+									font-weight: bold;
+									color: #333; /* Color del texto */
+									margin-bottom: 16px;
+								}
+
+								hr {
+									margin: 0px 0px 5px 0px;
+								}
+								
+								.list {
+										list-style-type: none; /* Quitar el estilo predeterminado */
+										padding: 0;
 									
-											&:hover {
-											//   color: #0d47a1; /* Color al pasar el mouse */
-												color: rgb(62, 122, 22); /* Color al pasar el mouse */
-											}
-
-											#expandMore {
-												// margin-top:14px;
-												// top:4;
-												position: relative; /* Asegúrate de establecer una posición relativa al padre */
-  												top: 7px; /* Baja el icono 5px */
-											}
-
-										} //end a
-
-
-										.submenu-list {
-											height: 100%;
-											// top:0;
-											margin: 0 auto;
-											position: relative;
-											top: -30px;
-											
-
-											div {
-
-												height: 2.3rem;
-												padding-left: 20px;
+										li {
+											height: 2.5rem;
+											margin: 0px 0;
+											// border: rgb(118, 204, 61);
+										
+											a {
 												text-decoration: none;
+												color: inherit;
 												// color: #1976d2; /* Color de los enlaces */
 												
 												@media only screen and (max-width: 1046px) {
@@ -643,22 +634,68 @@ header {
 													color: rgb(62, 122, 22); /* Color al pasar el mouse */
 												}
 
+												#expandMore {
+													// margin-top:14px;
+													// top:4;
+													position: relative; /* Asegúrate de establecer una posición relativa al padre */
+													top: 7px; /* Baja el icono 5px */
+												}
 
-											} //end div
-
-										} //end submenu-list
+											} //end a
 
 
-									} //end li
 
-							} //end list
+											.submenu-list {
+												height: 100%;
+												// top:0;
+												margin: 0 auto;
+												position: relative;
+												top: -30px;
+												
 
+												div {
+
+													height: 2.3rem;
+													padding-left: 20px;
+													text-decoration: none;
+													// color: #1976d2; /* Color de los enlaces */
+													
+													@media only screen and (max-width: 1046px) {
+														font-size: 0.95rem;
+													}
+							
+													@media only screen and (max-width: 415px) {
+														font-size: 0.95rem;
+													}
+							
+													@media only screen and (max-width: 377px) {
+														font-size: 1.05rem;
+													}
+													transition: color 0.3s;
+											
+													&:hover {
+													//   color: #0d47a1; /* Color al pasar el mouse */
+														color: rgb(62, 122, 22); /* Color al pasar el mouse */
+													}
+
+
+												} //end div
+
+											} //end submenu-list
+
+
+										} //end li
+
+								} //end list
+
+								
+
+							} //end menuCol
 							
 
-						} //end menuCol
-						  
+						} //cellPhoneDropDownMenu
 
-					} //cellPhoneDropDownMenu
+					} //end cellPhoneHeaderRightSideRow
 
 				} //end cellPhoneHeaderRightSide
 

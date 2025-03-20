@@ -67,7 +67,7 @@
                   // box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de flotación
                   // border: 2px solid rgba(255, 255, 255, 0.6);
                   // backdrop-filter: blur(10px); // Efecto de vidrio esmerilado
-                  opacity: 0.12; //Reduce la opacidad al 80%
+                  opacity: 0.17; //Reduce la opacidad al 80%
 
                 } //end canvas
 
@@ -128,27 +128,32 @@
                         #gamaTeamLogo {
 
                             margin: 0px;
+                            transition: all 300ms;
 
                             //=========== NORMAL SCREEN SIZE ===========//
                             @media only screen and (min-width: 1047px) {
-                              padding-bottom: 0px;
-                              padding-right: 0px;
-                              padding-left: 0px;
-                              padding-top: 10px;
-                              width: 43vw;
+                                padding-bottom: 0px;
+                                padding-right: 0px;
+                                padding-left: 0px;
+                                padding-top: 10px;
+                                width: 40vw;
                             }
                             //=========== CELL PHONE SIZE ===========//
                             @media only screen and (max-width: 1046px) {
-                              padding-top: 0px;
-                              width: 70%;
-                              max-width: 500px;
+                                padding-top: 0px;
+                                width: 70%;
+                                max-width: 500px;
+                            }
+
+                            &:hover {
+                                transform: scale(1.1,1.1);
                             }
 
                         }
 
 
                         #identitySpaceBeetweenLogoAndText {
-                            height: 30px;
+                            height: 40px;
                         }
 
 
