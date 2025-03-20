@@ -61,6 +61,10 @@ export class HomeComponent {
     // title = 'web-gama';
     
     // private timeoutId: any;
+    spainSelected: boolean = false;
+    ukSelected: boolean = true;
+    germanySelected: boolean = false;
+
     isMenuOpen: boolean = false;
 
     isSubmenuOpen: boolean = false; // Estado inicial del submenú
@@ -69,6 +73,30 @@ export class HomeComponent {
       private dialog: MatDialog
     ) {
     }
+
+
+    toggleLanguage(selectedLanguage: string) {
+
+        if (selectedLanguage=='es') {
+            this.spainSelected = true;
+            this.ukSelected = false;
+            this.germanySelected = false;
+
+        } else {
+          
+            if (selectedLanguage=='en') {
+                this.spainSelected = false;
+                this.ukSelected = true;
+                this.germanySelected = false;
+
+            } else {
+                this.spainSelected = false;
+                this.ukSelected = false;
+                this.germanySelected = true;
+            }
+        }
+
+    } //end toggleLanguage
 
 
     toggleMenu(): void {
