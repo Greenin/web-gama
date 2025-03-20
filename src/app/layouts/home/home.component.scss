@@ -86,6 +86,257 @@ header {
 		}
 
 
+		#spainFlag {
+			padding-left: 30px;
+			margin-right: 0;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+		#UKFlag {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+		#germanyFlag {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+		.countryFlag {
+			height: 25px;
+			width: 35px;
+		}
+
+		#normalScreenHeaderMenuButtonLi {
+			width: 3%;
+			max-width: 3%;
+			text-align: right;
+			align-items: center; /* Centra los elementos en el eje vertical */
+			margin: 0 auto;
+			height: 100%; /* Asegura que los li ocupen toda la altura de la cabecera */
+
+
+			#normalScreenHeaderMenuButton {
+
+				color: rgb(118, 204, 61);
+				// background-color: #f8f6ed;
+				border: none;
+
+				@media only screen and (max-width: 1046px) {
+					margin-right: 25px;
+				}
+
+				@media only screen and (max-width: 415px) {
+					margin-right: 10px;
+				}
+
+				@media only screen and (max-width: 377px) {
+					margin-right: 0px;
+				}
+				
+			} //end cellPhoneHeaderMenuButton
+
+
+			#cellPhoneDropDownMenu {
+
+				display: block; // Ocultar por defecto en móviles
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: 80%;
+				height: 100vh;
+				// background-color: #fff;
+				z-index: 1000;
+				overflow-y: auto;
+				transform: translateX(100%);
+				transition: transform 0.3s ease-in-out;
+
+				&.open {
+					transform: translateX(0); // Mostrar el menú
+				}
+
+
+				#cellPhoneHeaderCloseButton {
+
+					color: rgb(118, 204, 61);
+					// background-color: white;
+					border: none;
+
+					@media only screen and (max-width: 1046px) {
+						margin-right: 25px;
+					}
+
+					@media only screen and (max-width: 415px) {
+						margin-right: 20px;
+					}
+
+					@media only screen and (max-width: 377px) {
+						margin-right: 15px;
+					}
+					
+				} //end cellPhoneHeaderCloseButton
+
+				#menuCol {
+					// max-width: 400px;
+					margin: 0 auto;
+					text-align: left; /* Alineación a la izquierda */
+					padding-left: 25px;
+					padding-right: 20px;
+					// background-color: #f9f9f9; /* Fondo suave */
+					// border-radius: 8px;
+					// box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+
+					.title {
+						
+						@media only screen and (max-width: 1046px) {
+							font-size: 1.2rem;
+						}
+
+						@media only screen and (max-width: 415px) {
+							font-size: 1.2rem;
+						}
+
+						@media only screen and (max-width: 377px) {
+							font-size: 1.6rem;
+						}
+						font-weight: bold;
+						color: #333; /* Color del texto */
+						margin-bottom: 16px;
+					}
+					
+					.list {
+							list-style-type: none; /* Quitar el estilo predeterminado */
+							padding: 0;
+						
+							li {
+								height: 3rem;
+								margin: 0px 0;
+								// border: rgb(118, 204, 61);
+							
+								a {
+									text-decoration: none;
+									// color: #1976d2; /* Color de los enlaces */
+									
+									@media only screen and (max-width: 1046px) {
+										font-size: 0.95rem;
+									}
+			
+									@media only screen and (max-width: 415px) {
+										font-size: 0.95rem;
+									}
+			
+									@media only screen and (max-width: 377px) {
+										font-size: 1.05rem;
+									}
+									transition: color 0.3s;
+							
+									&:hover {
+									//   color: #0d47a1; /* Color al pasar el mouse */
+										color: rgb(62, 122, 22); /* Color al pasar el mouse */
+									}
+
+									#expandMore {
+										// margin-top:14px;
+										// top:4;
+										position: relative; /* Asegúrate de establecer una posición relativa al padre */
+										  top: 5px; /* Baja el icono 5px */
+									}
+
+								} //end a
+
+
+								.submenu-list {
+									height: 100%;
+									// top:0;
+									margin: 0 auto;
+									position: relative;
+									top: -25px;
+									
+									// list-style-type: none;
+									// padding: 0;
+									// margin: 0px 0 0;
+									// background-color: #f9f9f9;
+									// border: 1px solid #ddd;
+									// border-radius: 4px;
+									// box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+									div {
+
+										height: 2.5rem;
+										padding-left: 20px;
+										text-decoration: none;
+										// color: #1976d2; /* Color de los enlaces */
+										
+										@media only screen and (max-width: 1046px) {
+											font-size: 0.95rem;
+										}
+				
+										@media only screen and (max-width: 415px) {
+											font-size: 0.95rem;
+										}
+				
+										@media only screen and (max-width: 377px) {
+											font-size: 1.05rem;
+										}
+										transition: color 0.3s;
+								
+										&:hover {
+										//   color: #0d47a1; /* Color al pasar el mouse */
+											color: rgb(62, 122, 22); /* Color al pasar el mouse */
+										}
+
+										// a {
+										// 	display: block;
+										// 	height: 2rem;
+										// 	padding: 8px 16px;
+										// 	font-size: 1rem;
+										// 	color: #555;
+										
+										// 	&:hover {
+										// 		background-color: #f0f0f0;
+											//   color: #1976d2;
+											// }
+										// }
+
+									}
+
+								} //end submenu-list
+
+
+								// .submenu-toggle {
+								// 	// cursor: pointer;
+								// 	margin: 0 auto;
+								// 	padding: 0;
+
+								// 	#expandMore {
+								// 		// margin-top:14px;
+								// 		// top:4;
+								// 		position: relative; /* Asegúrate de establecer una posición relativa al padre */
+								  // 		top: 5px; /* Baja el icono 5px */
+								// 	}
+
+								// } ///end submenu-toggle 
+								
+
+							} //end li
+
+					} //end list
+
+					
+
+				} //end menuCol
+				  
+
+			} //cellPhoneDropDownMenu
+
+		}
+
+
 
 		#headerIconText {
 
@@ -364,10 +615,95 @@ header {
 											//   color: #0d47a1; /* Color al pasar el mouse */
 												color: rgb(62, 122, 22); /* Color al pasar el mouse */
 											}
-										}
-									}
+
+											#expandMore {
+												// margin-top:14px;
+												// top:4;
+												position: relative; /* Asegúrate de establecer una posición relativa al padre */
+  												top: 5px; /* Baja el icono 5px */
+											}
+
+										} //end a
+
+
+										.submenu-list {
+											height: 100%;
+											// top:0;
+											margin: 0 auto;
+											position: relative;
+											top: -25px;
+											
+											// list-style-type: none;
+											// padding: 0;
+											// margin: 0px 0 0;
+											// background-color: #f9f9f9;
+											// border: 1px solid #ddd;
+											// border-radius: 4px;
+											// box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+											div {
+
+												height: 2.5rem;
+												padding-left: 20px;
+												text-decoration: none;
+												// color: #1976d2; /* Color de los enlaces */
+												
+												@media only screen and (max-width: 1046px) {
+													font-size: 0.95rem;
+												}
+						
+												@media only screen and (max-width: 415px) {
+													font-size: 0.95rem;
+												}
+						
+												@media only screen and (max-width: 377px) {
+													font-size: 1.05rem;
+												}
+												transition: color 0.3s;
+										
+												&:hover {
+												//   color: #0d47a1; /* Color al pasar el mouse */
+													color: rgb(62, 122, 22); /* Color al pasar el mouse */
+												}
+
+												// a {
+												// 	display: block;
+												// 	height: 2rem;
+												// 	padding: 8px 16px;
+												// 	font-size: 1rem;
+												// 	color: #555;
+												
+												// 	&:hover {
+												// 		background-color: #f0f0f0;
+													//   color: #1976d2;
+													// }
+												// }
+
+											}
+
+										} //end submenu-list
+
+
+										// .submenu-toggle {
+										// 	// cursor: pointer;
+										// 	margin: 0 auto;
+										// 	padding: 0;
+
+										// 	#expandMore {
+										// 		// margin-top:14px;
+										// 		// top:4;
+										// 		position: relative; /* Asegúrate de establecer una posición relativa al padre */
+  										// 		top: 5px; /* Baja el icono 5px */
+										// 	}
+
+										// } ///end submenu-toggle 
+										
+
+									} //end li
 
 							} //end list
+
+							
 
 						} //end menuCol
 						  

@@ -63,6 +63,8 @@ export class HomeComponent {
     // private timeoutId: any;
     isMenuOpen: boolean = false;
 
+    isSubmenuOpen: boolean = false; // Estado inicial del submenú
+
     constructor(
       private dialog: MatDialog
     ) {
@@ -81,12 +83,18 @@ export class HomeComponent {
     // }
 
     clickMenuAddress(sectionId: string) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      this.toggleMenu(); // Cierra el menú después de desplazarse
-  }
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        this.toggleMenu(); // Cierra el menú después de desplazarse
+    }
+
+
+    toggleSubmenu(event: Event): void {
+        event.preventDefault(); // Evita la recarga de la página
+        this.isSubmenuOpen = !this.isSubmenuOpen; // Alterna el estado del submenú
+    }
 
 
     // clickIdentityAddress() {
