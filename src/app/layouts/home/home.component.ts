@@ -14,6 +14,7 @@ import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/p
 import { IdentityComponent } from './identity/identity.component';
 import { TeamComponent } from './team/team.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
+import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
 import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
 // import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
@@ -40,6 +41,7 @@ import { TranslateService } from '@ngx-translate/core';
     IdentityComponent,
     TeamComponent,
     CurrentyearTourComponent,
+    EnCurrentyeartourComponent,
     TenyearsExperienceComponent,
     // JoinusInfoComponent,
     JoinusMissionsComponent,

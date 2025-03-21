@@ -32,6 +32,28 @@
             }
         },
 
+        "TEAM": {
+            "NORMAL_SCREEN": {
+                "TITLE1": "CONOCE A LOS",
+                "TITLE2": "MIEMBROS DEL EQUIPO"
+            },
+            "CELL_PHONE": {
+                "TITLE1": "CONOCE AL",
+                "TITLE2": "EQUIPO"
+            },
+            "BADGE": {
+                "MISSIONS": "Misiones",
+                "EVANGELISM": "Evangelismo",
+                "ENGINEERING": "Ingeniería"
+            },
+            "VALERIO": {
+                "DESCRIPTION": "Misionero a tiempo completo, participa en programas de radio, evangelismo en universidades, tours misioneros por Europa así como viajes por todo el mundo equipando a las iglesias en evangelismo"
+            },    
+            "GUILLERMO": {
+                "DESCRIPTION": "Ingeniero de profesión, se encarga de dar apoyo a la obra misionera en todo tipo de tareas logísticas y técnicas además de participar activamente en campañas evangelísticas"
+            }       
+        },
+
         "GAMA_MEANING": "Global Awakening Movement Association"
     }
 }

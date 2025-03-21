@@ -201,10 +201,17 @@
 
 
   <!--======================================== -->
-  <!--========== CURRENT YEAR TOUR =========== -->
+  <!--========= ES CURRENT YEAR TOUR ========= -->
   <!--======================================== -->
 
-  <app-currentyear-tour></app-currentyear-tour>
+  <app-currentyear-tour [hidden]="currentLang===ENGLISH"></app-currentyear-tour>
+  
+  
+  <!--======================================== -->
+  <!--========= EN CURRENT YEAR TOUR ========= -->
+  <!--======================================== -->
+
+  <app-en-currentyeartour [hidden]="currentLang===ESPANOL"></app-en-currentyeartour>
   
 
   <!--======================================== -->
