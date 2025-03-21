@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +19,8 @@ import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-expe
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -43,6 +45,7 @@ import { MatListModule } from '@angular/material/list';
     JoinusMissionsComponent,
     MatCardModule,
     MatListModule,
+    TranslateModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -56,7 +59,7 @@ import { MatListModule } from '@angular/material/list';
   //   HttpClientModule,
   // ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
     // title = 'web-gama';
     
@@ -66,7 +69,7 @@ export class HomeComponent {
     readonly ENGLISH = "en";
     readonly DEUTSCH = "de";
 
-    currentLang = "es";
+    currentLang = this.ESPANOL;
     // currentLang = "";
 
 
@@ -79,13 +82,38 @@ export class HomeComponent {
     isSubmenuOpen: boolean = false; // Estado inicial del submenú
 
     constructor(
-      private dialog: MatDialog
+      private dialog: MatDialog,
+      private translate: TranslateService,
     ) {
+        // Establece el idioma por defecto (por ejemplo, español)
+        this.translate.setDefaultLang(this.currentLang);
+    }
+
+
+    ngOnInit(): void {
+        this.updateLanguage();
+    }
+
+
+    // Método para actualizar el idioma según las variables
+    updateLanguage(): void {
+
+      if (this.currentLang===this.ESPANOL) {
+          this.translate.use(this.ESPANOL); 
+
+      } else if (this.currentLang===this.ENGLISH) {
+          this.translate.use(this.ENGLISH);
+      } 
+      
+      // else if (this.currentLang===DEUTSCH) {
+      //   this.translate.use('de'); 
+      // }
     }
 
 
     selectLanguage(selectedLang: string) {
         this.currentLang = selectedLang;
+        this.translate.use(selectedLang); 
         // if (selectedLang=='es') {
         //     this.spainSelected = true;
         //     this.ukSelected = false;

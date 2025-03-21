@@ -6,16 +6,15 @@
     <ul>
         <li id="headerIconText">      
             <a id="normalScreenHeaderLogo" href="#">
-                <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
-                <span id="normalScreenText">MOVIMIENTO MISIONERO <br> GLOBAL</span>
+                <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
+                <span id="normalScreenText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
             </a>
         </li>
         <li id="headerSpace">&nbsp;</li>
         <!-- <li><a href="#identity">QUIÉNES SOMOS</a></li> -->
-        <li><a href="#speakers">EL EQUIPO</a></li>
-        <li><a href="#currentYearTour">TOUR MISIONERO 2025</a></li>
-        <li><a href="#uneteMisiones">ÚNETE A LA MISIÓN 2025</a></li>
-        <!-- <li id="headerSpace2">&nbsp;</li> -->
+        <li><a href="#speakers">{{ 'HOME.THE_TEAM' | translate }}</a></li>
+        <li><a href="#currentYearTour">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
+        <li><a href="#uneteMisiones">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
         <li class="flagLi" *ngIf="currentLang===ESPANOL">
             <a id="spainFlag" class="flag" (click)="selectLanguage(ENGLISH)">
                 <img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;&nbsp;ENGLISH
@@ -27,11 +26,8 @@
             </a>
         </li>
         <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="selectLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
-        <!-- <li>
-          <a href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
-              PETICIÓN DE ORACIÓN
-          </a>
-        </li> -->
+
+
         <li id="normalScreenHeaderMenuButtonLi">
             <button mat-button id="normalScreenHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
                 <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
@@ -48,16 +44,16 @@
                   <hr>
                     <div>
                         <a (click)="openContactUsModal($event)">
-                            Contacto
+                            {{ 'HOME.CONTACT' | translate }}
                         </a>
                     </div>
                     <div>
                         <a (click)="openPrayerRequestModal($event)">
-                            Petición de oración
+                            {{ 'HOME.PRAYER_REQUEST' | translate }}
                         </a>
                     </div>
                     <div>
-                      <a class="submenu-toggle" (click)="toggleSubmenu($event)">Idioma<mat-icon id="expandMore">expand_more</mat-icon></a>
+                      <a class="submenu-toggle" (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
                       <div class="submenu-list" *ngIf="isSubmenuOpen">
                           <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
                           <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
@@ -92,8 +88,8 @@
 
       <div id="cellPhoneHeaderLeftSide" class="col">
           <a id="cellPhoneHeaderLeftSideContainer" href="#" >
-              <img id="cellPhoneLogo" src="../assets/img/icon-6.png" alt="MOVIMIENTO MISIONERO GLOBAL" >
-              <span id="cellPhoneText">MOVIMIENTO  <br> MISIONERO <br> GLOBAL</span>
+              <img id="cellPhoneLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
+              <span id="cellPhoneText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
           </a>
       </div>
 
@@ -127,22 +123,23 @@
                       <h2 class="title">Home</h2>
                       <hr>
                       <ul class="list">
-                        <li><a (click)="clickMenuAddress('identity')">Quiénes somos</a></li>
-                        <li><a (click)="clickMenuAddress('speakers')">El equipo</a></li>
-                        <li><a (click)="clickMenuAddress('uneteMisiones')">Únete a la misión 2025</a></li>
+                        <!-- <li><a (click)="clickMenuAddress('identity')">{{ 'HOME.WHO_ARE_WE' | translate }}</a></li> -->
+                        <li><a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a></li>
+                        <li><a (click)="clickMenuAddress('currentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a></li>
+                        <li><a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a></li>
                         <li>
                             <a (click)="openContactUsModal($event)">
-                                Contacto
+                              {{ 'HOME.CONTACT' | translate }}
                             </a>
                         </li>
                         <li>
                             <a (click)="openPrayerRequestModal($event)">
-                                Petición de oración
+                              {{ 'HOME.PRAYER_REQUEST' | translate }}
                             </a>
                         </li>
                         <li>
                           <!-- <a>Idioma</a> -->
-                          <a (click)="toggleSubmenu($event)">Idioma<mat-icon id="expandMore">expand_more</mat-icon></a>
+                          <a (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
                           <div class="submenu-list" *ngIf="isSubmenuOpen">
                               <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
                               <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
@@ -160,29 +157,6 @@
           
       </div>
 
-
-      <!-- <div class="header-container"> -->
-        <!-- Otros elementos del header -->
-    
-        <!-- Botón para abrir/cerrar el menú en móviles -->
-        <!-- <button class="menu-toggle" (click)="toggleMenu()">
-          <span *ngIf="!isMenuOpen">☰</span>
-          <span *ngIf="isMenuOpen">✕</span>
-        </button> -->
-    
-        <!-- Menú desplegable -->
-        <!-- <div class="cellPhoneHeaderRightSide" [class.open]="isMenuOpen"> -->
-          <!-- Contenido del menú -->
-          <!-- <nav>
-            <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div> -->
-
     </div>
   </header>
 
@@ -196,7 +170,7 @@
   <!--======================================== -->
   <!--=============== SEMINARIO =============== -->
   <!--======================================== -->
-<!--  <seminario id="seminario">
+  <!--  <seminario id="seminario">
     <div id="seminario-announcement" class="carousel slide carousel-fade" data-ride="carousel"  data-pause="false">
       <div  class="row">
         <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
@@ -206,7 +180,7 @@
     </seminario> -->
   <!-- /Seminario -->
   <!-- tour --> 
-<!-- <tour id="tour">
+  <!-- <tour id="tour">
     <div id="tour-announcement" >
       <div  class="row">
         <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">

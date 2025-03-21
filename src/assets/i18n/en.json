@@ -1,0 +1,37 @@
+{
+    "HOME": {
+        "HEADER": {
+            "TITLE": "GLOBAL MISSIONARY MOVEMENT"
+        },
+
+        "THE_TEAM": "THE TEAM",
+        "THE_TEAM_LOW": "The team",
+        "CURRENT_YEAR_TOUR": "2025 MISSION TOUR",
+        "CURRENT_YEAR_TOUR_LOW": "2025 Mission tour",
+        "JOIN_US_MISSION": "JOIN US ON 2025 MISSION",
+        "JOIN_US_MISSION_LOW": "Join us on 2025 mission",
+        "CONTACT": "Contact",   
+        "PRAYER_REQUEST": "Prayer request",
+        "LANGUAGE": "Language",
+        "WHO_ARE_WE": "Who are we?",
+
+        "IDENTITY": {
+            "TITLE": "What is the meaning of GAMA?",
+            "PARAGRAPH": "we are a group of people who share a series of concerns surrounding the gospel and the Church of Christ. We believe that God is awakening and commissioning His Church throughout the earth to fulfill its calling and achieve the destiny God has for it",
+            "VISION": {
+                "TITLE": "VISION",
+                "PARAGRAPH": "Be part of the <span class=\"highlightText\">awakening</span> that God has for His Church."
+            },
+            "MISSION": {
+                "TITLE": "MISSION",
+                "PARAGRAPH": "Through different <span class=\"highlightText\">evangelism</span> and <span class=\"highlightText\">mission</span> initiatives we want to spread the awakening of the Church of Christ."
+            },
+            "VALUES": {
+                "TITLE": "VALUES",
+                "PARAGRAPH": "We identify God's Word fully in the <span class=\"highlightText\">Bible</span> and trust in the <span class=\"highlightText\">Holy Spirit</span> as our guide."
+            }
+        },
+
+        "GAMA_MEANING": "Global Awakening Movement Association"
+    }
+}
