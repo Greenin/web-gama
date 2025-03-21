@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-identity',
   standalone: true,
   imports: [
-    TranslateModule,
+      TranslateModule,
   ],
   templateUrl: './identity.component.html',
   styleUrl: './identity.component.scss'

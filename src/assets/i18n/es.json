@@ -16,6 +16,7 @@
         "WHO_ARE_WE": "¿Quiénes somos?",
 
         "IDENTITY": {
+            
             "TITLE": "¿Qué significa GAMA?",
             "PARAGRAPH": "somos un grupo de personas que compartimos una serie de inquietudes entorno al evangelio y la iglesia de Cristo. Creemos que Dios está despertando y comisionando a su Iglesia alrededor de toda la tierra para cumplir con su llamado y alcanzar el destino que Dios tiene para ella",
             "VISION": {
@@ -33,6 +34,7 @@
         },
 
         "TEAM": {
+
             "NORMAL_SCREEN": {
                 "TITLE1": "CONOCE A LOS",
                 "TITLE2": "MIEMBROS DEL EQUIPO"
@@ -51,7 +53,53 @@
             },    
             "GUILLERMO": {
                 "DESCRIPTION": "Ingeniero de profesión, se encarga de dar apoyo a la obra misionera en todo tipo de tareas logísticas y técnicas además de participar activamente en campañas evangelísticas"
-            }       
+            } 
+        },
+
+        "EXPERIENCE": {
+            "TITLE_1": "AÑOS",
+            "TITLE_2": "DE",
+            "TITLE_3": "EXPERIENCIA",
+            "TITLE_4": "PARA",
+            "TITLE_5": "LA GLORIA",
+            "TITLE_6": "DE DIOS"
+        },
+
+        "JOIN_MISSION": {
+
+            "TITLE_1": "ÚNETE AL",
+            "TITLE_2": "TOUR 2025",
+            "DESCRIPTION": "Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM",
+
+            "FORM": {
+
+                "NAME": "Nombre",
+                "SURNAME": "Apellidos",
+                "EMAIL": "Correo electrónico",
+                "PHONE_NUM": "Número de teléfono",
+                "LOCALITY": "Localidad",
+                "COUNTRY": "País donde resides",
+                "TESTIMONY": "Su testimonio de cómo conoció al Señor Jesús Cristo",
+                "LANGUAGE": "Idioma de preferencia",
+                "PRIVACY_TEXT_1": "He leído y aceptado las ondiciones de",
+                "PRIVACY_TEXT_2": "privacidad de datos",
+                "PRIVACY_TEXT_3": "",
+
+                "BUTTON_SEND": "Enviar",
+                "FORM_SUCCESS_TEXT": "Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias",
+                "FORM_ERROR_TEXT": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo",
+
+                "FIELD_ERROR_TEXT_REQUIRED": "Campo obligatorio",
+                "FIELD_ERROR_TEXT_VALID_EMAIL": "Ingresa un correo válido",
+                "FIELD_ERROR_TEXT_PHONE_NOT_VALID": "Teléfono no válido. Introduce el prefijo internacional. Ejemplo",
+                
+                "NAME_PLACEHOLDER": "Escribe tu nombre tal como aparece en tu identificación",
+                "SURNAME_PLACEHOLDER": "Introduce tus apellidos",
+                "EMAIL_PLACEHOLDER": "Asegúrate de ingresar un correo al que tengamos acceso directo para mantenerte informado",
+                "PHONE_PLACEHOLDER": "Incluye el prefijo internacional de tu país para poder contactarte sin problemas",
+                "LOCALITY_PLACEHOLDER": "Municipio, ciudad o pueblo donde resides",
+                "TESTIMONY_PLACEHOLDER": "En pocas palabras, cuéntanos cómo conociste a Cristo y cómo ha transformado tu vida"
+            }
         },
 
         "GAMA_MEANING": "Global Awakening Movement Association"

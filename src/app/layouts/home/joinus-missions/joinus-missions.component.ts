@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { HttpClient } from '@angular/common/http';
 import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-modal.component';
@@ -31,6 +32,7 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
     MatButtonModule, 
     // HttpClientModule,
     MatDialogModule,
+    TranslateModule,
   ],
   // providers: [provideHttpClient(withFetch())],
   templateUrl: './joinus-missions.component.html',
@@ -160,9 +162,6 @@ export class JoinusMissionsComponent {
 //     console.log('Asunto:', asunto);
 //     console.log('Cuerpo:', cuerpo);
 //   }
-
-
-
 
 
 }

@@ -7,71 +7,76 @@
     <div class="container">
 
           <div class="col">
-              <p id="uneteMisionesTitleFirstLine" class="title2">ÚNETE AL </p>
+              <p id="uneteMisionesTitleFirstLine" class="title2">{{ 'HOME.JOIN_MISSION.TITLE_1' | translate }}</p>
               <br>
-              <p id="uneteMisionesTitleSecondLine" class="title2">TOUR 2025</p>
+              <p id="uneteMisionesTitleSecondLine" class="title2">{{ 'HOME.JOIN_MISSION.TITLE_2' | translate }}</p>
           </div>
 
           <p id="uneteMisionesDescParagraph" class="text">
               <!-- Ponte en contacto con nosotros si te atrae la idea de participar en <abbr data-toggle="tooltip" title="En colaboración con iglesias locales y JCUM">misiones</abbr>. -->
-              Ponte en contacto con nosotros si te atrae la idea de participar en misiones, en colaboración con iglesias locales y JCUM.
+              {{ 'HOME.JOIN_MISSION.DESCRIPTION' | translate }}.
           </p>
           <br>
           
           <form [formGroup]="misioneroForm" (ngSubmit)="onSubmit()">
               <!-- Nombre -->
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Nombre</mat-label>
-                  <input matInput formControlName="nombre" name="nombre" placeholder="Escribe tu nombre tal como aparece en tu identificación." required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.NAME' | translate }}</mat-label>
+                  <input matInput formControlName="nombre" name="nombre" placeholder="{{ 'HOME.JOIN_MISSION.FORM.NAME_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('nombre')?.touched && misioneroForm.get('nombre')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
         
               <!-- Apellidos -->
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Apellidos</mat-label>
-                  <input matInput formControlName="apellidos" name="apellidos" placeholder="Introduce tus apellidos." required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.SURNAME' | translate }}</mat-label>
+                  <input matInput formControlName="apellidos" name="apellidos" placeholder="{{ 'HOME.JOIN_MISSION.FORM.SURNAME_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('apellidos')?.touched && misioneroForm.get('apellidos')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
         
               <!-- Correo electrónico -->
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Correo electrónico</mat-label>
-                  <input matInput formControlName="email" name="email" placeholder="Asegúrate de ingresar un correo al que tengamos acceso directo para mantenerte informado." required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.EMAIL' | translate }}</mat-label>
+                  <input matInput formControlName="email" name="email" placeholder="{{ 'HOME.JOIN_MISSION.FORM.EMAIL_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('email')?.touched && misioneroForm.get('email')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('email')?.touched && misioneroForm.get('email')?.errors?.['invalidEmail'] && !misioneroForm.get('email')?.errors?.['required']">
-                    Ingresa un correo válido.
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_VALID_EMAIL' | translate }}.
                   </mat-error>
               </mat-form-field>
 
               <!-- Número de teléfono y Cumpleaños -->
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Número de teléfono</mat-label>
-                  <input matInput formControlName="telefono" name="telefono" placeholder="Incluye el prefijo internacional de tu país para poder contactarte sin problemas." required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.PHONE_NUM' | translate }}</mat-label>
+                  <input matInput formControlName="telefono" name="telefono" placeholder="{{ 'HOME.JOIN_MISSION.FORM.PHONE_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('telefono')?.touched && misioneroForm.get('telefono')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('telefono')?.touched && misioneroForm.get('telefono')?.errors?.['invalidPhone']">
-                    Teléfono no válido. Introduce el prefijo internacional. Ejemplo: +34123456789. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_PHONE_NOT_VALID' | translate }}: +34123456789.
                   </mat-error>
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Localidad</mat-label>
-                  <input matInput formControlName="localidad" name="localidad" placeholder="Municipio, ciudad o pueblo donde resides." required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.LOCALITY' | translate }}</mat-label>
+                  <input matInput formControlName="localidad" name="localidad" placeholder="{{ 'HOME.JOIN_MISSION.FORM.LOCALITY_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('localidad')?.touched && misioneroForm.get('localidad')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>País donde resides</mat-label>
-                  <mat-select formControlName="pais" name="pais" required>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.COUNTRY' | translate }}</mat-label>
+                  <input matInput formControlName="pais" name="pais" placeholder="" required>
+                  <mat-error *ngIf="misioneroForm.get('pais')?.touched && misioneroForm.get('pais')?.errors?.['required']">
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                  </mat-error>
+
+                  <!-- <mat-select formControlName="pais" name="pais" required>
                       <mat-option value=""></mat-option>
                       <mat-option value="Afganistán">Afganistán</mat-option>
                       <mat-option value="Albania">Albania</mat-option>
@@ -180,18 +185,19 @@
                       <mat-option value="Uruguay">Uruguay</mat-option>
                       <mat-option value="Venezuela">Venezuela</mat-option>
                       <mat-option value="Vietnam">Vietnam</mat-option>
-                  </mat-select>
-                  <mat-error *ngIf="misioneroForm.get('pais')?.touched && misioneroForm.get('pais')?.errors?.['required']">
+                  </mat-select> -->
+
+                  <!-- <mat-error *ngIf="misioneroForm.get('pais')?.touched && misioneroForm.get('pais')?.errors?.['required']">
                     Campo obligatorio. 
-                  </mat-error>
+                  </mat-error> -->
               </mat-form-field>
 
 
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Su testimonio de cómo conoció al Señor Jesús Cristo</mat-label>
-                  <textarea matInput formControlName="testimonio" name="testimonio" rows="4" placeholder="En pocas palabras, cuéntanos cómo conociste a Cristo y cómo ha transformado tu vida." required></textarea>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.TESTIMONY' | translate }}</mat-label>
+                  <textarea matInput formControlName="testimonio" name="testimonio" rows="4" placeholder="{{ 'HOME.JOIN_MISSION.FORM.TESTIMONY_PLACEHOLDER' | translate }}." required></textarea>
                   <mat-error *ngIf="misioneroForm.get('testimonio')?.touched && misioneroForm.get('testimonio')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('testimonio')?.touched && misioneroForm.get('testimonio')?.errors?.['maxLengthExceeded']">
                       Longitud máxima de 4000 caracteres alcanzado.
@@ -199,7 +205,7 @@
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="full-width">
-                  <mat-label>Idioma de preferencia</mat-label>
+                  <mat-label>{{ 'HOME.JOIN_MISSION.FORM.LANGUAGE' | translate }}</mat-label>
                   <mat-select formControlName="idioma" name="idioma" required>
                       <mat-option value=""></mat-option>
                       <mat-option value="es">Español - ES</mat-option>
@@ -209,36 +215,37 @@
                       <!-- <mat-option value="pt">Português - PT</mat-option> -->
                   </mat-select>
                   <mat-error *ngIf="misioneroForm.get('idioma')?.touched && misioneroForm.get('idioma')?.errors?.['required']">
-                    Campo obligatorio. 
+                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
           
               <!-- Checkbox de privacidad -->
               <mat-checkbox formControlName="privacidad" name="privacidad" required>
-                  He leído y aceptado condiciones de
-                  <a href="#" (click)="openPrivacidadModal($event)">privacidad de datos</a>.
+                  {{ 'HOME.JOIN_MISSION.FORM.PRIVACY_TEXT_1' | translate }}
+                  <a href="#" (click)="openPrivacidadModal($event)">{{ 'HOME.JOIN_MISSION.FORM.PRIVACY_TEXT_2' | translate }}</a>
+                  {{ 'HOME.JOIN_MISSION.FORM.PRIVACY_TEXT_3' | translate }}.
               </mat-checkbox>
         
               <!-- Botón de enviar -->
               <div class="text-center">
-                  <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">Enviar</button>
+                  <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">{{ 'HOME.JOIN_MISSION.FORM.BUTTON_SEND' | translate }}</button>
               </div>
         
               <!-- Mensaje de éxito -->
               <div *ngIf="enviadoConExito">
                   <div class="container mt-2">
-                    <div class="alert alert-success text-dark" role="alert">
-                      <!-- <span class="material-icons me-2">check_circle</span>  -->
-                      Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias.
-                    </div>
+                      <div class="alert alert-success text-dark" role="alert">
+                        <!-- <span class="material-icons me-2">check_circle</span>  -->
+                          {{ 'HOME.JOIN_MISSION.FORM.FORM_SUCCESS_TEXT' | translate }}.
+                      </div>
                   </div>
               </div>
               <!-- Mensaje de error -->
               <div *ngIf="envioFallido">
                   <div class="container mt-2">
-                    <div class="alert alert-danger text-dark" role="alert">
-                      Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.
-                    </div>
+                      <div class="alert alert-danger text-dark" role="alert">
+                          {{ 'HOME.JOIN_MISSION.FORM.FORM_ERROR_TEXT' | translate }}.
+                      </div>
                   </div>
               </div> 
                 
