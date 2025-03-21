@@ -15,8 +15,10 @@
         "LANGUAGE": "Idioma",
         "WHO_ARE_WE": "¿Quiénes somos?",
 
+        "GAMA_MEANING": "Global Awakening Movement Association",
+
         "IDENTITY": {
-            
+
             "TITLE": "¿Qué significa GAMA?",
             "PARAGRAPH": "somos un grupo de personas que compartimos una serie de inquietudes entorno al evangelio y la iglesia de Cristo. Creemos que Dios está despertando y comisionando a su Iglesia alrededor de toda la tierra para cumplir con su llamado y alcanzar el destino que Dios tiene para ella",
             "VISION": {
@@ -102,6 +104,14 @@
             }
         },
 
-        "GAMA_MEANING": "Global Awakening Movement Association"
+        "FOOTER": {
+            "LINKS": "Enlaces",
+            "CONTACT": "Contacto",
+            "PRAYER_REQUEST": "Petición de Oración",
+            "PRIVACY_POLICY": "Política de Privacidad",
+            "LEGAL_NOTICE": "Aviso Legal"
+        }
+
+       
     }
 }

@@ -167,30 +167,6 @@
   <app-identity></app-identity>
 
 
-  <!--======================================== -->
-  <!--=============== SEMINARIO =============== -->
-  <!--======================================== -->
-  <!--  <seminario id="seminario">
-    <div id="seminario-announcement" class="carousel slide carousel-fade" data-ride="carousel"  data-pause="false">
-      <div  class="row">
-        <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
-          <img  id="seminario-announcement-banner" src="./images/misiones-europa-seminario.png"  alt="">
-        </div> 
-        </div>
-    </seminario> -->
-  <!-- /Seminario -->
-  <!-- tour --> 
-  <!-- <tour id="tour">
-    <div id="tour-announcement" >
-      <div  class="row">
-        <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
-          <img  id="seminario-announcement-banner" src="./images/tour_misionero_2022.jpg"  alt="">
-        </div> 
-      </div>
-    </tour> -->
-  <!-- /tour-->
-
-
 
   <!--======================================== -->
   <!--=============== SPEAKERS =============== -->
@@ -219,6 +195,106 @@
   <!--======================================== -->
 
   <app-tenyears-experience></app-tenyears-experience>
+
+
+
+  <!--======================================== -->
+  <!--=== INFORMACION UNETE A LAS MISIONES === -->
+  <!--======================================== -->
+  <!-- <app-joinus-info></app-joinus-info> -->
+
+
+  <!--======================================== -->
+  <!--========= UNETE A LAS MISIONES ========= -->
+  <!--======================================== -->
+  
+  <app-joinus-missions></app-joinus-missions>
+
+
+  <!--======================================== -->
+  <!--================ FOOTER ================ -->
+  <!--======================================== -->
+  <footer class="text-end">
+    <div class="container">
+
+      <div class="row text-center pt-4">
+          <div class="col-12 col-lg">
+             <h2>{{ 'HOME.FOOTER.LINKS' | translate }}</h2>
+          </div> 
+      </div>
+
+      <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openContactUsModal($event)" >
+                  {{ 'HOME.FOOTER.CONTACT' | translate }}
+              </a>
+              &nbsp;
+              <a href="#" (click)="openPrayerRequestModal($event)" >
+                  {{ 'HOME.FOOTER.PRAYER_REQUEST' | translate }}
+              </a>
+          </div> 
+      </div>
+
+      <!-- <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openPrayerRequestModal($event)" >
+                  Petición de Oración
+              </a>
+          </div> 
+      </div> -->
+
+      <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openPrivacidadModal($event)" >
+                  {{ 'HOME.FOOTER.PRIVACY_POLICY' | translate }}
+              </a>
+          </div> 
+      </div>
+
+      <div class="row text-center pb-2">
+          <div class="col-12 col-lg">
+              <a href="#" (click)="openLegalNoticeModal($event)" >
+                  {{ 'HOME.FOOTER.LEGAL_NOTICE' | translate }}
+              </a>
+          </div> 
+      </div>
+
+      <br>
+      <div class="row text-center pb-1">
+          <div class="col-12 col-lg">
+              Copyright &copy; 2025 - GAMA - Global Awakening Movement Association
+          </div> 
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <!--======================================== -->
+  <!--=============== SEMINARIO =============== -->
+  <!--======================================== -->
+  <!--  <seminario id="seminario">
+    <div id="seminario-announcement" class="carousel slide carousel-fade" data-ride="carousel"  data-pause="false">
+      <div  class="row">
+        <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
+          <img  id="seminario-announcement-banner" src="./images/misiones-europa-seminario.png"  alt="">
+        </div> 
+        </div>
+    </seminario> -->
+  <!-- /Seminario -->
+  <!-- tour --> 
+  <!-- <tour id="tour">
+    <div id="tour-announcement" >
+      <div  class="row">
+        <div class="col-12 col-lg-6 pt-4 pb-4 align-self-center">
+          <img  id="seminario-announcement-banner" src="./images/tour_misionero_2022.jpg"  alt="">
+        </div> 
+      </div>
+    </tour> -->
+  <!-- /tour-->
+
   
   <!--======================================== -->
   <!--============ lUGAR Y FECHA ============= -->
@@ -240,76 +316,6 @@
     </div>
   </section>
 -->
-
-  <!--======================================== -->
-  <!--=== INFORMACION UNETE A LAS MISIONES === -->
-  <!--======================================== -->
-  <!-- <app-joinus-info></app-joinus-info> -->
-
-  <!--======================================== -->
-  <!--========= UNETE A LAS MISIONES ========= -->
-  <!--======================================== -->
-  
-  <app-joinus-missions></app-joinus-missions>
-
-
-  <!--======================================== -->
-  <!--================ FOOTER ================ -->
-  <!--======================================== -->
-  <footer class="text-end">
-    <div class="container">
-
-      <div class="row text-center pt-4">
-          <div class="col-12 col-lg">
-             <h2>Enlaces</h2>
-          </div> 
-      </div>
-
-      <div class="row text-center pb-2">
-          <div class="col-12 col-lg">
-              <a href="#" (click)="openContactUsModal($event)" >
-                  Contacto
-              </a>
-              &nbsp;
-              <a href="#" (click)="openPrayerRequestModal($event)" >
-                Petición de Oración
-              </a>
-          </div> 
-      </div>
-
-      <!-- <div class="row text-center pb-2">
-          <div class="col-12 col-lg">
-              <a href="#" (click)="openPrayerRequestModal($event)" >
-                  Petición de Oración
-              </a>
-          </div> 
-      </div> -->
-
-      <div class="row text-center pb-2">
-          <div class="col-12 col-lg">
-              <a href="#" (click)="openPrivacidadModal($event)" >
-                  Política de Privacidad
-              </a>
-          </div> 
-      </div>
-
-      <div class="row text-center pb-2">
-          <div class="col-12 col-lg">
-              <a href="#" (click)="openLegalNoticeModal($event)" >
-                  Aviso Legal
-              </a>
-          </div> 
-      </div>
-
-      <br>
-      <div class="row text-center pb-1">
-          <div class="col-12 col-lg">
-              Copyright &copy; 2025 - GAMA - Global Awakening Movement Association
-          </div> 
-      </div>
-
-    </div>
-  </footer>
 
 
   <!-- <footer id="footer" class="pb-4 pt-4">
