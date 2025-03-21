@@ -24,7 +24,7 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.NAME' | translate }}</mat-label>
                   <input matInput formControlName="nombre" name="nombre" placeholder="{{ 'HOME.JOIN_MISSION.FORM.NAME_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('nombre')?.touched && misioneroForm.get('nombre')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
         
@@ -33,7 +33,7 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.SURNAME' | translate }}</mat-label>
                   <input matInput formControlName="apellidos" name="apellidos" placeholder="{{ 'HOME.JOIN_MISSION.FORM.SURNAME_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('apellidos')?.touched && misioneroForm.get('apellidos')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
         
@@ -42,10 +42,10 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.EMAIL' | translate }}</mat-label>
                   <input matInput formControlName="email" name="email" placeholder="{{ 'HOME.JOIN_MISSION.FORM.EMAIL_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('email')?.touched && misioneroForm.get('email')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('email')?.touched && misioneroForm.get('email')?.errors?.['invalidEmail'] && !misioneroForm.get('email')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_VALID_EMAIL' | translate }}.
+                      {{ 'HOME.FIELD_ERROR_TEXT_VALID_EMAIL' | translate }}.
                   </mat-error>
               </mat-form-field>
 
@@ -54,7 +54,7 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.PHONE_NUM' | translate }}</mat-label>
                   <input matInput formControlName="telefono" name="telefono" placeholder="{{ 'HOME.JOIN_MISSION.FORM.PHONE_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('telefono')?.touched && misioneroForm.get('telefono')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('telefono')?.touched && misioneroForm.get('telefono')?.errors?.['invalidPhone']">
                       {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_PHONE_NOT_VALID' | translate }}: +34123456789.
@@ -65,7 +65,7 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.LOCALITY' | translate }}</mat-label>
                   <input matInput formControlName="localidad" name="localidad" placeholder="{{ 'HOME.JOIN_MISSION.FORM.LOCALITY_PLACEHOLDER' | translate }}." required>
                   <mat-error *ngIf="misioneroForm.get('localidad')?.touched && misioneroForm.get('localidad')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
 
@@ -73,7 +73,7 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.COUNTRY' | translate }}</mat-label>
                   <input matInput formControlName="pais" name="pais" placeholder="" required>
                   <mat-error *ngIf="misioneroForm.get('pais')?.touched && misioneroForm.get('pais')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
 
                   <!-- <mat-select formControlName="pais" name="pais" required>
@@ -197,10 +197,10 @@
                   <mat-label>{{ 'HOME.JOIN_MISSION.FORM.TESTIMONY' | translate }}</mat-label>
                   <textarea matInput formControlName="testimonio" name="testimonio" rows="4" placeholder="{{ 'HOME.JOIN_MISSION.FORM.TESTIMONY_PLACEHOLDER' | translate }}." required></textarea>
                   <mat-error *ngIf="misioneroForm.get('testimonio')?.touched && misioneroForm.get('testimonio')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
                   <mat-error *ngIf="misioneroForm.get('testimonio')?.touched && misioneroForm.get('testimonio')?.errors?.['maxLengthExceeded']">
-                      Longitud máxima de 4000 caracteres alcanzado.
+                      {{ 'HOME.FIELD_ERROR_MAXIMUM_LENGTH' | translate }}.
                   </mat-error>
               </mat-form-field>
 
@@ -215,7 +215,7 @@
                       <!-- <mat-option value="pt">Português - PT</mat-option> -->
                   </mat-select>
                   <mat-error *ngIf="misioneroForm.get('idioma')?.touched && misioneroForm.get('idioma')?.errors?.['required']">
-                      {{ 'HOME.JOIN_MISSION.FORM.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
+                      {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
                   </mat-error>
               </mat-form-field>
           
@@ -228,7 +228,7 @@
         
               <!-- Botón de enviar -->
               <div class="text-center">
-                  <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">{{ 'HOME.JOIN_MISSION.FORM.BUTTON_SEND' | translate }}</button>
+                  <button mat-raised-button color="primary" type="submit" [disabled]="misioneroForm.invalid">{{ 'HOME.BUTTON_SEND' | translate }}</button>
               </div>
         
               <!-- Mensaje de éxito -->

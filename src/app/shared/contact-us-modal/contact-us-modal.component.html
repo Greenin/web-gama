@@ -1,48 +1,39 @@
-<h2 mat-dialog-title>Contacto</h2>
+<h2 mat-dialog-title>{{ 'HOME.CONTACT' | translate }}</h2>
 
 <mat-dialog-content class="dialog-content">
 
     <form [formGroup]="contactForm">
         <!-- Campo de texto largo -->
         <mat-form-field appearance="outline" class="full-width mt-2 mb-3">
-            <mat-label>¿En qué te podemos ayudar?</mat-label>
+            <mat-label>{{ 'HOME.CONTACT_MODAL.MESSAGE' | translate }}</mat-label>
             <!-- <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea> -->
-            <textarea matInput formControlName="message" name="message" rows="4" placeholder="Pregúntanos lo que quieras." required></textarea>
+            <textarea matInput formControlName="message" name="message" rows="4" placeholder="{{ 'HOME.CONTACT_MODAL.MESSAGE_PLACEHOLDER' | translate }}." required></textarea>
             <mat-error *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']">
-                Campo obligatorio. 
+                {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
             </mat-error>
             <mat-error *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['maxLengthExceeded']">
-                Longitud máxima de 4000 caracteres alcanzado.
+                {{ 'HOME.FIELD_ERROR_MAXIMUM_LENGTH' | translate }}.
             </mat-error>
         </mat-form-field>
 
         <!-- Campo de correo electrónico -->
         <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Escríbenos tu correo electrónico</mat-label>
+            <mat-label>{{ 'HOME.CONTACT_MODAL.EMAIL' | translate }}</mat-label>
             <!-- <input matInput [(ngModel)]="email" name="email" required email> -->
-            <input matInput formControlName="email" name="email" placeholder="Escríbenos un correo al que podamos responderte." required>
+            <input matInput formControlName="email" name="email" placeholder="{{ 'HOME.CONTACT_MODAL.EMAIL_PLACEHOLDER' | translate }}." required>
             <mat-error *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">
-                Campo obligatorio. 
+                {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
             </mat-error>
             <mat-error *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['invalidEmail'] && !contactForm.get('email')?.errors?.['required']">
-                Ingresa un correo válido.
+                {{ 'HOME.FIELD_ERROR_TEXT_VALID_EMAIL' | translate }}.
             </mat-error>
         </mat-form-field>
     
-
-      <!-- Mensaje de éxito -->
-      <!-- <div *ngIf="enviadoConExito">
-          <div class="container mt-2">
-              <div class="alert alert-success text-dark" role="alert">
-                  Correo electrónico enviado con éxito. Responderemos a la mayor brevedad con el mejor servicio que podamos servirle. Muchas gracias por contactar con nosotros. Atentamente equipo de GAMA.
-              </div>
-          </div>
-      </div> -->
       <!-- Mensaje de error -->
       <div *ngIf="envioFallido">
         <div class="container mt-2">
             <div class="alert alert-danger text-dark" role="alert">
-                Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo.
+                {{ 'HOME.EMAIL_ERROR_TEXT' | translate }}.
             </div>
         </div>
       </div> 
@@ -52,6 +43,10 @@
 </mat-dialog-content>
 
 <mat-dialog-actions class="dialog-actions">
-    <button mat-button (click)="onCancel()" class="cancel-button">Cancelar</button>
-    <button mat-button (click)="onEnviar()" [disabled]="contactForm.invalid" class="enviar-button">Enviar</button>
+    <button mat-button (click)="onCancel()" class="cancel-button">
+        {{ 'HOME.BUTTON_CANCEL' | translate }}
+    </button>
+    <button mat-button (click)="onEnviar()" [disabled]="contactForm.invalid" class="enviar-button">
+        {{ 'HOME.BUTTON_SEND' | translate }}
+    </button>
 </mat-dialog-actions>

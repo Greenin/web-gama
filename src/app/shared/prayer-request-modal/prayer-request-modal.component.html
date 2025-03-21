@@ -1,31 +1,31 @@
-<h2 mat-dialog-title>Petición de Oración</h2>
+<h2 mat-dialog-title>{{ 'HOME.PRAYER_REQUEST' | translate }}</h2>
 
 <mat-dialog-content class="dialog-content">
 
     <form [formGroup]="prayReqForm">
         <!-- Campo de texto largo -->
         <mat-form-field appearance="outline" class="full-width mt-2 mb-3">
-            <mat-label>Compártenos tu petición o motivo de agradecimiento</mat-label>
+            <mat-label>{{ 'HOME.PRAYER_REQUEST_MODAL.MESSAGE' | translate }}</mat-label>
             <!-- <textarea matInput [(ngModel)]="mensaje" name="mensaje" required></textarea> -->
-            <textarea matInput formControlName="message" name="message" rows="4" placeholder="Compártenos tu petición o motivo de agradecimiento." required></textarea>
+            <textarea matInput formControlName="message" name="message" rows="4" placeholder="{{ 'HOME.PRAYER_REQUEST_MODAL.MESSAGE_PLACEHOLDER' | translate }}." required></textarea>
             <mat-error *ngIf="prayReqForm.get('message')?.touched && prayReqForm.get('message')?.errors?.['required']">
-              Campo obligatorio. 
+                {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
             </mat-error>            
             <mat-error *ngIf="prayReqForm.get('message')?.touched && prayReqForm.get('message')?.errors?.['maxLengthExceeded']">
-                Longitud máxima de 4000 caracteres alcanzado.
+                {{ 'HOME.FIELD_ERROR_MAXIMUM_LENGTH' | translate }}.
             </mat-error>
         </mat-form-field>
 
         <!-- Campo de correo electrónico -->
         <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Tu correo electrónico</mat-label>
+            <mat-label>{{ 'HOME.PRAYER_REQUEST_MODAL.EMAIL' | translate }}</mat-label>
             <!-- <input matInput [(ngModel)]="email" name="email" required email> -->
-            <input matInput formControlName="email" name="email" placeholder="Escríbenos un correo al que podamos responderte." required>
+            <input matInput formControlName="email" name="email" placeholder="{{ 'HOME.PRAYER_REQUEST_MODAL.EMAIL_PLACEHOLDER' | translate }}." required>
             <mat-error *ngIf="prayReqForm.get('email')?.touched && prayReqForm.get('email')?.errors?.['required']">
-                Campo obligatorio. 
+                {{ 'HOME.FIELD_ERROR_TEXT_REQUIRED' | translate }}. 
             </mat-error>
             <mat-error *ngIf="prayReqForm.get('email')?.touched && prayReqForm.get('email')?.errors?.['invalidEmail'] && !prayReqForm.get('email')?.errors?.['required']">
-                Ingresa un correo válido.
+                {{ 'HOME.FIELD_ERROR_TEXT_VALID_EMAIL' | translate }}.
             </mat-error>
         </mat-form-field>
 
@@ -33,7 +33,7 @@
       <div *ngIf="envioFallido">
         <div class="container mt-2">
             <div class="alert alert-danger text-dark" role="alert">
-                Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo.
+                {{ 'HOME.EMAIL_ERROR_TEXT' | translate }}.
             </div>
         </div>
       </div> 
@@ -43,6 +43,10 @@
 </mat-dialog-content>
 
 <mat-dialog-actions class="dialog-actions">
-    <button mat-button (click)="onCancel()" class="cancel-button">Cancelar</button>
-    <button mat-button (click)="onEnviar()" [disabled]="prayReqForm.invalid" class="enviar-button">Enviar</button>
+    <button mat-button (click)="onCancel()" class="cancel-button">
+        {{ 'HOME.BUTTON_CANCEL' | translate }}
+    </button>
+    <button mat-button (click)="onEnviar()" [disabled]="prayReqForm.invalid" class="enviar-button">
+        {{ 'HOME.BUTTON_SEND' | translate }}
+    </button>
 </mat-dialog-actions>

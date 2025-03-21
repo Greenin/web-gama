@@ -86,21 +86,18 @@
                 "PRIVACY_TEXT_1": "I have read and accepted",
                 "PRIVACY_TEXT_2": "data privacy",
                 "PRIVACY_TEXT_3": "conditions",
-
-                "BUTTON_SEND": "Send",
-                "FORM_SUCCESS_TEXT": "Missionary subscription sent successfully. We will send a message to the email address provided within a few minutes, if the network is operating normally. We will send you the web link to continue your subscription process. Thank you very much",
-                "FORM_ERROR_TEXT": "There was an error when sending the form. Please try it again",
-
-                "FIELD_ERROR_TEXT_REQUIRED": "Required field",
-                "FIELD_ERROR_TEXT_VALID_EMAIL": "Enter a valid email",
+                
                 "FIELD_ERROR_TEXT_PHONE_NOT_VALID": "Phone number is not valid. Enter the international prefix. Example",
-
+                
                 "NAME_PLACEHOLDER": "Write your name exactly as it appears on your ID",
                 "SURNAME_PLACEHOLDER": "Enter your last name.",
                 "EMAIL_PLACEHOLDER": "Make sure to enter an email that we have direct access to so we can keep you informed",
                 "PHONE_PLACEHOLDER": "Include your country's international prefix so we can contact you without problems",
                 "LOCALITY_PLACEHOLDER": "Municipality, city or town where you reside",
-                "TESTIMONY_PLACEHOLDER": "In a few words, tell us how you met Christ and how he has transformed your life"
+                "TESTIMONY_PLACEHOLDER": "In a few words, tell us how you met Christ and how he has transformed your life",
+                
+                "FORM_SUCCESS_TEXT": "Missionary subscription sent successfully. We will send a message to the email address provided within a few minutes, if the network is operating normally. We will send you the web link to continue your subscription process. Thank you very much",
+                "FORM_ERROR_TEXT": "There was an error when sending the form. Please try it again"
             }
         },
 
@@ -110,6 +107,28 @@
             "PRAYER_REQUEST": "Prayer Request",
             "PRIVACY_POLICY": "Privacy Policy",
             "LEGAL_NOTICE": "Legal Notice"
-        }
+        },
+
+        "CONTACT_MODAL": {
+            "MESSAGE": "How can we help you?",
+            "EMAIL": "Write us your email",
+            "MESSAGE_PLACEHOLDER": "Ask us whatever you want",
+            "EMAIL_PLACEHOLDER": "Write us an email so we can answer to you"
+        },
+
+        "PRAYER_REQUEST_MODAL": {
+            "MESSAGE": "Share with us your request or reason for gratitude",
+            "EMAIL": "Your email",
+            "MESSAGE_PLACEHOLDER": "Share with us your request or reason for gratitude",
+            "EMAIL_PLACEHOLDER": "Write us an email so we can answer to you"
+        },
+
+        "FIELD_ERROR_TEXT_REQUIRED": "Required field",
+        "FIELD_ERROR_TEXT_VALID_EMAIL": "Enter a valid email",
+        "FIELD_ERROR_MAXIMUM_LENGTH": "Maximum length of 4000 characters reached",
+        "EMAIL_ERROR_TEXT": "There was an error sending the email. Please try again",
+
+        "BUTTON_SEND": "Send",
+        "BUTTON_CANCEL": "Cancel"
     }
 }

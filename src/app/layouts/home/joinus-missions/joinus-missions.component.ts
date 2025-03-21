@@ -17,8 +17,6 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
 // import provideHttpClient;
 
 
-
-
 @Component({
   selector: 'app-joinus-missions',
   standalone: true,

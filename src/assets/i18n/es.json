@@ -1,5 +1,6 @@
 {
     "HOME": {
+
         "HEADER": {
             "TITLE": "MOVIMIENTO MISIONERO GLOBAL"
         },
@@ -86,13 +87,7 @@
                 "PRIVACY_TEXT_1": "He leído y aceptado las ondiciones de",
                 "PRIVACY_TEXT_2": "privacidad de datos",
                 "PRIVACY_TEXT_3": "",
-
-                "BUTTON_SEND": "Enviar",
-                "FORM_SUCCESS_TEXT": "Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias",
-                "FORM_ERROR_TEXT": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo",
-
-                "FIELD_ERROR_TEXT_REQUIRED": "Campo obligatorio",
-                "FIELD_ERROR_TEXT_VALID_EMAIL": "Ingresa un correo válido",
+                
                 "FIELD_ERROR_TEXT_PHONE_NOT_VALID": "Teléfono no válido. Introduce el prefijo internacional. Ejemplo",
                 
                 "NAME_PLACEHOLDER": "Escribe tu nombre tal como aparece en tu identificación",
@@ -100,7 +95,10 @@
                 "EMAIL_PLACEHOLDER": "Asegúrate de ingresar un correo al que tengamos acceso directo para mantenerte informado",
                 "PHONE_PLACEHOLDER": "Incluye el prefijo internacional de tu país para poder contactarte sin problemas",
                 "LOCALITY_PLACEHOLDER": "Municipio, ciudad o pueblo donde resides",
-                "TESTIMONY_PLACEHOLDER": "En pocas palabras, cuéntanos cómo conociste a Cristo y cómo ha transformado tu vida"
+                "TESTIMONY_PLACEHOLDER": "En pocas palabras, cuéntanos cómo conociste a Cristo y cómo ha transformado tu vida",
+                
+                "FORM_SUCCESS_TEXT": "Suscripción a misionero enviada con éxito. Le enviaremos un mensaje a la dirección de correo electrónico indicado en unos minutos, si la red funciona normalmente. Le haremos llegar el enlace web para seguir su proceso de suscripción. Muchas gracias",
+                "FORM_ERROR_TEXT": "Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo"
             }
         },
 
@@ -110,8 +108,28 @@
             "PRAYER_REQUEST": "Petición de Oración",
             "PRIVACY_POLICY": "Política de Privacidad",
             "LEGAL_NOTICE": "Aviso Legal"
-        }
+        },
 
+        "CONTACT_MODAL": {
+            "MESSAGE": "¿En qué te podemos ayudar?",
+            "EMAIL": "Escríbenos tu correo electrónico",
+            "MESSAGE_PLACEHOLDER": "Pregúntanos lo que quieras",
+            "EMAIL_PLACEHOLDER": "Escríbenos un correo al que podamos responderte"
+        },
+
+        "PRAYER_REQUEST_MODAL": {
+            "MESSAGE": "Compártenos tu petición o motivo de agradecimiento",
+            "EMAIL": "Tu correo electrónico",
+            "MESSAGE_PLACEHOLDER": "Compártenos tu petición o motivo de agradecimiento",
+            "EMAIL_PLACEHOLDER": "Escríbenos un correo al que podamos responderte"
+        },
        
+        "FIELD_ERROR_TEXT_REQUIRED": "Campo obligatorio",
+        "FIELD_ERROR_TEXT_VALID_EMAIL": "Ingresa un correo válido",
+        "FIELD_ERROR_MAXIMUM_LENGTH": "Longitud máxima de 4000 caracteres alcanzado",
+        "EMAIL_ERROR_TEXT": "Hubo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo",
+
+        "BUTTON_SEND": "Enviar",
+        "BUTTON_CANCEL": "Cancelar"
     }
 }

@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -21,6 +22,7 @@ import { HttpClient } from '@angular/common/http';
     FormsModule,
     MatButtonModule,
     MatDialogModule,
+    TranslateModule,
   ],
   templateUrl: './contact-us-modal.component.html',
   styleUrl: './contact-us-modal.component.scss'
