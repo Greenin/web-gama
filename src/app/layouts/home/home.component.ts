@@ -88,7 +88,7 @@ export class HomeComponent implements OnInit {
       private translate: TranslateService,
     ) {
         // Establece el idioma por defecto (por ejemplo, español)
-        this.translate.setDefaultLang(this.currentLang);
+        // this.translate.setDefaultLang(this.currentLang);
     }
 
 

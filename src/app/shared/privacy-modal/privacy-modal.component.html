@@ -2,8 +2,8 @@
 
 <mat-dialog-content>
 
-    <section id="privacy-policy">
-      
+    <section id="privacy-policy" [hidden]="currentLang===ENGLISH">
+        
         <h2>Política de Privacidad</h2>
         <p>
           En <strong>Global Awakening Movement Association</strong> (en adelante, "nosotros" o "el responsable"), con CIF <strong>G88589908</strong>, nos comprometemos a proteger y respetar su privacidad. Esta política explica cómo recopilamos, usamos y protegemos la información personal que usted nos proporciona al aplicar como misionero evangélico a través de nuestra página web.
@@ -82,6 +82,87 @@
           <strong>Fecha de última actualización:</strong> 24/02/2025.
         </p>
     </section>
+
+    <section id="privacy-policy" [hidden]="currentLang===ESPANOL">
+      <h2>Privacy Policy</h2>
+      <p>
+        At <strong>Global Awakening Movement Association</strong> (hereinafter "we" or "the controller"), with CIF <strong>G88589908</strong>, we are committed to protecting and respecting your privacy. This policy explains how we collect, use, and protect the personal information you provide to us when applying as an evangelical missionary through our website.
+      </p>
+      
+      <h3>1. Data Controller</h3>
+      <p>
+        The controller responsible for processing your personal data is:
+        <br>
+        <strong>GAMA EVANGELISTIC ASSOCIATION</strong>
+        <br>
+        <strong>Address:</strong> Paseo Móstoles (DE), num. 51. Puerta 2B. Parque Coimbra. 28935. Móstoles (Madrid).
+        <br>
+        <strong>Email:</strong> admin&#64;gamamission.org
+        <br>
+        <strong>Phone:</strong> +34 669 26 66 77
+      </p>
+      
+      <h3>2. Purpose of Processing</h3>
+      <p>
+        The personal data you provide (name, surname, and email) will be used for:
+      </p>
+      <ul>
+        <li>Establishing communication with you to keep you informed about evangelical missions that may arise worldwide from now on.</li>
+        <li>Preparing and organizing trips related to the missions.</li>
+      </ul>
+      
+      <h3>3. Legal Basis for Processing</h3>
+      <p>
+        The legal basis for processing your personal data is your <strong>explicit consent</strong>, which you provide by submitting your application through our form. You have the right to withdraw your consent at any time, without affecting the lawfulness of the processing based on the consent prior to its withdrawal.
+      </p>
+      
+      <h3>4. Data Retention</h3>
+      <p>
+        Your personal data will be retained indefinitely or until you exercise your right to erasure. This allows us to keep you informed about future evangelical missions and related activities.
+      </p>
+      
+      <h3>5. Security Measures</h3>
+      <p>
+        We have implemented technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include:
+      </p>
+      <ul>
+        <!-- <li>Use of a secure server with <strong>Hostinger (Premium VPS Plan)</strong>, configured with a state-of-the-art firewall.</li> -->
+        <li>Use of a secure server, configured with a state-of-the-art firewall.</li>
+        <li>Data transfer encrypted in transit, using the common SSL method, to secure communication between the client and the database server.</li>
+        <li>Restricted access to data, limited only to authorized personnel.</li>
+      </ul>
+      
+      <h3>6. User Rights</h3>
+      <p>
+        You have the following rights over your personal data:
+      </p>
+      <ul>
+        <li><strong>Access:</strong> You may request a copy of the data we hold about you.</li>
+        <li><strong>Rectification:</strong> You may request that we correct any inaccurate or incomplete data.</li>
+        <li><strong>Erasure:</strong> You may request that we delete your personal data.</li>
+        <li><strong>Restriction of Processing:</strong> You may request that we restrict the use of your data.</li>
+        <li><strong>Portability:</strong> You may request that we provide your data in a structured and readable format.</li>
+        <li><strong>Objection:</strong> You may object to the processing of your personal data.</li>
+      </ul>
+      <p>
+        To exercise these rights, you may contact us at the address provided in section 1.
+      </p>
+      
+      <h3>7. Cookies</h3>
+      <p>
+        This website does not use cookies or any other tracking technologies.
+      </p>
+      
+      <h3>8. Changes to the Privacy Policy</h3>
+      <p>
+        We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page, and if the changes are significant, we will notify you by email.
+      </p>
+      
+      <p>
+        <strong>Last Updated:</strong> 02/24/2025.
+      </p>
+    </section>
+
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">

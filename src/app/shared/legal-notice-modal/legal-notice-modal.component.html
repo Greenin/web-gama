@@ -1,9 +1,9 @@
-<h2 mat-dialog-title>Aviso Legal</h2>
+<h2 mat-dialog-title>{{ 'HOME.FOOTER.LEGAL_NOTICE' | translate }}</h2>
 
 <mat-dialog-content>
 
-  <section id="legal-notice">
-    
+  <section id="legal-notice" [hidden]="currentLang===ENGLISH">
+
       <h2>Aviso Legal</h2>
       <p>
         En cumplimiento con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), se informa a los usuarios de los datos identificativos de la entidad responsable de este sitio web:
@@ -63,6 +63,71 @@
     
       <p>
         <strong>Fecha de última actualización:</strong> 24/02/2025.
+      </p>
+  </section>
+
+  
+  <section id="legal-notice" [hidden]="currentLang===ESPANOL">
+
+      <h2>Legal Notice</h2>
+      <p>
+        In compliance with Article 10 of Law 34/2002, of July 11, on Information Society Services and Electronic Commerce (LSSICE), users are informed of the identification details of the entity responsible for this website:
+      </p>
+      
+      <h3>1. Identification Details</h3>
+      <p>
+        <strong>Name:</strong> Global Awakening Movement Association - GAMA
+        <br>
+        <strong>Address:</strong> Paseo Móstoles (DE), num. 51. Puerta 2B. Parque Coimbra. 28935. Móstoles (Madrid).
+        <br>
+        <strong>CIF:</strong> G88589908
+        <br>
+        <strong>Email:</strong> admin&#64;gamamission.org
+        <br>
+        <strong>Phone:</strong> +34 669 26 66 77
+      </p>
+      
+      <h3>2. Website Activity</h3>
+      <p>
+        The purpose of this website is to collect information from users who wish to apply as evangelical missionaries. The personal data provided (name, surname, and email) are stored in a secure database. This website does not engage in the following activities:
+      </p>
+      <ul>
+        <li>Tracking user activity.</li>
+        <li>Using cookies or tracking technologies.</li>
+        <li>Sharing personal data with third parties.</li>
+      </ul>
+      
+      <h3>3. Terms of Use</h3>
+      <p>
+        The use of this website and related social media is subject to the following conditions:
+      </p>
+      <ul>
+        <li>Any illegal or immoral use of the website and related social media is prohibited.</li>
+        <li>The use of the website must be limited to reading its content and providing the personal data required for the activities of the GAMA organization.</li>
+      </ul>
+      
+      <h3>4. Intellectual Property</h3>
+      <p>
+        All content on this website, including texts, icons, artwork, graphics, photographs, sound recordings, videos, and any other material, is the property of <strong>Global Awakening Movement Association - GAMA</strong> or its licensors. The following is strictly prohibited:
+      </p>
+      <ul>
+        <li>Plagiarism, copying, modification, or unauthorized distribution of the content.</li>
+        <li>Sale, rental, or commercial exploitation of the content.</li>
+        <li>Any use that is unethical or not expressly authorized by GAMA.</li>
+      </ul>
+      
+      <h3>5. Liability</h3>
+      <p>
+        <strong>Global Awakening Movement Association - GAMA</strong> is not responsible for the negative consequences arising from the use or sharing of the information contained on this website. The user is solely responsible for the use they make of the content and services provided.
+      </p>
+      
+      <h3>6. Applicable Law and Jurisdiction</h3>
+      <p>
+        This Legal Notice is governed by Spanish law. For the resolution of any conflict or dispute that may arise in connection with the use of this website, the parties expressly submit to the Courts and Tribunals of Madrid (Spain), expressly waiving any other jurisdiction that may correspond to them.
+      </p>
+      
+      <p>
+        <strong>Last Updated:</strong> 02/24/2025.
       </p>
   </section>
 </mat-dialog-content>
