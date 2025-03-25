@@ -44,7 +44,6 @@
 				line-height: 70px;
 				padding: 0 auto;
 				margin: 0 auto;
-				
 			}
 			
 
@@ -73,7 +72,15 @@
 			a {
 				display: flex;
 				align-items: center; /* Centra el texto dentro del enlace */
-				padding: 0 30px; /* Reduce el padding lateral si es necesario */
+				
+				//=========== NORMAL SCREEN SIZE ===========//
+				@media only screen and (min-width: 1047px) {
+					padding: 0 30px; /* Reduce el padding lateral si es necesario */
+				}
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 1046px) {
+					padding: 0; /* Reduce el padding lateral si es necesario */
+				}
 				height: 100%; /* Hace que los enlaces ocupen toda la altura */
 				text-decoration: none;
 				color: inherit;
@@ -97,7 +104,7 @@
 
 				justify-content: left;
 				margin: 0 auto;
-				padding: 0;
+				padding-right: 0;
 
 				//=========== NORMAL SCREEN SIZE ===========//
 				@media only screen and (min-width: 1047px) {
@@ -105,23 +112,48 @@
 					min-width: 20%;
 					max-width: 20%;
 					padding-left: 18px;
+					padding-top: 1px;
+					padding-bottom: 1px;
 				}
 				//=========== CELL PHONE SIZE ===========//
 				@media only screen and (max-width: 1046px) {
-					width: 20%;
-					min-width: 20%;
-					max-width: 20%;
+					width: 30%;
+					min-width: 30%;
+					max-width: 30%;
+					padding-left: 20px;
+					padding-top: 2px;
+					padding-bottom: 2px;
 					// padding-left: 15px;
 				}
 
-				// @media only screen and (max-width: 1046px) {
-				// 	padding-left: 15px;
-				// }
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 734px) {
+					width: 40%;
+					min-width: 40%;
+					max-width: 40%;
+				}
 				//=========== CELL PHONE SIZE ===========//
 				@media only screen and (max-width: 415px) {
-					// max-width: 60%;
+					width: 55%;
+					min-width: 55%;
+					max-width: 55%;
+					// padding-right: 10px;
 					padding-left: 10px;
+					padding-top: 3px;
+					padding-bottom: 3px;
+					// padding-left: 10px;
 				}
+				//=========== CELL PHONE SIZE ===========//
+				// @media only screen and (max-width: 376px) {
+				// 	width: 55%;
+				// 	min-width: 55%;
+				// 	max-width: 55%;
+				// 	// padding-right: 10px;
+				// 	padding-left: 10px;
+				// 	padding-top: 3px;
+				// 	padding-bottom: 3px;
+				// 	// padding-left: 10px;
+				// }
 
 				// padding-left: 4px;
 				transition: all 300ms;
@@ -130,7 +162,16 @@
 
 					align-items: center; /* Centra verticalmente */
 					text-decoration: none;
-					padding: 0px 15px;
+					//=========== NORMAL SCREEN SIZE ===========//
+					@media only screen and (min-width: 1047px) {
+						padding: 0px 15px;
+					}
+					//=========== CELL PHONE SIZE ===========//
+					@media only screen and (max-width: 1046px) {
+						// width: 7%;
+						padding: 0;
+					}
+					
 
 					
 					#normalScreenLogo {
@@ -178,33 +219,35 @@
 
 
 			#headerSpaceLi {
-				//=========== NORMAL SCREEN SIZE ===========//
-				@media only screen and (min-width: 1279px) {
-					min-width: 12%;
-				}
-				//=========== NORMAL SCREEN SIZE ===========//
-				@media only screen and (min-width: 1093px) {
-					min-width: 16%;
-				}
-				//=========== NORMAL SCREEN SIZE ===========//
-				@media only screen and (min-width: 1047px) {
-					min-width: 16%;
-				}
+				flex-grow: 1;
+				// //=========== NORMAL SCREEN SIZE ===========//
+				// @media only screen and (min-width: 1279px) {
+				// 	min-width: 12%;
+				// }
+				// //=========== NORMAL SCREEN SIZE ===========//
+				// @media only screen and (min-width: 1093px) {
+				// 	min-width: 16%;
+				// }
+				// //=========== NORMAL SCREEN SIZE ===========//
+				// @media only screen and (min-width: 1047px) {
+				// 	min-width: 16%;
+				// }
+				// //=========== CELL PHONE SIZE ===========//
+				// @media only screen and (max-width: 1046px) {
+				// 	min-width: 55%;
+				// 	width: 55%;
+				// }
+				// //=========== CELL PHONE SIZE ===========//
+				// @media only screen and (max-width: 628px) {
+				// 	min-width: 26%;
+				// 	width: 26%;
+				// }
 				//=========== CELL PHONE SIZE ===========//
-				@media only screen and (max-width: 1046px) {
-					min-width: 55%;
-					width: 55%;
-				}
-				//=========== CELL PHONE SIZE ===========//
-				@media only screen and (max-width: 628px) {
-					min-width: 35%;
-					width: 35%;
-				}
-				//=========== CELL PHONE SIZE ===========//
-				@media only screen and (max-width: 338px) {
-					min-width: 35%;
-					width: 35%;
-				}
+				// @media only screen and (max-width: 376px) {
+				// 	display: none;
+				// 	// min-width: 20%;
+				// 	// width: 20%;
+				// }
 			}	
 
 			//=========== NORMAL SCREEN SIZE ===========//
@@ -212,12 +255,21 @@
 		
 				#firstLi {
 					display: block;
+					width: 15%;
+					min-width: 15%;
+					max-width: 15%;
 				}		
 				#secondLi {
 					display: block;
+					width: 15%;
+					min-width: 15%;
+					max-width: 15%;
 				}		
 				#thirdLi {
 					display: block;
+					width: 15%;
+					min-width: 15%;
+					max-width: 15%;
 				}	
 				// #headerSpaceLi2 {
 				// 	display: none;
@@ -304,15 +356,36 @@
 
 			.flagLi {
 				// display: flex;
-				justify-content: center;
 				
 				//=========== NORMAL SCREEN SIZE ===========//
 				@media only screen and (min-width: 1047px) {
 					width: 15%;
+					justify-content: center;
 				}
 				//=========== CELL PHONE SIZE ===========//
 				@media only screen and (max-width: 1046px) {
-					// width: 7%;
+					width: 12%;
+					// border-left: 20px !important;
+				}
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 980px) {
+					width: 13%;
+					// border-left: 20px !important;
+				}
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 790px) {
+					width: 17%;
+					// border-left: 20px !important;
+				}
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 660px) {
+					width: 18%;
+					// border-left: 20px !important;
+				}
+				//=========== CELL PHONE SIZE ===========//
+				@media only screen and (max-width: 560px) {
+					width: 21%;
+					// border-left: 20px !important;
 				}
 
 				.flag	 {
@@ -320,6 +393,13 @@
 					margin-right: 0;
 					// padding-left: 26px;
 					// padding-right: 26px;
+					//=========== NORMAL SCREEN SIZE ===========//
+					@media only screen and (min-width: 1047px) {
+					}
+					//=========== CELL PHONE SIZE ===========//
+					@media only screen and (max-width: 1046px) {
+						padding-left: 40px;
+					}
 
 					#englishLabel {
 						//=========== NORMAL SCREEN SIZE ===========//
@@ -373,16 +453,28 @@
 				}
 				//=========== CELL PHONE SIZE ===========//
 				@media only screen and (max-width: 1046px) {
-					max-width: 6%;
-					width: 6%;
-					min-width: 6%;
+					max-width: 8%;
+					width: 8%;
+					min-width: 8%;
 				}
 				//=========== CELL PHONE SIZE ===========//
-				@media only screen and (max-width: 1046px) {
-					max-width: 6%;
-					width: 6%;
-					min-width: 6%;
+				@media only screen and (max-width: 431px) {
+					max-width: 16%;
+					width: 16%;
+					min-width: 16%;
 				}
+				// //=========== CELL PHONE SIZE ===========//
+				// @media only screen and (max-width: 1046px) {
+				// 	max-width: 8%;
+				// 	width: 8%;
+				// 	min-width: 8%;
+				// }
+				//=========== CELL PHONE SIZE ===========//
+				// @media only screen and (max-width: 1046px) {
+				// 	max-width: 6%;
+				// 	width: 6%;
+				// 	min-width: 6%;
+				// }
 
 
 				#normalScreenHeaderMenuButton {
@@ -404,14 +496,14 @@
 					@media only screen and (max-width: 415px) {
 						// width: 20%;
 						// max-width: 20%;
-						padding-top: 8px;
+						padding-top: 5px;
 						margin-right: 10px;
 					}
 					//=========== CELL PHONE SIZE ===========//
 					@media only screen and (max-width: 377px) {
 						// width: 20%;
 						// max-width: 20%;
-						padding-top: 8px;
+						padding-top: 4px;
 						margin-right: 0px;
 					}
 
