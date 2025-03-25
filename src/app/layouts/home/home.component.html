@@ -13,9 +13,11 @@
 
         <li id="headerSpaceLi">&nbsp;</li>
         <!-- <li><a href="#identity">QUIÉNES SOMOS</a></li> -->
-        <li id="firstLi"><a href="#speakers">{{ 'HOME.THE_TEAM' | translate }}</a></li>
-        <li id="secondLi"><a href="#currentYearTour">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
-        <li id="thirdLi"><a href="#uneteMisiones">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
+        <li id="li1"><a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM' | translate }}</a></li>
+        <li id="li2" >
+          <a (click)="clickMenuAddress(currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
+        <li id="li3">
+          <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
 
         <!-- <li id="headerSpace2">&nbsp;</li> -->
 
@@ -53,7 +55,8 @@
                         <a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a>
                     </div>
                     <div class="hiddenMenuElement">
-                        <a (click)="clickMenuAddress('currentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a>
+                        <a (click)="clickMenuAddress(currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">
+                          {{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a>
                     </div>
                     <div class="hiddenMenuElement">
                         <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a>
@@ -123,7 +126,7 @@
   <!--========= EN CURRENT YEAR TOUR ========= -->
   <!--======================================== -->
 
-  <!-- <app-en-currentyeartour [hidden]="currentLang===ESPANOL"></app-en-currentyeartour> -->
+  <app-en-currentyeartour [hidden]="currentLang===ESPANOL"></app-en-currentyeartour>
   
 
   <!--======================================== -->

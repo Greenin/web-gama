@@ -34,10 +34,6 @@ import { TranslateService } from '@ngx-translate/core';
     MatIconModule,
     HttpClientModule,
     MatDialogModule,
-    // PrivacyModalComponent,
-    // LegalNoticeModalComponent,
-    // PrayerRequestModalComponent,
-    // ContactUsModalComponent,
     IdentityComponent,
     TeamComponent,
     CurrentyearTourComponent,
@@ -51,15 +47,6 @@ import { TranslateService } from '@ngx-translate/core';
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  // exports: [
-  //   CommonModule, 
-  //   MatButtonModule, 
-  //   ReactiveFormsModule,
-  //   MatInputModule,
-  //   MatFormFieldModule,
-  //   MatCheckboxModule,
-  //   HttpClientModule,
-  // ]
 })
 export class HomeComponent implements OnInit {
 
@@ -116,26 +103,7 @@ export class HomeComponent implements OnInit {
     selectLanguage(selectedLang: string) {
         this.currentLang = selectedLang;
         this.translate.use(selectedLang); 
-        // if (selectedLang=='es') {
-        //     this.spainSelected = true;
-        //     this.ukSelected = false;
-        //     this.germanySelected = false;
-
-        // } else {
-          
-        //     if (selectedLang=='en') {
-        //         this.spainSelected = false;
-        //         this.ukSelected = true;
-        //         this.germanySelected = false;
-
-        //     } else {
-        //         this.spainSelected = false;
-        //         this.ukSelected = false;
-        //         this.germanySelected = true;
-        //     }
-        // }
-
-    } //end selectLanguage
+    } 
 
 
     toggleMenu(): void {
@@ -143,19 +111,15 @@ export class HomeComponent implements OnInit {
         this.isSubmenuOpen = false;
     }
 
-    // scrollIntoView(sectionId: string) {
-    //     const element = document.getElementById(sectionId);
-    //     if (element) {
-    //         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    //     }
-    // }
 
     clickMenuAddress(sectionId: string) {
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        this.toggleMenu(); // Cierra el menú después de desplazarse
+        if (this.isMenuOpen) {
+            this.toggleMenu(); // Cierra el menú después de desplazarse
+        }
     }
 
 
