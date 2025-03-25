@@ -165,22 +165,6 @@ export class HomeComponent implements OnInit {
     }
 
 
-    // clickIdentityAddress() {
-    //     this.scrollIntoView("identity");
-    //     this.toggleMenu(); // Cierra el menú después de desplazarse
-    // }
-
-    // clickSpeakersAddress() {
-    //     this.scrollIntoView("speakers");
-    //     this.toggleMenu(); // Cierra el menú después de desplazarse
-    // }
-
-    // clickUneteMisionesAddress() {
-    //     this.scrollIntoView("uneteMisiones");
-    //     this.toggleMenu(); // Cierra el menú después de desplazarse
-    // }
-
-
 
 //   enviarCorreo(email: string) {
 //     const asunto = 'Suscripción a misionero GAMA';

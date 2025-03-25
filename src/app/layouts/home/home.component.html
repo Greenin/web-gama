@@ -2,27 +2,31 @@
   <!--========= NORMAL SCREEN HEADER ========= -->
   <!--======================================== -->
 
-  <header class="normalScreenHeaderClass headerBackgroundColor headerText">
+  <header class="headerBackgroundColor headerText">
     <ul>
-        <li id="headerIconText">      
+        <li id="headerIconTextLi">      
             <a id="normalScreenHeaderLogo" href="#">
                 <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
                 <span id="normalScreenText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
             </a>
         </li>
-        <li id="headerSpace">&nbsp;</li>
+
+        <li id="headerSpaceLi">&nbsp;</li>
         <!-- <li><a href="#identity">QUIÉNES SOMOS</a></li> -->
-        <li><a href="#speakers">{{ 'HOME.THE_TEAM' | translate }}</a></li>
-        <li><a href="#currentYearTour">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
-        <li><a href="#uneteMisiones">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
+        <li id="firstLi"><a href="#speakers">{{ 'HOME.THE_TEAM' | translate }}</a></li>
+        <li id="secondLi"><a href="#currentYearTour">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
+        <li id="thirdLi"><a href="#uneteMisiones">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
+
+        <!-- <li id="headerSpace2">&nbsp;</li> -->
+
         <li class="flagLi" *ngIf="currentLang===ESPANOL">
-            <a id="spainFlag" class="flag" (click)="selectLanguage(ENGLISH)">
-                <img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;&nbsp;ENGLISH
+            <a class="flag" (click)="selectLanguage(ENGLISH)">
+                <img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;&nbsp;<span id="englishLabel">ENGLISH</span>
             </a>
         </li>
         <li class="flagLi" *ngIf="currentLang===ENGLISH">
-            <a id="UKFlag" class="flag" (click)="selectLanguage(ESPANOL)">
-              <img class="countryFlag" src="../assets/img/spain-little.png">&nbsp;&nbsp;ESPAÑOL
+            <a class="flag" (click)="selectLanguage(ESPANOL)">
+              <img class="countryFlag" src="../assets/img/spain-little.png">&nbsp;&nbsp;<span id="spanishLabel">ESPAÑOL</span>
             </a>
         </li>
         <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="selectLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
@@ -78,87 +82,7 @@
   </header>
   
 
-
-  <!--======================================== -->
-  <!--========== CELL PHONE HEADER  ========== -->
-  <!--======================================== -->
-
-  <header class="cellPhoneHeaderClass headerBackgroundColor headerText">
-    <div id="cellPhoneHeaderRow" class="row">
-
-      <div id="cellPhoneHeaderLeftSide" class="col">
-          <a id="cellPhoneHeaderLeftSideContainer" href="#" >
-              <img id="cellPhoneLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
-              <span id="cellPhoneText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
-          </a>
-      </div>
-
-
-      <div id="cellPhoneHeaderRightSide" class="col">
-          
-          <div id="cellPhoneHeaderRightSideRow">
-
-                <div *ngIf="currentLang===ESPANOL" class="cellPhoneFlagDiv">
-                    <a id="cellPhoneSpainFlag" class="cellPhoneFlag" (click)="selectLanguage(ENGLISH)">
-                        <img  class="cellPhoneCountryFlag" src="../assets/img/unitedkingdom-little.png">
-                    </a>
-                </div>
-                <div *ngIf="currentLang===ENGLISH" class="cellPhoneFlagDiv">
-                    <a id="cellPhoneUKFlag" class="cellPhoneFlag" (click)="selectLanguage(ESPANOL)">
-                        <img  class="cellPhoneCountryFlag" src="../assets/img/spain-little.png">
-                    </a>
-                </div>
-
-                <button mat-button id="cellPhoneHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
-                    <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
-                </button>
-                
-                <div id="cellPhoneDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
-                    <!-- Contenido del menú -->
-                    <button mat-button id="cellPhoneHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
-                        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
-                    </button>
-                    
-                    <div id="menuCol" class="col">
-                      <h2 class="title">Home</h2>
-                      <hr>
-                      <ul class="list">
-                        <!-- <li><a (click)="clickMenuAddress('identity')">{{ 'HOME.WHO_ARE_WE' | translate }}</a></li> -->
-                        <li><a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a></li>
-                        <li><a (click)="clickMenuAddress('currentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a></li>
-                        <li><a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a></li>
-                        <li>
-                            <a (click)="openContactUsModal($event)">
-                              {{ 'HOME.CONTACT' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a (click)="openPrayerRequestModal($event)">
-                              {{ 'HOME.PRAYER_REQUEST' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                          <!-- <a>Idioma</a> -->
-                          <a (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
-                          <div class="submenu-list" *ngIf="isSubmenuOpen">
-                              <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
-                              <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
-                              <!-- <div>Español - ES</div>
-                              <div>English - EN</div> -->
-                              <!-- <div>Deutsch - DE</div> -->
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                
-                </div>
-
-          </div>
-          
-      </div>
-
-    </div>
-  </header>
+ 
 
   <!--======================================== -->
   <!--=============== IDENTITY =============== -->
