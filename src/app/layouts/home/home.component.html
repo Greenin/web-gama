@@ -39,13 +39,25 @@
             <!-- Menú desplegable -->
             <div id="normalScreenDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
                 <!-- Contenido del menú -->
-                <button mat-button id="normalScreenHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
-                    <mat-icon *ngIf="isMenuOpen">close</mat-icon>
-                </button>
+                <div id="closeButtonRow" class="row"> 
+                    <!-- <div id="closeButtonSpace" class="col"></div> -->
+                    <button mat-button id="normalScreenHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+                    </button>
+                </div>
 
                 <div id="menuCol" class="col">
                   <h2 class="title">Home</h2>
                   <hr>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a>
+                    </div>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress('currentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a>
+                    </div>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a>
+                    </div>
                     <div>
                         <a (click)="openContactUsModal($event)">
                             {{ 'HOME.CONTACT' | translate }}
