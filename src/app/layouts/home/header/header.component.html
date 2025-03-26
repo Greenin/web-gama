@@ -1,1 +1,93 @@
-<p>header works!</p>
+<header class="headerBackgroundColor headerText">
+    <ul>
+        <li id="headerIconTextLi">      
+            <a id="normalScreenHeaderLogo" href="#">
+                <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
+                <span id="normalScreenText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
+            </a>
+        </li>
+
+        <li id="headerSpaceLi">&nbsp;</li>
+        <!-- <li><a href="#identity">QUIÉNES SOMOS</a></li> -->
+        <li id="li1"><a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM' | translate }}</a></li>
+        <li id="li2" >
+          <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
+        <li id="li3">
+          <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
+
+        <!-- <li id="headerSpace2">&nbsp;</li> -->
+
+        <li class="flagLi" *ngIf="translate.currentLang===ESPANOL">
+            <a class="flag" (click)="selectLanguage(ENGLISH)">
+                <img  class="countryFlag" src="../assets/img/unitedkingdom-little.png">&nbsp;&nbsp;<span id="englishLabel">ENGLISH</span>
+            </a>
+        </li>
+        <li class="flagLi" *ngIf="translate.currentLang===ENGLISH">
+            <a class="flag" (click)="selectLanguage(ESPANOL)">
+              <img class="countryFlag" src="../assets/img/spain-little.png">&nbsp;&nbsp;<span id="spanishLabel">ESPAÑOL</span>
+            </a>
+        </li>
+        <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="selectLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
+
+
+        <li id="normalScreenHeaderMenuButtonLi">
+            <button mat-button id="normalScreenHeaderMenuButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
+            </button>
+            <!-- Menú desplegable -->
+            <div id="normalScreenDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
+                <!-- Contenido del menú -->
+                <div id="closeButtonRow" class="row"> 
+                    <!-- <div id="closeButtonSpace" class="col"></div> -->
+                    <button mat-button id="normalScreenHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                        <mat-icon *ngIf="isMenuOpen">close</mat-icon>
+                    </button>
+                </div>
+
+                <div id="menuCol" class="col">
+                  <h2 class="title">Home</h2>
+                  <hr>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a>
+                    </div>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">
+                          {{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a>
+                    </div>
+                    <div class="hiddenMenuElement">
+                        <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a>
+                    </div>
+                    <div>
+                        <a (click)="openContactUsModal($event)">
+                            {{ 'HOME.CONTACT' | translate }}
+                        </a>
+                    </div>
+                    <div>
+                        <a (click)="openPrayerRequestModal($event)">
+                            {{ 'HOME.PRAYER_REQUEST' | translate }}
+                        </a>
+                    </div>
+                    <div>
+                      <a class="submenu-toggle" (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
+                      <div class="submenu-list" *ngIf="isSubmenuOpen">
+                          <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
+                          <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
+                          <!-- <div>Deutsch - DE</div> -->
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <mat-menu id="cellPhoneMenu" #menu="matMenu">
+                <button mat-menu-item><a class="headerText" href="#identity">QUIÉNES SOMOS</a></button>
+                <button mat-menu-item><a class="headerText" href="#speakers">EL EQUIPO</a></button>
+                <button mat-menu-item><a class="headerText" href="#uneteMisiones">ÚNETE A LAS MISIONES</a></button> -->
+                <!-- <button mat-menu-item>
+                    <a class="headerText" href="#" (click)="openPrayerRequestModal($event)" data-target="modaloración">
+                        PETICIÓN DE ORACIÓN
+                    </a>
+                </button> -->
+            <!-- </mat-menu> -->
+        </li>
+    </ul>
+  </header>

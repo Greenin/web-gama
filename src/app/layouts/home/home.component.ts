@@ -12,6 +12,7 @@ import { LegalNoticeModalComponent } from '../../shared/legal-notice-modal/legal
 import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/prayer-request-modal.component';
 
 import { IdentityComponent } from './identity/identity.component';
+import { HeaderComponent } from './header/header.component';
 import { TeamComponent } from './team/team.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
 import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
@@ -34,6 +35,7 @@ import { TranslateService } from '@ngx-translate/core';
     MatIconModule,
     HttpClientModule,
     MatDialogModule,
+    HeaderComponent,
     IdentityComponent,
     TeamComponent,
     CurrentyearTourComponent,
@@ -48,86 +50,39 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-    // title = 'web-gama';
-    
-    // private timeoutId: any;
 
     readonly ESPANOL = "es";
     readonly ENGLISH = "en";
     readonly DEUTSCH = "de";
 
     currentLang = this.ESPANOL;
-    // currentLang = "";
 
-
-    spainSelected: boolean = false;
-    ukSelected: boolean = true;
-    germanySelected: boolean = false;
-
-    isMenuOpen: boolean = false;
-
-    isSubmenuOpen: boolean = false; // Estado inicial del submenú
 
     constructor(
-      private dialog: MatDialog,
-      private translate: TranslateService,
+        private dialog: MatDialog,
+        public translate: TranslateService,
     ) {
         // Establece el idioma por defecto (por ejemplo, español)
         // this.translate.setDefaultLang(this.currentLang);
-    }
-
-
-    ngOnInit(): void {
-        this.updateLanguage();
+        this.translate.use(this.ESPANOL); 
     }
 
 
     // Método para actualizar el idioma según las variables
-    updateLanguage(): void {
+    // updateLanguage(): void {
 
-      if (this.currentLang===this.ESPANOL) {
-          this.translate.use(this.ESPANOL); 
+    //     if (this.currentLang===this.ESPANOL) {
+    //         this.translate.use(this.ESPANOL); 
 
-      } else if (this.currentLang===this.ENGLISH) {
-          this.translate.use(this.ENGLISH);
-      } 
-      
-      // else if (this.currentLang===DEUTSCH) {
-      //   this.translate.use('de'); 
-      // }
-    }
-
-
-    selectLanguage(selectedLang: string) {
-        this.currentLang = selectedLang;
-        this.translate.use(selectedLang); 
-    } 
-
-
-    toggleMenu(): void {
-        this.isMenuOpen = !this.isMenuOpen;
-        this.isSubmenuOpen = false;
-    }
-
-
-    clickMenuAddress(sectionId: string) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        if (this.isMenuOpen) {
-            this.toggleMenu(); // Cierra el menú después de desplazarse
-        }
-    }
-
-
-    toggleSubmenu(event: Event): void {
-        event.preventDefault(); // Evita la recarga de la página
-        this.isSubmenuOpen = !this.isSubmenuOpen; // Alterna el estado del submenú
-    }
-
+    //     } else if (this.currentLang===this.ENGLISH) {
+    //         this.translate.use(this.ENGLISH);
+    //     } 
+    //   // else if (this.currentLang===DEUTSCH) {
+    //   //   this.translate.use('de'); 
+    //   // }
+    // }
 
 
 //   enviarCorreo(email: string) {
@@ -157,35 +112,35 @@ export class HomeComponent implements OnInit {
 
 
     openContactUsModal(event: Event) {
-      event.preventDefault(); // Evita que el enlace recargue la página
-      this.dialog.open(ContactUsModalComponent, {
-        width: '600px', // Ajusta el ancho del modal
-      });
+        event.preventDefault(); // Evita que el enlace recargue la página
+        this.dialog.open(ContactUsModalComponent, {
+          width: '600px', // Ajusta el ancho del modal
+        });
     }
 
 
     openPrayerRequestModal(event: Event) {
-      event.preventDefault(); // Evita que el enlace recargue la página
-      this.dialog.open(PrayerRequestModalComponent, {
-        width: '600px', // Ajusta el ancho del modal
-      });
+        event.preventDefault(); // Evita que el enlace recargue la página
+        this.dialog.open(PrayerRequestModalComponent, {
+          width: '600px', // Ajusta el ancho del modal
+        });
     }
     
 
     openPrivacidadModal(event: Event) {
-      event.preventDefault(); // Evita que el enlace recargue la página
-      this.dialog.open(PrivacyModalComponent, {
-        width: '600px', // Ajusta el ancho del modal
-      });
+        event.preventDefault(); // Evita que el enlace recargue la página
+        this.dialog.open(PrivacyModalComponent, {
+          width: '600px', // Ajusta el ancho del modal
+        });
     }
 
 
     openLegalNoticeModal(event: Event) {
-      event.preventDefault(); // Evita que el enlace recargue la página
-      this.dialog.open(LegalNoticeModalComponent, {
-        width: '600px', // Ajusta el ancho del modal
-        // height: '500px'
-      });
+        event.preventDefault(); // Evita que el enlace recargue la página
+        this.dialog.open(LegalNoticeModalComponent, {
+          width: '600px', // Ajusta el ancho del modal
+          // height: '500px'
+        });
     }
 
 
