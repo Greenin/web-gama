@@ -1,209 +1,133 @@
 
 @import '../../../../styles/_variables.scss';
-//======================================== //
-//========= NORMAL SCREEN STYLE ========== //
-//======================================== //
-
-@media only screen and (min-width: 1047px) {
-
   
-    //=========== NORMAL SCREEN SPEAKERS ===========//
-  
-      #speakers {
+#speakers {
+
+    //background-color: #f9f9f9;
+    //=========== NORMAL SCREEN SIZE ===========//
+    @media only screen and (min-width: 1047px) {
+        padding-top: 30px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 1046px) {
+        padding-top: 40px;
+    }
     
-          //background-color: #f9f9f9;
-          padding-top: 30px;
-      
-          #speakersSpaceAtBeginning {
-              height: 30px;
-          }
-      
-          #speakerTitleFirstLine {
-              // font-size: 1.1rem;
-            //   color: #3f51b5;
-            //   color: var(gamaColor6);
-              color: $gamaColor6;
-            //   @extend .textColor6;
-            //   @include gamaTextColor6;
-              letter-spacing: 3px;
-              margin: 0 auto;
-              padding-bottom: 0px;
-              margin-bottom: 0px;
-          } 
-      
-          #speakertitleSecondLine {
-              font-size: 2.1rem;
-              color: var(--bs-dark-rgb);
-              letter-spacing: 3px;
-              margin: 0 auto;
-              padding-bottom: 5px;
-              margin-bottom: 40px;
-          } 
-      
-          #speakersCardRow {
-      
-              .card {
+
+    #speakersSpaceAtBeginning {
+        //=========== NORMAL SCREEN SIZE ===========//
+        @media only screen and (min-width: 1047px) {
+            height: 30px;
+        }
+        //=========== CELL PHONE SIZE ===========//
+        @media only screen and (max-width: 1046px) {
+        }
+    }
+
+    #speakerTitleFirstLine {
+        //=========== NORMAL SCREEN SIZE ===========//
+        @media only screen and (min-width: 1047px) {
+            // font-size: 1.1rem;
+        }
+        //=========== CELL PHONE SIZE ===========//
+        @media only screen and (max-width: 1046px) {
+            font-size: 1.1rem;
+        }
+        // font-size: 1.1rem;
+        // color: #3f51b5;
+        // color: var(gamaColor6);
+        color: $gamaColor6;
+        // @extend .textColor6;
+        // @include gamaTextColor6;
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    } 
+
+    #speakertitleSecondLine {
+        font-size: 2.1rem;
+        color: var(--bs-dark-rgb);
+        letter-spacing: 3px;
+        margin: 0 auto;
+        padding-bottom: 5px;
+        margin-bottom: 40px;
+    } 
+
+    #speakersCardRow {
+
+
+        .cardCol {
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (max-width: 623px) {
+                // width: 90%;
+                padding: 0px 30px;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 378px) {
+                // width: 90%;
+                padding: 0px 20px;
+            }
+
+
+            .card {
         
-                  width: 100%;
-                  height: 100%;
-          
-                  .card-body {
-          
-                      .card-body-title {
-                          font-size: 18px;
-                          margin-bottom: 6px;
-                      }
-          
-                      .custom-badge {
-                          display: inline-block;
-                          padding: 1px 5px;
-                          font-size: 13px;
-                          color: white;
-                          border-radius: 4px;
-                          text-align: center;
-                          margin-right: 5px;
-                          white-space: nowrap;
-                      }
-          
-                      .warning {
-                          background-color: $warningBadgeColor; /* Color similar a "badge-warning" */
-                      }
-                      
-                      .success {
-                          background-color: $successBadgeColor; /* Color similar a "badge-success" */
-                      }
-          
-                      .info {
-                          background-color: $infoBadgeColor; /* Color similar a "badge-info" */
-                      }
-          
-                      hr {
-                          margin: 8px 0px 15px 0px;
-                      }
-          
-                      // #guillermoCardText {
+                width: 100%;
+                height: 100%;
+        
+                .card-body {
+        
+                    .card-body-title {
+                        font-size: 18px;
+                        margin-bottom: 6px;
+                    }
+        
+                    .custom-badge {
+                        display: inline-block;
+                        padding: 1px 5px;
+                        font-size: 13px;
+                        color: white;
+                        border-radius: 4px;
+                        text-align: center;
+                        margin-right: 5px;
+                        white-space: nowrap;
+                        
+                    }
+        
+                    .warning {
+                        background-color: $warningBadgeColor; /* Color similar a "badge-warning" */
+                    }
+                    
+                    .success {
+                        background-color: $successBadgeColor; /* Color similar a "badge-success" */
+                    }
+        
+                    .info {
+                        background-color: $infoBadgeColor; /* Color similar a "badge-info" */
+                    }
+        
+                    hr {
+                        margin: 8px 0px 15px 0px;
+                    }
+        
+                    // #guillermoCardText {
                         // padding-bottom: 20px;
-                      // }
-          
-          
-                  } //end card-body
+                    // }
         
-              } //end card
-      
-          } //end speakersCardRow
-      
-      } //end speakers
-  
-  } //end normal screen
-  
-  
-  
-  
-  
-  //======================================== //
-  //=========== CELL PHONE STYLE =========== //
-  //======================================== //
-  
-  @media only screen and (max-width: 1046px) {
-  
-      
-      //=========== CELL PHONE SPEAKERS ===========//
-    
-      #speakers {
-    
-        //   background-color: #f9f9f9;
-          padding-top: 40px;
-      
-          #speakerTitleFirstLine {
-              font-size: 1.1rem;
-            //   color: #3f51b5;
-              color: $gamaColor6;
-            //   @extend .textColor6;
-            //   @include gamaTextColor6;
-              letter-spacing: 3px;
-              margin: 0 auto;
-              padding-bottom: 0px;
-              margin-bottom: 0px;
-          } 
-      
-          #speakertitleSecondLine {
-              font-size: 2.1rem;
-              color: var(--bs-dark-rgb);
-              letter-spacing: 3px;
-              margin: 0 auto;
-              padding-bottom: 5px;
-              margin-bottom: 40px;
-          } 
-      
-          #speakersCardRow {
+        
+                } //end card-body
+        
+            } //end card
+        
+        } //end cardCol
 
-              .cardCol {
+    } //end speakersCardRow
 
-                  @media only screen and (max-width: 623px) {
-                    // width: 90%;
-                    padding: 0px 30px;
-                  }
-
-                  @media only screen and (max-width: 378px) {
-                    // width: 90%;
-                    padding: 0px 20px;
-                  }
-
-                  .card {
-            
-                      width: 100%;
-                      height: 100%;
-              
-                      .card-body {
-              
-                          .card-body-title {
-                              font-size: 18px;
-                              margin-bottom: 6px;
-                          }
-              
-                          .custom-badge {
-                              display: inline-block;
-                              padding: 1px 5px;
-                              font-size: 13px;
-                              color: white;
-                              border-radius: 4px;
-                              text-align: center;
-                              margin-right: 5px;
-                              white-space: nowrap;
-                          }
-              
-                          .warning {
-                              background-color: $warningBadgeColor; /* Color similar a "badge-warning" */
-                          }
-                          
-                          .success {
-                              background-color: $successBadgeColor; /* Color similar a "badge-success" */
-                          }
-              
-                          .info {
-                              background-color: $infoBadgeColor; /* Color similar a "badge-info" */
-                          }
-              
-                          hr {
-                              margin: 8px 0px 15px 0px;
-                          }
-              
-                          // #guillermoCardText {
-                          //   padding-bottom: 20px;
-                          // }
-              
-              
-                      } //end card-body
-            
-                  } //end card
-
-              } //end cardCol
-      
-          } //end speakersCardRow
-    
-      } //end speakers
+} //end speakers
   
-  } //end cell phone
+  
+  
+  
   
   
   
