@@ -37,5 +37,4 @@ export class PrivacyModalComponent {
         this.currentLang = this.translate.currentLang;
     }
 
-
 }

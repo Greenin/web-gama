@@ -1,0 +1,90 @@
+#previousYearVideo {
+
+    padding: 70px 0 70px 0;
+
+    .videoRow {
+
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        padding-left: 60px;
+        padding-right: 60px;
+        // background: linear-gradient(to bottom, #f4f4f4, #e0e0e0); // Fondo suave
+        // padding: 0;
+
+  
+        .videoContainer {
+            // max-width: 350px;
+            // display: block;
+            display: flex;
+            justify-content: right;
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                width: 50%;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                width: 100%;
+            }
+            padding: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+
+
+            .vertical-video {
+                width: 100%;
+                max-width: 400px; /* Ancho fijo */
+                aspect-ratio: 9 / 16; /* Proporción vertical */
+            }
+
+        } //end videoContainer
+
+        .videoTextContainer {
+
+            display: flex;
+            justify-content: left;
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                width: 50%;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                width: 100%;
+            }
+
+            .verse {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #333;
+                margin: 15px 0;
+                padding: 10px;
+                border-left: 5px solid #007bff; // Línea decorativa
+                background: #ffffff;
+                border-radius: 5px;
+
+                .quote {
+                    display: block;
+                    font-style: italic;
+                    color: #555;
+                }
+                
+                .reference {
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: #007bff; // Color azul para resaltar
+                    margin-top: 5px;
+                }
+
+            } //end verse
+            
+            
+        } //end videoTextContainer
+        
+    } //end videoRow
+
+} //end previousYearVideo

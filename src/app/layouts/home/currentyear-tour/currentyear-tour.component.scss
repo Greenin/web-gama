@@ -1,4 +1,4 @@
-
+// @import 'styles/variables';
 
 //======================================== //
 //========= NORMAL SCREEN STYLE ========== //
@@ -20,6 +20,9 @@
               #currentYearTourFirstSpan {
                   font-size: 1.9rem;
                   color:  var(--bs-dark-rgb);
+                //   color:  var(--gamaColor1);
+                //   color:  $gamaColor1;
+                //   @extend .textColor1;
                   letter-spacing: 4px;
                   margin: 0 auto;
                   padding-bottom: 0px;
@@ -29,7 +32,9 @@
       
               #currentYearTourSecondSpan {
                   font-size: 2.5rem;
-                  color: #3f51b5 !important;
+                  color: #3f51b5 !important; 
+                //   color: $gamaColor6 !important;
+                //   color: var(--gamaColor6) !important;
                   letter-spacing: 6px;
                   margin: 0 auto;
                   padding-bottom: 5px;
@@ -129,6 +134,7 @@
               #currentYearTourFirstSpan {
                   font-size: 1.9rem;
                   color:  var(--bs-dark-rgb);
+                //   color:  var(--gamaColor1);
                   letter-spacing: 4px;
                   margin: 0 auto;
                   padding-bottom: 0px;
@@ -138,7 +144,9 @@
     
               #currentYearTourSecondSpan {
                   font-size: 2.5rem;
-                  color: #3f51b5 !important;
+                //   color: $gamaColor6 !important;
+                  color: #3f51b5 !important;  
+                //   color: var(--gamaColor6) !important;
                   letter-spacing: 6px;
                   // margin: 0 auto;
                   padding-bottom: 5px;

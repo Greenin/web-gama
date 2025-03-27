@@ -14,9 +14,10 @@ import { PrayerRequestModalComponent } from '../../shared/prayer-request-modal/p
 import { IdentityComponent } from './identity/identity.component';
 import { HeaderComponent } from './header/header.component';
 import { TeamComponent } from './team/team.component';
+import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
+import { PrevyearVideoComponent } from './prevyear-video/prevyear-video.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
 import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
-import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
 // import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 import { MatCardModule } from '@angular/material/card';
@@ -38,9 +39,10 @@ import { TranslateService } from '@ngx-translate/core';
     HeaderComponent,
     IdentityComponent,
     TeamComponent,
+    TenyearsExperienceComponent,
+    PrevyearVideoComponent,
     CurrentyearTourComponent,
     EnCurrentyeartourComponent,
-    TenyearsExperienceComponent,
     // JoinusInfoComponent,
     JoinusMissionsComponent,
     MatCardModule,
