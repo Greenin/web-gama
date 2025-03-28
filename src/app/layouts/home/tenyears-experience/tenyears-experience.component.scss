@@ -193,6 +193,10 @@
                                         width: 53%;
                                     }
                                     //=========== CELL PHONE SIZE ===========//
+                                    @media only screen and (max-width: 535px) {
+                                        width: 58%;
+                                    }
+                                    //=========== CELL PHONE SIZE ===========//
                                     @media only screen and (max-width: 414px) {
                                         width: 65%;
                                     }

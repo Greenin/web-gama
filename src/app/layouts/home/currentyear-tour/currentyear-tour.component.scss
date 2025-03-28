@@ -1,257 +1,248 @@
-// @import 'styles/variables';
-
-//======================================== //
-//========= NORMAL SCREEN STYLE ========== //
-//======================================== //
-
-@media only screen and (min-width: 1047px) {
 
 
-      #currentYearTour {
-      
-          #cellPhoneCurrentYearTourTitle {
-            display: none;
-          }
-      
-          #normalScreenCurrentYearTourTitle {
-      
-              display: block;
-      
-              #currentYearTourFirstSpan {
-                  font-size: 1.9rem;
-                  color:  var(--bs-dark-rgb);
-                //   color:  var(--gamaColor1);
-                //   color:  $gamaColor1;
-                //   @extend .textColor1;
-                  letter-spacing: 4px;
-                  margin: 0 auto;
-                  padding-bottom: 0px;
-                  margin-bottom: 0px;
-                  text-align: center;
-              } 
-      
-              #currentYearTourSecondSpan {
-                  font-size: 2.5rem;
-                  color: #3f51b5 !important; 
-                //   color: $gamaColor6 !important;
-                //   color: var(--gamaColor6) !important;
-                  letter-spacing: 6px;
-                  margin: 0 auto;
-                  padding-bottom: 5px;
-                  margin-bottom: 40px;
-              } 
-          }
-      
-          .row {
+    #currentYearTour {
 
-              // display: flex;
-              width: 100%;
-              justify-content: center;
-              align-items: center;
-              margin: 0 auto;
-              margin-bottom: 0px;
-              padding-left: 60px;
-              padding-right: 60px;
-              // padding: 0;
+
+        #cellPhoneCurrentYearTourTitle {
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                display: none;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                display: block;
+            }
+
+            #currentYearTourFirstSpan {
+                font-size: 1.9rem;
+                color:  var(--bs-dark-rgb);
+            //   color:  var(--gamaColor1);
+            //   color:  $gamaColor1;
+            //   @extend .textColor1;
+                letter-spacing: 4px;
+                margin: 0 auto;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+            } 
+    
+            #currentYearTourSecondSpan {
+                font-size: 2.5rem;
+                color: #3f51b5 !important; 
+            //   color: $gamaColor6 !important;
+            //   color: var(--gamaColor6) !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+            } 
+        }
         
-              .imageContainer {
-                  max-width: 350px;
-                  padding: 0;
-                  margin-left: 20px;
-                  margin-right: 20px;
-                  margin-bottom: 30px;
-              }
+        #normalScreenCurrentYearTourTitle {
         
-              .imageContainer img {
-                  width: 100%;
-                  height: auto;
-                  display: block;
-          
-          
-                  // border-radius: 12px;
-                  // border: 6px double #d4af37; /* Borde dorado doble */
-                  // background-color: #fff;
-                  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                  // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-          
-          
-                  // border: 6px solid #4CAF50; /* Color del marco */
-                  // border-radius: 10px; /* Bordes redondeados */
-                  // padding: 10px; /* Espacio entre el marco y la imagen */
-                  // background-color: #ffffff; /* Fondo blanco detrás del marco */
-                  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
-                  // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-          
-          
-                  border: 9px solid #fff; // Borde blanco
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
-                  border-radius: 10px; // Bordes redondeados
-                  transition: transform 0.3s ease, box-shadow 0.3s ease;
-          
-                
-                  &:hover {
-                      // transform: scale(1.05);
-                      // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-            
-                      // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-                      // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
-            
-                      transform: scale(1.05); // Efecto de zoom al pasar el mouse
-                      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
-              
-                  }
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                display: block;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                display: none;
+            }
         
-              } //end imageContainer img
-
-          } //end row
+            #currentYearTourFirstSpan {
+                font-size: 1.9rem;
+                color:  var(--bs-dark-rgb);
+            //   color:  var(--gamaColor1);
+            //   color:  $gamaColor1;
+            //   @extend .textColor1;
+                letter-spacing: 4px;
+                margin: 0 auto;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+            } 
     
-      } //end currentYearTour
-  
-  } //end normal screen
-  
-  
-  
-  
-  
-  //======================================== //
-  //=========== CELL PHONE STYLE =========== //
-  //======================================== //
-  
-  @media only screen and (max-width: 1046px) {
-  
-  
-      #currentYearTour {
-    
-    
-          #normalScreenCurrentYearTourTitle {
-              display: none;
-          }
-    
-          #cellPhoneCurrentYearTourTitle {
-    
-              display: block;
-    
-              #currentYearTourFirstSpan {
-                  font-size: 1.9rem;
-                  color:  var(--bs-dark-rgb);
-                //   color:  var(--gamaColor1);
-                  letter-spacing: 4px;
-                  margin: 0 auto;
-                  padding-bottom: 0px;
-                  margin-bottom: 0px;
-                  text-align: center;
-              } 
-    
-              #currentYearTourSecondSpan {
-                  font-size: 2.5rem;
-                //   color: $gamaColor6 !important;
-                  color: #3f51b5 !important;  
-                //   color: var(--gamaColor6) !important;
-                  letter-spacing: 6px;
-                  // margin: 0 auto;
-                  padding-bottom: 5px;
-                  margin-bottom: 20px;
-                  // text-align: center;
-                  // @media only screen and (max-width: 415px) {
-                  //   padding-top: 20px !important;
-                  // }
-              } 
-          }
-    
-          .row {
+            #currentYearTourSecondSpan {
+                font-size: 2.5rem;
+                color: #3f51b5 !important; 
+            //   color: $gamaColor6 !important;
+            //   color: var(--gamaColor6) !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+            } 
             
-              // display: flex;
-              justify-content: center;
-              width: 100%;
-              padding: 0;
-              margin: 0 auto;
+        }
 
-              // @media only screen and (max-width: 1046px) {
-              //   margin: 0px 0px;
-              // }
+    } //end currentYearTour
 
-              // @media only screen and (max-width: 868px) {
-              //   margin: 0px 30px;
-              //   // padding: 0px 20px;
-              // }
+    #englishCurrentYearTour {
+
+        #cellPhoneCurrentYearTourTitle {
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                display: none;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                display: block;
+            }
+
+            #currentYearTourFirstSpan {
+                font-size: 2.5rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+            } 
+
+            #currentYearTourSecondSpan {
+                font-size: 1.9rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+            } 
+
+        } //end englishCurrentYearTour
     
-              .imageContainer {
-                  // display: block;
-                  width: 100%;
-                  max-width: 350px;
-                  margin-left: 0px;
-                  margin-right: 0px;
-                  margin-bottom: 30px;
-                  // justify-content: center;
+        #normalScreenCurrentYearTourTitle {
+    
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                display: block;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                display: none;
+            }
+    
+            #currentYearTourFirstSpan {
+                font-size: 2.5rem;
+                color: #3f51b5 !important;
+                letter-spacing: 6px;
+                margin: 0 auto;
+                padding-bottom: 5px;
+                margin-bottom: 40px;
+            } 
 
-                  @media only screen and (max-width: 1046px) {
+            #currentYearTourSecondSpan {
+                font-size: 1.9rem;
+                color:  var(--bs-dark-rgb);
+                letter-spacing: 4px;
+                margin: 0 auto;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+            } 
+
+        }
+
+    } //end englishCurrentYearTour
+
+
+
+    #currentYearTour, #englishCurrentYearTour {
+    
+    
+        .row {
+
+            // display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            // margin-bottom: 0px;
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                padding: 0;
+            }
+            
+        
+            .imageContainer {
+                width: 100%;
+                max-width: 350px;
+                padding: 0;
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1047px) {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    margin-left: 0px;
+                    margin-right: 0px;
                     padding-left: 20px;
                     padding-right: 20px;
-                  }
-
-                  @media only screen and (max-width: 691px) {
-                    padding-left: 0px;
-                    padding-right: 0px;
-                  }
-      
-                  @media only screen and (max-width: 376px) {
+                }
+                // @media only screen and (max-width: 691px) {
+                    // padding-left: 0px;
+                    // padding-right: 0px;
+                // }
+                @media only screen and (max-width: 376px) {
                     padding-left: 20px;
                     padding-right: 20px;
-                    // padding: 0px 20px;
-                  }
-      
-                  // @media only screen and (max-width: 868px) {
-                  //   margin-left: 30px;
-                  //   margin-right: 30px;
-                  //  // padding: 0px 20px;
-                  // }
-
-              } //end imageContainer
+                }
+                margin-bottom: 30px;
     
-              .imageContainer img {
-                  width: 100%;
-                  height: auto;
-                  display: block;
-      
-      
-                  // border-radius: 12px;
-                  // border: 6px double #d4af37; /* Borde dorado doble */
-                  // background-color: #fff;
-                  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                  // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      
-      
-                  // border: 6px solid #4CAF50; /* Color del marco */
-                  // border-radius: 10px; /* Bordes redondeados */
-                  // padding: 10px; /* Espacio entre el marco y la imagen */
-                  // background-color: #ffffff; /* Fondo blanco detrás del marco */
-                  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
-                  // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      
-      
-                  border: 9px solid #fff; // Borde blanco
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
-                  border-radius: 10px; // Bordes redondeados
-                  transition: transform 0.3s ease, box-shadow 0.3s ease;
-      
+            }
+        
+            .imageContainer img {
+                width: 100%;
+                height: auto;
+                display: block;
+
+        
+                // border-radius: 12px;
+                // border: 6px double #d4af37; /* Borde dorado doble */
+                // background-color: #fff;
+                // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        
+        
+                // border: 6px solid #4CAF50; /* Color del marco */
+                // border-radius: 10px; /* Bordes redondeados */
+                // padding: 10px; /* Espacio entre el marco y la imagen */
+                // background-color: #ffffff; /* Fondo blanco detrás del marco */
+                // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+                // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        
+        
+                border: 9px solid #fff; // Borde blanco
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+                border-radius: 10px; // Bordes redondeados
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
                 
-                  &:hover {
+                &:hover {
                     // transform: scale(1.05);
                     // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-      
+            
                     // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
                     // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
-      
+            
                     transform: scale(1.05); // Efecto de zoom al pasar el mouse
                     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
-                
-                  }
+            
+                }
+        
+            } //end imageContainer img
+
+        } //end row
     
-              } //end imageContainer img
-    
-          } //end row
-    
-      } //end currentYearTour
+    } //end currentYearTour, englishCurrentYearTour
+
+
+
   
   
-  } //end cell phone
+  

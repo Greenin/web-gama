@@ -26,15 +26,15 @@ export class PrivacyModalComponent {
     readonly ENGLISH = "en";
     readonly DEUTSCH = "de";
 
-    currentLang = "";
+    // currentLang = "";
 
 
 
     constructor(
-      public dialogRef: MatDialogRef<PrivacyModalComponent>,
-      private translate: TranslateService,
+        public dialogRef: MatDialogRef<PrivacyModalComponent>,
+        public translate: TranslateService,
     ) {
-        this.currentLang = this.translate.currentLang;
+        // this.currentLang = this.translate.currentLang;
     }
 
 }

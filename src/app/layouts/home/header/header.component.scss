@@ -24,7 +24,10 @@ header {
         padding: 0 auto;
         margin: 0 auto;
     }
-    
+    // z-index: 3;
+    // background: none;
+    border-bottom: 1px solid #e6e4e4;
+    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
     ul {
         width: 100%;
@@ -33,6 +36,7 @@ header {
         justify-content: flex-start; /* Alinea los elementos a la izquierda */
         padding: 0;
         margin: 0;
+        // z-index: 3;
     }
 
 
@@ -45,6 +49,7 @@ header {
         // max-height: 80px;
         // text-wrap:break-word;
         line-height: 1.2; /* Reducir el interlineado */
+        z-index: 3;
     }
 
 
@@ -70,6 +75,7 @@ header {
         word-break: normal; /* Divide palabras largas si es necesario */
         line-height: 1.2; /* Reducir el interlineado */
         cursor: pointer;
+        // z-index: 3;
     }
 
 
@@ -165,6 +171,7 @@ header {
                     width: 60px;
                     height: 60px;
                 }
+                // z-index: 3;
             }
 
 
@@ -402,8 +409,9 @@ header {
 
             color: rgb(118, 204, 61);
             // background-color: #f8f6ed;
+            background: none;
             border: none;
-
+            // z-index: 3;
             
         } //end cellPhoneHeaderMenuButton
 
@@ -427,7 +435,7 @@ header {
             }
             height: 100vh;
             // background-color: #fff;
-            z-index: 1000;
+            z-index: 4;
             overflow-y: auto;
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
