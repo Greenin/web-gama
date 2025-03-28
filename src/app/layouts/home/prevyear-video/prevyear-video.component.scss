@@ -13,7 +13,7 @@
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 414px) {
-        padding: 80px 25px;
+        padding: 80px 15px;
     }
 
     .videoRow {
@@ -40,12 +40,20 @@
             //=========== NORMAL SCREEN SIZE ===========//
             @media only screen and (min-width: 1047px) {
                 width: 50%;
+                padding: 0 20px 30px 20px;
             }
             //=========== CELL PHONE SIZE ===========//
             @media only screen and (max-width: 1046px) {
                 width: 100%;
+                padding: 0 20px 30px 20px;
             }
-            padding: 0 20px 30px 20px;
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 414px) {
+                padding: 80px 20px;
+                padding: 0 15px 30px 15px;
+            }
+
+            
             // margin-left: 20px;
             // margin-right: 20px;
             // margin-bottom: 30px;
@@ -79,7 +87,6 @@
             @media only screen and (max-width: 1046px) {
                 width: 100%;
             }
-
 
 
             .verse {

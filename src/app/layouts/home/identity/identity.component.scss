@@ -11,15 +11,15 @@
 
           //=========== NORMAL SCREEN SIZE ===========//
           @media only screen and (min-width: 1047px) {
-            padding: 0;
-            margin: 0 auto;
+              padding: 0;
+              margin: 0 auto;
           }
 
           //=========== CELL PHONE SIZE ===========//
           @media only screen and (max-width: 1046px) {
-            padding: 0;
-            margin-right: 0 auto;
-            margin-left: 0 auto;
+              padding: 0;
+              margin-right: 0 auto;
+              margin-left: 0 auto;
           }
 
           .row { 
@@ -40,7 +40,7 @@
                 }
                 //=========== MEDIIUM SCREEN SIZE ===========//
                 @media only screen and (max-width: 1046px) {
-                  padding-bottom: 10px;
+                    padding-bottom: 10px;
                 }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 430px) {
@@ -86,11 +86,11 @@
                             padding-left: 5%;
                             //=========== NORMAL SCREEN SIZE ===========//
                             @media only screen and (min-width: 1047px) {
-                              margin-top: 0px;
+                                margin-top: 0px;
                             }
                             //=========== CELL PHONE SIZE ===========//
                             @media only screen and (max-width: 1046px) {
-                              margin-top: 20px;
+                                margin-top: 20px;
                             }
                             // z-index: 2; 
 
@@ -98,11 +98,11 @@
                                 
                                   //=========== NORMAL SCREEN SIZE ===========//
                                   @media only screen and (min-width: 1047px) {
-                                    font-size: 1.5rem;
+                                      font-size: 1.5rem;
                                   }
                                   //=========== CELL PHONE SIZE ===========//
                                   @media only screen and (max-width: 1046px) {
-                                    font-size: 1.2rem;
+                                      font-size: 1.2rem;
                                   }
 
                                   color: #1e2757;
@@ -113,11 +113,11 @@
                                   
                                   //=========== NORMAL SCREEN SIZE ===========//
                                   @media only screen and (min-width: 1047px) {
-                                    padding-bottom: 8px;
+                                      padding-bottom: 8px;
                                   }
                                   //=========== CELL PHONE SIZE ===========//
                                   @media only screen and (max-width: 1046px) {
-                                    padding-bottom: 5px;
+                                      padding-bottom: 5px;
                                   }
                                 
                             } 
@@ -166,8 +166,8 @@
                             }
                             //=========== CELL PHONE SIZE ===========//
                             @media only screen and (max-width: 1046px) {
-                              padding-left: 15px;
-                              padding-right: 15px;
+                              padding-left: 20px;
+                              padding-right: 20px;
                               margin-top: 0px;
                               margin-bottom: 20px;  
                             }

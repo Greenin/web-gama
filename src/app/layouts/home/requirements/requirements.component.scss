@@ -1,0 +1,149 @@
+@import '../../../../styles/_variables.scss';
+
+#previousYearVideo {
+
+    
+    //=========== NORMAL SCREEN SIZE ===========//
+    @media only screen and (min-width: 1047px) {
+        padding: 80px 80px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 1046px) {
+        padding: 80px 80px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 414px) {
+        padding: 80px 25px;
+    }
+
+    .videoRow {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        // padding-left: 80px;
+        // padding-right: 80px;
+        // background: linear-gradient(to bottom, #f4f4f4, #e0e0e0); // Fondo suave
+        // padding: 0;
+
+  
+        .videoContainer {
+            // max-width: 350px;
+            // display: block;
+            display: flex;
+            justify-content: center;
+
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                width: 50%;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                width: 100%;
+            }
+            padding: 0 20px 30px 20px;
+            // margin-left: 20px;
+            // margin-right: 20px;
+            // margin-bottom: 30px;
+
+            .vertical-video {
+                width: 100%;
+                max-width: 400px; /* Ancho fijo */
+                max-height: 500px; /* Alto fijo */
+                aspect-ratio: 9 / 16; /* Proporción vertical */
+            }
+
+
+        } //end videoContainer
+
+        .videoTextContainer {
+
+            // display: flex;
+            justify-content: left;
+
+            // flex-direction: column;
+            // align-items: center;
+            // gap: 20px;
+            // padding: 20px;
+            // background-color: lighten(#1e2757, 20%); // Un azul más claro
+
+            //=========== NORMAL SCREEN SIZE ===========//
+            @media only screen and (min-width: 1047px) {
+                width: 35%;
+            }
+            //=========== CELL PHONE SIZE ===========//
+            @media only screen and (max-width: 1046px) {
+                width: 100%;
+            }
+
+
+
+            .verse {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #333;
+                margin: 15px 0;
+                padding: 10px;
+                background: #ffffff;
+                // border-radius: 5px;
+
+                .quote {
+                    display: block;
+                    font-style: italic;
+                    color: #555;
+                }
+                
+                .reference {
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: $gamaColor6; // Color azul para resaltar
+                    margin-top: 5px;
+                }
+
+            } //end verse
+
+
+            #verse1 {
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1047px) {
+                    margin: 0px 0px 15px 0px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    margin: 50px 0px 15px 0px;
+                }
+                
+                padding: 0px 10px 10px 10px;
+                border-bottom: 1px solid $gamaColor4; // Línea decorativa
+            }
+
+            #verse2 {
+                border-bottom: 1px solid $gamaColor4; // Línea decorativa
+            }
+
+            #verse3 {
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1047px) {
+                    display: block;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1265px) {
+                    display: none;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    display: block;
+                }
+            }
+            
+            
+        } //end videoTextContainer
+        
+    } //end videoRow
+
+} //end previousYearVideo

@@ -6,11 +6,13 @@
     //background-color: #f9f9f9;
     //=========== NORMAL SCREEN SIZE ===========//
     @media only screen and (min-width: 1047px) {
-        padding-top: 30px;
+        padding: 30px 30px 0px 30px;
+        // padding-top: 30px;
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 1046px) {
-        padding-top: 40px;
+        padding: 40px 30px 0px 30px;
+        // padding-top: 40px;
     }
     
 
@@ -58,7 +60,7 @@
 
 
         .cardCol {
-            //=========== NORMAL SCREEN SIZE ===========//
+            //=========== CELL PHONE SIZE ===========//
             @media only screen and (max-width: 623px) {
                 // width: 90%;
                 padding: 0px 30px;
@@ -66,7 +68,7 @@
             //=========== CELL PHONE SIZE ===========//
             @media only screen and (max-width: 378px) {
                 // width: 90%;
-                padding: 0px 20px;
+                padding: 0px 0px;
             }
 
 

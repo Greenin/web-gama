@@ -11,7 +11,7 @@
 
         max-width: 800px;
         margin: 0 auto;
-        // padding: 0 20px;
+        padding: 0;
 
         #uneteMisionesTitleFirstLine {
             font-size: 1.3rem;
@@ -25,11 +25,11 @@
   
         #uneteMisionesTitleSecondLine {
             //=========== NORMAL SCREEN SIZE ===========//
-            @media only screen and (max-width: 623px) {
+            @media only screen and (min-width: 1047px) {
                 font-size: 2.9rem;
             }
             //=========== CELL PHONE SIZE ===========//
-            @media only screen and (max-width: 378px) {
+            @media only screen and (max-width: 414px) {
                 font-size: 2.7rem;
             }
             // font-family: serif !important;

@@ -6,8 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-team',
   standalone: true,
   imports: [
-    CommonModule,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'

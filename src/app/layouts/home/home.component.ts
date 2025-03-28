@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { TeamComponent } from './team/team.component';
 import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-experience.component';
 import { PrevyearVideoComponent } from './prevyear-video/prevyear-video.component';
+import { RequirementsComponent } from './requirements/requirements.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
 import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
 // import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
@@ -41,6 +42,7 @@ import { TranslateService } from '@ngx-translate/core';
     TeamComponent,
     TenyearsExperienceComponent,
     PrevyearVideoComponent,
+    RequirementsComponent,
     CurrentyearTourComponent,
     EnCurrentyeartourComponent,
     // JoinusInfoComponent,
