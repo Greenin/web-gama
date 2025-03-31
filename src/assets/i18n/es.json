@@ -84,8 +84,9 @@
                 "COUNTRY": "País donde resides",
                 "TESTIMONY": "Tu testimonio",
                 "LANGUAGE": "Idioma preferido para completar el formulario",
-                "PRIVACY_TEXT_1": "He leído y aceptado las ondiciones de",
+                "PRIVACY_TEXT_1": "He leído y aceptado las condiciones de",
                 "PRIVACY_TEXT_2": "privacidad de datos",
+                "PRIVACY_TEXT_3": "",
                 
                 "FIELD_ERROR_TEXT_PHONE_NOT_VALID": "Teléfono no válido. Introduce el prefijo internacional. Ejemplo",
                 

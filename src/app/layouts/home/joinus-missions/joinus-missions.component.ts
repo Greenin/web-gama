@@ -37,7 +37,7 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
   templateUrl: './joinus-missions.component.html',
   styleUrl: './joinus-missions.component.scss'
 })
-export class JoinusMissionsComponent {
+export class JoinusMissionsComponent  {
 
   misioneroForm: FormGroup;
   enviadoConExito: boolean = false;
@@ -45,26 +45,61 @@ export class JoinusMissionsComponent {
 
 
   constructor(
-    private fb: FormBuilder,
-    private http: HttpClient,
-    private dialog: MatDialog,
+      private fb: FormBuilder,
+      private http: HttpClient,
+      private dialog: MatDialog,
 
   ) {
 
-    this.misioneroForm = this.fb.group({
-        nombre: ['', Validators.required],
-        apellidos: ['', Validators.required],
-        email: ['', [Validators.required, this.emailValidator]],
-        // this.asyncPhoneValidator.bind(this)
-        telefono: ['', Validators.required, this.asyncPhoneValidator],
-        localidad: ['', Validators.required],
-        pais: ['', Validators.required],
-        testimonio: ['', Validators.required, this.asyncTestimonyValidator],
-        idioma: ['', Validators.required],
-        privacidad: [false, Validators.requiredTrue],
-    });
+      this.misioneroForm = this.fb.group({
+          nombre: ['', Validators.required],
+          apellidos: ['', Validators.required],
+          email: ['', [Validators.required, this.emailValidator]],
+          // this.asyncPhoneValidator.bind(this)
+          telefono: ['', Validators.required, this.asyncPhoneValidator],
+          localidad: ['', Validators.required],
+          pais: ['', Validators.required],
+          testimonio: ['', Validators.required, this.asyncTestimonyValidator],
+          idioma: ['', Validators.required],
+          privacidad: [false, Validators.requiredTrue],
+      });
+
+      this.misioneroForm.get('email')?.valueChanges.subscribe((newValue) => {
+          // console.log('TRACE4, newValue: ', newValue)        
+          if (newValue!=null && newValue!=='') {
+              this.enviadoConExito = false;
+              this.envioFallido = false;
+              // console.log('TRACE3');
+          } 
+          // else {
+          //   console.log('TRACE2');
+          // }
+      });
 
   }
+
+
+  // ngOnInit() {
+  //       // Detectar cambios en el formulario y cambiar variables
+  //     //   this.misioneroForm.valueChanges.subscribe(() => {
+  //     //     this.enviadoConExito = false;
+  //     //     this.envioFallido = false;
+  //     //     console.log('TRACE1');
+  //     // });
+
+      
+  //     // Si el campo "email" cambia, se actualiza "enviadoConExito"
+  //     this.misioneroForm.get('email')?.valueChanges.subscribe((newValue) => {
+  //         console.log('TRACE4, newValue: ', newValue)        
+  //         if (newValue!=null && newValue!=='') {
+  //             this.enviadoConExito = false;
+  //             this.envioFallido = false;
+  //             console.log('TRACE3');
+  //         } else {
+  //           console.log('TRACE2');
+  //         }
+  //     });
+  // }
 
 
   asyncPhoneValidator(control: AbstractControl): Promise<ValidationErrors | null> {

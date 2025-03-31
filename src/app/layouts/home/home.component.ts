@@ -19,9 +19,6 @@ import { PrevyearVideoComponent } from './prevyear-video/prevyear-video.componen
 import { RequirementsComponent } from './requirements/requirements.component';
 import { ColumnsComponent } from './columns/columns.component';
 import { MissionInfoComponent } from './mission-info/mission-info.component';
-// import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
-// import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
-// import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
