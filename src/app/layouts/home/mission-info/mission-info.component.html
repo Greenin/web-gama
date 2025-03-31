@@ -2,7 +2,7 @@
   <!--========= MISSION INFORMATION ========== -->
   <!--======================================== -->
 
-<section id="missionInfoSection" >
+<section id="missionInfoSection" [hidden]="translate.currentLang===ENGLISH">
 
     <div class="missionInfoRow">
 
@@ -76,6 +76,78 @@
                 
                 <p class="closing">
                     <span class="emoji">🔥</span> ¡Dios tiene un gran propósito para ti en este viaje! <span class="emoji">🚀🔥</span>
+                </p>
+        </div>
+
+    </div>
+    
+</section>
+
+<section id="englishMissionInfoSection" [hidden]="translate.currentLang===ESPANOL">
+
+    <div class="missionInfoRow">
+
+        <div class="missionInfoContainer">
+
+                <!-- <p id="missionInfoTitle">Para poder emprender con nosotros este viaje necesitas cumplir estos requisitos:</p> -->
+                <h1 class="title">Join the Missionary Tour "United for Europe"!</h1>
+                <hr>
+                <br>
+                <p class="intro">
+                    Are you ready for an experience that will transform your life and the lives of many others? <span class="emoji">🌍✝️</span>
+                </p>
+
+                <div class="quote">
+                    <p>Jesus gave us a clear command in <strong>Mark 16:15</strong>:</p>
+                    <blockquote>“Go into all the world and preach the gospel to every creature.”</blockquote>
+                </div>
+                
+                <p class="description">
+                    This trip is more than just a tour of Europe; it is an opportunity to bring the message of hope and salvation to those who need it most. We will experience times of worship, evangelism, and service, sharing the love of Christ in every step we take.
+                </p>
+                
+                <h2 class="subtitle">📅 Duration and Cost:</h2>
+                <ul class="duration-cost-list">
+                    <li>1 week: <strong>400 EUR</strong></li>
+                    <li>2 weeks: <strong>800 EUR</strong></li>
+                    <li>3 weeks: <strong>1000 EUR</strong> (discount included)</li>
+                </ul>
+                <p class="cost-note">
+                    <strong>Note:</strong> Note: If you can’t participate for the full weeks, it will be calculated at <strong>58 EUR/day</strong>.
+                </p>
+                <p class="payment-note">
+                    <span class="emoji">💰</span> The cost of the Missionary Tour must be paid by the end of the tour.
+                </p>
+                
+                <p class="deadline">
+                    <span class="emoji">📌</span> Registration deadline: <strong>15.05.2025</strong>
+                </p>
+                
+                <h2 class="subtitle">Includes and Does not Include:</h2>
+                <p class="includes">
+                    <span class="emoji">✅</span> Includes: Transportation, food, and accommodation.
+                </p>
+                <p class="excludes">
+                    <span class="emoji">❌</span> Does not include: Visas, accident insurance, and health insurance (you must manage these on your own).
+                </p>
+                
+                <p class="call-to-action">
+                    <span class="emoji">📅</span> Don't miss this opportunity. Sign up now and be part of this move of God!
+                </p>
+                
+                <h2 class="subtitle">📞 Have questions or need help?</h2>
+                <p class="contact-info">
+                    Contact us for more information on registration, logistics, or if you need financial advice. We are also here to provide spiritual guidance and accompany you in this step of faith.
+                    <br>
+                    Feel free to reach out!
+                </p>
+                <ul class="contact-list">
+                    <li><span class="emoji">📞</span> +34 642 107 452 – Valerio (leave your message on WhatsApp)</li>
+                    <li><span class="emoji">📧</span> <a href="mailto:tourgamamission.org">tour&#64;gamamission.org</a></li>
+                </ul>
+                
+                <p class="closing">
+                    <span class="emoji">🔥</span> God has a great purpose for you on this journey! <span class="emoji">🚀🔥</span>
                 </p>
         </div>
 

@@ -3,9 +3,6 @@
 
 #missionInfoSection, #englishMissionInfoSection {
 
-    // background-color: rgb(33, 33, 33);
-    // background-color: rgb(252, 227, 178);
-    // color: white;
 
     //=========== NORMAL SCREEN SIZE ===========//
     @media only screen and (min-width: 1047px) {
@@ -13,8 +10,12 @@
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 1046px) {
-        padding: 80px 60px 70px 60px;
+        padding: 80px 30px 70px 30px;
     }
+    //=========== CELL PHONE SIZE ===========//
+    // @media only screen and (max-width: 720px) {
+    //     padding: 80px 30px 70px 30px;
+    // }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 414px) {
         padding: 80px 25px 70px 25px;
@@ -56,21 +57,30 @@
                     width: 75%;
                     // margin: 0px 30px;
                 }
-                //=========== NORMAL SCREEN SIZE ===========//
                 @media only screen and (max-width: 1349px) {
-                    width: 55%;
+                    width: 75%;
                     // margin: 0px 30px;
                 }
                 //=========== CELL PHONE SIZE ===========//
-                @media only screen and (max-width: 1046px) {
-                    width: 80%;
-                    // margin: 0 0;
-                }
-                //=========== CELL PHONE SIZE ===========//
-                @media only screen and (max-width: 850px) {
+                @media only screen and (max-width: 1230px) {
                     width: 85%;
                     // margin: 0 0;
                 }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    width: 87%;
+                    // margin: 0 0;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 946px) {
+                    width: 90%;
+                    // margin: 0 0;
+                }
+                // //=========== CELL PHONE SIZE ===========//
+                // @media only screen and (max-width: 850px) {
+                //     width: 90%;
+                //     // margin: 0 0;
+                // }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 650px) {
                     width: 90%;
@@ -88,79 +98,111 @@
                 // }
 
                 .title {
+                    
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
                         font-size: 2rem;
-                        color: #333;
-                        text-align: center;
-                        margin-bottom: 20px;
-                  }
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1.9rem;
+                    }
+                    color: #333;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
                   
-                  .subtitle {
+                .subtitle {
+                    
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
                         font-size: 1.5rem;
-                        color: #555;
-                        margin-top: 30px;
-                        margin-bottom: 15px;
-                  }
-                  
-                  .intro, .description, .call-to-action, .contact-info, .closing {
-                        font-size: 1.1rem;
-                        color: #444;
-                  }
-                  
-                  .quote {
-                        font-size: 1.1rem;
-                        color: #666;
-                        margin: 20px 0;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1.4rem;
+                    }
+                    color: #555;
+                    margin-top: 30px;
+                    margin-bottom: 15px;
+                }
+                
+                .intro, .description, .call-to-action, .contact-info, .closing {
                     
-                        blockquote {
-                            font-style: italic;
-                            margin: 10px 0 0 20px;
-                            padding-left: 15px;
-                            border-left: 3px solid #ccc;
-                        }
-                  }
-                  
-                  .duration-cost-list {
-                        list-style-type: none;
-                        padding-left: 0;
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 1.1rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1rem;
+                    }
+                    color: #444;
+                }
+                
+                .quote {
                     
-                        li {
-                            margin-bottom: 10px;
-                        
-                            strong {
-                                color: #000;
-                            }
-                        }
-                  }
-                  
-                  .cost-note, .payment-note, .deadline, .includes, .excludes {
-                        margin: 10px 0;
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 1.1rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1rem;
+                    }
+                    color: #666;
+                    margin: 20px 0;
+                
+                    blockquote {
+                        font-style: italic;
+                        margin: 10px 0 0 20px;
+                        padding-left: 15px;
+                        border-left: 3px solid #ccc;
+                    }
+                }
+                
+                .duration-cost-list {
+                    list-style-type: none;
+                    padding-left: 0;
+                
+                    li {
+                        margin-bottom: 10px;
                     
                         strong {
                             color: #000;
                         }
-                  }
-                  
-                  .contact-list {
-                        list-style-type: none;
-                        padding-left: 0;
+                    }
+                }
+                
+                .cost-note, .payment-note, .deadline, .includes, .excludes {
+                    margin: 10px 0;
+                
+                    strong {
+                        color: #000;
+                    }
+                }
+                
+                .contact-list {
+                    list-style-type: none;
+                    padding-left: 0;
+                
+                    li {
+                        margin-bottom: 10px;
                     
-                        li {
-                            margin-bottom: 10px;
-                        
-                            a {
-                                color: #007bff;
-                                text-decoration: none;
-                        
-                                &:hover {
-                                    text-decoration: underline;
-                                }
+                        a {
+                            color: #007bff;
+                            text-decoration: none;
+                    
+                            &:hover {
+                                text-decoration: underline;
                             }
                         }
-                  }
-                  
-                  .emoji {
-                        margin-right: 5px;
-                  }
+                    }
+                }
+                
+                .emoji {
+                    margin-right: 5px;
+                }
                 
                 
             } //end missionInfoTextContainer

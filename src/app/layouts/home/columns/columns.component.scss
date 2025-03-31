@@ -1,7 +1,5 @@
 
 
-
-
 #columnSection, #englishColumnSection {
 
     //=========== NORMAL SCREEN SIZE ===========//
@@ -27,16 +25,6 @@
             align-items: center;
             margin: 0 auto;
             padding: 0;
-            // margin-bottom: 0px;
-            //=========== NORMAL SCREEN SIZE ===========//
-            // @media only screen and (min-width: 1047px) {
-                // padding-left: 60px;
-            //     // padding-right: 60px;
-            // }
-            // //=========== CELL PHONE SIZE ===========//
-            // @media only screen and (max-width: 1046px) {
-            //     padding: 0;
-            // }
             
         
             .imageContainer {
@@ -72,22 +60,6 @@
                     height: auto;
                     display: block;
         
-            
-                    // border-radius: 12px;
-                    // border: 6px double #d4af37; /* Borde dorado doble */
-                    // background-color: #fff;
-                    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            
-            
-                    // border: 6px solid #4CAF50; /* Color del marco */
-                    // border-radius: 10px; /* Bordes redondeados */
-                    // padding: 10px; /* Espacio entre el marco y la imagen */
-                    // background-color: #ffffff; /* Fondo blanco detrás del marco */
-                    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
-                    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            
-            
                     border: 9px solid #fff; // Borde blanco
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
                     border-radius: 10px; // Bordes redondeados
@@ -95,12 +67,6 @@
             
                     
                     &:hover {
-                        // transform: scale(1.05);
-                        // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-                
-                        // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-                        // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
-                
                         
                         //=========== NORMAL SCREEN SIZE ===========//
                         @media only screen and (min-width: 1047px) {
