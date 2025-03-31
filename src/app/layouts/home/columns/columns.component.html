@@ -1,1 +1,50 @@
-<p>columns works!</p>
+  <!--======================================== -->
+  <!--=============== COLUMNS ================ -->
+  <!--======================================== -->
+
+<section id="columnSection" [hidden]="translate.currentLang===ENGLISH">
+
+    <!--========= NORMAL SCREEN CURRENT YEAR TOUR TITLE ========= -->
+    <!-- <div id="normalScreenColumnSectionTitle" class="col text-center mt-4 mb-5">
+      <p class="title2"><span id="columnSectionFirstSpan">TOUR MISIONERO </span><span id="columnSectionSecondSpan">2025</span></p>
+    </div> -->
+
+    <!--========= CELL PHONE CURRENT YEAR TOUR TITLE ========= -->
+    <!-- <div id="cellPhoneColumnSectionTitle" class="col text-center mt-4 mb-5">
+        <p class="title2">
+            <span id="columnSectionFirstSpan">TOUR MISIONERO </span>
+            <br>
+            <br>
+            <span id="columnSectionSecondSpan">2025</span>
+        </p>
+    </div> -->
+    
+    <div class="row">
+        <div class="imageContainer">
+            <img src="../assets/img/columnas1.jpg" alt="">
+        </div>
+        <div class="imageContainer">
+            <img src="../assets/img/columnas2.jpg" alt="">
+        </div>
+        <div class="imageContainer">
+            <img src="../assets/img/columnas3.jpg" alt="">
+        </div>
+    </div>
+  
+</section>
+
+<section id="englishColumnSection" [hidden]="translate.currentLang===ESPANOL">
+
+    <div class="row">
+        <div class="imageContainer">
+            <img src="../assets/img/columns1.jpg" alt="">
+        </div>
+        <div class="imageContainer">
+            <img src="../assets/img/columns2.jpg" alt="">
+        </div>
+        <div class="imageContainer">
+            <img src="../assets/img/columns3.jpg" alt="">
+        </div>
+    </div>
+  
+</section>

@@ -1,0 +1,127 @@
+
+
+
+
+#columnSection, #englishColumnSection {
+
+    //=========== NORMAL SCREEN SIZE ===========//
+    @media only screen and (min-width: 1047px) {
+        padding: 100px 50px 70px 50px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 1046px) {
+        padding: 100px 50px 70px 50px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 414px) {
+        padding: 80px 25px 70px 25px;
+    }
+
+    background-color: rgb(33, 33, 33);
+
+    .row {
+
+            // display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0;
+            // margin-bottom: 0px;
+            //=========== NORMAL SCREEN SIZE ===========//
+            // @media only screen and (min-width: 1047px) {
+                // padding-left: 60px;
+            //     // padding-right: 60px;
+            // }
+            // //=========== CELL PHONE SIZE ===========//
+            // @media only screen and (max-width: 1046px) {
+            //     padding: 0;
+            // }
+            
+        
+            .imageContainer {
+
+                width: 100%;
+                max-width: 340px;
+                padding: 0;
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1047px) {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                // @media only screen and (max-width: 691px) {
+                    // padding-left: 0px;
+                    // padding-right: 0px;
+                // }
+                @media only screen and (max-width: 376px) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                margin-bottom: 30px;
+
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+        
+            
+                    // border-radius: 12px;
+                    // border: 6px double #d4af37; /* Borde dorado doble */
+                    // background-color: #fff;
+                    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            
+            
+                    // border: 6px solid #4CAF50; /* Color del marco */
+                    // border-radius: 10px; /* Bordes redondeados */
+                    // padding: 10px; /* Espacio entre el marco y la imagen */
+                    // background-color: #ffffff; /* Fondo blanco detrás del marco */
+                    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para añadir elegancia */
+                    // transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            
+            
+                    border: 9px solid #fff; // Borde blanco
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986); // Sombra suave
+                    border-radius: 10px; // Bordes redondeados
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+                    
+                    &:hover {
+                        // transform: scale(1.05);
+                        // box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+                
+                        // transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+                        // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Más sombra al hacer hover */
+                
+                        
+                        //=========== NORMAL SCREEN SIZE ===========//
+                        @media only screen and (min-width: 1047px) {
+                            transform: scale(1.1); // Efecto de zoom al pasar el mouse
+                        }
+                        //=========== CELL PHONE SIZE ===========//
+                        @media only screen and (max-width: 1046px) {
+                            transform: scale(1.05); // Efecto de zoom al pasar el mouse
+                        }
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al pasar e
+                
+                    }
+            
+                } //end imageContainer img
+
+            } //end imageContainer
+    
+        
+
+    } //end row
+
+} //end columnSection, englishColumnSection
+
+
