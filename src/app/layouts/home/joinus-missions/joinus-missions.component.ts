@@ -9,7 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClient } from '@angular/common/http';
 import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-modal.component';
 // import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +31,7 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
     // HttpClientModule,
     MatDialogModule,
     TranslateModule,
+    MatIconModule,
   ],
   // providers: [provideHttpClient(withFetch())],
   templateUrl: './joinus-missions.component.html',

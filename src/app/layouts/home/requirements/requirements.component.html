@@ -1,48 +1,111 @@
 
 
   <!--======================================== -->
-  <!--============ MISSION VIDEOS ============ -->
+  <!--===== BROCHURE AND REQUIREMENTS ======== -->
   <!--======================================== -->
 
-  <section id="previousYearVideo">
+  <section id="requirementsSection" [hidden]="translate.currentLang===ENGLISH">
 
-    <div class="videoRow">
+      <div class="requirementRow">
 
-        <div class="videoContainer">
-            <iframe class="vertical-video" src="https://www.youtube.com/embed/SIEj5fBaIHw" frameborder="0" allowfullscreen>
-            </iframe>
-        </div>
-        <!-- <div class="videoContainer">
-            <iframe class="vertical-video" src="https://www.youtube.com/embed/SIEj5fBaIHw" frameborder="0" allowfullscreen></iframe>
-        </div> -->
-        <div class="videoTextContainer">
-            <div id="verse1" class="verse">
-                <p class="quote">“Id por todo el mundo y predicad el evangelio a toda criatura.”</p>
-                <p class="reference">- Marcos 16:15</p>
-            </div>
-            <div id="verse2" class="verse">
-                <p class="quote">“Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; enseñándoles que guarden todas las cosas que os he mandado; y he aquí, yo estoy con vosotros todos los días, hasta el fin del mundo. Amén.”</p>
-                <p class="reference">- Mateo 28:19-20</p>
-            </div>
-            <div id="verse3" class="verse">
-                <p class="quote">“¿Cómo, pues, invocarán a aquel en quien no han creído? ¿Y cómo creerán en aquel de quien no han oído? ¿Y cómo oirán sin haber quien les predique?”</p>
-                <p class="reference">- Romanos 10:14</p>
-            </div>
-            <!-- <p class="verse">
-                <span class="quote">“Proclamad su gloria entre las naciones, sus maravillas entre todos los pueblos.”</span>
-                <span class="reference">- Salmos 96:3</span>
-            </p> -->
+          <div class="brochureContainer">
+              <!-- <div class="row mb-2"> -->
+              <div class="imageContainer">
+                  <img src="../assets/img/brochure1.jpg" alt="">
+              </div>
+              <!-- </div> -->
+          </div>
+          <!-- <div class="videoContainer">
+              <iframe class="vertical-video" src="https://www.youtube.com/embed/SIEj5fBaIHw" frameborder="0" allowfullscreen></iframe>
+          </div> -->
+          <div class="requirementTextContainer">
 
-            <!-- <div class="verse-box">
-                <p class="verse-text">"¿Cómo, pues, invocarán a aquel en quien no han creído? ¿Y cómo creerán en aquel de quien no han oído? ¿Y cómo oirán sin haber quien les predique?"</p>
-                <p class="verse-ref">- Romanos 10:14</p>
-            </div>
-            
-            <div class="verse-box">
-                <p class="verse-text">"Proclamad su gloria entre las naciones, sus maravillas entre todos los pueblos."</p>
-                <p class="verse-ref">- Salmos 96:3</p>
-            </div> -->
-        </div>
+                  <p id="requirementTitle">Para poder emprender con nosotros este viaje necesitas cumplir estos requisitos:</p>
+                  
+                  <ul class="requirementList">
+
+                      <li>Tener amor por las personas y el deseo de llevar el Evangelio a todas las naciones.</li>
+                      
+                      <li>Tener la capacidad de sudar a 30°C a la sombra y aún así anunciar las buenas nuevas con una sonrisa.</li>
+                      
+                      <li>Ser mayor de edad (los menores entre 12 a 17 años sólo con acompañamiento parental).</li>
+                      
+                      <li>Ser parte de una iglesia.</li>
+                      
+                      <li>Tener buena salud (capacidad para estar sentado durante largos períodos, dar paseos de oración y llevar su propio equipaje).</li>
+                      
+                      <li>Tener un pasaporte válido (para viajes fuera de Europa) o documento de identidad/pasaporte (para viajes dentro de Europa).</li>
+                      
+                      <li>Contar con los medios financieros necesarios para cubrir:
+                          <ul>
+                              <li>Boletos/pasaje de avión, tren o autobús.</li>
+                              <li>Costos totales del viaje misionero "Unidos por Europa".</li>
+                          </ul>
+                          *Seguro de accidentes por cuenta propia (no asumimos responsabilidad)
+                          <p class="nota">Nota: si no tienes todos los recursos económicos y crees que Dios te llama a participar, contáctanos.</p>
+                      </li>
+                      
+                      <li>Rellenar el formulario de inscripción (necesitas tener cuenta en Google) y adjuntar una carta de recomendación del pastor de la iglesia.</li>
+                      
+                      <li>Participar en las reuniones de preparación por Zoom antes del viaje misionero.</li>
+                      
+                      <li>La capacidad de continuar la misión con una sonrisa y gozo del Señor, incluso en los mayores desafíos.</li>
+                      
+                  </ul>
+          </div>
+
+      </div>
+  </section>
+
+  <section id="requirementsSection" [hidden]="translate.currentLang===ESPANOL">
+
+      <div class="requirementRow">
+
+          <div class="brochureContainer">
+              <!-- <div class="row mb-2"> -->
+              <div class="imageContainer">
+                  <img src="../assets/img/brochure2.jpg" alt="">
+              </div>
+              <!-- </div> -->
+          </div>
+          <!-- <div class="videoContainer">
+              <iframe class="vertical-video" src="https://www.youtube.com/embed/SIEj5fBaIHw" frameborder="0" allowfullscreen></iframe>
+          </div> -->
+          <div class="requirementTextContainer">
+
+                  <p id="requirementTitle">To embark on this journey with us, you need to meet the following requirements:</p>
+                  
+                  <ul class="requirementList">
+
+                      <li>Have love for people and the desire to bring the Gospel to all nations.</li>
+                      
+                      <li>Be able to sweat in 30°C in the shade and still announce the good news with a smile.</li>
+                      
+                      <li>Be of legal age (minors aged 12-17 may participate only with parental accompaniment).</li>
+                      
+                      <li>Be part of a church.</li>
+                      
+                      <li>Have good health (ability to sit for long periods, go on prayer walks, and carry your own luggage).</li>
+                      
+                      <li>Have a valid passport (for travel outside Europe) or identity card/passport (for travel within Europe).</li>
+                      
+                      <li>Have the necessary financial means to cover:
+                          <ul>
+                              <li>Flight, train, or bus tickets.</li>
+                              <li>Total costs of the "United by Europe" mission trip.</li>
+                          </ul>
+                          *Accident insurance at your own expense (we do not assume responsibility)
+                          <p class="nota">Note: If you do not have all the financial resources and believe that God is calling you to participate, please contact us.</p>
+                      </li>
+                      
+                      <li>Fill out the registration form (you need to have a Google account) and attach a recommendation letter from the pastor of your church.</li>
+                      
+                      <li>Participate in the Zoom preparation meetings before the mission trip.</li>
+                      
+                      <li>The ability to continue the mission with a smile and the joy of the Lord, even in the greatest challenges.</li>
+
+                  </ul>
+          </div>
 
     </div>
 </section>

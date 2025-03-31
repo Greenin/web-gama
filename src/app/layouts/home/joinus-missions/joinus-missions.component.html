@@ -2,14 +2,14 @@
   <!--========= UNETE A LAS MISIONES ========= -->
   <!--======================================== -->
   
-  <section id="uneteMisiones" class="pt-5 pb-5">
+  <section id="uneteMisiones">
 
     <div class="container">
 
           <div class="col">
-              <p id="uneteMisionesTitleFirstLine" class="title2">{{ 'HOME.JOIN_MISSION.TITLE_1' | translate }}</p>
+              <p id="uneteMisionesTitleFirstLine" class="title3">{{ 'HOME.JOIN_MISSION.TITLE_1' | translate }}</p>
               <br>
-              <p id="uneteMisionesTitleSecondLine" class="title2">{{ 'HOME.JOIN_MISSION.TITLE_2' | translate }}</p>
+              <p id="uneteMisionesTitleSecondLine" class="title3">{{ 'HOME.JOIN_MISSION.TITLE_2' | translate }}</p>
           </div>
 
           <p id="uneteMisionesDescParagraph" class="text">
@@ -225,6 +225,10 @@
                   <a href="#" (click)="openPrivacidadModal($event)">{{ 'HOME.JOIN_MISSION.FORM.PRIVACY_TEXT_2' | translate }}</a>
                   {{ 'HOME.JOIN_MISSION.FORM.PRIVACY_TEXT_3' | translate }}.
               </mat-checkbox>
+
+              <br>
+              <p>&nbsp;&nbsp;<span id="mailIcon"><mat-icon >mail</mat-icon></span>&nbsp;{{ 'HOME.JOIN_MISSION.FORM.BOTTOM_TEXT1' | translate }}</p>
+              <p>&nbsp;&nbsp;{{ 'HOME.JOIN_MISSION.FORM.BOTTOM_TEXT2' | translate }}</p>
         
               <!-- Botón de enviar -->
               <div class="text-center">

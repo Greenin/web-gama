@@ -22,19 +22,15 @@ import { TranslateService } from '@ngx-translate/core';
 export class LegalNoticeModalComponent {
 
 
-  readonly ESPANOL = "es";
-  readonly ENGLISH = "en";
-  readonly DEUTSCH = "de";
-
-  currentLang = "";
+    readonly ESPANOL = "es";
+    readonly ENGLISH = "en";
+    readonly DEUTSCH = "de";
 
 
-  constructor(
-    public dialogRef: MatDialogRef<LegalNoticeModalComponent>,
-    private translate: TranslateService,
-  ) {
-      this.currentLang = this.translate.currentLang;
-  }
-
+    constructor(
+      public dialogRef: MatDialogRef<LegalNoticeModalComponent>,
+      public translate: TranslateService,
+    ) {
+    }
 
 }

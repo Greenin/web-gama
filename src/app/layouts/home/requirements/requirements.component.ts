@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-requirements',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './requirements.component.scss'
 })
 export class RequirementsComponent {
+
+    readonly ESPANOL = "es";
+    readonly ENGLISH = "en";
+    readonly DEUTSCH = "de";
+
+
+    constructor(
+        public translate: TranslateService,
+    ) {
+    }
 
 }

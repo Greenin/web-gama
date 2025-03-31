@@ -20,14 +20,14 @@
         "IDENTITY": {
 
             "TITLE": "What is the meaning of GAMA?",
-            "PARAGRAPH": "we are a group of people who share a series of concerns surrounding the gospel and the Church of Christ. We believe that God is awakening and commissioning His Church throughout the earth to fulfill its calling and achieve the destiny God has for it",
+            "PARAGRAPH": "we are a group of people who share a passion for the Gospel and the Church of Christ. We believe that God is awakening and commissioning His Church all over the earth to fulfill His calling and reach the destiny He has prepared for it",
             "VISION": {
                 "TITLE": "VISION",
                 "PARAGRAPH": "Be part of the <span class=\"highlightText\">awakening</span> that God has for His Church."
             },
             "MISSION": {
                 "TITLE": "MISSION",
-                "PARAGRAPH": "Through different <span class=\"highlightText\">evangelism</span> and <span class=\"highlightText\">mission</span> initiatives we want to spread the awakening of the Church of Christ."
+                "PARAGRAPH": "Through different <span class=\"highlightText\">evangelism</span> and <span class=\"highlightText\">mission</span> initiatives, we want to extend the awakening of the Church of Christ."
             },
             "VALUES": {
                 "TITLE": "VALUES",
@@ -51,10 +51,10 @@
                 "ENGINEERING": "Engineering"
             },
             "VALERIO": {
-                "DESCRIPTION": "A full-time missionary, he participates in radio programs, evangelism in universities, missionary tours in Europe, as well as traveling around the world equipping churches in evangelism"
+                "DESCRIPTION": "Full-time missionary, participates in radio programs, university evangelism, missionary tours across Europe, as well as worldwide trips equipping churches in evangelism"
             },
             "GUILLERMO": {
-                "DESCRIPTION": "An engineer by profession, he is responsible for supporting missionary work in all types of logistical and technical tasks, in addition to actively participating in evangelistic campaigns"
+                "DESCRIPTION": "Engineer by profession, responsible for supporting missionary work in all kinds of logistical and technical tasks, in addition to actively participating in evangelistic campaigns"
             } 
         },
 
@@ -71,7 +71,7 @@
 
             "TITLE_1": "JOIN THE",
             "TITLE_2": "2025 TOUR",
-            "DESCRIPTION": "Contact us if you attract the idea of ​​participating in Misiones, in collaboration with Local Churches and Jcum",
+            "DESCRIPTION": "Thank you for your interest in being part of this great mission of God! Please complete the following fields to start the registration process.",
 
             "FORM": {
 
@@ -81,8 +81,8 @@
                 "PHONE_NUM": "Phone number",
                 "LOCALITY": "City",
                 "COUNTRY": "Country where you reside",
-                "TESTIMONY": "His testimony of how you met the Lord Jesus Christ",
-                "LANGUAGE": "Preferred language",
+                "TESTIMONY": "Your testimony",
+                "LANGUAGE": "Preferred language to complete the form",
                 "PRIVACY_TEXT_1": "I have read and accepted",
                 "PRIVACY_TEXT_2": "data privacy",
                 "PRIVACY_TEXT_3": "conditions",
@@ -95,6 +95,9 @@
                 "PHONE_PLACEHOLDER": "Include your country's international prefix so we can contact you without problems",
                 "LOCALITY_PLACEHOLDER": "Municipality, city or town where you reside",
                 "TESTIMONY_PLACEHOLDER": "In a few words, tell us how you met Christ and how he has transformed your life",
+
+                "BOTTOM_TEXT1": "Once completed, submit your application and we will get in touch with you soon.",
+                "BOTTOM_TEXT2": "We are excited to serve together and united in this great work of God in Europe!",
                 
                 "FORM_SUCCESS_TEXT": "Missionary subscription sent successfully. We will send a message to the email address provided within a few minutes, if the network is operating normally. We will send you the web link to continue your subscription process. Thank you very much",
                 "FORM_ERROR_TEXT": "There was an error when sending the form. Please try it again"

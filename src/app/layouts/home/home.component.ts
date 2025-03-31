@@ -18,7 +18,7 @@ import { TenyearsExperienceComponent } from './tenyears-experience/tenyears-expe
 import { PrevyearVideoComponent } from './prevyear-video/prevyear-video.component';
 import { RequirementsComponent } from './requirements/requirements.component';
 import { CurrentyearTourComponent } from './currentyear-tour/currentyear-tour.component';
-import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
+// import { EnCurrentyeartourComponent } from './en-currentyeartour/en-currentyeartour.component';
 // import { JoinusInfoComponent } from './joinus-info/joinus-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
 import { MatCardModule } from '@angular/material/card';
@@ -44,7 +44,7 @@ import { TranslateService } from '@ngx-translate/core';
     PrevyearVideoComponent,
     RequirementsComponent,
     CurrentyearTourComponent,
-    EnCurrentyeartourComponent,
+    // EnCurrentyeartourComponent,
     // JoinusInfoComponent,
     JoinusMissionsComponent,
     MatCardModule,
