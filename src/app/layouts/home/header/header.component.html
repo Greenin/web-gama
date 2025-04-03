@@ -11,7 +11,7 @@
         <!-- <li><a href="#identity">QUIÉNES SOMOS</a></li> -->
         <li id="li1"><a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM' | translate }}</a></li>
         <li id="li2" >
-          <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
+          <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'requirementsSection':'englishRequirementsSection')">{{ 'HOME.CURRENT_YEAR_TOUR' | translate }}</a></li>
         <li id="li3">
           <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION' | translate }}</a></li>
 
@@ -73,13 +73,13 @@
                     </div> -->
                     <!-- <hr> -->
                     <div class="language">
-                        <a (click)="selectLanguage(ESPANOL)">Español - ES -
+                        <a (click)="selectLanguage(ESPANOL)">Español -
                             <div class="menuFlagImgContainer">
                                 <img class="menuCountryFlag" src="../assets/img/spain-little.png"></div></a>
                         
                     </div>
                     <div class="language">
-                        <a (click)="selectLanguage(ENGLISH)">English - EN -
+                        <a (click)="selectLanguage(ENGLISH)">English -
                             <div class="menuFlagImgContainer">
                                 <img  class="menuCountryFlag" src="../assets/img/unitedkingdom-little.png"></div></a>
                     </div>
