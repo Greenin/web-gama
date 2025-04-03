@@ -17,7 +17,7 @@
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 414px) {
-        padding: 80px 25px 70px 25px;
+        padding: 80px 20px 50px 20px;
     }
 
 
@@ -119,8 +119,11 @@
                         padding: 0;
                     }
                     @media only screen and (max-width: 376px) {
-                        padding-left: 20px;
-                        padding-right: 20px;
+                        max-width: 300px;
+                        min-width: 300px;
+                        min-height: 400px; /* Alto fijo */
+                        // padding-left: 20px;
+                        // padding-right: 20px;
                     }
                     // margin-bottom: 30px;
                     
@@ -200,6 +203,7 @@
                 #requirementTitle {
                     font-size: medium;
                     font-weight: bold;
+                    padding-bottom: 10px;
                 }
 
 
@@ -213,7 +217,15 @@
 
 
                         ul {
-                            padding-left: 20px;
+                            
+                            //=========== CELL PHONE SIZE ===========//
+                            @media only screen and (min-width: 1047px) {
+                                padding-left: 20px;
+                            }
+                            //=========== CELL PHONE SIZE ===========//
+                            @media only screen and (max-width: 1046px) {
+                                padding-left: 0px;
+                            }
                             list-style-type: circle;
                             margin-top: 5px;
                         }

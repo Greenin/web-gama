@@ -70,8 +70,9 @@
 
         "JOIN_MISSION": {
 
-            "TITLE_1": "ÚNETE AL",
-            "TITLE_2": "TOUR 2025",
+            "TITLE": "FORMULARIO DE INSCRIPCIÓN",
+            "TITLE_1": "FORMULARIO DE",
+            "TITLE_2": "INSCRIPCIÓN",
             "DESCRIPTION": "¡Gracias por tu interés en ser parte de esta gran misión de Dios! Por favor, completa los siguientes campos para empezar el proceso de inscripción",
 
             "FORM": {
