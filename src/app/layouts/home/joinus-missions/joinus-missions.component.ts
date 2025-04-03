@@ -12,9 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClient } from '@angular/common/http';
 import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-modal.component';
-// import { HttpClientModule } from '@angular/common/http';
-// import { provideHttpClient, withFetch } from '@angular/common/http';
-// import provideHttpClient;
+import { TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -39,6 +38,12 @@ import { PrivacyModalComponent } from '../../../shared/privacy-modal/privacy-mod
 })
 export class JoinusMissionsComponent  {
 
+  
+  readonly ESPANOL = "es";
+  readonly ENGLISH = "en";
+  readonly DEUTSCH = "de";
+
+
   misioneroForm: FormGroup;
   enviadoConExito: boolean = false;
   envioFallido: boolean  = false;
@@ -48,7 +53,7 @@ export class JoinusMissionsComponent  {
       private fb: FormBuilder,
       private http: HttpClient,
       private dialog: MatDialog,
-
+      public translate: TranslateService,
   ) {
 
       this.misioneroForm = this.fb.group({
@@ -65,41 +70,13 @@ export class JoinusMissionsComponent  {
       });
 
       this.misioneroForm.get('email')?.valueChanges.subscribe((newValue) => {
-          // console.log('TRACE4, newValue: ', newValue)        
           if (newValue!=null && newValue!=='') {
               this.enviadoConExito = false;
               this.envioFallido = false;
-              // console.log('TRACE3');
           } 
-          // else {
-          //   console.log('TRACE2');
-          // }
       });
 
   }
-
-
-  // ngOnInit() {
-  //       // Detectar cambios en el formulario y cambiar variables
-  //     //   this.misioneroForm.valueChanges.subscribe(() => {
-  //     //     this.enviadoConExito = false;
-  //     //     this.envioFallido = false;
-  //     //     console.log('TRACE1');
-  //     // });
-
-      
-  //     // Si el campo "email" cambia, se actualiza "enviadoConExito"
-  //     this.misioneroForm.get('email')?.valueChanges.subscribe((newValue) => {
-  //         console.log('TRACE4, newValue: ', newValue)        
-  //         if (newValue!=null && newValue!=='') {
-  //             this.enviadoConExito = false;
-  //             this.envioFallido = false;
-  //             console.log('TRACE3');
-  //         } else {
-  //           console.log('TRACE2');
-  //         }
-  //     });
-  // }
 
 
   asyncPhoneValidator(control: AbstractControl): Promise<ValidationErrors | null> {

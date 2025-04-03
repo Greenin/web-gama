@@ -1,9 +1,9 @@
 <header class="headerText">
     <ul>
         <li id="headerIconTextLi">      
-            <a id="normalScreenHeaderLogo" href="#">
-                <img id="normalScreenLogo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
-                <span id="normalScreenText">{{ 'HOME.HEADER.TITLE' | translate }}</span>
+            <a id="headerLogo" href="#">
+                <img id="logo" src="../assets/img/icon-6.png" alt="{{ 'HOME.HEADER.TITLE' | translate }}" >
+                <span id="text">{{ 'HOME.HEADER.TITLE' | translate }}</span>
             </a>
         </li>
 
@@ -30,51 +30,68 @@
         <!-- <li *ngIf="germanySelected"><a id="germanyFlag" class="flag" (click)="selectLanguage('de')"><img class="countryFlag" src="../assets/img/germany-little.png">&nbsp;DEUTSCH</a></li> -->
 
 
-        <li id="normalScreenHeaderMenuButtonLi">
-            <button mat-button id="normalScreenHeaderMenuButton" class="" (click)="toggleMenu()">
+        <li id="headerMenuButtonLi">
+            <button mat-button id="headerMenuButton" class="" (click)="toggleMenu()">
                 <mat-icon *ngIf="!isMenuOpen">menu</mat-icon>
             </button>
             <!-- Menú desplegable -->
-            <div id="normalScreenDropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
+            <div id="dropDownMenu" class="headerBackgroundColor" [class.open]="isMenuOpen">
                 <!-- Contenido del menú -->
                 <div id="closeButtonRow" class="row"> 
                     <!-- <div id="closeButtonSpace" class="col"></div> -->
-                    <button mat-button id="normalScreenHeaderCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
+                    <button mat-button id="headerCloseButton" class="headerBackgroundColor" (click)="toggleMenu()">
                         <mat-icon *ngIf="isMenuOpen">close</mat-icon>
                     </button>
                 </div>
 
                 <div id="menuCol" class="col">
-                  <h2 class="title">Home</h2>
-                  <hr>
-                    <div class="hiddenMenuElement">
+                    <h2 id="homeTitle" class="title">Home</h2>
+                    <hr>
+                    <div class="hiddenMenuElement menuLink">
                         <a (click)="clickMenuAddress('speakers')">{{ 'HOME.THE_TEAM_LOW' | translate }}</a>
                     </div>
-                    <div class="hiddenMenuElement">
-                        <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'currentYearTour':'englishCurrentYearTour')">
+                    <div class="hiddenMenuElement menuLink">
+                        <a (click)="clickMenuAddress(translate.currentLang===ESPANOL?'requirementsSection':'englishRequirementsSection')">
                           {{ 'HOME.CURRENT_YEAR_TOUR_LOW' | translate }}</a>
                     </div>
-                    <div class="hiddenMenuElement">
+                    <div class="hiddenMenuElement menuLink">
                         <a (click)="clickMenuAddress('uneteMisiones')">{{ 'HOME.JOIN_US_MISSION_LOW' | translate }}</a>
                     </div>
-                    <div>
+                    <div class="menuLink">
                         <a (click)="openContactUsModal($event)">
                             {{ 'HOME.CONTACT' | translate }}
                         </a>
                     </div>
-                    <div>
+                    <div class="menuLink">
                         <a (click)="openPrayerRequestModal($event)">
                             {{ 'HOME.PRAYER_REQUEST' | translate }}
                         </a>
                     </div>
-                    <div>
-                      <a class="submenu-toggle" (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
-                      <div class="submenu-list" *ngIf="isSubmenuOpen">
-                          <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
-                          <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
-                          <!-- <div>Deutsch - DE</div> -->
-                      </div>
+                    <h3 id="languageTitle" class="title">Language</h3>
+                    <!-- <div id="languageDiv">
+                        <h3 id="languageTitleH3" class="title">Language</h3>
+                    </div> -->
+                    <!-- <hr> -->
+                    <div class="language">
+                        <a (click)="selectLanguage(ESPANOL)">Español - ES -
+                            <div class="menuFlagImgContainer">
+                                <img class="menuCountryFlag" src="../assets/img/spain-little.png"></div></a>
+                        
                     </div>
+                    <div class="language">
+                        <a (click)="selectLanguage(ENGLISH)">English - EN -
+                            <div class="menuFlagImgContainer">
+                                <img  class="menuCountryFlag" src="../assets/img/unitedkingdom-little.png"></div></a>
+                    </div>
+                            <!-- <div>Deutsch - DE</div> -->
+                    <!-- <div>
+                        <a class="submenu-toggle" (click)="toggleSubmenu($event)">{{ 'HOME.LANGUAGE' | translate }}<mat-icon id="expandMore">expand_more</mat-icon></a>
+                        <div class="submenu-list" *ngIf="isSubmenuOpen">
+                            <div><a (click)="selectLanguage(ESPANOL)">Español - ES</a></div>
+                            <div><a (click)="selectLanguage(ENGLISH)">English - EN</a></div>
+                            <div>Deutsch - DE</div>
+                        </div>
+                    </div> -->
                 </div>
                 
             </div>
