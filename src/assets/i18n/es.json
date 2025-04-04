@@ -106,6 +106,10 @@
             }
         },
 
+        "SOCIAL_MEDIA": {
+            "TITLE1": "TOUR UNIDOS POR EUROPA"
+        },
+
         "FOOTER": {
             "LINKS": "Enlaces",
             "CONTACT": "Contacto",

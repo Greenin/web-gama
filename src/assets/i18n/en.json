@@ -105,6 +105,11 @@
             }
         },
 
+
+        "SOCIAL_MEDIA": {
+            "TITLE1": "TOUR UNITED FOR EUROPE"
+        },
+
         "FOOTER": {
             "LINKS": "Links",
             "CONTACT": "Contact",

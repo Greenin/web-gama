@@ -20,6 +20,7 @@ import { RequirementsComponent } from './requirements/requirements.component';
 import { ColumnsComponent } from './columns/columns.component';
 import { MissionInfoComponent } from './mission-info/mission-info.component';
 import { JoinusMissionsComponent } from './joinus-missions/joinus-missions.component';
+import { LinksComponent } from './links/links.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { TranslateModule } from '@ngx-translate/core';
@@ -44,10 +45,8 @@ import { TranslateService } from '@ngx-translate/core';
     RequirementsComponent,
     ColumnsComponent,
     MissionInfoComponent,
-    // CurrentyearTourComponent,
-    // EnCurrentyeartourComponent,
-    // JoinusInfoComponent,
     JoinusMissionsComponent,
+    LinksComponent,
     MatCardModule,
     MatListModule,
     TranslateModule,
