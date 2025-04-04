@@ -4,15 +4,19 @@
 
     //=========== NORMAL SCREEN SIZE ===========//
     @media only screen and (min-width: 1047px) {
-        padding: 100px 50px 50px 50px;
+        padding: 100px 50px 100px 50px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 1254px) {
+        padding: 100px 50px 40px 50px;
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 1046px) {
-        padding: 100px 50px 50px 50px;
+        padding: 100px 50px 40px 50px;
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 414px) {
-        padding: 85px 25px 40px 25px;
+        padding: 90px 25px 30px 25px;
     }
 
     background-color: rgb(33, 33, 33);
@@ -30,12 +34,23 @@
             .imageContainer {
 
                 width: 100%;
+                margin: 0 auto;
                 padding: 0;
                 //=========== NORMAL SCREEN SIZE ===========//
                 @media only screen and (min-width: 1047px) {
                     max-width: 340px;
-                    margin-left: 20px;
-                    margin-right: 20px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1254px) {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin-bottom: 60px;
                 }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 1046px) {
@@ -45,6 +60,7 @@
                     margin-right: 0px;
                     padding-left: 20px;
                     padding-right: 20px;
+                    margin-bottom: 60px;
                 }
                 // @media only screen and (max-width: 691px) {
                     // padding-left: 0px;
@@ -53,12 +69,16 @@
                 @media only screen and (max-width: 414px) {
                     max-width: 310px;
                     min-width: 310px;   
-                    min-height: 440px;   
-                    max-height: 440px;   
+                    // min-height: 440px;   
+                    // max-height: 440px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    margin-bottom: 60px;
                     // padding-left: 20px;
                     // padding-right: 20px;
                 }
-                margin-bottom: 60px;
 
 
                 img {
