@@ -20,7 +20,7 @@
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 414px) {
-        padding: 80px 15px 35px 15px;
+        padding: 80px 15px 80px 15px;
     }
 
     .socialWrapper {
@@ -103,13 +103,18 @@
                     }
             
                     a {
+                            // text-decoration: none;
+                            // color: #1e2757;
+                            // font-weight: 500;
+                            // transition: color 0.3s;
+                            font-size: 1.1rem;
+                            color: #007bff;
                             text-decoration: none;
-                            color: #1e2757;
-                            font-weight: 500;
                             transition: color 0.3s;
                 
                             &:hover {
-                            color: #0077ff;
+                                color: #0056b3;
+                                text-decoration: underline;
                             }
                     }
                 } //end li
