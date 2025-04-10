@@ -1,0 +1,173 @@
+// @import '../../../../styles/_variables.scss';
+
+
+#missionInfoSection, #englishMissionInfoSection {
+
+
+    //=========== NORMAL SCREEN SIZE ===========//
+    @media only screen and (min-width: 1047px) {
+        padding: 80px 60px 70px 60px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 1046px) {
+        padding: 80px 30px 70px 30px;
+    }
+    //=========== CELL PHONE SIZE ===========//
+    // @media only screen and (max-width: 720px) {
+    //     padding: 80px 30px 70px 30px;
+    // }
+    //=========== CELL PHONE SIZE ===========//
+    @media only screen and (max-width: 414px) {
+        padding: 80px 25px 60px 25px;
+    }
+
+
+
+    .missionInfoRow {
+
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            // height: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0;
+
+
+            .missionInfoContainer {
+
+                // justify-content: left;
+                // line-height: 1.2;
+                // color: #333;
+                // font-size: 0.9rem;
+                // padding: 0;
+
+                display: block;
+                // max-width: 800px;
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0 auto;
+                // margin: 20px auto;
+                padding: 0;
+                // padding: 20px;
+
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1350px) {
+                    width: 75%;
+                    // margin: 0px 30px;
+                }
+                @media only screen and (max-width: 1349px) {
+                    width: 75%;
+                    // margin: 0px 30px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1230px) {
+                    width: 85%;
+                    // margin: 0 0;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    width: 87%;
+                    // margin: 0 0;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 946px) {
+                    width: 90%;
+                    // margin: 0 0;
+                }
+                // //=========== CELL PHONE SIZE ===========//
+                // @media only screen and (max-width: 850px) {
+                //     width: 90%;
+                //     // margin: 0 0;
+                // }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 650px) {
+                    width: 90%;
+                    // margin: 0 0;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 550px) {
+                    width: 95%;
+                    // margin: 0 0;
+                }
+
+                // #missionInfoTitle {
+                //     font-size: medium;
+                //     font-weight: bold;
+                // }
+
+
+                .title {
+                    
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 1.9rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1.8rem;
+                    }
+                    color: #333;
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+
+
+                // #infoTitle {
+                    
+                //     //=========== CELL PHONE SIZE ===========//
+                //     @media only screen and (min-width: 1047px) {
+                //         font-size: 2rem;
+                //     }
+                //     //=========== CELL PHONE SIZE ===========//
+                //     @media only screen and (max-width: 1046px) {
+                //         font-size: 1.9rem;
+                //     }
+                //     //=========== CELL PHONE SIZE ===========//
+                //     @media only screen and (max-width: 375px) {
+                //         font-size: 1.9rem;
+                //     }
+                //     // color: #333;
+                //     // color: #6e6e6e;
+                //     color: black;
+                //     // color: $gamaColor6;
+                //     text-align: center;
+                //     margin-bottom: 20px;
+                // }
+                  
+                .subtitle {
+                    
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 1.5rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 1.4rem;
+                    }
+                    color: #555;
+                    margin-top: 30px;
+                    margin-bottom: 15px;
+                }
+                
+                .intro, .description, .call-to-action, .contact-info, .closing {
+                    
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 1rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 0.9rem;
+                    }
+                    color: #444;
+                }
+                
+                
+            } //end missionInfoTextContainer
+
+        
+    } //end missionInfoRow
+
+} //end previousYearVideo

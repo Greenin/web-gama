@@ -9,16 +9,17 @@
 
     //=========== NORMAL SCREEN SIZE ===========//
     @media only screen and (min-width: 1047px) {
-        padding: 80px 60px 70px 60px;
+        padding: 70px 60px 70px 60px;
     }
     //=========== CELL PHONE SIZE ===========//
     @media only screen and (max-width: 1046px) {
-        padding: 80px 60px 70px 60px;
+        padding: 60px 60px 70px 60px;
     }
     //=========== CELL PHONE SIZE ===========//
-    @media only screen and (max-width: 414px) {
-        padding: 80px 20px 50px 20px;
+    @media only screen and (max-width: 430px) {
+        padding: 70px 20px 50px 20px;
     }
+
 
 
     .requirementRow {
@@ -30,6 +31,73 @@
             justify-content: center;
             align-items: center;
             margin: 0 auto;
+
+
+
+            #requirementTitle {
+
+                display: block;
+                width: 85%;
+                
+                //=========== NORMAL SCREEN SIZE ===========//
+                @media only screen and (min-width: 1047px) {
+                    padding-bottom: 45px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1046px) {
+                    padding-bottom: 40px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 430px) {
+                    padding-bottom: 35px;
+                }
+        
+        
+                #uneteMisionesTitleFirstLine {
+                    font-size: 1.3rem;
+                    color: #3f51b5;
+                    letter-spacing: 4px;
+                    margin: 0 auto;
+                    padding-bottom: 5px;
+                    margin-bottom: 0px;
+                    text-align: center;
+                } 
+            
+                #uneteMisionesTitleSecondLine {
+                    //=========== NORMAL SCREEN SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        font-size: 2.9rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1046px) {
+                        font-size: 2.9rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 414px) {
+                        font-size: 2.6rem;
+                    }
+                    // font-family: serif !important;
+                    color:  var(--bs-dark-rgb);
+                    letter-spacing: 6px;
+                    margin: 0 auto;
+                    padding-bottom: 15px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                } 
+
+                #titleHr {
+                    //=========== NORMAL SCREEN SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        display: block;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 1185px) {
+                        display: none;
+                    }
+
+                }
+
+            } //end requirementTitle
 
 
             .brochureContainer {
@@ -178,6 +246,11 @@
                 @media only screen and (max-width: 1349px) {
                     width: 55%;
                     margin: 0px 30px;
+                }
+                //=========== CELL PHONE SIZE ===========//
+                @media only screen and (max-width: 1185px) {
+                    width: 70%;
+                    margin: 0 0;
                 }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 1046px) {
