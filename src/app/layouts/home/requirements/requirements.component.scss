@@ -37,44 +37,79 @@
             #requirementTitle {
 
                 display: block;
-                width: 85%;
+                // width: 85%;
+                // line-height: 1.8;
                 
                 //=========== NORMAL SCREEN SIZE ===========//
                 @media only screen and (min-width: 1047px) {
+                    width: 85%;
                     padding-bottom: 45px;
                 }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 1046px) {
+                    width: 100%;
                     padding-bottom: 40px;
                 }
                 //=========== CELL PHONE SIZE ===========//
                 @media only screen and (max-width: 430px) {
-                    padding-bottom: 35px;
+                    line-height: 1.5;
+                    width: 100%;
+                    padding-bottom: 20px;
                 }
         
         
                 #uneteMisionesTitleFirstLine {
-                    font-size: 1.3rem;
                     color: #3f51b5;
-                    letter-spacing: 4px;
+                    // letter-spacing: 4px;
                     margin: 0 auto;
                     padding-bottom: 5px;
                     margin-bottom: 0px;
                     text-align: center;
+
+                    //=========== NORMAL SCREEN SIZE ===========//
+                    @media only screen and (min-width: 1047px) {
+                        letter-spacing: 4px;
+                        font-size: 1.3rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 830px) {
+                        letter-spacing: 3px;
+                        font-size: 1.1rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 414px) {
+                        letter-spacing: 2px;
+                        font-size: 1.1rrem;
+                    }
                 } 
             
                 #uneteMisionesTitleSecondLine {
                     //=========== NORMAL SCREEN SIZE ===========//
                     @media only screen and (min-width: 1047px) {
-                        font-size: 2.9rem;
+                        letter-spacing: 4px;
+                        // font-size: 2.9rem;
+                        font-size: 2.3rem;
                     }
                     //=========== CELL PHONE SIZE ===========//
                     @media only screen and (max-width: 1046px) {
-                        font-size: 2.9rem;
+                        letter-spacing: 4px;
+                        // font-size: 2.9rem;
+                        font-size: 2.3rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 830px) {
+                        letter-spacing: 3px;
+                        font-size: 1.8rem;
+                    }
+                    //=========== CELL PHONE SIZE ===========//
+                    @media only screen and (max-width: 710px) {
+                        letter-spacing: 2px;
+                        font-size: 1.5rem;
                     }
                     //=========== CELL PHONE SIZE ===========//
                     @media only screen and (max-width: 414px) {
-                        font-size: 2.6rem;
+                        letter-spacing: 2px;
+                        font-size: 1.4rem;
                     }
                     // font-family: serif !important;
                     color:  var(--bs-dark-rgb);
